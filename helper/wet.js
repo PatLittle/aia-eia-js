@@ -11,7 +11,7 @@ function reloadTemplate(){
     appName: [
       {
         href: "#",
-        text: (switchLanguage === 'en' ? "Évaluation de l'Incidence Algorithmique" : 'Algorithmic Impact Assessment')
+        text: (switchLanguage === 'en' ? "Évaluation de l'incidence algorithmique" : 'Algorithmic Impact Assessment')
       }
     ],
     search: false,
@@ -33,8 +33,8 @@ function reloadTemplate(){
 
   var defPreFooter = document.getElementById("def-preFooter");
   defPreFooter.outerHTML = wet.builder.preFooter({
-    dateModified: "2019-03-29",
-    versionIdentifier: "0.0.4",
+    dateModified: "2025-10-03",
+    versionIdentifier: "1.0.1",
     showPostContent: false,
     showShare: false
   });
@@ -68,4 +68,16 @@ function reloadTemplate(){
     }],
     "showFeatures": false
   });
+
+  if(switchLanguage === 'en'){
+    document.querySelector(".pagedetails a").innerText = "Signaler un problème sur cette page";
+    document.querySelector(".pagedetails a").setAttribute("href", "https://www.canada.ca/fr/signaler-probleme.html");
+    document.querySelector("#wb-dtmd dt").innerText = "Date de modification : ";
+    document.querySelectorAll(".brand a")[0].innerText = "Contactez-nous";
+    document.querySelectorAll(".brand a")[0].setAttribute("href", "https://www.canada.ca/fr/contact.html");
+    document.querySelectorAll(".brand a")[1].innerText = "Avis";
+    document.querySelectorAll(".brand a")[1].setAttribute("href", "https://www.canada.ca/fr/transparence/avis.html");
+    document.querySelectorAll(".brand a")[2].innerText = "Confidentialité";
+    document.querySelectorAll(".brand a")[2].setAttribute("href", "https://www.canada.ca/fr/transparence/confidentialite.html");
+  }  
 }
