@@ -397,7 +397,7 @@ export default class Results extends Vue {
     return items;
   }
 
-  Survey: Model = new Model(surveyJSON);
+  Survey: Model = this.$store.state.result || new Model(surveyJSON);
 
   startAgain() {
     this.Survey.clear(true, true);
@@ -417,6 +417,10 @@ export default class Results extends Vue {
   }
 
   created() {
+    if (this.$store.state.result) {
+      this.Survey = this.$store.state.result;
+      this.myResults = this.$store.getters.resultDataSections;
+    }
     this.Survey.onComplete.add(result => {
       this.$store.commit("updateResult", result);
     });
@@ -475,7 +479,7 @@ export default class Results extends Vue {
     });
 
     //if survey is in progress reload from store
-    if (this.$store.getters.inProgress) {
+    if (!this.$store.state.result && this.$store.getters.inProgress) {
       this.fileLoaded({
         version: this.$store.state.version,
         currentPage: this.$store.state.currentPageNo,

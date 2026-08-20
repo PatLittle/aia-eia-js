@@ -8,7 +8,8 @@
   },
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "prepare:surveys": "node scripts/fetch-survey-versions.js",
+    "build": "npm run prepare:surveys && vue-cli-service build",
     "lint": "vue-cli-service lint",
     "lint:md": "markdownlint \"**/*.md\" -i \"node_modules\"",
     "test:unit": "vue-cli-service test:unit",

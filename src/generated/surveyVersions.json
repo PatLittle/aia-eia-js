@@ -1,0 +1,26 @@
+[
+  {
+    "version": "v1.0.0",
+    "releaseName": "v1.0.0 - fourth review",
+    "sourceUrl": "https://raw.githubusercontent.com/canada-ca/aia-eia-js/v1.0.0/src/survey-enfr.json",
+    "assetPath": "surveys/v1.0.0/survey-enfr.json"
+  },
+  {
+    "version": "v0.10.0",
+    "releaseName": "v0.10.0 - third review",
+    "sourceUrl": "https://raw.githubusercontent.com/canada-ca/aia-eia-js/v0.10.0/src/survey-enfr.json",
+    "assetPath": "surveys/v0.10.0/survey-enfr.json"
+  },
+  {
+    "version": "v0.9.1",
+    "releaseName": "v0.9.1",
+    "sourceUrl": "https://raw.githubusercontent.com/canada-ca/aia-eia-js/v0.9.1/src/survey-enfr.json",
+    "assetPath": "surveys/v0.9.1/survey-enfr.json"
+  },
+  {
+    "version": "v.0.8a1",
+    "releaseName": "April 2019 - MVP - Pre-Release 1",
+    "sourceUrl": "https://raw.githubusercontent.com/canada-ca/aia-eia-js/v.0.8a1/src/survey-enfr.json",
+    "assetPath": "surveys/v.0.8a1/survey-enfr.json"
+  }
+]

@@ -18,6 +18,12 @@ export default new Router({
       path: "/Results",
       name: "results",
       component: Results
+    },
+    {
+      path: "/version/:version",
+      alias: "/:version",
+      name: "versioned-home",
+      component: Home
     }
   ]
 });
