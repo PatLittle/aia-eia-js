@@ -2,6 +2,8 @@ import Vue from "vue";
 import Router from "vue-router";
 import Results from "./views/Results.vue";
 import Home from "./views/Home.vue";
+import CompletedAias from "./views/CompletedAias.vue";
+import AnalysisReport from "./views/AnalysisReport.vue";
 
 Vue.use(Router);
 
@@ -18,6 +20,16 @@ export default new Router({
       path: "/Results",
       name: "results",
       component: Results
+    },
+    {
+      path: "/CompletedAIAs",
+      name: "completed-aias",
+      component: CompletedAias
+    },
+    {
+      path: "/AnalysisReport",
+      name: "analysis-report",
+      component: AnalysisReport
     },
     {
       path: "/version/:version",

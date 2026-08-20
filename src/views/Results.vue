@@ -3,7 +3,18 @@
     <!--<PrintButton />-->
     <div>
       <h1>{{ $t("resultTitle") }}</h1>
-      <p>{{ $t("version") }}</p>
+      <p>{{ "Version: " + displayVersion }}</p>
+    </div>
+
+    <div v-if="loadingMessage" class="alert alert-info" role="status">
+      {{ loadingMessage }}
+    </div>
+    <div v-if="loadError" class="alert alert-danger" role="alert">
+      <strong>{{ loadErrorHeading }}</strong> {{ loadError }}
+    </div>
+    <div v-if="loadedJsonUrl" class="alert alert-success" role="status">
+      {{ loadedMessage }}
+      <a :href="loadedJsonUrl">{{ loadedJsonUrl }}</a>
     </div>
 
     <p>
@@ -149,7 +160,7 @@
       <summary>{{ $t("englishContent") }}</summary>
       <div id="en-content" lang="en">
         <h1>{{ $t("resultTitle", "en") }}</h1>
-        <p>{{ $t("version", "en") }}</p>
+        <p>{{ "Version: " + displayVersion }}</p>
 
         <h2>
           {{ "Section 1: " + $t("riskLevel", "en") }} {{ ": " + score[3] }}
@@ -177,7 +188,7 @@
             v-for="(result, index) in myResults[0]"
             :key="result.name"
           >
-          <Result :data="result" locale="en" :num="index + 1"></Result>
+            <Result :data="result" locale="en" :num="index + 1"></Result>
           </div>
           <div class="row">
             <h3 id="riskQA">
@@ -211,7 +222,7 @@
       <summary>{{ $t("frenchContent") }}</summary>
       <div id="fr-content" lang="fr">
         <h1>{{ $t("resultTitle", "fr") }}</h1>
-        <p>{{ $t("version", "fr") }}</p>
+        <p>{{ "Version : " + displayVersion }}</p>
 
         <h2>
           {{ "Section 1: " + $t("riskLevel", (locale = "fr"))
@@ -277,14 +288,12 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue, Prop } from "vue-property-decorator";
+import { Component, Vue } from "vue-property-decorator";
 
 import { Model } from "survey-vue";
 
 import showdown from "showdown";
 
-import AssessmentTool from "@/components/AssessmentTool.vue"; // @ is an alias to /src
-import Score from "@/components/Score.vue";
 import ActionButtonBar from "@/components/ActionButtonBar.vue";
 import Result from "@/components/Result.vue";
 import Obligations from "@/components/Obligations.vue";
@@ -292,12 +301,14 @@ import SurveyFile from "@/interfaces/SurveyFile";
 import i18n from "@/plugins/i18n";
 import surveyJSON from "@/survey-enfr.json";
 import RiskArea from "@/interfaces/RiskArea";
+import { fetchSurveyFileFromUrl } from "@/utils/remoteSurveyFile";
+import { hydrateSurveyModel, normalizeSurveyFile } from "@/utils/surveyFile";
+import { loadSurveyDefinition } from "@/utils/surveyVersions";
 
 @Component({
   components: {
     ActionButtonBar,
     Result,
-    Score,
     Obligations
   },
   computed: {
@@ -308,6 +319,27 @@ import RiskArea from "@/interfaces/RiskArea";
 })
 export default class Results extends Vue {
   myResults = this.$store.getters.resultDataSections;
+  loadingMessage = "";
+  loadError = "";
+  loadedJsonUrl = "";
+
+  get loadErrorHeading(): string {
+    return this.$i18n.locale === "fr"
+      ? "Impossible de charger les données demandées."
+      : "The requested data could not be loaded.";
+  }
+
+  get loadedMessage(): string {
+    return this.$i18n.locale === "fr"
+      ? "Résultats EIA chargés depuis :"
+      : "AIA results loaded from:";
+  }
+
+  get displayVersion(): string {
+    return String(
+      this.$store.state.version || this.Survey.version || ""
+    ).replace(/^v/, "");
+  }
 
   riskAreaFields = [
     { key: "risk_area", label: this.$t("riskArea").toString() },
@@ -405,37 +437,48 @@ export default class Results extends Vue {
     this.$store.commit("resetSurvey");
     this.$router.push({ path: "/" });
   }
-  fileLoaded($event: SurveyFile) {
-    this.Survey.version = $event.version;
-    this.Survey.data = $event.data;
-    this.Survey.translationsOnResult = $event.translationsOnResult;
-    this.Survey.currentPageNo = $event.currentPage;
-    this.Survey.start();
-    this.$store.commit("updateResult", this.Survey);
-
+  async fileLoaded($event: SurveyFile) {
+    this.loadingMessage =
+      this.$i18n.locale === "fr"
+        ? "Chargement des résultats EIA…"
+        : "Loading AIA results…";
+    this.loadError = "";
+    this.loadedJsonUrl = "";
+    try {
+      const loadedFile = normalizeSurveyFile($event);
+      const loadedSurvey = await loadSurveyDefinition(loadedFile.version);
+      const model = new Model(loadedSurvey.definition);
+      this.configureSurvey(model);
+      loadedFile.version = loadedFile.version || loadedSurvey.version;
+      hydrateSurveyModel(model, loadedFile);
+      this.$store.commit("resetSurvey");
+      this.$store.commit("setSurveyVersion", loadedSurvey.version);
+      this.$store.commit("updateResult", model);
+      this.Survey = model;
+    } catch (error) {
+      this.loadError = error instanceof Error ? error.message : String(error);
+    } finally {
+      this.loadingMessage = "";
+    }
     this.myResults = this.$store.getters.resultDataSections;
   }
 
-  created() {
-    if (this.$store.state.result) {
-      this.Survey = this.$store.state.result;
-      this.myResults = this.$store.getters.resultDataSections;
-    }
-    this.Survey.onComplete.add(result => {
+  private configureSurvey(survey: Model) {
+    survey.onComplete.add(result => {
       this.$store.commit("updateResult", result);
     });
 
-    this.Survey.onComplete.add(results => {
+    survey.onComplete.add(() => {
       this.$router.push("Results");
     });
 
-    this.Survey.onValueChanged.add(result => {
+    survey.onValueChanged.add(result => {
       this.$store.commit("updateResult", result);
     });
 
     const converter = new showdown.Converter();
 
-    this.Survey.onTextMarkdown.add(function(survey, options) {
+    survey.onTextMarkdown.add(function(sender, options) {
       //convert the markdown text to html
       var str = converter.makeHtml(options.text);
       //remove root paragraphs <p></p>
@@ -446,14 +489,14 @@ export default class Results extends Vue {
     });
 
     // Set locale
-    this.Survey.locale = i18n.locale;
+    survey.locale = i18n.locale;
 
     // Remove the default required '*'.
-    this.Survey.requiredText = "";
+    survey.requiredText = "";
 
     // Fix all the question labels as they're using <H5> instead of <label>
     // as SurveyJS has open issue as per: https://github.com/surveyjs/surveyjs/issues/928
-    this.Survey.onAfterRenderQuestion.add(function(sender, options) {
+    survey.onAfterRenderQuestion.add(function(sender, options) {
       let title = options.htmlElement.getElementsByTagName("H5")[0];
       if (title) {
         var questionRequiredHTML = "";
@@ -477,9 +520,42 @@ export default class Results extends Vue {
           "</label>";
       }
     });
+  }
 
-    //if survey is in progress reload from store
-    if (!this.$store.state.result && this.$store.getters.inProgress) {
+  private queryJsonUrl(): string {
+    const value = this.$route.query.json;
+    if (Array.isArray(value)) return String(value[0] || "");
+    return String(value || "");
+  }
+
+  private async initializeFromUrl(jsonUrl: string) {
+    this.loadingMessage =
+      this.$i18n.locale === "fr"
+        ? "Chargement des résultats EIA à partir de l’URL…"
+        : "Loading AIA results from the URL…";
+    this.loadError = "";
+    try {
+      const loadedFile = await fetchSurveyFileFromUrl(jsonUrl);
+      await this.fileLoaded(loadedFile);
+      if (!this.loadError) this.loadedJsonUrl = jsonUrl;
+    } catch (error) {
+      this.loadError = error instanceof Error ? error.message : String(error);
+    } finally {
+      this.loadingMessage = "";
+    }
+  }
+
+  created() {
+    if (this.$store.state.result) {
+      this.Survey = this.$store.state.result;
+      this.myResults = this.$store.getters.resultDataSections;
+    }
+    this.configureSurvey(this.Survey);
+
+    const jsonUrl = this.queryJsonUrl();
+    if (jsonUrl) {
+      this.initializeFromUrl(jsonUrl);
+    } else if (!this.$store.state.result && this.$store.getters.inProgress) {
       this.fileLoaded({
         version: this.$store.state.version,
         currentPage: this.$store.state.currentPageNo,

@@ -1,6 +1,8 @@
 .DS_Store
 node_modules
 /public/surveys/
+/public/aia-analysis-data/
+/public/aia_analysis_report.html
 /dist
 
 /tests/e2e/videos/

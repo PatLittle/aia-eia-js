@@ -1,4 +1,5 @@
 import SurveyFile from "@/interfaces/SurveyFile";
+import { SurveyModel } from "survey-vue";
 
 export function normalizeSurveyFile(loadedFile: SurveyFile): SurveyFile {
   if (!loadedFile || typeof loadedFile !== "object" || !loadedFile.data) {
@@ -28,4 +29,17 @@ export function normalizeSurveyFile(loadedFile: SurveyFile): SurveyFile {
   loadedFile.currentPage = Number(loadedFile.currentPage || 0);
   loadedFile.translationsOnResult = loadedFile.translationsOnResult || {};
   return loadedFile;
+}
+
+export function hydrateSurveyModel(
+  survey: SurveyModel,
+  loadedFile: SurveyFile
+): SurveyModel {
+  const normalizedFile = normalizeSurveyFile(loadedFile);
+  survey.version = normalizedFile.version;
+  survey.data = normalizedFile.data;
+  survey.translationsOnResult = normalizedFile.translationsOnResult;
+  survey.currentPageNo = normalizedFile.currentPage;
+  survey.start();
+  return survey;
 }

@@ -11,35 +11,6 @@
       </a>
     </p>
 
-    <nav class="well version-navigation" :aria-label="uiText.versionNavigation">
-      <p>
-        <strong>{{ uiText.questionnaireVersion }}</strong>
-      </p>
-      <label for="aia-version" class="control-label">
-        {{ uiText.chooseVersion }}
-      </label>
-      <select
-        id="aia-version"
-        class="form-control input-md"
-        :value="activeVersion"
-        @change="switchVersion"
-      >
-        <option :value="currentVersion">
-          {{ uiText.currentVersion }} ({{ currentVersion }})
-        </option>
-        <option
-          v-for="record in availableVersions"
-          :key="record.version"
-          :value="record.version"
-        >
-          {{ record.version }} — {{ record.releaseName }}
-        </option>
-      </select>
-      <p class="mrgn-tp-md mrgn-bttm-0">
-        <a :href="analysisReportUrl">{{ uiText.analysisReport }}</a>
-      </p>
-    </nav>
-
     <div v-if="loadingMessage" class="alert alert-info" role="status">
       {{ loadingMessage }}
     </div>
@@ -72,7 +43,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+import { Component, Vue, Watch } from "vue-property-decorator";
 import * as Survey from "survey-vue";
 import showdown from "showdown";
 import DropDown from "@/components/DropDown.vue";
@@ -83,13 +54,12 @@ import HelpModal from "@/components/HelpModal.vue";
 import SurveyFile from "@/interfaces/SurveyFile";
 import i18n from "@/plugins/i18n";
 import currentSurvey from "@/survey-enfr.json";
-import { normalizeSurveyFile } from "@/utils/surveyFile";
+import { hydrateSurveyModel, normalizeSurveyFile } from "@/utils/surveyFile";
+import { fetchSurveyFileFromUrl } from "@/utils/remoteSurveyFile";
 import {
   CURRENT_VERSION,
-  SurveyVersionRecord,
   findSurveyVersion,
-  loadSurveyDefinition,
-  surveyVersions
+  loadSurveyDefinition
 } from "@/utils/surveyVersions";
 
 Survey.Serializer.addProperty("question", "help:text");
@@ -107,25 +77,14 @@ export default class Home extends Vue {
   Survey: Survey.Model = new Survey.Model(currentSurvey);
   allowDropdown = false;
   activeVersion = CURRENT_VERSION;
-  currentVersion = CURRENT_VERSION;
-  availableVersions: SurveyVersionRecord[] = surveyVersions;
   loadingMessage = "";
   loadError = "";
   loadedJsonUrl = "";
   surveyRenderKey = 0;
 
-  get analysisReportUrl(): string {
-    return `${process.env.BASE_URL}aia_analysis_report.html`;
-  }
-
   get uiText() {
     if (this.$i18n.locale === "fr") {
       return {
-        versionNavigation: "Versions du questionnaire et rapport d’analyse",
-        questionnaireVersion: `Version du questionnaire : ${this.activeVersion}`,
-        chooseVersion: "Choisir une version de l’EIA",
-        currentVersion: "Version actuelle",
-        analysisReport: "Consulter le rapport d’analyse des EIA",
         loadingVersion: "Chargement du questionnaire…",
         loadingJson: "Chargement des résultats EIA à partir de l’URL…",
         loadError: "Impossible de charger les données demandées.",
@@ -133,11 +92,6 @@ export default class Home extends Vue {
       };
     }
     return {
-      versionNavigation: "Questionnaire versions and analysis report",
-      questionnaireVersion: `Questionnaire version: ${this.activeVersion}`,
-      chooseVersion: "Choose an AIA version",
-      currentVersion: "Current version",
-      analysisReport: "View the AIA analysis report",
       loadingVersion: "Loading questionnaire…",
       loadingJson: "Loading AIA results from the URL…",
       loadError: "The requested data could not be loaded.",
@@ -158,24 +112,12 @@ export default class Home extends Vue {
       "setSurveyVersion",
       loadedFile.version || this.activeVersion
     );
-    this.Survey.version = loadedFile.version || this.activeVersion;
-    this.Survey.data = loadedFile.data;
-    this.Survey.currentPageNo = loadedFile.currentPage;
-    this.Survey.translationsOnResult = loadedFile.translationsOnResult;
-    this.Survey.start();
+    loadedFile.version = loadedFile.version || this.activeVersion;
+    hydrateSurveyModel(this.Survey, loadedFile);
     this.$store.commit("updateResult", this.Survey);
+    this.surveyRenderKey += 1;
     this.allowDropdown =
       this.Survey.getValue("projectDetailsPhase") !== undefined;
-  }
-
-  switchVersion(event: Event) {
-    const version = (event.target as HTMLSelectElement).value;
-    const path =
-      version === CURRENT_VERSION ? "/" : `/${encodeURIComponent(version)}`;
-    this.$router.push({ path }).catch(() => undefined);
-    this.loadVersion(version, true).catch(error => {
-      this.loadError = error instanceof Error ? error.message : String(error);
-    });
   }
 
   private async loadVersion(version: string, clearExisting: boolean) {
@@ -203,75 +145,6 @@ export default class Home extends Vue {
     return String(value || "");
   }
 
-  private validatePublicJsonUrl(value: string): URL {
-    const url = new URL(value);
-    const hostname = url.hostname.toLowerCase();
-    const isPrivateIpv4 =
-      /^(10\.|127\.|169\.254\.|192\.168\.)/.test(hostname) ||
-      /^172\.(1[6-9]|2\d|3[01])\./.test(hostname);
-    const isLocal =
-      hostname === "localhost" ||
-      hostname === "[::1]" ||
-      hostname.endsWith(".local");
-
-    if (
-      url.protocol !== "https:" ||
-      url.username ||
-      url.password ||
-      isPrivateIpv4 ||
-      isLocal
-    ) {
-      throw new Error("The json parameter must be a public HTTPS URL.");
-    }
-    return url;
-  }
-
-  private async fetchJsonText(url: string): Promise<string> {
-    const response = await fetch(url, {
-      redirect: "follow",
-      headers: { Accept: "application/json" }
-    });
-    if (!response.ok) {
-      throw new Error(`HTTP ${response.status} ${response.statusText}`);
-    }
-    const contentLength = Number(response.headers.get("content-length") || 0);
-    if (contentLength > 10 * 1024 * 1024) {
-      throw new Error("The JSON file is larger than 10 MB.");
-    }
-    const text = await response.text();
-    if (text.length > 10 * 1024 * 1024) {
-      throw new Error("The JSON file is larger than 10 MB.");
-    }
-    return text;
-  }
-
-  private async fetchSurveyFile(value: string): Promise<SurveyFile> {
-    const url = this.validatePublicJsonUrl(value);
-    const directUrl = url.toString();
-    const candidates = [
-      directUrl,
-      `https://r.jina.ai/${directUrl}`,
-      `https://api.allorigins.win/raw?url=${encodeURIComponent(directUrl)}`
-    ];
-    let lastError: unknown;
-
-    for (const candidate of candidates) {
-      try {
-        const text = await this.fetchJsonText(candidate);
-        const markdownMarker = "Markdown Content:";
-        const jsonText = text.includes(markdownMarker)
-          ? text
-              .substring(text.indexOf(markdownMarker) + markdownMarker.length)
-              .trim()
-          : text;
-        return normalizeSurveyFile(JSON.parse(jsonText) as SurveyFile);
-      } catch (error) {
-        lastError = error;
-      }
-    }
-    throw lastError || new Error("Unable to download the AIA JSON file.");
-  }
-
   private async initializeFromUrl() {
     const jsonUrl = this.queryJsonUrl();
     let loadedFile: SurveyFile | undefined;
@@ -280,7 +153,7 @@ export default class Home extends Vue {
     try {
       if (jsonUrl) {
         this.loadingMessage = this.uiText.loadingJson;
-        loadedFile = await this.fetchSurveyFile(jsonUrl);
+        loadedFile = await fetchSurveyFileFromUrl(jsonUrl);
         requestedVersion = loadedFile.version || requestedVersion;
       }
 
@@ -398,20 +271,17 @@ export default class Home extends Vue {
     });
   }
 
+  @Watch("$route.params.version")
+  onRouteVersionChanged() {
+    const version = this.routeVersion() || CURRENT_VERSION;
+    this.loadVersion(version, true).catch(error => {
+      this.loadError = error instanceof Error ? error.message : String(error);
+    });
+  }
+
   created() {
     this.configureSurvey(this.Survey);
     this.initializeFromUrl();
   }
 }
 </script>
-
-<style scoped>
-.version-navigation {
-  clear: both;
-  margin-top: 1.5rem;
-}
-
-.version-navigation select {
-  max-width: 44rem;
-}
-</style>
