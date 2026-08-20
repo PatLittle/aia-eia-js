@@ -58,6 +58,7 @@ import showdown from "showdown";
 import i18n from "@/plugins/i18n";
 import SurveyFile from "@/interfaces/SurveyFile";
 import { Model } from "survey-vue";
+import { normalizeSurveyFile } from "@/utils/surveyFile";
 
 // make saveJsonFile() declared in index.html available to TS
 declare global {
@@ -115,25 +116,7 @@ export default class ActionButtonBar extends Vue {
         return;
       }
 
-      const loadedFile: SurveyFile = JSON.parse(result);
-      // little conversion for older files before #622 was implemented
-      if ((loadedFile?.data as any)?.aboutSystem1?.includes("item6-1")) {
-        const aboutSystem = (loadedFile.data as any).aboutSystem1 as string[];
-        aboutSystem[aboutSystem.indexOf("item6-1")] = "item6";
-      }
-      // another conversion, for when we moved "describe the decision automated" from impact to decision
-      if (loadedFile?.data !== undefined && "impact4" in (loadedFile.data as any)) {
-        const decisionAutomated = (loadedFile.data as any).impact4 as string;
-        (loadedFile.data as any).decisionSector3 = decisionAutomated;
-        delete (loadedFile.data as any).impact4;
-
-        // also bring over the translation
-        if (loadedFile.translationsOnResult !== undefined && "impact4" in (loadedFile.translationsOnResult as any)) {
-          var translations = (loadedFile.translationsOnResult as any);
-          translations.decisionSector3 = translations.impact4;
-          delete translations.impact4;
-        }
-      }
+      const loadedFile = normalizeSurveyFile(JSON.parse(result) as SurveyFile);
 
       this.$emit("fileLoaded", loadedFile);
     };

@@ -16,6 +16,7 @@ Vue.use(Vuex);
 const vuexLocal = new VuexPersistence({
   storage: window.localStorage,
   reducer: (state: RootState) => ({
+    version: state.version,
     toolData: state.toolData,
     translationsOnResult: state.translationsOnResult,
     currentPageNo: state.currentPageNo
@@ -303,6 +304,11 @@ const store: StoreOptions<RootState> = {
       state.translationsOnResult = {};
       state.removeNext = false;
       state.removePrev = false;
+      state.questionNames = [];
+    },
+    setSurveyVersion(state: RootState, version: string) {
+      state.version = version;
+      state.questionNames = [];
     },
     updateResult(state: RootState, result: SurveyModel) {
       //When it reaches the last page it will get rid of the button or add it back if the user decides to go back
