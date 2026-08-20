@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/aia-eia-js/aia-analysis-data/aia_report_yearly.csv"
   },
   {
-    "revision": "92098d2a43f3135cb057a542949e7965",
+    "revision": "ceb218e62601fb1252f583b958503bcd",
     "url": "/aia-eia-js/aia_analysis_report.html"
   },
   {
