@@ -3,7 +3,7 @@
     <div class="container-fluid">
       <div class="row">
         <h2 id="obligations">
-          {{ $t("requirements.title", locale) }} {{ score[3] }}
+          {{ $t("requirements.title", locale) }} {{ impactLevel }}
         </h2>
       </div>
       <div
@@ -12,7 +12,7 @@
         :key="requirement.title"
       >
         <h3>{{ requirement.title }}</h3>
-        <list-item :text="requirement.elements[score[3] - 1].text" />
+        <list-item :text="requirement.elements[impactLevel - 1].text" />
       </div>
       <div class="row">
         <h3>{{ $t("otherRequirementsTitle", locale) }}</h3>
@@ -36,14 +36,14 @@ import ListItem from "@/components/ListItem.vue";
 
 @Component({
   props: ["locale"],
-  computed: {
-    score: function() {
-      return this.$store.getters.calcScore;
-    }
-  },
   components: {
     ListItem
   }
 })
-export default class Obligations extends Vue {}
+export default class Obligations extends Vue {
+  get impactLevel(): number {
+    const level = Number(this.$store.getters.calcScore[3]);
+    return level >= 1 && level <= 4 ? level : 1;
+  }
+}
 </script>

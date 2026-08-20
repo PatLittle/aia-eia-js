@@ -345,7 +345,7 @@ const store: StoreOptions<RootState> = {
       return !isEmpty(state.toolData);
     },
     calcScore: state => {
-      if (state.result === undefined) return [0, 0, 0];
+      if (state.result === undefined) return [0, 0, 0, 1];
       return calculateFinalScore(state.result, state.questionNames);
     },
     getScoreBySection: state => (section: string) => {

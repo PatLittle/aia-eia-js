@@ -30,7 +30,7 @@ describe("store.ts", () => {
     store.state.result = undefined;
     const getter = store.getters.calcScore;
 
-    expect(getter).toEqual([0, 0, 0]);
+    expect(getter).toEqual([0, 0, 0, 1]);
   });
 
   it("tooldata getter calculated properly, if state is defined", () => {
