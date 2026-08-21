@@ -1,0 +1,86 @@
+name: Validate AIA data pipeline
+
+on:
+  pull_request:
+    paths:
+      - "scripts/recover_aia_json_from_pdfs.py"
+      - "scripts/build_aia_jsonl.py"
+      - "scripts/build_aia_site_assets.py"
+      - "scripts/aia_pdf_recovery_targets.json"
+      - "aia_analysis_report.ipynb"
+      - "recovered_aia_json/**"
+      - ".github/workflows/aia-data-pipeline-check.yml"
+      - ".github/workflows/recover-aia-json.yml"
+      - ".github/workflows/gh-pages-deploy.yml"
+  push:
+    branches:
+      - master
+    paths:
+      - "scripts/recover_aia_json_from_pdfs.py"
+      - "scripts/build_aia_jsonl.py"
+      - "scripts/build_aia_site_assets.py"
+      - "scripts/aia_pdf_recovery_targets.json"
+      - "aia_analysis_report.ipynb"
+      - "recovered_aia_json/**"
+      - ".github/workflows/aia-data-pipeline-check.yml"
+      - ".github/workflows/recover-aia-json.yml"
+      - ".github/workflows/gh-pages-deploy.yml"
+
+jobs:
+  validate-data:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements-aia-report.txt
+
+      - name: Install dependencies
+        run: |
+          python -m pip install -r requirements-aia-report.txt
+          python -m pip install pymupdf rapidfuzz
+
+      - name: Validate PDF recovery and bilingual control
+        run: |
+          python scripts/recover_aia_json_from_pdfs.py \
+            --output-dir /tmp/recovered_aia_json \
+            --debug-dir /tmp/recovery_debug
+
+      - name: Build unified JSONL from validated recovered files
+        run: |
+          python scripts/build_aia_jsonl.py \
+            --recovered-dir /tmp/recovered_aia_json \
+            --output /tmp/aia-results.jsonl \
+            --summary-output /tmp/aia-results-summary.json
+          cat /tmp/aia-results-summary.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          summary = json.loads(Path('/tmp/aia-results-summary.json').read_text())
+          assert summary['record_count'] > 0
+          assert summary['recovered_count'] > 0
+          PY
+
+      - name: Execute JSONL-backed notebook
+        env:
+          AIA_JSONL_PATH: /tmp/aia-results.jsonl
+          AIA_REPORT_OUTPUT_DIR: /tmp/aia-report-output
+          MPLBACKEND: Agg
+        run: >-
+          jupyter nbconvert
+          --to notebook
+          --execute aia_analysis_report.ipynb
+          --output /tmp/executed-aia_analysis_report.ipynb
+          --ExecutePreprocessor.timeout=1800
+
+      - name: Validate site asset generation
+        run: |
+          mkdir -p /tmp/public
+          python scripts/build_aia_site_assets.py \
+            --jsonl /tmp/aia-results.jsonl \
+            --public-dir /tmp/public
+          test -s /tmp/public/aia-analysis-data/completed-aias.json
