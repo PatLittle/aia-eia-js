@@ -125,7 +125,7 @@
         </div>
       </div>
 
-      <article class="panel panel-default chart-card chart-card-wide">
+      <article class="panel panel-default chart-card">
         <div class="panel-heading">
           <h2 class="h4">{{ labels.completenessByOrganization }}</h2>
         </div>
@@ -180,7 +180,10 @@
               </tr>
             </thead>
             <tbody>
-              <tr v-for="record in filteredRecords" :key="`data-${record.package_id}`">
+              <tr
+                v-for="record in filteredRecords"
+                :key="'data-' + record.package_id"
+              >
                 <td>{{ displayTitle(record) }}</td>
                 <td>{{ displayOrganization(record) }}</td>
                 <td>{{ displaySource(record.source) }}</td>
@@ -211,7 +214,6 @@ interface AiaDerived {
   project_phase?: string;
   completeness_pct?: number | null;
   nonconditional_completeness_pct?: number | null;
-  impact_level_label?: string;
 }
 
 interface AiaRecord {
@@ -222,13 +224,21 @@ interface AiaRecord {
   organization_fr: string;
   metadata_created: string;
   dataset_url: string;
-  source: "published" | "recovered" | string;
+  source: string;
   version: string;
   derived?: AiaDerived;
 }
 
-type CountMap = { [key: string]: number };
-type AverageMap = { [key: string]: { total: number; nonconditional: number; count: number } };
+interface ChartValue {
+  label: string;
+  value: number;
+}
+
+interface CompletenessValue {
+  label: string;
+  all: number;
+  nonconditional: number;
+}
 
 @Component
 export default class AnalysisReport extends Vue {
@@ -330,13 +340,24 @@ export default class AnalysisReport extends Vue {
   }
 
   get versions(): string[] {
-    return Array.from(new Set(this.records.map(record => record.version).filter(Boolean))).sort();
+    const values: string[] = [];
+    this.records.forEach(record => {
+      if (record.version && values.indexOf(record.version) === -1) {
+        values.push(record.version);
+      }
+    });
+    return values.sort();
   }
 
   get organizations(): string[] {
-    return Array.from(
-      new Set(this.records.map(record => this.displayOrganization(record)).filter(Boolean))
-    ).sort((a, b) => a.localeCompare(b));
+    const values: string[] = [];
+    this.records.forEach(record => {
+      const organization = this.displayOrganization(record);
+      if (organization && values.indexOf(organization) === -1) {
+        values.push(organization);
+      }
+    });
+    return values.sort((a, b) => a.localeCompare(b));
   }
 
   get filteredRecords(): AiaRecord[] {
@@ -362,11 +383,14 @@ export default class AnalysisReport extends Vue {
   }
 
   get averageCompleteness(): string {
-    const values = this.filteredRecords
-      .map(record => record.derived && record.derived.completeness_pct)
-      .filter((value): value is number => typeof value === "number");
+    const values: number[] = [];
+    this.filteredRecords.forEach(record => {
+      const value = record.derived && record.derived.completeness_pct;
+      if (typeof value === "number") values.push(value);
+    });
     if (!values.length) return "—";
-    return `${(values.reduce((sum, value) => sum + value, 0) / values.length).toFixed(1)}%`;
+    const total = values.reduce((sum, value) => sum + value, 0);
+    return `${(total / values.length).toFixed(1)}%`;
   }
 
   get recoveredRecords(): AiaRecord[] {
@@ -400,59 +424,62 @@ export default class AnalysisReport extends Vue {
     return typeof value === "number" ? `${value.toFixed(1)}%` : "—";
   }
 
-  countBy(values: string[]): CountMap {
-    return values.reduce((counts: CountMap, value: string) => {
+  countValues(values: string[], limit = 0): ChartValue[] {
+    const counts: { [key: string]: number } = {};
+    values.forEach(value => {
       const key = value || this.labels.unknown;
       counts[key] = (counts[key] || 0) + 1;
-      return counts;
-    }, {});
-  }
-
-  sortedEntries(counts: CountMap, limit = 0): Array<[string, number]> {
-    const entries = Object.keys(counts)
-      .map(key => [key, counts[key]] as [string, number])
-      .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+    });
+    let entries = Object.keys(counts).map(key => ({
+      label: key,
+      value: counts[key]
+    }));
+    entries = entries.sort(
+      (a, b) => b.value - a.value || a.label.localeCompare(b.label)
+    );
     return limit > 0 ? entries.slice(0, limit) : entries;
   }
 
-  averageCompletenessByOrganization(): Array<[string, number, number]> {
-    const values: AverageMap = {};
+  averageCompletenessByOrganization(): CompletenessValue[] {
+    const groups: {
+      [key: string]: { total: number; nonconditional: number; count: number };
+    } = {};
     this.filteredRecords.forEach(record => {
       const organization = this.displayOrganization(record) || this.labels.unknown;
       const all = record.derived && record.derived.completeness_pct;
       const nonconditional =
         record.derived && record.derived.nonconditional_completeness_pct;
       if (typeof all !== "number" || typeof nonconditional !== "number") return;
-      if (!values[organization]) {
-        values[organization] = { total: 0, nonconditional: 0, count: 0 };
+      if (!groups[organization]) {
+        groups[organization] = { total: 0, nonconditional: 0, count: 0 };
       }
-      values[organization].total += all;
-      values[organization].nonconditional += nonconditional;
-      values[organization].count += 1;
+      groups[organization].total += all;
+      groups[organization].nonconditional += nonconditional;
+      groups[organization].count += 1;
     });
-    return Object.keys(values)
-      .map(organization => {
-        const value = values[organization];
-        return [
-          organization,
-          value.total / value.count,
-          value.nonconditional / value.count
-        ] as [string, number, number];
-      })
-      .sort((a, b) => b[1] - a[1])
+    return Object.keys(groups)
+      .map(organization => ({
+        label: organization,
+        all: groups[organization].total / groups[organization].count,
+        nonconditional:
+          groups[organization].nonconditional / groups[organization].count
+      }))
+      .sort((a, b) => b.all - a.all)
       .slice(0, 12);
   }
 
   async loadChartJs(): Promise<void> {
-    const chartWindow = window as any;
+    const chartWindow: any = window;
     if (chartWindow.Chart) return;
-    const existing = document.getElementById("aia-chartjs-library") as HTMLScriptElement;
+    const existing = document.getElementById("aia-chartjs-library");
     if (existing) {
       await new Promise<void>((resolve, reject) => {
         existing.addEventListener("load", () => resolve(), { once: true });
-        existing.addEventListener("error", () => reject(new Error("Chart.js failed to load")), {
-          once: true
-        });
+        existing.addEventListener(
+          "error",
+          () => reject(new Error("Chart.js failed to load")),
+          { once: true }
+        );
       });
       return;
     }
@@ -473,44 +500,76 @@ export default class AnalysisReport extends Vue {
   }
 
   createChart(refName: string, configuration: any): void {
-    const chartWindow = window as any;
-    const canvas = this.$refs[refName] as HTMLCanvasElement;
+    const chartWindow: any = window;
+    const canvas: any = this.$refs[refName];
     if (!canvas || !chartWindow.Chart) return;
-    this.charts.push(new chartWindow.Chart(canvas.getContext("2d"), configuration));
+    this.charts.push(
+      new chartWindow.Chart(canvas.getContext("2d"), configuration)
+    );
   }
 
   async renderCharts(): Promise<void> {
     await this.$nextTick();
-    if (!(window as any).Chart) return;
+    const chartWindow: any = window;
+    if (!chartWindow.Chart) return;
     this.clearCharts();
     const records = this.filteredRecords;
-    const palette = ["#26374a", "#2b8a3e", "#1c578a", "#a05a00", "#6f42c1", "#8b1e3f", "#4f6d7a", "#7a6c5d", "#3c7a89", "#8a6d3b", "#5b5f97", "#287271"];
+    const palette = [
+      "#26374a",
+      "#2b8a3e",
+      "#1c578a",
+      "#a05a00",
+      "#6f42c1",
+      "#8b1e3f",
+      "#4f6d7a",
+      "#7a6c5d",
+      "#3c7a89",
+      "#8a6d3b",
+      "#5b5f97",
+      "#287271"
+    ];
 
-    const years = this.sortedEntries(
-      this.countBy(
-        records.map(record =>
-          record.metadata_created ? record.metadata_created.slice(0, 4) : this.labels.unknown
-        )
+    const years = this.countValues(
+      records.map(record =>
+        record.metadata_created
+          ? record.metadata_created.slice(0, 4)
+          : this.labels.unknown
       )
-    ).sort((a, b) => a[0].localeCompare(b[0]));
+    ).sort((a, b) => a.label.localeCompare(b.label));
     this.createChart("yearChart", {
       type: "bar",
       data: {
-        labels: years.map(item => item[0]),
-        datasets: [{ label: this.labels.assessments, data: years.map(item => item[1]), backgroundColor: palette[2] }]
+        labels: years.map(item => item.label),
+        datasets: [
+          {
+            label: this.labels.assessments,
+            data: years.map(item => item.value),
+            backgroundColor: palette[2]
+          }
+        ]
       },
-      options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } } }
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { display: false } }
+      }
     });
 
-    const organizations = this.sortedEntries(
-      this.countBy(records.map(record => this.displayOrganization(record))),
+    const organizationValues = this.countValues(
+      records.map(record => this.displayOrganization(record)),
       12
     );
     this.createChart("organizationChart", {
       type: "bar",
       data: {
-        labels: organizations.map(item => item[0]),
-        datasets: [{ label: this.labels.assessments, data: organizations.map(item => item[1]), backgroundColor: palette[1] }]
+        labels: organizationValues.map(item => item.label),
+        datasets: [
+          {
+            label: this.labels.assessments,
+            data: organizationValues.map(item => item.value),
+            backgroundColor: palette[1]
+          }
+        ]
       },
       options: {
         indexAxis: "y",
@@ -521,32 +580,57 @@ export default class AnalysisReport extends Vue {
       }
     });
 
-    const versions = this.sortedEntries(this.countBy(records.map(record => record.version || this.labels.unknown)));
+    const versionValues = this.countValues(
+      records.map(record => record.version || this.labels.unknown)
+    );
     this.createChart("versionChart", {
       type: "doughnut",
       data: {
-        labels: versions.map(item => item[0]),
-        datasets: [{ data: versions.map(item => item[1]), backgroundColor: versions.map((_item, index) => palette[index % palette.length]) }]
+        labels: versionValues.map(item => item.label),
+        datasets: [
+          {
+            data: versionValues.map(item => item.value),
+            backgroundColor: versionValues.map(
+              (_item, index) => palette[index % palette.length]
+            )
+          }
+        ]
       },
       options: { responsive: true, maintainAspectRatio: false }
     });
 
-    const phases = this.sortedEntries(this.countBy(records.map(record => this.displayPhase(record))));
+    const phaseValues = this.countValues(
+      records.map(record => this.displayPhase(record))
+    );
     this.createChart("phaseChart", {
       type: "doughnut",
       data: {
-        labels: phases.map(item => item[0]),
-        datasets: [{ data: phases.map(item => item[1]), backgroundColor: phases.map((_item, index) => palette[(index + 2) % palette.length]) }]
+        labels: phaseValues.map(item => item.label),
+        datasets: [
+          {
+            data: phaseValues.map(item => item.value),
+            backgroundColor: phaseValues.map(
+              (_item, index) => palette[(index + 2) % palette.length]
+            )
+          }
+        ]
       },
       options: { responsive: true, maintainAspectRatio: false }
     });
 
-    const sources = this.sortedEntries(this.countBy(records.map(record => this.displaySource(record.source))));
+    const sourceValues = this.countValues(
+      records.map(record => this.displaySource(record.source))
+    );
     this.createChart("sourceChart", {
       type: "doughnut",
       data: {
-        labels: sources.map(item => item[0]),
-        datasets: [{ data: sources.map(item => item[1]), backgroundColor: [palette[2], palette[3]] }]
+        labels: sourceValues.map(item => item.label),
+        datasets: [
+          {
+            data: sourceValues.map(item => item.value),
+            backgroundColor: [palette[2], palette[3]]
+          }
+        ]
       },
       options: { responsive: true, maintainAspectRatio: false }
     });
@@ -555,17 +639,33 @@ export default class AnalysisReport extends Vue {
     this.createChart("completenessChart", {
       type: "bar",
       data: {
-        labels: completeness.map(item => item[0]),
+        labels: completeness.map(item => item.label),
         datasets: [
-          { label: this.labels.allQuestions, data: completeness.map(item => Number(item[1].toFixed(2))), backgroundColor: palette[0] },
-          { label: this.labels.nonconditional, data: completeness.map(item => Number(item[2].toFixed(2))), backgroundColor: palette[1] }
+          {
+            label: this.labels.allQuestions,
+            data: completeness.map(item => Number(item.all.toFixed(2))),
+            backgroundColor: palette[0]
+          },
+          {
+            label: this.labels.nonconditional,
+            data: completeness.map(item =>
+              Number(item.nonconditional.toFixed(2))
+            ),
+            backgroundColor: palette[1]
+          }
         ]
       },
       options: {
         indexAxis: "y",
         responsive: true,
         maintainAspectRatio: false,
-        scales: { x: { beginAtZero: true, max: 100, title: { display: true, text: "%" } } }
+        scales: {
+          x: {
+            beginAtZero: true,
+            max: 100,
+            title: { display: true, text: "%" }
+          }
+        }
       }
     });
   }
@@ -577,10 +677,11 @@ export default class AnalysisReport extends Vue {
         throw new Error(`HTTP ${response.status} ${response.statusText}`);
       }
       const text = await response.text();
-      this.records = text
-        .split(/\r?\n/)
-        .filter(line => line.trim())
-        .map(line => JSON.parse(line) as AiaRecord);
+      const parsed: AiaRecord[] = [];
+      text.split(/\r?\n/).forEach(line => {
+        if (line.trim()) parsed.push(JSON.parse(line) as AiaRecord);
+      });
+      this.records = parsed;
       await this.loadChartJs();
       this.loading = false;
       await this.renderCharts();
