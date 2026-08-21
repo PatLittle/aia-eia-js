@@ -36,7 +36,11 @@
               @change="renderCharts"
             >
               <option value="">{{ labels.allVersions }}</option>
-              <option v-for="version in versions" :key="version" :value="version">
+              <option
+                v-for="version in versions"
+                :key="version"
+                :value="version"
+              >
                 {{ version }}
               </option>
             </select>
@@ -92,14 +96,22 @@
       <div class="row">
         <div class="col-lg-6">
           <article class="panel panel-default chart-card">
-            <div class="panel-heading"><h2 class="h4">{{ labels.byYear }}</h2></div>
-            <div class="panel-body chart-wrap"><canvas ref="yearChart"></canvas></div>
+            <div class="panel-heading">
+              <h2 class="h4">{{ labels.byYear }}</h2>
+            </div>
+            <div class="panel-body chart-wrap">
+              <canvas ref="yearChart"></canvas>
+            </div>
           </article>
         </div>
         <div class="col-lg-6">
           <article class="panel panel-default chart-card">
-            <div class="panel-heading"><h2 class="h4">{{ labels.byOrganization }}</h2></div>
-            <div class="panel-body chart-wrap"><canvas ref="organizationChart"></canvas></div>
+            <div class="panel-heading">
+              <h2 class="h4">{{ labels.byOrganization }}</h2>
+            </div>
+            <div class="panel-body chart-wrap">
+              <canvas ref="organizationChart"></canvas>
+            </div>
           </article>
         </div>
       </div>
@@ -107,20 +119,32 @@
       <div class="row">
         <div class="col-lg-4">
           <article class="panel panel-default chart-card">
-            <div class="panel-heading"><h2 class="h4">{{ labels.byVersion }}</h2></div>
-            <div class="panel-body chart-wrap"><canvas ref="versionChart"></canvas></div>
+            <div class="panel-heading">
+              <h2 class="h4">{{ labels.byVersion }}</h2>
+            </div>
+            <div class="panel-body chart-wrap">
+              <canvas ref="versionChart"></canvas>
+            </div>
           </article>
         </div>
         <div class="col-lg-4">
           <article class="panel panel-default chart-card">
-            <div class="panel-heading"><h2 class="h4">{{ labels.byPhase }}</h2></div>
-            <div class="panel-body chart-wrap"><canvas ref="phaseChart"></canvas></div>
+            <div class="panel-heading">
+              <h2 class="h4">{{ labels.byPhase }}</h2>
+            </div>
+            <div class="panel-body chart-wrap">
+              <canvas ref="phaseChart"></canvas>
+            </div>
           </article>
         </div>
         <div class="col-lg-4">
           <article class="panel panel-default chart-card">
-            <div class="panel-heading"><h2 class="h4">{{ labels.bySource }}</h2></div>
-            <div class="panel-body chart-wrap"><canvas ref="sourceChart"></canvas></div>
+            <div class="panel-heading">
+              <h2 class="h4">{{ labels.bySource }}</h2>
+            </div>
+            <div class="panel-body chart-wrap">
+              <canvas ref="sourceChart"></canvas>
+            </div>
           </article>
         </div>
       </div>
@@ -134,8 +158,59 @@
         </div>
       </article>
 
+      <section class="data-quality-section" aria-labelledby="data-quality-heading">
+        <h2 id="data-quality-heading">{{ labels.dataQualityHeading }}</h2>
+        <p>{{ labels.dataQualityExplanation }}</p>
+        <div class="row">
+          <div class="col-lg-6">
+            <article class="panel panel-default chart-card">
+              <div class="panel-heading">
+                <h3 class="h4">{{ labels.biasAvailability }}</h3>
+              </div>
+              <div class="panel-body chart-wrap">
+                <canvas ref="biasChart"></canvas>
+              </div>
+            </article>
+          </div>
+          <div class="col-lg-6">
+            <article class="panel panel-default chart-card">
+              <div class="panel-heading">
+                <h3 class="h4">{{ labels.resolutionAvailability }}</h3>
+              </div>
+              <div class="panel-body chart-wrap">
+                <canvas ref="resolutionChart"></canvas>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <article class="panel panel-default chart-card">
+              <div class="panel-heading">
+                <h3 class="h4">{{ labels.unreliableAvailability }}</h3>
+              </div>
+              <div class="panel-body chart-wrap">
+                <canvas ref="unreliableChart"></canvas>
+              </div>
+            </article>
+          </div>
+          <div class="col-lg-6">
+            <article class="panel panel-default chart-card">
+              <div class="panel-heading">
+                <h3 class="h4">{{ labels.gbaAvailability }}</h3>
+              </div>
+              <div class="panel-body chart-wrap">
+                <canvas ref="gbaChart"></canvas>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
       <details class="analysis-details" open>
-        <summary><strong>{{ labels.recoveredRecords }}</strong></summary>
+        <summary>
+          <strong>{{ labels.recoveredRecords }}</strong>
+        </summary>
         <p>{{ labels.recoveredExplanation }}</p>
         <div class="table-responsive">
           <table class="table table-striped table-hover">
@@ -150,11 +225,19 @@
             </thead>
             <tbody>
               <tr v-for="record in recoveredRecords" :key="record.package_id">
-                <td><a :href="record.dataset_url">{{ displayTitle(record) }}</a></td>
+                <td>
+                  <a :href="record.dataset_url">{{ displayTitle(record) }}</a>
+                </td>
                 <td>{{ displayOrganization(record) }}</td>
                 <td>{{ record.version || "—" }}</td>
                 <td>{{ displayPhase(record) }}</td>
-                <td>{{ formatPercent(record.derived && record.derived.completeness_pct) }}</td>
+                <td>
+                  {{
+                    formatPercent(
+                      record.derived && record.derived.completeness_pct
+                    )
+                  }}
+                </td>
               </tr>
               <tr v-if="recoveredRecords.length === 0">
                 <td colspan="5">{{ labels.noRecovered }}</td>
@@ -165,7 +248,9 @@
       </details>
 
       <details class="analysis-details">
-        <summary><strong>{{ labels.chartData }}</strong></summary>
+        <summary>
+          <strong>{{ labels.chartData }}</strong>
+        </summary>
         <div class="table-responsive">
           <table class="table table-condensed table-striped">
             <thead>
@@ -189,8 +274,21 @@
                 <td>{{ displaySource(record.source) }}</td>
                 <td>{{ record.version || "—" }}</td>
                 <td>{{ displayPhase(record) }}</td>
-                <td>{{ formatPercent(record.derived && record.derived.completeness_pct) }}</td>
-                <td>{{ formatPercent(record.derived && record.derived.nonconditional_completeness_pct) }}</td>
+                <td>
+                  {{
+                    formatPercent(
+                      record.derived && record.derived.completeness_pct
+                    )
+                  }}
+                </td>
+                <td>
+                  {{
+                    formatPercent(
+                      record.derived &&
+                        record.derived.nonconditional_completeness_pct
+                    )
+                  }}
+                </td>
               </tr>
             </tbody>
           </table>
@@ -200,8 +298,14 @@
       <p class="source-note">
         {{ labels.dataSource }}
         <a :href="jsonlUrl">{{ labels.downloadJsonl }}</a> ·
-        <a href="https://open.canada.ca/data/en/dataset?collection=aia">Open Canada</a> ·
-        <a href="https://github.com/PatLittle/aia-eia-js/tree/master/recovered_aia_json">{{ labels.recoveredRepository }}</a>
+        <a href="https://open.canada.ca/data/en/dataset?collection=aia"
+          >Open Canada</a
+        >
+        ·
+        <a
+          href="https://github.com/PatLittle/aia-eia-js/tree/master/recovered_aia_json"
+          >{{ labels.recoveredRepository }}</a
+        >
       </p>
     </div>
   </section>
@@ -226,6 +330,7 @@ interface AiaRecord {
   dataset_url: string;
   source: string;
   version: string;
+  data?: { [key: string]: any };
   derived?: AiaDerived;
 }
 
@@ -238,6 +343,23 @@ interface CompletenessValue {
   label: string;
   all: number;
   nonconditional: number;
+}
+
+interface DataQualityPairDefinition {
+  refName: string;
+  title: string;
+  firstLabel: string;
+  secondLabel: string;
+  firstSuffixes: string[];
+  secondSuffixes: string[];
+  gbaPublic?: boolean;
+}
+
+interface BinaryCounts {
+  firstYes: number;
+  firstNo: number;
+  secondYes: number;
+  secondNo: number;
 }
 
 @Component
@@ -278,14 +400,33 @@ export default class AnalysisReport extends Vue {
         byPhase: "Phase du projet",
         bySource: "Source des résultats JSON",
         completenessByOrganization: "Complétude moyenne par organisation",
+        dataQualityHeading: "Qualité des données et disponibilité publique",
+        dataQualityExplanation:
+          "Ces graphiques utilisent les champs de conception ou de mise en œuvre correspondant à la phase enregistrée dans chaque EIA. Pour l’ACS Plus, le champ de disponibilité publique est la question 6 dans les versions 0.x et la question 7 dans les versions 1.x. Seules les réponses Oui/Non enregistrées sont comptées.",
+        biasAvailability: "Tests de biais et disponibilité publique",
+        resolutionAvailability:
+          "Résolution des problèmes de qualité et disponibilité publique",
+        unreliableAvailability:
+          "Gestion des données non fiables et disponibilité publique",
+        gbaAvailability: "ACS Plus et disponibilité publique des résultats",
+        biasProcess: "Processus de test des biais documenté",
+        publicProcess: "Processus accessible au public",
+        resolutionProcess: "Processus de résolution documenté",
+        unreliableProcess: "Processus de gestion du risque documenté",
+        gbaAnalysis: "Analyse ACS Plus entreprise",
+        gbaPublic: "Résultats accessibles au public",
+        yes: "Oui",
+        no: "Non",
         recoveredRecords: "EIA dont le JSON a été reconstruit",
         recoveredExplanation:
           "Ces EIA n’avaient pas de ressource JSON utilisable dans le catalogue. Leurs réponses ont été reconstruites à partir des PDF anglais et français publiés.",
         assessment: "Évaluation",
         phase: "Phase",
         completeness: "Complétude",
-        nonconditionalCompleteness: "Complétude des questions non conditionnelles",
-        noRecovered: "Aucune EIA reconstruite ne correspond aux filtres actuels.",
+        nonconditionalCompleteness:
+          "Complétude des questions non conditionnelles",
+        noRecovered:
+          "Aucune EIA reconstruite ne correspond aux filtres actuels.",
         chartData: "Données des graphiques",
         dataSource: "Données :",
         downloadJsonl: "télécharger le fichier JSONL unifié",
@@ -319,6 +460,23 @@ export default class AnalysisReport extends Vue {
       byPhase: "Project phase",
       bySource: "JSON result source",
       completenessByOrganization: "Average completeness by organization",
+      dataQualityHeading: "Data quality and public availability",
+      dataQualityExplanation:
+        "These charts use the Design or Implementation fields that match each AIA's saved project phase. For GBA Plus, the public-availability field is question 6 in v0.x surveys and question 7 in v1.x surveys. Only saved Yes/No answers are counted.",
+      biasAvailability: "Bias testing and public availability",
+      resolutionAvailability:
+        "Data-quality resolution and public availability",
+      unreliableAvailability:
+        "Unreliable-data risk management and public availability",
+      gbaAvailability: "GBA Plus analysis and public availability",
+      biasProcess: "Bias-testing process documented",
+      publicProcess: "Process publicly available",
+      resolutionProcess: "Resolution process documented",
+      unreliableProcess: "Risk-management process documented",
+      gbaAnalysis: "GBA Plus analysis undertaken",
+      gbaPublic: "Findings publicly available",
+      yes: "Yes",
+      no: "No",
       recoveredRecords: "AIAs with reconstructed JSON",
       recoveredExplanation:
         "These AIAs had no usable JSON resource in the catalogue. Their responses were reconstructed from the published English and French PDFs.",
@@ -337,6 +495,44 @@ export default class AnalysisReport extends Vue {
       allQuestions: "All questions",
       nonconditional: "Non-conditional questions"
     };
+  }
+
+  get dataQualityPairs(): DataQualityPairDefinition[] {
+    return [
+      {
+        refName: "biasChart",
+        title: this.labels.biasAvailability,
+        firstLabel: this.labels.biasProcess,
+        secondLabel: this.labels.publicProcess,
+        firstSuffixes: ["1"],
+        secondSuffixes: ["2"]
+      },
+      {
+        refName: "resolutionChart",
+        title: this.labels.resolutionAvailability,
+        firstLabel: this.labels.resolutionProcess,
+        secondLabel: this.labels.publicProcess,
+        firstSuffixes: ["3"],
+        secondSuffixes: ["4"]
+      },
+      {
+        refName: "unreliableChart",
+        title: this.labels.unreliableAvailability,
+        firstLabel: this.labels.unreliableProcess,
+        secondLabel: this.labels.publicProcess,
+        firstSuffixes: ["8"],
+        secondSuffixes: ["9"]
+      },
+      {
+        refName: "gbaChart",
+        title: this.labels.gbaAvailability,
+        firstLabel: this.labels.gbaAnalysis,
+        secondLabel: this.labels.gbaPublic,
+        firstSuffixes: ["5"],
+        secondSuffixes: [],
+        gbaPublic: true
+      }
+    ];
   }
 
   get versions(): string[] {
@@ -362,8 +558,12 @@ export default class AnalysisReport extends Vue {
 
   get filteredRecords(): AiaRecord[] {
     return this.records.filter(record => {
-      if (this.selectedSource && record.source !== this.selectedSource) return false;
-      if (this.selectedVersion && record.version !== this.selectedVersion) return false;
+      if (this.selectedSource && record.source !== this.selectedSource) {
+        return false;
+      }
+      if (this.selectedVersion && record.version !== this.selectedVersion) {
+        return false;
+      }
       if (
         this.selectedOrganization &&
         this.displayOrganization(record) !== this.selectedOrganization
@@ -375,11 +575,13 @@ export default class AnalysisReport extends Vue {
   }
 
   get filteredPublishedCount(): number {
-    return this.filteredRecords.filter(record => record.source === "published").length;
+    return this.filteredRecords.filter(record => record.source === "published")
+      .length;
   }
 
   get filteredRecoveredCount(): number {
-    return this.filteredRecords.filter(record => record.source === "recovered").length;
+    return this.filteredRecords.filter(record => record.source === "recovered")
+      .length;
   }
 
   get averageCompleteness(): string {
@@ -417,7 +619,9 @@ export default class AnalysisReport extends Vue {
   }
 
   displaySource(source: string): string {
-    return source === "recovered" ? this.labels.recovered : this.labels.published;
+    return source === "recovered"
+      ? this.labels.recovered
+      : this.labels.published;
   }
 
   formatPercent(value?: number | null): string {
@@ -445,11 +649,14 @@ export default class AnalysisReport extends Vue {
       [key: string]: { total: number; nonconditional: number; count: number };
     } = {};
     this.filteredRecords.forEach(record => {
-      const organization = this.displayOrganization(record) || this.labels.unknown;
+      const organization =
+        this.displayOrganization(record) || this.labels.unknown;
       const all = record.derived && record.derived.completeness_pct;
       const nonconditional =
         record.derived && record.derived.nonconditional_completeness_pct;
-      if (typeof all !== "number" || typeof nonconditional !== "number") return;
+      if (typeof all !== "number" || typeof nonconditional !== "number") {
+        return;
+      }
       if (!groups[organization]) {
         groups[organization] = { total: 0, nonconditional: 0, count: 0 };
       }
@@ -466,6 +673,92 @@ export default class AnalysisReport extends Vue {
       }))
       .sort((a, b) => b.all - a.all)
       .slice(0, 12);
+  }
+
+  isSubstantive(value: any): boolean {
+    if (value === null || typeof value === "undefined") return false;
+    if (typeof value === "string") return value.trim().length > 0;
+    if (Array.isArray(value)) return value.length > 0;
+    return true;
+  }
+
+  binaryAnswer(value: any): string {
+    if (!this.isSubstantive(value)) return "";
+    const normalized = String(value).trim().toLowerCase();
+    if (
+      normalized === "yes" ||
+      normalized === "oui" ||
+      normalized.indexOf("item1") === 0
+    ) {
+      return "yes";
+    }
+    if (
+      normalized === "no" ||
+      normalized === "non" ||
+      normalized.indexOf("item2") === 0
+    ) {
+      return "no";
+    }
+    return "";
+  }
+
+  gbaPublicSuffixes(version: string): string[] {
+    const normalized = String(version || "")
+      .trim()
+      .toLowerCase()
+      .replace(/^version\s*/, "")
+      .replace(/^v\.?/, "");
+    return normalized.indexOf("1.") === 0 ? ["7", "6"] : ["6", "7"];
+  }
+
+  resolveDataQualityAnswer(record: AiaRecord, suffixes: string[]): any {
+    const data = record.data || {};
+    const savedPhase = record.derived && record.derived.project_phase;
+    const phases: string[] = [];
+    if (savedPhase === "Design" || savedPhase === "Implementation") {
+      phases.push(savedPhase);
+    }
+    ["Design", "Implementation"].forEach(phase => {
+      if (phases.indexOf(phase) === -1) phases.push(phase);
+    });
+
+    for (const phase of phases) {
+      for (const suffix of suffixes) {
+        const fieldName = `dataQuality${phase}${suffix}`;
+        if (this.isSubstantive(data[fieldName])) {
+          return data[fieldName];
+        }
+      }
+    }
+    return null;
+  }
+
+  dataQualityCounts(definition: DataQualityPairDefinition): BinaryCounts {
+    const counts: BinaryCounts = {
+      firstYes: 0,
+      firstNo: 0,
+      secondYes: 0,
+      secondNo: 0
+    };
+
+    this.filteredRecords.forEach(record => {
+      const first = this.binaryAnswer(
+        this.resolveDataQualityAnswer(record, definition.firstSuffixes)
+      );
+      const secondSuffixes = definition.gbaPublic
+        ? this.gbaPublicSuffixes(record.version)
+        : definition.secondSuffixes;
+      const second = this.binaryAnswer(
+        this.resolveDataQualityAnswer(record, secondSuffixes)
+      );
+
+      if (first === "yes") counts.firstYes += 1;
+      if (first === "no") counts.firstNo += 1;
+      if (second === "yes") counts.secondYes += 1;
+      if (second === "no") counts.secondNo += 1;
+    });
+
+    return counts;
   }
 
   async loadChartJs(): Promise<void> {
@@ -486,7 +779,8 @@ export default class AnalysisReport extends Vue {
     await new Promise<void>((resolve, reject) => {
       const script = document.createElement("script");
       script.id = "aia-chartjs-library";
-      script.src = "https://cdn.jsdelivr.net/npm/chart.js@4.5.0/dist/chart.umd.min.js";
+      script.src =
+        "https://cdn.jsdelivr.net/npm/chart.js@4.5.0/dist/chart.umd.min.js";
       script.async = true;
       script.onload = () => resolve();
       script.onerror = () => reject(new Error("Chart.js failed to load"));
@@ -506,6 +800,46 @@ export default class AnalysisReport extends Vue {
     this.charts.push(
       new chartWindow.Chart(canvas.getContext("2d"), configuration)
     );
+  }
+
+  renderDataQualityChart(
+    definition: DataQualityPairDefinition,
+    palette: string[]
+  ): void {
+    const counts = this.dataQualityCounts(definition);
+    this.createChart(definition.refName, {
+      type: "bar",
+      data: {
+        labels: [definition.firstLabel, definition.secondLabel],
+        datasets: [
+          {
+            label: this.labels.yes,
+            data: [counts.firstYes, counts.secondYes],
+            backgroundColor: palette[1]
+          },
+          {
+            label: this.labels.no,
+            data: [counts.firstNo, counts.secondNo],
+            backgroundColor: palette[5]
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks: { precision: 0 },
+            title: { display: true, text: this.labels.assessments }
+          }
+        },
+        plugins: {
+          legend: { position: "bottom" },
+          title: { display: false, text: definition.title }
+        }
+      }
+    });
   }
 
   async renderCharts(): Promise<void> {
@@ -668,6 +1002,10 @@ export default class AnalysisReport extends Vue {
         }
       }
     });
+
+    this.dataQualityPairs.forEach(definition =>
+      this.renderDataQualityChart(definition, palette)
+    );
   }
 
   async created(): Promise<void> {
@@ -749,6 +1087,12 @@ export default class AnalysisReport extends Vue {
 
 .chart-wrap-wide {
   min-height: 470px;
+}
+
+.data-quality-section {
+  border-top: 1px solid #ddd;
+  margin-top: 2.5rem;
+  padding-top: 1rem;
 }
 
 .analysis-details {
