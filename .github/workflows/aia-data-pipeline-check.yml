@@ -9,6 +9,8 @@ on:
       - "scripts/aia_pdf_recovery_targets.json"
       - "aia_analysis_report.ipynb"
       - "recovered_aia_json/**"
+      - "src/views/AnalysisReport.vue"
+      - "src/views/CompletedAias.vue"
       - ".github/workflows/aia-data-pipeline-check.yml"
       - ".github/workflows/recover-aia-json.yml"
       - ".github/workflows/gh-pages-deploy.yml"
@@ -22,6 +24,8 @@ on:
       - "scripts/aia_pdf_recovery_targets.json"
       - "aia_analysis_report.ipynb"
       - "recovered_aia_json/**"
+      - "src/views/AnalysisReport.vue"
+      - "src/views/CompletedAias.vue"
       - ".github/workflows/aia-data-pipeline-check.yml"
       - ".github/workflows/recover-aia-json.yml"
       - ".github/workflows/gh-pages-deploy.yml"
@@ -46,14 +50,15 @@ jobs:
 
       - name: Validate PDF recovery and bilingual control
         run: |
+          rm -rf .pipeline-test
           python scripts/recover_aia_json_from_pdfs.py \
-            --output-dir /tmp/recovered_aia_json \
+            --output-dir .pipeline-test/recovered_aia_json \
             --debug-dir /tmp/recovery_debug
 
       - name: Build unified JSONL from validated recovered files
         run: |
           python scripts/build_aia_jsonl.py \
-            --recovered-dir /tmp/recovered_aia_json \
+            --recovered-dir .pipeline-test/recovered_aia_json \
             --output /tmp/aia-results.jsonl \
             --summary-output /tmp/aia-results-summary.json
           cat /tmp/aia-results-summary.json
