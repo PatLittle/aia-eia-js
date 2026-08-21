@@ -66,8 +66,10 @@ jobs:
           import json
           from pathlib import Path
           summary = json.loads(Path('/tmp/aia-results-summary.json').read_text())
-          assert summary['record_count'] > 0
-          assert summary['recovered_count'] > 0
+          assert summary['record_count'] == summary['catalogue_count'], summary
+          assert summary['missing_count'] == 0, summary
+          assert summary['recovered_count'] == 6, summary
+          assert summary['published_count'] + summary['recovered_count'] == summary['record_count'], summary
           PY
 
       - name: Execute JSONL-backed notebook
