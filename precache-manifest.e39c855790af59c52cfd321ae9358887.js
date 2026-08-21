@@ -4,11 +4,11 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/aia-eia-js/404.html"
   },
   {
-    "revision": "5ab33d843c1f6dbac5633135d298c63f",
+    "revision": "d843a3f74da0b0ed6b084ac2b3922f60",
     "url": "/aia-eia-js/aia-analysis-data/aia-results-summary.json"
   },
   {
-    "revision": "10866b751bf29d8f2c24e6389c0e3385",
+    "revision": "77184da70a36fec69fabc838c98b047a",
     "url": "/aia-eia-js/aia-analysis-data/aia-results.jsonl"
   },
   {
