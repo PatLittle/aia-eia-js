@@ -11,6 +11,7 @@ on:
       - "recovered_aia_json/**"
       - "src/views/AnalysisReport.vue"
       - "src/views/CompletedAias.vue"
+      - ".cspell.json"
       - ".github/workflows/aia-data-pipeline-check.yml"
       - ".github/workflows/recover-aia-json.yml"
       - ".github/workflows/gh-pages-deploy.yml"
@@ -26,6 +27,7 @@ on:
       - "recovered_aia_json/**"
       - "src/views/AnalysisReport.vue"
       - "src/views/CompletedAias.vue"
+      - ".cspell.json"
       - ".github/workflows/aia-data-pipeline-check.yml"
       - ".github/workflows/recover-aia-json.yml"
       - ".github/workflows/gh-pages-deploy.yml"
@@ -43,7 +45,7 @@ jobs:
           cache: pip
           cache-dependency-path: requirements-aia-report.txt
 
-      - name: Install dependencies
+      - name: Install Python dependencies
         run: |
           python -m pip install -r requirements-aia-report.txt
           python -m pip install pymupdf rapidfuzz
@@ -55,7 +57,7 @@ jobs:
             --output-dir .pipeline-test/recovered_aia_json \
             --debug-dir /tmp/recovery_debug
 
-      - name: Build unified JSONL from validated recovered files
+      - name: Build and validate unified bilingual JSONL
         run: |
           python scripts/build_aia_jsonl.py \
             --recovered-dir .pipeline-test/recovered_aia_json \
@@ -65,11 +67,37 @@ jobs:
           python - <<'PY'
           import json
           from pathlib import Path
+
           summary = json.loads(Path('/tmp/aia-results-summary.json').read_text())
+          records = [
+              json.loads(line)
+              for line in Path('/tmp/aia-results.jsonl').read_text(encoding='utf-8').splitlines()
+              if line.strip()
+          ]
+          by_id = {record['package_id']: record for record in records}
+          targets = json.loads(Path('scripts/aia_pdf_recovery_targets.json').read_text())
+          expected_recovered = {target['package_id'] for target in targets}
+          actual_recovered = {
+              record['package_id']
+              for record in records
+              if record.get('source') == 'recovered'
+          }
+
           assert summary['record_count'] == summary['catalogue_count'], summary
           assert summary['missing_count'] == 0, summary
           assert summary['recovered_count'] == 6, summary
           assert summary['published_count'] + summary['recovered_count'] == summary['record_count'], summary
+          assert actual_recovered == expected_recovered, (actual_recovered, expected_recovered)
+
+          for package_id in expected_recovered:
+              record = by_id[package_id]
+              assert record['data'], package_id
+              assert record['translationsOnResult'], package_id
+
+          control = by_id['eaeb269c-6ac5-4429-a5aa-1fcc07c77933']
+          assert control['source'] == 'published', control['source']
+          assert control['data'], 'published control has no data'
+          assert control['translationsOnResult'], 'published control has no French translations'
           PY
 
       - name: Execute JSONL-backed notebook
@@ -91,3 +119,17 @@ jobs:
             --jsonl /tmp/aia-results.jsonl \
             --public-dir /tmp/public
           test -s /tmp/public/aia-analysis-data/completed-aias.json
+
+      - name: Setup Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: "24.x"
+          cache: npm
+
+      - name: Install application dependencies
+        run: npm ci
+
+      - name: Build production application
+        run: npm run build
+        env:
+          NODE_OPTIONS: --openssl-legacy-provider
