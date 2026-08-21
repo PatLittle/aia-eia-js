@@ -20,12 +20,14 @@ from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Iterable
+from urllib.parse import urljoin
 
 import requests
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 
-PACKAGE_SEARCH_URL = "https://open.canada.ca/data/api/action/package_search"
+OPEN_CANADA_BASE = "https://open.canada.ca"
+PACKAGE_SEARCH_URL = f"{OPEN_CANADA_BASE}/data/api/action/package_search"
 COLLECTION_QUERY = "collection:aia"
 CURRENT_VERSION = "v1.0.1"
 PAGE_SIZE = 100
@@ -56,6 +58,14 @@ def version_norm(value: str) -> str:
     return value[1:] if value.startswith(".") else value
 
 
+def absolute_open_canada_url(value: Any) -> str:
+    """Resolve CKAN resource URLs, including package_search relative paths."""
+    url = str(value or "").strip()
+    if not url:
+        return ""
+    return urljoin(f"{OPEN_CANADA_BASE}/", url)
+
+
 def build_session() -> requests.Session:
     session = requests.Session()
     retry = Retry(
@@ -72,7 +82,12 @@ def build_session() -> requests.Session:
     return session
 
 
-def get_json(session: requests.Session, url: str, *, params: dict[str, Any] | None = None) -> Any:
+def get_json(
+    session: requests.Session,
+    url: str,
+    *,
+    params: dict[str, Any] | None = None,
+) -> Any:
     response = session.get(url, params=params, timeout=REQUEST_TIMEOUT)
     response.raise_for_status()
     return response.json()
@@ -132,7 +147,11 @@ def organization_titles(package: dict[str, Any]) -> tuple[str, str]:
     organization = package.get("organization") or {}
     if not isinstance(organization, dict):
         return localized(organization)
-    value = organization.get("title_translated") or organization.get("title") or organization.get("name")
+    value = (
+        organization.get("title_translated")
+        or organization.get("title")
+        or organization.get("name")
+    )
     return localized(value)
 
 
@@ -148,11 +167,15 @@ def walk_elements(
         conditional = inherited_conditional or bool(element.get("visibleIf"))
         next_parents = parents + ((name,) if name else ())
         if element.get("type") == "panel":
-            yield from walk_elements(element.get("elements") or [], next_parents, conditional)
+            yield from walk_elements(
+                element.get("elements") or [], next_parents, conditional
+            )
         else:
             yield element, parents, conditional
             if element.get("elements"):
-                yield from walk_elements(element.get("elements") or [], next_parents, conditional)
+                yield from walk_elements(
+                    element.get("elements") or [], next_parents, conditional
+                )
 
 
 def score_type(name: str, parents: tuple[str, ...]) -> str:
@@ -199,13 +222,22 @@ def schema_questions(schema: dict[str, Any]) -> list[QuestionMeta]:
     return questions
 
 
-def load_schemas(session: requests.Session, repo_root: Path) -> dict[str, dict[str, Any]]:
-    current = json.loads((repo_root / "src" / "survey-enfr.json").read_text(encoding="utf-8"))
+def load_schemas(
+    session: requests.Session, repo_root: Path
+) -> dict[str, dict[str, Any]]:
+    current = json.loads(
+        (repo_root / "src" / "survey-enfr.json").read_text(encoding="utf-8")
+    )
     schemas: dict[str, dict[str, Any]] = {
-        version_norm(CURRENT_VERSION): {"version": CURRENT_VERSION, "definition": current}
+        version_norm(CURRENT_VERSION): {
+            "version": CURRENT_VERSION,
+            "definition": current,
+        }
     }
     manifest = json.loads(
-        (repo_root / "src" / "generated" / "surveyVersions.json").read_text(encoding="utf-8")
+        (repo_root / "src" / "generated" / "surveyVersions.json").read_text(
+            encoding="utf-8"
+        )
     )
     for entry in manifest:
         try:
@@ -260,13 +292,20 @@ def load_published_jsons(
 ) -> list[tuple[dict[str, Any], dict[str, Any], str]]:
     loaded: list[tuple[dict[str, Any], dict[str, Any], str]] = []
     for resource in json_resource_candidates(package):
+        normalized_resource = dict(resource)
+        normalized_resource["url"] = absolute_open_canada_url(resource.get("url"))
         try:
-            value = get_json(session, resource["url"])
+            value = get_json(session, normalized_resource["url"])
         except Exception as exc:
-            print(f"WARNING: {package.get('id')} JSON {resource.get('url')} failed: {exc}")
+            print(
+                f"WARNING: {package.get('id')} JSON "
+                f"{normalized_resource.get('url')} failed: {exc}"
+            )
             continue
         if valid_survey_file(value):
-            loaded.append((resource, value, resource_locale(resource)))
+            loaded.append(
+                (normalized_resource, value, resource_locale(normalized_resource))
+            )
     return loaded
 
 
@@ -312,7 +351,9 @@ def choose_published_survey(
     if not loaded:
         return None
 
-    def base_rank(item: tuple[dict[str, Any], dict[str, Any], str]) -> tuple[int, int]:
+    def base_rank(
+        item: tuple[dict[str, Any], dict[str, Any], str]
+    ) -> tuple[int, int]:
         _resource, survey, locale = item
         translations = survey.get("translationsOnResult") or {}
         bilingual = 1 if isinstance(translations, dict) and bool(translations) else 0
@@ -320,15 +361,23 @@ def choose_published_survey(
         return (bilingual * 10 + locale_rank, len(survey.get("data") or {}))
 
     base_resource, base_survey, base_locale = max(loaded, key=base_rank)
-    french_candidates = [item for item in loaded if item[2] == "fr" and item[0].get("url") != base_resource.get("url")]
-    french_survey = max(french_candidates, key=lambda item: len(item[1].get("data") or {}))[1] if french_candidates else None
+    french_candidates = [
+        item
+        for item in loaded
+        if item[2] == "fr" and item[0].get("url") != base_resource.get("url")
+    ]
+    french_survey = (
+        max(french_candidates, key=lambda item: len(item[1].get("data") or {}))[1]
+        if french_candidates
+        else None
+    )
 
-    # If the best resource is French but an English resource exists, always use English as the data body.
     if base_locale == "fr":
         english_candidates = [item for item in loaded if item[2] == "en"]
         if english_candidates:
             base_resource, base_survey, _ = max(
-                english_candidates, key=lambda item: len(item[1].get("data") or {})
+                english_candidates,
+                key=lambda item: len(item[1].get("data") or {}),
             )
             if french_survey is None:
                 french_survey = max(
@@ -337,7 +386,11 @@ def choose_published_survey(
                 )[1]
 
     merged = merge_bilingual(base_survey, french_survey, schemas)
-    urls = [str(resource.get("url")) for resource, _, _ in loaded if resource.get("url")]
+    urls = [
+        str(resource.get("url"))
+        for resource, _, _ in loaded
+        if resource.get("url")
+    ]
     return base_resource, merged, urls
 
 
@@ -359,7 +412,11 @@ def load_recovered_survey(
     french_path = package_dir / "aia-results-fr.json"
     if english_path.exists():
         english = json.loads(english_path.read_text(encoding="utf-8"))
-        french = json.loads(french_path.read_text(encoding="utf-8")) if french_path.exists() else None
+        french = (
+            json.loads(french_path.read_text(encoding="utf-8"))
+            if french_path.exists()
+            else None
+        )
         if valid_survey_file(english):
             return merge_bilingual(english, french, schemas), str(english_path)
     return None
@@ -383,7 +440,9 @@ def max_question_score(question: QuestionMeta) -> int:
     return max(scores, default=0)
 
 
-def impact_metrics(data: dict[str, Any], questions: list[QuestionMeta]) -> dict[str, Any]:
+def impact_metrics(
+    data: dict[str, Any], questions: list[QuestionMeta]
+) -> dict[str, Any]:
     raw_risk = mitigation = max_raw = max_mitigation = 0
     for question in questions:
         if question.qtype not in CHOICE_TYPES:
@@ -446,11 +505,17 @@ def answered(value: Any) -> bool:
     return True
 
 
-def completeness_metrics(data: dict[str, Any], questions: list[QuestionMeta]) -> dict[str, Any]:
+def completeness_metrics(
+    data: dict[str, Any], questions: list[QuestionMeta]
+) -> dict[str, Any]:
     phase = project_phase(data)
-    eligible = [question for question in questions if phase_compatible(question.name, phase)]
+    eligible = [
+        question for question in questions if phase_compatible(question.name, phase)
+    ]
     nonconditional = [question for question in eligible if not question.conditional]
-    answered_all = sum(1 for question in eligible if answered(data.get(question.name)))
+    answered_all = sum(
+        1 for question in eligible if answered(data.get(question.name))
+    )
     answered_nonconditional = sum(
         1 for question in nonconditional if answered(data.get(question.name))
     )
@@ -458,7 +523,9 @@ def completeness_metrics(data: dict[str, Any], questions: list[QuestionMeta]) ->
         "project_phase": phase,
         "eligible_question_count": len(eligible),
         "answered_question_count": answered_all,
-        "completeness_pct": round(100 * answered_all / len(eligible), 2) if eligible else None,
+        "completeness_pct": (
+            round(100 * answered_all / len(eligible), 2) if eligible else None
+        ),
         "nonconditional_question_count": len(nonconditional),
         "answered_nonconditional_count": answered_nonconditional,
         "nonconditional_completeness_pct": (
@@ -485,7 +552,9 @@ def make_record(
     schemas: dict[str, dict[str, Any]],
     recovered_path: str = "",
 ) -> dict[str, Any]:
-    title_en, title_fr = localized(package.get("title_translated") or package.get("title"))
+    title_en, title_fr = localized(
+        package.get("title_translated") or package.get("title")
+    )
     org_en, org_fr = organization_titles(package)
     questions = schema_for_survey(survey, schemas)
     data = survey.get("data") or {}
@@ -501,7 +570,7 @@ def make_record(
         "organization_fr": org_fr,
         "metadata_created": package.get("metadata_created") or "",
         "metadata_modified": package.get("metadata_modified") or "",
-        "dataset_url": f"https://open.canada.ca/data/en/dataset/{package.get('id')}",
+        "dataset_url": f"{OPEN_CANADA_BASE}/data/en/dataset/{package.get('id')}",
         "source": source,
         "resource_url": resource_url,
         "resource_urls": resource_urls,
@@ -516,20 +585,30 @@ def make_record(
 
 def write_json(path: Path, value: Any) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    path.write_text(
+        json.dumps(value, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
 
 
 def write_jsonl(path: Path, records: list[dict[str, Any]]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", encoding="utf-8", newline="\n") as handle:
         for record in records:
-            handle.write(json.dumps(record, ensure_ascii=False, separators=(",", ":")) + "\n")
+            handle.write(
+                json.dumps(record, ensure_ascii=False, separators=(",", ":")) + "\n"
+            )
 
 
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--output", default="public/aia-analysis-data/aia-results.jsonl")
-    parser.add_argument("--summary-output", default="public/aia-analysis-data/aia-results-summary.json")
+    parser.add_argument(
+        "--output", default="public/aia-analysis-data/aia-results.jsonl"
+    )
+    parser.add_argument(
+        "--summary-output",
+        default="public/aia-analysis-data/aia-results-summary.json",
+    )
     parser.add_argument("--recovered-dir", default="recovered_aia_json")
     args = parser.parse_args()
 
