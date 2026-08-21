@@ -1,5 +1,8 @@
 import {
+  buildCorsProxyUrl,
+  CORS_PROXY_BASE,
   fetchSurveyFileFromUrl,
+  getSourceJsonUrl,
   parseSurveyFileText,
   validatePublicJsonUrl
 } from "@/utils/remoteSurveyFile";
@@ -32,28 +35,31 @@ describe("remote AIA result files", () => {
     ).toThrow("public HTTPS URL");
   });
 
-  it("follows redirects and uses the text fallback when direct CORS fails", async () => {
-    const directFailure = Promise.reject(new TypeError("Failed to fetch"));
-    const fallbackResponse = Promise.resolve({
+  it("loads through the configured CORS proxy", async () => {
+    const proxyResponse = Promise.resolve({
       ok: true,
       status: 200,
       statusText: "OK",
       headers: { get: () => null },
-      text: () =>
-        Promise.resolve(`Markdown Content:\n${JSON.stringify(savedFile)}`)
+      text: () => Promise.resolve(JSON.stringify(savedFile))
     });
-    const fetchMock = jest
-      .fn()
-      .mockReturnValueOnce(directFailure)
-      .mockReturnValueOnce(fallbackResponse);
+    const fetchMock = jest.fn().mockReturnValueOnce(proxyResponse);
     (window as any).fetch = fetchMock;
 
     await expect(
       fetchSurveyFileFromUrl("https://open.canada.ca/example.json")
     ).resolves.toEqual(savedFile);
     expect(fetchMock.mock.calls[0][1].redirect).toBe("follow");
-    expect(fetchMock.mock.calls[1][0]).toBe(
-      "https://r.jina.ai/https://open.canada.ca/example.json"
+    expect(fetchMock.mock.calls[0][0]).toBe(
+      `${CORS_PROXY_BASE}https%3A%2F%2Fopen.canada.ca%2Fexample.json`
     );
+  });
+
+  it("removes the proxy prefix when presenting the source URL", () => {
+    const source = "https://open.canada.ca/example.json";
+    const proxied = buildCorsProxyUrl(source);
+
+    expect(getSourceJsonUrl(proxied)).toBe(source);
+    expect(buildCorsProxyUrl(proxied)).toBe(buildCorsProxyUrl(source));
   });
 });

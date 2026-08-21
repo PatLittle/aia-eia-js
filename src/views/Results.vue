@@ -28,6 +28,7 @@
     </p>
     <form>
       <ActionButtonBar
+        ref="actionButtonBar"
         @fileLoaded="fileLoaded($event)"
         @startAgain="startAgain"
       />
@@ -156,6 +157,30 @@
           onclick="exportResults('fr')"
         >
           {{ $t("exportFrenchResults") }}
+        </button>
+
+        <button
+          type="button"
+          class="btn btn-success"
+          @click="exportStructuredData"
+        >
+          {{ $t("exportStructuredData") }}
+        </button>
+
+        <button
+          type="button"
+          class="btn btn-default"
+          @click="exportMarkdown('en')"
+        >
+          {{ $t("exportEnglishMarkdown") }}
+        </button>
+
+        <button
+          type="button"
+          class="btn btn-default"
+          @click="exportMarkdown('fr')"
+        >
+          {{ $t("exportFrenchMarkdown") }}
         </button>
       </div>
 
@@ -305,9 +330,19 @@ import SurveyFile from "@/interfaces/SurveyFile";
 import i18n from "@/plugins/i18n";
 import surveyJSON from "@/survey-enfr.json";
 import RiskArea from "@/interfaces/RiskArea";
-import { fetchSurveyFileFromUrl } from "@/utils/remoteSurveyFile";
+import {
+  fetchSurveyFileFromUrl,
+  getSourceJsonUrl
+} from "@/utils/remoteSurveyFile";
 import { hydrateSurveyModel, normalizeSurveyFile } from "@/utils/surveyFile";
 import { loadSurveyDefinition } from "@/utils/surveyVersions";
+import { elementToMarkdown } from "@/utils/markdownExport";
+
+declare global {
+  interface Window {
+    saveMarkdownFile: any;
+  }
+}
 
 @Component({
   components: {
@@ -458,6 +493,20 @@ export default class Results extends Vue {
     this.$store.commit("resetSurvey");
     this.$router.push({ path: "/" });
   }
+
+  exportStructuredData() {
+    (this.$refs.actionButtonBar as ActionButtonBar).saveSurvey();
+  }
+
+  exportMarkdown(locale: "en" | "fr") {
+    const content = document.getElementById(`${locale}-content`);
+    if (!content) return;
+    const blob = new Blob([elementToMarkdown(content)], {
+      type: "text/markdown"
+    });
+    window.saveMarkdownFile(`aia-results-${locale}.md`, blob);
+  }
+
   async fileLoaded($event: SurveyFile) {
     this.loadingMessage =
       this.$i18n.locale === "fr"
@@ -559,7 +608,7 @@ export default class Results extends Vue {
     try {
       const loadedFile = await fetchSurveyFileFromUrl(jsonUrl);
       await this.fileLoaded(loadedFile);
-      if (!this.loadError) this.loadedJsonUrl = jsonUrl;
+      if (!this.loadError) this.loadedJsonUrl = getSourceJsonUrl(jsonUrl);
     } catch (error) {
       this.loadError = error instanceof Error ? error.message : String(error);
     } finally {

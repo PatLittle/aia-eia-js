@@ -62,6 +62,10 @@
     function savePdfFile(filename, blob) {
       _saveFile(filename, "PDF", ".pdf", "application/pdf", blob);
     }
+
+    function saveMarkdownFile(filename, blob) {
+      _saveFile(filename, "Markdown", ".md", "text/markdown", blob);
+    }
     
     async function _saveFile(filename, typeDescription, typeExtension, mimeType, blob) {
       // see File System Access API for a description of saveOptions (https://web.dev/file-system-access/)

@@ -55,7 +55,10 @@ import SurveyFile from "@/interfaces/SurveyFile";
 import i18n from "@/plugins/i18n";
 import currentSurvey from "@/survey-enfr.json";
 import { hydrateSurveyModel, normalizeSurveyFile } from "@/utils/surveyFile";
-import { fetchSurveyFileFromUrl } from "@/utils/remoteSurveyFile";
+import {
+  fetchSurveyFileFromUrl,
+  getSourceJsonUrl
+} from "@/utils/remoteSurveyFile";
 import {
   CURRENT_VERSION,
   findSurveyVersion,
@@ -169,7 +172,7 @@ export default class Home extends Vue {
 
       if (loadedFile) {
         this.fileLoaded(loadedFile);
-        this.loadedJsonUrl = jsonUrl;
+        this.loadedJsonUrl = getSourceJsonUrl(jsonUrl);
       } else if (
         this.$store.getters.inProgress &&
         this.$store.state.version === this.activeVersion

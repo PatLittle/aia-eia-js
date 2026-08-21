@@ -2,6 +2,8 @@ import SurveyFile from "@/interfaces/SurveyFile";
 import { normalizeSurveyFile } from "@/utils/surveyFile";
 
 const MAX_JSON_BYTES = 10 * 1024 * 1024;
+export const CORS_PROXY_BASE =
+  "https://lovely-nasturtium-97f019.netlify.app/cors-proxy?url=";
 
 export function validatePublicJsonUrl(value: string): URL {
   const url = new URL(value);
@@ -24,6 +26,28 @@ export function validatePublicJsonUrl(value: string): URL {
     throw new Error("The json parameter must be a public HTTPS URL.");
   }
   return url;
+}
+
+export function getSourceJsonUrl(value: string): string {
+  const suppliedUrl = validatePublicJsonUrl(value);
+  const proxyUrl = new URL(CORS_PROXY_BASE);
+
+  if (
+    suppliedUrl.origin === proxyUrl.origin &&
+    suppliedUrl.pathname === proxyUrl.pathname
+  ) {
+    const sourceUrl = suppliedUrl.searchParams.get("url");
+    if (!sourceUrl) {
+      throw new Error("The CORS proxy URL does not contain a source URL.");
+    }
+    return validatePublicJsonUrl(sourceUrl).toString();
+  }
+
+  return suppliedUrl.toString();
+}
+
+export function buildCorsProxyUrl(value: string): string {
+  return `${CORS_PROXY_BASE}${encodeURIComponent(getSourceJsonUrl(value))}`;
 }
 
 async function fetchJsonText(url: string): Promise<string> {
@@ -58,21 +82,5 @@ export function parseSurveyFileText(text: string): SurveyFile {
 export async function fetchSurveyFileFromUrl(
   value: string
 ): Promise<SurveyFile> {
-  const directUrl = validatePublicJsonUrl(value).toString();
-  const candidates = [
-    directUrl,
-    `https://r.jina.ai/${directUrl}`,
-    `https://api.allorigins.win/raw?url=${encodeURIComponent(directUrl)}`
-  ];
-  let lastError: unknown;
-
-  for (const candidate of candidates) {
-    try {
-      return parseSurveyFileText(await fetchJsonText(candidate));
-    } catch (error) {
-      lastError = error;
-    }
-  }
-
-  throw lastError || new Error("Unable to download the AIA JSON file.");
+  return parseSurveyFileText(await fetchJsonText(buildCorsProxyUrl(value)));
 }
