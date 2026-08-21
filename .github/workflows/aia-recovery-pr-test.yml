@@ -5,7 +5,7 @@ on:
     branches:
       - master
     paths:
-      - "scripts/recover_aia_json_from_pdf.py"
+      - "scripts/recover_aia_json_from_pdfs.py"
       - "scripts/aia_pdf_recovery_targets.json"
       - ".github/workflows/recover-aia-json.yml"
 
@@ -33,7 +33,7 @@ jobs:
       - name: Reconstruct and validate
         run: |
           rm -rf recovery_debug recovered_aia_json
-          python scripts/recover_aia_json_from_pdf.py \
+          python scripts/recover_aia_json_from_pdfs.py \
             --output-dir recovered_aia_json \
             --debug-dir recovery_debug \
             --keep-pdfs
@@ -50,6 +50,7 @@ jobs:
             exit 0
           fi
           git commit -m "test: capture AIA recovery diagnostics"
+          git pull --rebase origin "$BRANCH_NAME"
           git push origin "HEAD:$BRANCH_NAME"
 
       - name: Upload diagnostics
