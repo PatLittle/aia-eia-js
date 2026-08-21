@@ -1,26 +1,32 @@
 [
   {
     "package_id": "eed746a8-a682-47c2-86b1-b427398fa2e2",
-    "title": "Algorithmic Impact Assessment - Export Compliance Dashboard"
+    "title": "Algorithmic Impact Assessment - Export Compliance Dashboard",
+    "expected_locales": ["en", "fr"]
   },
   {
     "package_id": "44fe9b0d-d730-43cf-ba7e-d952d55f88f2",
-    "title": "Algorithmic Impact Assessment - CBSA Assessment and Revenue Management (CARM)"
+    "title": "Algorithmic Impact Assessment - CBSA Assessment and Revenue Management (CARM)",
+    "expected_locales": ["en", "fr"]
   },
   {
     "package_id": "b8a34d1b-d27f-4506-973c-d2ea2f68c623",
-    "title": "Algorithmic Impact Assessment - CBSA Traveller Compliance Indicator"
+    "title": "Algorithmic Impact Assessment - CBSA Traveller Compliance Indicator",
+    "expected_locales": ["en", "fr"]
   },
   {
     "package_id": "89898244-aaae-4591-ba9b-fe5cd81d5924",
-    "title": "Algorithmic Impact Assessment Results - Griffeye Tool"
+    "title": "Algorithmic Impact Assessment Results - Griffeye Tool",
+    "expected_locales": ["en", "fr"]
   },
   {
     "package_id": "7612202f-1530-41ce-80c7-6e121f5fcadc",
-    "title": "Algorithmic Impact Assessments Results - Voice 2 Text application"
+    "title": "Algorithmic Impact Assessments Results - Voice 2 Text application",
+    "expected_locales": ["en", "fr"]
   },
   {
     "package_id": "c839bedc-0d5f-4b02-98a7-671d1f60ac51",
-    "title": "Algorithmic Impact Assessment - Claim Summary Tool (CST)"
+    "title": "Algorithmic Impact Assessment - Claim Summary Tool (CST)",
+    "expected_locales": ["en", "fr"]
   }
 ]
