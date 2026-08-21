@@ -1,0 +1,135 @@
+name: Validate AIA data pipeline
+
+on:
+  pull_request:
+    paths:
+      - "scripts/recover_aia_json_from_pdfs.py"
+      - "scripts/build_aia_jsonl.py"
+      - "scripts/build_aia_site_assets.py"
+      - "scripts/aia_pdf_recovery_targets.json"
+      - "aia_analysis_report.ipynb"
+      - "recovered_aia_json/**"
+      - "src/views/AnalysisReport.vue"
+      - "src/views/CompletedAias.vue"
+      - ".cspell.json"
+      - ".github/workflows/aia-data-pipeline-check.yml"
+      - ".github/workflows/recover-aia-json.yml"
+      - ".github/workflows/gh-pages-deploy.yml"
+  push:
+    branches:
+      - master
+    paths:
+      - "scripts/recover_aia_json_from_pdfs.py"
+      - "scripts/build_aia_jsonl.py"
+      - "scripts/build_aia_site_assets.py"
+      - "scripts/aia_pdf_recovery_targets.json"
+      - "aia_analysis_report.ipynb"
+      - "recovered_aia_json/**"
+      - "src/views/AnalysisReport.vue"
+      - "src/views/CompletedAias.vue"
+      - ".cspell.json"
+      - ".github/workflows/aia-data-pipeline-check.yml"
+      - ".github/workflows/recover-aia-json.yml"
+      - ".github/workflows/gh-pages-deploy.yml"
+
+jobs:
+  validate-data:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements-aia-report.txt
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install -r requirements-aia-report.txt
+          python -m pip install pymupdf rapidfuzz
+
+      - name: Validate PDF recovery and bilingual control
+        run: |
+          rm -rf .pipeline-test
+          python scripts/recover_aia_json_from_pdfs.py \
+            --output-dir .pipeline-test/recovered_aia_json \
+            --debug-dir /tmp/recovery_debug
+
+      - name: Build and validate unified bilingual JSONL
+        run: |
+          python scripts/build_aia_jsonl.py \
+            --recovered-dir .pipeline-test/recovered_aia_json \
+            --output /tmp/aia-results.jsonl \
+            --summary-output /tmp/aia-results-summary.json
+          cat /tmp/aia-results-summary.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          summary = json.loads(Path('/tmp/aia-results-summary.json').read_text())
+          records = [
+              json.loads(line)
+              for line in Path('/tmp/aia-results.jsonl').read_text(encoding='utf-8').splitlines()
+              if line.strip()
+          ]
+          by_id = {record['package_id']: record for record in records}
+          targets = json.loads(Path('scripts/aia_pdf_recovery_targets.json').read_text())
+          expected_recovered = {target['package_id'] for target in targets}
+          actual_recovered = {
+              record['package_id']
+              for record in records
+              if record.get('source') == 'recovered'
+          }
+
+          assert summary['record_count'] == summary['catalogue_count'], summary
+          assert summary['missing_count'] == 0, summary
+          assert summary['recovered_count'] == 6, summary
+          assert summary['published_count'] + summary['recovered_count'] == summary['record_count'], summary
+          assert actual_recovered == expected_recovered, (actual_recovered, expected_recovered)
+
+          for package_id in expected_recovered:
+              record = by_id[package_id]
+              assert record['data'], package_id
+              assert record['translationsOnResult'], package_id
+
+          control = by_id['eaeb269c-6ac5-4429-a5aa-1fcc07c77933']
+          assert control['source'] == 'published', control['source']
+          assert control['data'], 'published control has no data'
+          assert control['translationsOnResult'], 'published control has no French translations'
+          PY
+
+      - name: Execute JSONL-backed notebook
+        env:
+          AIA_JSONL_PATH: /tmp/aia-results.jsonl
+          AIA_REPORT_OUTPUT_DIR: /tmp/aia-report-output
+          MPLBACKEND: Agg
+        run: >-
+          jupyter nbconvert
+          --to notebook
+          --execute aia_analysis_report.ipynb
+          --output /tmp/executed-aia_analysis_report.ipynb
+          --ExecutePreprocessor.timeout=1800
+
+      - name: Validate site asset generation
+        run: |
+          mkdir -p /tmp/public
+          python scripts/build_aia_site_assets.py \
+            --jsonl /tmp/aia-results.jsonl \
+            --public-dir /tmp/public
+          test -s /tmp/public/aia-analysis-data/completed-aias.json
+
+      - name: Setup Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: "24.x"
+          cache: npm
+
+      - name: Install application dependencies
+        run: npm ci
+
+      - name: Build production application
+        run: npm run build
+        env:
+          NODE_OPTIONS: --openssl-legacy-provider

@@ -24,9 +24,18 @@ jobs:
       - name: Install report dependencies
         run: python -m pip install -r requirements-aia-report.txt
 
-      - name: Execute AIA analysis notebook
+      - name: Build unified bilingual AIA JSONL
+        run: |
+          mkdir -p public/aia-analysis-data
+          python scripts/build_aia_jsonl.py \
+            --output public/aia-analysis-data/aia-results.jsonl \
+            --summary-output public/aia-analysis-data/aia-results-summary.json \
+            --recovered-dir recovered_aia_json
+
+      - name: Execute JSONL-backed AIA analysis notebook
         env:
           AIA_REPORT_OUTPUT_DIR: ${{ github.workspace }}/report-output
+          AIA_JSONL_PATH: ${{ github.workspace }}/public/aia-analysis-data/aia-results.jsonl
           MPLBACKEND: Agg
         run: >-
           jupyter nbconvert
@@ -35,12 +44,11 @@ jobs:
           --output executed-aia_analysis_report.ipynb
           --ExecutePreprocessor.timeout=1800
 
-      - name: Add report and data to the site
+      - name: Add report data to the site
         run: |
-          mkdir -p public/aia-analysis-data
-          cp report-output/*.csv public/aia-analysis-data/
+          cp report-output/*.csv public/aia-analysis-data/ 2>/dev/null || true
           python scripts/build_aia_site_assets.py \
-            --report-dir report-output \
+            --jsonl public/aia-analysis-data/aia-results.jsonl \
             --public-dir public
 
       - name: Setup Node

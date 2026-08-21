@@ -28,9 +28,10 @@
           <tr>
             <th>{{ labels.assessment }}</th>
             <th>{{ labels.organization }}</th>
-            <th>{{ labels.published }}</th>
+            <th>{{ labels.publishedDate }}</th>
             <th>{{ labels.version }}</th>
             <th>{{ labels.impactLevel }}</th>
+            <th>{{ labels.source }}</th>
             <th>{{ labels.action }}</th>
           </tr>
         </thead>
@@ -40,12 +41,13 @@
             :key="assessment.package_id"
           >
             <td>
-              <a :href="assessment.dataset_url">{{ assessment.title }}</a>
+              <a :href="assessment.dataset_url">{{ displayTitle(assessment) }}</a>
             </td>
-            <td>{{ assessment.organization }}</td>
+            <td>{{ displayOrganization(assessment) }}</td>
             <td>{{ formatDate(assessment.publication_date) }}</td>
             <td>{{ assessment.aia_version || "—" }}</td>
             <td>{{ assessment.impact_level || "—" }}</td>
+            <td>{{ displaySource(assessment.source) }}</td>
             <td>
               <router-link
                 class="btn btn-primary btn-sm"
@@ -66,7 +68,7 @@
     </div>
 
     <p>
-      <a :href="sourceCsvUrl">{{ labels.source }}</a>
+      <a :href="sourceJsonlUrl">{{ labels.sourceData }}</a>
     </p>
   </section>
 </template>
@@ -76,13 +78,16 @@ import { Component, Vue } from "vue-property-decorator";
 
 interface CompletedAia {
   package_id: string;
-  title: string;
-  organization: string;
+  title_en: string;
+  title_fr: string;
+  organization_en: string;
+  organization_fr: string;
   publication_date: string;
   aia_version: string;
   impact_level: string;
   dataset_url: string;
   resource_url: string;
+  source: string;
 }
 
 @Component
@@ -92,15 +97,15 @@ export default class CompletedAias extends Vue {
   loading = true;
   error = "";
 
-  get sourceCsvUrl(): string {
-    return `${process.env.BASE_URL}aia-analysis-data/aia_report_assessments.csv`;
+  get sourceJsonlUrl(): string {
+    return `${process.env.BASE_URL}aia-analysis-data/aia-results.jsonl`;
   }
 
   get filteredAssessments(): CompletedAia[] {
     const query = this.filter.trim().toLowerCase();
     if (!query) return this.assessments;
     return this.assessments.filter(assessment =>
-      `${assessment.title} ${assessment.organization} ${assessment.aia_version}`
+      `${assessment.title_en} ${assessment.title_fr} ${assessment.organization_en} ${assessment.organization_fr} ${assessment.aia_version} ${assessment.source}`
         .toLowerCase()
         .includes(query)
     );
@@ -111,36 +116,60 @@ export default class CompletedAias extends Vue {
       return {
         title: "Charger une EIA terminée depuis les données ouvertes",
         introduction:
-          "Sélectionnez une EIA publiée pour afficher ses résultats dans l’outil.",
+          "Sélectionnez une EIA publiée ou reconstruite pour afficher ses résultats dans l’outil.",
         filter: "Filtrer les EIA",
-        loading: "Chargement des EIA publiées…",
+        loading: "Chargement des EIA…",
         assessment: "Évaluation",
         organization: "Organisation",
-        published: "Publication",
+        publishedDate: "Publication",
         version: "Version",
         impactLevel: "Niveau d’incidence",
+        source: "Source JSON",
+        publishedJson: "JSON publié",
+        recoveredJson: "JSON reconstruit",
         action: "Résultats",
         loadResults: "Charger les résultats",
         noMatches: "Aucune EIA ne correspond au filtre.",
-        source: "Télécharger les données sources sur les EIA"
+        sourceData: "Télécharger le jeu de données JSONL unifié"
       };
     }
     return {
       title: "Load Completed AIA from Open Data",
       introduction:
-        "Select a published AIA to display its completed results in this application.",
+        "Select a published or reconstructed AIA to display its completed results in this application.",
       filter: "Filter AIAs",
-      loading: "Loading published AIAs…",
+      loading: "Loading AIAs…",
       assessment: "Assessment",
       organization: "Organization",
-      published: "Published",
+      publishedDate: "Published",
       version: "Version",
       impactLevel: "Impact level",
+      source: "JSON source",
+      publishedJson: "Published JSON",
+      recoveredJson: "Recovered JSON",
       action: "Results",
       loadResults: "Load results",
       noMatches: "No AIAs match the filter.",
-      source: "Download the source AIA assessment data"
+      sourceData: "Download the unified JSONL dataset"
     };
+  }
+
+  displayTitle(assessment: CompletedAia): string {
+    return this.$i18n.locale === "fr"
+      ? assessment.title_fr || assessment.title_en
+      : assessment.title_en || assessment.title_fr;
+  }
+
+  displayOrganization(assessment: CompletedAia): string {
+    return this.$i18n.locale === "fr"
+      ? assessment.organization_fr || assessment.organization_en
+      : assessment.organization_en || assessment.organization_fr;
+  }
+
+  displaySource(source: string): string {
+    return source === "recovered"
+      ? this.labels.recoveredJson
+      : this.labels.publishedJson;
   }
 
   formatDate(value: string): string {
