@@ -1,0 +1,1488 @@
+{
+  "package_id": "89898244-aaae-4591-ba9b-fe5cd81d5924",
+  "package_title": "Algorithmic Impact Assessment Results - Griffeye Tool",
+  "survey_version": "v0.10.0",
+  "schema_source": "https://raw.githubusercontent.com/canada-ca/aia-eia-js/v0.10.0/src/survey-enfr.json",
+  "english_resource": {
+    "id": "dd50ce04-3150-4f26-b8ab-0ad067489593",
+    "name": "Algorithmic Impact Assessment Results - Griffeye Tool",
+    "url": "https://open.canada.ca/data/dataset/89898244-aaae-4591-ba9b-fe5cd81d5924/resource/dd50ce04-3150-4f26-b8ab-0ad067489593/download/griffeye-aia-en.pdf"
+  },
+  "french_resource": {
+    "id": "66e755f6-db6d-495d-abc0-ae798f888e53",
+    "name": "Algorithmic Impact Assessment Results - Griffeye Tool",
+    "url": "https://open.canada.ca/data/dataset/89898244-aaae-4591-ba9b-fe5cd81d5924/resource/66e755f6-db6d-495d-abc0-ae798f888e53/download/griffeye-aia_fre.pdf"
+  },
+  "english": {
+    "matched_questions": 87,
+    "schema_questions": 153,
+    "matches": [
+      {
+        "number": 1,
+        "name": "projectDetailsRespondent",
+        "type": "text",
+        "title": "Name of Respondent",
+        "match_score": 100.0,
+        "answer": "Sgt Tom Guineau",
+        "value": "Sgt Tom Guineau"
+      },
+      {
+        "number": 2,
+        "name": "projectDetailsJob",
+        "type": "text",
+        "title": "Job Title",
+        "match_score": 100.0,
+        "answer": "Technical Manager",
+        "value": "Technical Manager"
+      },
+      {
+        "number": 3,
+        "name": "projectDetailsDepartment-NS",
+        "type": "dropdown",
+        "title": "Department",
+        "match_score": 100.0,
+        "answer": "Royal Canadian Mounted Police",
+        "value": "030"
+      },
+      {
+        "number": 4,
+        "name": "projectDetailsBranch",
+        "type": "text",
+        "title": "Branch",
+        "match_score": 100.0,
+        "answer": "NHQ/Tech Ops/SSIS/NCECC/Tech Unit",
+        "value": "NHQ/Tech Ops/SSIS/NCECC/Tech Unit"
+      },
+      {
+        "number": 5,
+        "name": "projectDetailsTitle",
+        "type": "text",
+        "title": "Project Title",
+        "match_score": 100.0,
+        "answer": "Griffeye",
+        "value": "Griffeye"
+      },
+      {
+        "number": 6,
+        "name": "projectDetailsID",
+        "type": "text",
+        "title": "Project ID from IT Plan",
+        "match_score": 100.0,
+        "answer": "Griffeye CS and Di Pro",
+        "value": "Griffeye CS and Di Pro"
+      },
+      {
+        "number": 7,
+        "name": "projectDetailsProgram",
+        "type": "text",
+        "title": "Departmental Program (from Department Results Framework)",
+        "match_score": 100.0,
+        "answer": "Griffeye CS and Di Pro",
+        "value": "Griffeye CS and Di Pro"
+      },
+      {
+        "number": 8,
+        "name": "projectDetailsPhase",
+        "type": "radiogroup",
+        "title": "Project Phase",
+        "match_score": 100.0,
+        "answer": "Implementation                                                                                                           [ Points: 0 ]",
+        "value": "item2"
+      },
+      {
+        "number": 9,
+        "name": "projectDetailsDescription",
+        "type": "comment",
+        "title": "Please provide a project description:",
+        "match_score": 100.0,
+        "answer": "SOFTWARE already in Use - Tool designed to assist in the categorization/\nclassification of Child Exploitation images and Videos. It ingests media\nderived from Seized Exhibits, Submissions from partners (NCMEC, CyberTip\nand other Law Enforcement Agencies et al) and presents all of the media and\nassociated embedded meta data (EXIF etc) into a workspace where\nCategories per Sec 163 of the Criminal Code can be applied, media can be\ngrouped together using various filters, and pre-categorization performed\nagainst hash databases of known material. This tool does offer the ability to\nuse an AI implementation to evaluate images and videos and determine\nwhether Child Pornography is present by applying trained Classifiers to group\nmedia together for human review. This AI function is also able to Face Match\n(not Face Recognize) against other media contained within the workspace to\nattempt to group individuals with similar characteristics together. The inbuilt\nFace Matching feature can be used and does not reach out to other systems\nin order to resolve a face to a specific identifiable individual. Once work is\ncomplete, the Hashes and associated meta data can be exported to share out\nto other compatible tools using the PVIC Format, and shared as appropriate/\nauthorized.\n\nAbout The System",
+        "value": "SOFTWARE already in Use - Tool designed to assist in the categorization/\nclassification of Child Exploitation images and Videos. It ingests media\nderived from Seized Exhibits, Submissions from partners (NCMEC, CyberTip\nand other Law Enforcement Agencies et al) and presents all of the media and\nassociated embedded meta data (EXIF etc) into a workspace where\nCategories per Sec 163 of the Criminal Code can be applied, media can be\ngrouped together using various filters, and pre-categorization performed\nagainst hash databases of known material. This tool does offer the ability to\nuse an AI implementation to evaluate images and videos and determine\nwhether Child Pornography is present by applying trained Classifiers to group\nmedia together for human review. This AI function is also able to Face Match\n(not Face Recognize) against other media contained within the workspace to\nattempt to group individuals with similar characteristics together. The inbuilt\nFace Matching feature can be used and does not reach out to other systems\nin order to resolve a face to a specific identifiable individual. Once work is\ncomplete, the Hashes and associated meta data can be exported to share out\nto other compatible tools using the PVIC Format, and shared as appropriate/\nauthorized.\n\nAbout The System"
+      },
+      {
+        "number": 10,
+        "name": "aboutSystem1",
+        "type": "checkbox",
+        "title": "Please check which of the following capabilities apply to your system.",
+        "match_score": 100.0,
+        "answer": "Image and object recognition: Analyzing very large data sets to automate the\nrecognition, classification, and context associated with an image or object.\nContent generation: Analyzing large data sets to categorize, process, triage,\npersonalize, and serve specific content for specific contexts\nRisk assessment: Analyzing very large data sets to identify patterns and\nrecommend courses of action and in some cases trigger specific actions\n\n\nCurrent Score: 39\n\nRaw Impact Score: 39\n\nMitigation Score: 16\nPeer review\n\nConsult at least one of the following experts and publish the complete review or a plain language\nsummary of the findings on a Government of Canada website:\n\n    qualified expert from a federal, provincial, territorial or municipal government institution\n    qualified members of faculty of a post-secondary institution\n    qualified researchers from a relevant non-governmental organization\n   contracted third-party vendor with a relevant specialization\n   a data and automation advisory board specified by Treasury Board of Canada Secretariat.\n\nOR\n\nPublish specifications of the automated decision system in a peer-reviewed journal. Where\naccess to the published review is restricted, ensure that a plain language summary of the\nfindings is openly available.\nGender-based Analysis Plus\n\nEnsure that the Gender-based Analysis Plus addresses the following issues:\n\n   impacts of the automation project (including the system, data and decision) on gender and/or\n   other identity factors;\n   planned or existing measures to address risks identified through the Gender-based Analysis\n   Plus.\nNotice\n\nPlain language notice posted through all service delivery channels in use (Internet, in person,\nmail or telephone).\nHuman-in-the-loop for decisions\n\nDecisions may be rendered without direct human involvement.\nExplanation\n\nIn addition to any applicable legal requirement, ensure that a meaningful explanation is provided\nto the client with any decision that results in the denial of a benefit or service, or involves a\nregulatory action. The explanation must inform the client in plain language of:\n\n   the role of the system in the decision-making process;\n   the training and client data, their source, and method of collection, as applicable;\n   the criteria used to evaluate client data and the operations applied to process it;\n   the output produced by the system and any relevant information needed to interpret it in the\n   context of the administrative decision; and\n   a justification of the administrative decision, including the principal factors that led to it.\n\nExplanations must also inform clients of relevant recourse options, where appropriate.\n\nA general description of these elements must also be made available through the Algorithmic\nImpact Assessment and discoverable via a departmental website.\nTraining\n\nDocumentation on the design and functionality of the system.\nIT and business continuity management\n\nNone\nApproval for the system to operate\n\nNone\nOther requirements\n\nThe Directive on Automated Decision-Making also includes other requirements that must be met\nfor all impact levels.\n\nLink to the Directive on Automated Decision-Making\n\nContact your institution's ATIP office to discuss the requirement for a Privacy Impact\nAssessment as per the Directive on Privacy Impact Assessment.\nReasons for Automation\n1. What is motivating your team to introduce automation into this decision-making process?\n(Check all that apply)\nImprove overall quality of decisions\nThe system is performing tasks that humans could not accomplish in a\nreasonable period of time\nUse innovative approaches\nExisting backlog of work or cases\nLower transaction costs of an existing program\nOther (please specify)",
+        "value": [
+          "item1",
+          "item3",
+          "item4",
+          "item6"
+        ]
+      },
+      {
+        "number": 2,
+        "name": "aboutSystem2",
+        "type": "comment",
+        "title": "Please describe",
+        "match_score": 100.0,
+        "answer": "With respect to Child Pornography and sexual abuse videos and images,\nhuman review and decision making is always required to quickly identify,\nlocate and safeguard children being victimized. With the average single case\ncontaining in excess of 3 million media items to review, such tools are\nemployed in order to identify which media has been reviewed or investigated\npreviously, and then group 'new media' together for the human review and\nmore quickly determine police response/rescue. By removing the need to\nreview the exact same horrific media over and over again not only adds\nefficiency to safeguarding children, it lends itself to protecting the\ninvestigator's health and well-being through unnecessary exposure.\n\n3. What client needs will the system address and how will this system meet them? If possible,\ndescribe how client needs have been identified.\nThere are several clients involved; primarily the victimized and abused\nchildren need to be identified, located and safeguarded from the abusive\nsituation regardless of location in the world as soon as possible. If the scant\nlaw enforcement resources spend their time reviewing non-relevant or non-\nurgent materials it would delay discovery of the abuse for months or years,\nleaving the victim to be further abused despite the organization having timely\ninformation to save them in hand. Such systems aid in prioritizing media for\nhuman review in order to determine the likelihood of a child being currently at\nrisk.\n\n4. Please describe any public benefits the system is expected to have.\nFurther to above, the public has an expectation that law enforcement will act\non information and safeguard people in a timely manner. If 911 call would\ntake weeks to garner a response, public safety would be in jeopardy as would\ntrust in the ability to provide security of the person. Such systems that aid in\norganizing data in a manner in which vulnerable persons are more quickly\noffered aid is a no-brainer.\n\n5. How effective will the system likely be in meeting client needs?\nVery effective                                                                                                               [ Points: +0 ]\n\n6. Please describe any improvements, benefits, or advantages you expect from using an\nautomated system. This could include relevant program indicators and performance targets.\nGriffeye Analyze is one of very few niche tools available that addresses\ncategorizing media related to Child Pornography investigations. The benefits\nof using such tools are:\n- more quickly identify, investigate and locate/safeguard children at risk\n- ease of evidence and intelligence sharing with external and internal partners,\nas these tools utilize a standardized format in order to export/import data\n- reduces psychological injury and grief to investigators by reducing the\namount of trauma they are continuously exposed to\n- ability to provide prosecutors with factual data as to the severity and scope\nof media collections by offenders\n- be able to provide statistical data to government to convey the scope of\nabuse and the associate police response\n7. Please describe how you will ensure that the system is confined to addressing the client\nneeds identified above.\nGriffeye Analyze is designed for media categorization specifically for this\npurpose ( as are other competitive niche solutions ), and as such is purpose\nbuilt with these needs in mind.\n\n8. Please describe any trade-offs between client interests and program objectives that you have\nconsidered during the design of the project.\nNone\n\n9. Have alternative non-automated processes been considered?\nYes                                                                                                                                [ Points: +0 ]\n\n10. If non-automated processes were considered, why was automation identified as the\npreferred option?\nHistorically, investigators would physically print off images of abuse\noriginating from floppy disk drives and other digital storage, which resulted in\nfew media items requiring human review and evaluation. With the advent of\nmass digital storage and the availability of high speed internet, the production,\ntransmission and collection of videos and images are near instant and often\nresult in a single investigation containing on average in excess of 2-3 million\nmedia items to be reviewed (numerous computers, cellphones, tablets and\nother common devices with large storage and connectivity can be found in\neveryone's residences). The need to human review and evaluate each video or\nimage cannot be sustained by one person if they were to review each abuse\nimage, each Windows logo or Amazon listing over and over again if they have\nalready been seen in the past. Without digital processing and analysis of\nmedia that can identify previously seen content or the ability to group media\ntogether with various commonalities (same camera, same computer user,\nsame website et al), an investigator would take a month just to evaluate and\nrisk assess one case, let alone all of the reports that are submitted on a daily\nbasis.\n\n11. What would be the consequence of not deploying the system?\nService cannot be delivered in a timely or efficient manner                                     [ Points: +2 ]\nService costs are too high                                                                                          [ Points: 0 ]\nService quality is not as high                                                                                      [ Points: 0 ]\nService delivery cannot achieve performance targets                                              [ Points: 0 ]\nOther (please specify)                                                                                                 [ Points: 0 ]\n\n12. Please describe\nChildren will continue to be filmed while being sexually assaulted or tortured\ndue to delays in evaluating and prioritizing media under investigation.\n\nRisk Profile\n13. Is the project within an area of intense public scrutiny (e.g. because of privacy concerns)\nand/or frequent litigation?\nNo                                                                                                                                 [ Points: +0 ]\n\n14. Are clients in this line of business particularly vulnerable?\nYes                                                                                                                                [ Points: +3 ]",
+        "value": "With respect to Child Pornography and sexual abuse videos and images,\nhuman review and decision making is always required to quickly identify,\nlocate and safeguard children being victimized. With the average single case\ncontaining in excess of 3 million media items to review, such tools are\nemployed in order to identify which media has been reviewed or investigated\npreviously, and then group 'new media' together for the human review and\nmore quickly determine police response/rescue. By removing the need to\nreview the exact same horrific media over and over again not only adds\nefficiency to safeguarding children, it lends itself to protecting the\ninvestigator's health and well-being through unnecessary exposure.\n\n3. What client needs will the system address and how will this system meet them? If possible,\ndescribe how client needs have been identified.\nThere are several clients involved; primarily the victimized and abused\nchildren need to be identified, located and safeguarded from the abusive\nsituation regardless of location in the world as soon as possible. If the scant\nlaw enforcement resources spend their time reviewing non-relevant or non-\nurgent materials it would delay discovery of the abuse for months or years,\nleaving the victim to be further abused despite the organization having timely\ninformation to save them in hand. Such systems aid in prioritizing media for\nhuman review in order to determine the likelihood of a child being currently at\nrisk.\n\n4. Please describe any public benefits the system is expected to have.\nFurther to above, the public has an expectation that law enforcement will act\non information and safeguard people in a timely manner. If 911 call would\ntake weeks to garner a response, public safety would be in jeopardy as would\ntrust in the ability to provide security of the person. Such systems that aid in\norganizing data in a manner in which vulnerable persons are more quickly\noffered aid is a no-brainer.\n\n5. How effective will the system likely be in meeting client needs?\nVery effective                                                                                                               [ Points: +0 ]\n\n6. Please describe any improvements, benefits, or advantages you expect from using an\nautomated system. This could include relevant program indicators and performance targets.\nGriffeye Analyze is one of very few niche tools available that addresses\ncategorizing media related to Child Pornography investigations. The benefits\nof using such tools are:\n- more quickly identify, investigate and locate/safeguard children at risk\n- ease of evidence and intelligence sharing with external and internal partners,\nas these tools utilize a standardized format in order to export/import data\n- reduces psychological injury and grief to investigators by reducing the\namount of trauma they are continuously exposed to\n- ability to provide prosecutors with factual data as to the severity and scope\nof media collections by offenders\n- be able to provide statistical data to government to convey the scope of\nabuse and the associate police response\n7. Please describe how you will ensure that the system is confined to addressing the client\nneeds identified above.\nGriffeye Analyze is designed for media categorization specifically for this\npurpose ( as are other competitive niche solutions ), and as such is purpose\nbuilt with these needs in mind.\n\n8. Please describe any trade-offs between client interests and program objectives that you have\nconsidered during the design of the project.\nNone\n\n9. Have alternative non-automated processes been considered?\nYes                                                                                                                                [ Points: +0 ]\n\n10. If non-automated processes were considered, why was automation identified as the\npreferred option?\nHistorically, investigators would physically print off images of abuse\noriginating from floppy disk drives and other digital storage, which resulted in\nfew media items requiring human review and evaluation. With the advent of\nmass digital storage and the availability of high speed internet, the production,\ntransmission and collection of videos and images are near instant and often\nresult in a single investigation containing on average in excess of 2-3 million\nmedia items to be reviewed (numerous computers, cellphones, tablets and\nother common devices with large storage and connectivity can be found in\neveryone's residences). The need to human review and evaluate each video or\nimage cannot be sustained by one person if they were to review each abuse\nimage, each Windows logo or Amazon listing over and over again if they have\nalready been seen in the past. Without digital processing and analysis of\nmedia that can identify previously seen content or the ability to group media\ntogether with various commonalities (same camera, same computer user,\nsame website et al), an investigator would take a month just to evaluate and\nrisk assess one case, let alone all of the reports that are submitted on a daily\nbasis.\n\n11. What would be the consequence of not deploying the system?\nService cannot be delivered in a timely or efficient manner                                     [ Points: +2 ]\nService costs are too high                                                                                          [ Points: 0 ]\nService quality is not as high                                                                                      [ Points: 0 ]\nService delivery cannot achieve performance targets                                              [ Points: 0 ]\nOther (please specify)                                                                                                 [ Points: 0 ]\n\n12. Please describe\nChildren will continue to be filmed while being sexually assaulted or tortured\ndue to delays in evaluating and prioritizing media under investigation.\n\nRisk Profile\n13. Is the project within an area of intense public scrutiny (e.g. because of privacy concerns)\nand/or frequent litigation?\nNo                                                                                                                                 [ Points: +0 ]\n\n14. Are clients in this line of business particularly vulnerable?\nYes                                                                                                                                [ Points: +3 ]"
+      },
+      {
+        "number": 15,
+        "name": "riskProfile5",
+        "type": "radiogroup",
+        "title": "Will the use of the system create or exacerbate barriers for persons with disabilities?",
+        "match_score": 96.0,
+        "answer": "",
+        "value": null
+      },
+      {
+        "number": 16,
+        "name": "riskProfile4",
+        "type": "radiogroup",
+        "title": "Will this project have major impacts on staff, either in terms of their numbers or their roles?",
+        "match_score": 100.0,
+        "answer": "Yes                                                                                                                                [ Points: +3 ]",
+        "value": "item1-3"
+      },
+      {
+        "number": 17,
+        "name": "riskProfile5",
+        "type": "radiogroup",
+        "title": "Will the use of the system create or exacerbate barriers for persons with disabilities?",
+        "match_score": 100.0,
+        "answer": "No                                                                                                                                 [ Points: +0 ]\n\nProject Authority",
+        "value": "item2-0"
+      },
+      {
+        "number": 18,
+        "name": "projectAuthority1",
+        "type": "radiogroup",
+        "title": "Will you require new policy authority for this project?",
+        "match_score": 100.0,
+        "answer": "No                                                                                                                                 [ Points: +0 ]\n\nAbout the Algorithm",
+        "value": "item2-0"
+      },
+      {
+        "number": 19,
+        "name": "aboutAlgorithm1",
+        "type": "radiogroup",
+        "title": "The algorithm used will be a (trade) secret",
+        "match_score": 100.0,
+        "answer": "No                                                                                                                                 [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 20,
+        "name": "aboutAlgorithm2",
+        "type": "radiogroup",
+        "title": "The algorithmic process will be difficult to interpret or to explain",
+        "match_score": 100.0,
+        "answer": "No                                                                                                                                 [ Points: +0 ]\n\nAbout the Decision",
+        "value": "item2-0"
+      },
+      {
+        "number": 21,
+        "name": "decisionSector3",
+        "type": "comment",
+        "title": "Please describe the decision(s) that will be automated.",
+        "match_score": 100.0,
+        "answer": "The tool has the ability to group media together in a number of ways that are\nnot AI driven (group by exif, file path, binary hash matching et al) but can also\nhave the feature of leveraging additional modules of ML to group images/\nvideos together if they contain children, various sexual assault acts or levels\nof nudity. The decisions are to group media together and flag them to the\ninvestigator in order to prioritize their manual human review and evaluation -\nso effectively, the final decision always resides with the person operating the\ntool. The AI is to assist in more quickly locating media that contains elements\nof children and sexual abuse among masses of unrelated media such as\ninternet web page media, operating system images and other more legitimate\nmedia.",
+        "value": "The tool has the ability to group media together in a number of ways that are\nnot AI driven (group by exif, file path, binary hash matching et al) but can also\nhave the feature of leveraging additional modules of ML to group images/\nvideos together if they contain children, various sexual assault acts or levels\nof nudity. The decisions are to group media together and flag them to the\ninvestigator in order to prioritize their manual human review and evaluation -\nso effectively, the final decision always resides with the person operating the\ntool. The AI is to assist in more quickly locating media that contains elements\nof children and sexual abuse among masses of unrelated media such as\ninternet web page media, operating system images and other more legitimate\nmedia."
+      },
+      {
+        "number": 22,
+        "name": "decisionSector1",
+        "type": "checkbox",
+        "title": "Does the decision pertain to any of the categories below (check all that apply):",
+        "match_score": 100.0,
+        "answer": "Other (please specify)                                                                                                 [ Points: +1 ]",
+        "value": [
+          "item6-1"
+        ]
+      },
+      {
+        "number": 23,
+        "name": "aboutSystem2",
+        "type": "comment",
+        "title": "Please describe",
+        "match_score": 100.0,
+        "answer": "The decisions more quickly identify Child Pornography media content within\nmass digital storage, in order to prioritize their human review.\n\nImpact Assessment",
+        "value": "The decisions more quickly identify Child Pornography media content within\nmass digital storage, in order to prioritize their human review.\n\nImpact Assessment"
+      },
+      {
+        "number": 24,
+        "name": "impact30",
+        "type": "radiogroup",
+        "title": "Which of the following best describes the type of automation you are planning?",
+        "match_score": 100.0,
+        "answer": "Partial automation (the system will contribute to administrative decision-\nmaking by supporting an officer through assessments, recommendations,\nintermediate decisions, or other outputs)                                                                  [ Points: +2 ]",
+        "value": "item2-2"
+      },
+      {
+        "number": 25,
+        "name": "impact31",
+        "type": "comment",
+        "title": "Please describe the role of the system in the decision-making process.",
+        "match_score": 100.0,
+        "answer": "Please refer to previous information",
+        "value": "Please refer to previous information"
+      },
+      {
+        "number": 26,
+        "name": "impact3",
+        "type": "radiogroup",
+        "title": "Will the system be making decisions or assessments that require judgement or discretion?",
+        "match_score": 100.0,
+        "answer": "No                                                                                                                                 [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 27,
+        "name": "impact20",
+        "type": "comment",
+        "title": "Please describe the criteria used to evaluate client data and the operations applied to process it.",
+        "match_score": 100.0,
+        "answer": "The system (when using any AI feature) attempts to examine the content of\nimages or videos to determine if certain visual or behavioral elements exist\nwithin (ie - is there a child present? Is there an adult? is there a sexual act\noccurring? is there genetalia present et al). Media containing selected\nelements is flagged and brought to the operator's attention as the prudent\nstarting point to determine if Child Pornography is present within that set of\nmedia items.",
+        "value": "The system (when using any AI feature) attempts to examine the content of\nimages or videos to determine if certain visual or behavioral elements exist\nwithin (ie - is there a child present? Is there an adult? is there a sexual act\noccurring? is there genetalia present et al). Media containing selected\nelements is flagged and brought to the operator's attention as the prudent\nstarting point to determine if Child Pornography is present within that set of\nmedia items."
+      },
+      {
+        "number": 28,
+        "name": "impact21",
+        "type": "comment",
+        "title": "Please describe the output produced by the system and any relevant information needed to interpret it in the context of the administrative decision.",
+        "match_score": 100.0,
+        "answer": "The output results in media being flagged as a priority for human review,\nwhere an investigator can then watch the video or look at the image to\nascertain and confirm whether the content/context therein is Child\nPornography as defined by the Criminal Code, and thus decide if there is\ncurrent risk to a person/persons requiring immediate intervention",
+        "value": "The output results in media being flagged as a priority for human review,\nwhere an investigator can then watch the video or look at the image to\nascertain and confirm whether the content/context therein is Child\nPornography as defined by the Criminal Code, and thus decide if there is\ncurrent risk to a person/persons requiring immediate intervention"
+      },
+      {
+        "number": 29,
+        "name": "impact22",
+        "type": "radiogroup",
+        "title": "Will the system perform an assessment or other operation that would not otherwise be completed by a human?",
+        "match_score": 100.0,
+        "answer": "No                                                                                                                                 [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 30,
+        "name": "impact5",
+        "type": "radiogroup",
+        "title": "Is the system used by a different part of the organization than the ones who developed it?",
+        "match_score": 100.0,
+        "answer": "No                                                                                                                                 [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 31,
+        "name": "impact6",
+        "type": "dropdown",
+        "title": "Are the impacts resulting from the decision reversible?",
+        "match_score": 100.0,
+        "answer": "Reversible                                                                                                                    [ Points: +1 ]",
+        "value": "item1-1"
+      },
+      {
+        "number": 32,
+        "name": "impact7",
+        "type": "dropdown",
+        "title": "How long will impacts from the decision last?",
+        "match_score": 100.0,
+        "answer": "Impacts are most likely to be brief                                                                             [ Points: +1 ]",
+        "value": "item1-1"
+      },
+      {
+        "number": 33,
+        "name": "impact8",
+        "type": "comment",
+        "title": "Please describe why the impacts resulting from the decision are as per selected option above.",
+        "match_score": 100.0,
+        "answer": "The impact is that the AI is not the final decision as it rests with the human\noperator. The AI functions as an aid and not an authoritative role within the\ninvestigative process.",
+        "value": "The impact is that the AI is not the final decision as it rests with the human\noperator. The AI functions as an aid and not an authoritative role within the\ninvestigative process."
+      },
+      {
+        "number": 34,
+        "name": "impact9",
+        "type": "dropdown",
+        "title": "The impacts that the decision will have on the rights or freedoms of individuals will likely be:",
+        "match_score": 100.0,
+        "answer": "Little to no impact                                                                                                       [ Points: +1 ]",
+        "value": "item1-1"
+      },
+      {
+        "number": 35,
+        "name": "impact8",
+        "type": "comment",
+        "title": "Please describe why the impacts resulting from the decision are as per selected option above.",
+        "match_score": 100.0,
+        "answer": "The AI functions as an aid and not an authoritative role within the investigative\nprocess.",
+        "value": "The AI functions as an aid and not an authoritative role within the investigative\nprocess."
+      },
+      {
+        "number": 36,
+        "name": "impact24",
+        "type": "dropdown",
+        "title": "The impacts that the decision will have on the equality, dignity, privacy, and autonomy of individuals will likely be:",
+        "match_score": 100.0,
+        "answer": "Little to no impact                                                                                                       [ Points: +1 ]",
+        "value": "item1-1"
+      },
+      {
+        "number": 37,
+        "name": "impact8",
+        "type": "comment",
+        "title": "Please describe why the impacts resulting from the decision are as per selected option above.",
+        "match_score": 100.0,
+        "answer": "The AI functions as an aid and not an authoritative role within the investigative\nprocess.",
+        "value": "The AI functions as an aid and not an authoritative role within the investigative\nprocess."
+      },
+      {
+        "number": 38,
+        "name": "impact11",
+        "type": "dropdown",
+        "title": "The impacts that the decision will have on the health and well-being of individuals will likely be:",
+        "match_score": 100.0,
+        "answer": "Little to no impact                                                                                                       [ Points: +1 ]",
+        "value": "item1-1"
+      },
+      {
+        "number": 39,
+        "name": "impact10",
+        "type": "comment",
+        "title": "Please describe why the impacts resulting from the decision are as per selected option above.",
+        "match_score": 100.0,
+        "answer": "The AI functions as an aid and not an authoritative role within the investigative\nprocess. However, the use of the tool will reduce the time in safeguarding\nchildren being sexually assaulted or tortured, which in turn is to the overall\nbenefit to the victim if rescue were to occur as sooner rather than later. As\nwell, a reduction in the repetitive traumatic exposure by investigators to such\nmedia will benefit their well being.",
+        "value": "The AI functions as an aid and not an authoritative role within the investigative\nprocess. However, the use of the tool will reduce the time in safeguarding\nchildren being sexually assaulted or tortured, which in turn is to the overall\nbenefit to the victim if rescue were to occur as sooner rather than later. As\nwell, a reduction in the repetitive traumatic exposure by investigators to such\nmedia will benefit their well being."
+      },
+      {
+        "number": 40,
+        "name": "impact13",
+        "type": "dropdown",
+        "title": "The impacts that the decision will have on the economic interests of individuals will likely be:",
+        "match_score": 100.0,
+        "answer": "Little to no impact                                                                                                       [ Points: +1 ]",
+        "value": "item1-1"
+      },
+      {
+        "number": 41,
+        "name": "impact25",
+        "type": "comment",
+        "title": "Please describe why the impacts resulting from the decision are as per selected option above.",
+        "match_score": 100.0,
+        "answer": "The AI functions as an aid and not an authoritative role within the investigative\nprocess.",
+        "value": "The AI functions as an aid and not an authoritative role within the investigative\nprocess."
+      },
+      {
+        "number": 42,
+        "name": "impact15",
+        "type": "dropdown",
+        "title": "The impacts that the decision will have on the ongoing sustainability of an environmental ecosystem, will likely be:",
+        "match_score": 100.0,
+        "answer": "Little to no impact                                                                                                       [ Points: +1 ]",
+        "value": "item1-1"
+      },
+      {
+        "number": 43,
+        "name": "impact12",
+        "type": "comment",
+        "title": "Please describe why the impacts resulting from the decision are as per selected option above.",
+        "match_score": 100.0,
+        "answer": "The AI functions as an aid and not an authoritative role within the investigative\nprocess.\n\nAbout the Data - A. Data Source",
+        "value": "The AI functions as an aid and not an authoritative role within the investigative\nprocess.\n\nAbout the Data - A. Data Source"
+      },
+      {
+        "number": 44,
+        "name": "aboutDataSource1",
+        "type": "radiogroup",
+        "title": "Will the Automated Decision System use personal information as input data?",
+        "match_score": 100.0,
+        "answer": "No                                                                                                                                 [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 45,
+        "name": "aboutDataSource2",
+        "type": "dropdown",
+        "title": "What is the highest security classification of the input data used by the system? (Select one)",
+        "match_score": 100.0,
+        "answer": "Protected B / Protected C                                                                                           [ Points: +3 ]",
+        "value": "item4-3"
+      },
+      {
+        "number": 46,
+        "name": "aboutDataSource3",
+        "type": "dropdown",
+        "title": "Who controls the data?",
+        "match_score": 100.0,
+        "answer": "Federal government                                                                                                    [ Points: +1 ]",
+        "value": "item2-1"
+      },
+      {
+        "number": 47,
+        "name": "aboutDataSource4",
+        "type": "radiogroup",
+        "title": "Will the system use data from multiple different sources?",
+        "match_score": 100.0,
+        "answer": "Yes                                                                                                                                [ Points: +4 ]",
+        "value": "item1-4"
+      },
+      {
+        "number": 48,
+        "name": "aboutDataSource5",
+        "type": "radiogroup",
+        "title": "Will the system require input data from an Internet- or telephony-connected device? (e.g. Internet of Things, sensor)",
+        "match_score": 100.0,
+        "answer": "No                                                                                                                                 [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 49,
+        "name": "aboutDataSource6",
+        "type": "radiogroup",
+        "title": "Will the system interface with other IT systems?",
+        "match_score": 100.0,
+        "answer": "Yes                                                                                                                                [ Points: +4 ]",
+        "value": "item1-4"
+      },
+      {
+        "number": 50,
+        "name": "aboutDataSource7",
+        "type": "dropdown",
+        "title": "Who collected the data used for training the system?",
+        "match_score": 100.0,
+        "answer": "A foreign government or non-government third party                                               [ Points: +4 ]",
+        "value": "item4-4"
+      },
+      {
+        "number": 51,
+        "name": "aboutDataSource8",
+        "type": "dropdown",
+        "title": "Who collected the input data used by the system?",
+        "match_score": 100.0,
+        "answer": "Your institution                                                                                                            [ Points: +1 ]",
+        "value": "item1-1"
+      },
+      {
+        "number": 52,
+        "name": "aboutDataSource13",
+        "type": "comment",
+        "title": "Please describe the input data collected and used by the system, its source, and method of collection.",
+        "match_score": 100.0,
+        "answer": "Input data (Images and Videos) consists of evidence submitted by Police,\nNGOs and other industry as a function of reporting a criminal offence. It can\ncome by way of police seizure (Judicial Authorizations) or submitted via third\nparty (CyberTip, NCMEC, Industry Reporting). Some is collected forensically,\nsome electronically by the party that received it or as it traverses their IT\nsystems and flagged for reporting to police. Police agencies receive such\nmedia either directly from victims/complainants or via assistance requests\nfrom other LE agencies\n\nAbout the Data - B. Type of Data",
+        "value": "Input data (Images and Videos) consists of evidence submitted by Police,\nNGOs and other industry as a function of reporting a criminal offence. It can\ncome by way of police seizure (Judicial Authorizations) or submitted via third\nparty (CyberTip, NCMEC, Industry Reporting). Some is collected forensically,\nsome electronically by the party that received it or as it traverses their IT\nsystems and flagged for reporting to police. Police agencies receive such\nmedia either directly from victims/complainants or via assistance requests\nfrom other LE agencies\n\nAbout the Data - B. Type of Data"
+      },
+      {
+        "number": 53,
+        "name": "aboutDataType1",
+        "type": "radiogroup",
+        "title": "Will the system require the analysis of unstructured data to render a recommendation or a decision?",
+        "match_score": 100.0,
+        "answer": "No                                                                                                                                 [ Points: 0 ]\n\nConsultations",
+        "value": "item2"
+      },
+      {
+        "number": 1,
+        "name": "consultationDesign1",
+        "type": "radiogroup",
+        "title": "Internal Stakeholders (federal institutions, including the federal public service)",
+        "match_score": 100.0,
+        "answer": "Yes                                                                                                                                [ Points: +1 ]",
+        "value": "item1-1"
+      },
+      {
+        "number": 2,
+        "name": "consultationImplementation2",
+        "type": "checkbox",
+        "title": "Which Internal Stakeholders have you engaged?",
+        "match_score": 100.0,
+        "answer": "Strategic Policy and Planning\nData Governance\nLegal Services\nAccess to Information and Privacy Office\nProgram Policy",
+        "value": [
+          "item2",
+          "item3",
+          "item4",
+          "item5",
+          "item6"
+        ]
+      },
+      {
+        "number": 3,
+        "name": "consultationDesign3",
+        "type": "radiogroup",
+        "title": "External Stakeholders (groups in other sectors or jurisdictions)",
+        "match_score": 100.0,
+        "answer": "Yes                                                                                                                                [ Points: +1 ]",
+        "value": "item1-1"
+      },
+      {
+        "number": 4,
+        "name": "consultationImplementation4",
+        "type": "checkbox",
+        "title": "Which External Stakeholders have you engaged?",
+        "match_score": 100.0,
+        "answer": "Academia\nIndustry\nGovernments in other Jurisdictions\nInternational Organizations\n\nDe-Risking and Mitigation Measures - Data Quality",
+        "value": [
+          "item7",
+          "item8",
+          "item12",
+          "item13"
+        ]
+      },
+      {
+        "number": 5,
+        "name": "dataQualityImplementation1",
+        "type": "radiogroup",
+        "title": "Do you have documented processes in place to test datasets against biases and other unexpected outcomes? This could include experience in applying frameworks, methods, guidelines or other assessment tools.",
+        "match_score": 100.0,
+        "answer": "No                                                                                                                                 [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 6,
+        "name": "dataQualityImplementation2",
+        "type": "radiogroup",
+        "title": "Is this information publicly available?",
+        "match_score": 100.0,
+        "answer": "No                                                                                                                                 [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 7,
+        "name": "dataQualityImplementation3",
+        "type": "radiogroup",
+        "title": "Have you developed a process to document how data quality issues were resolved during the design process?",
+        "match_score": 100.0,
+        "answer": "No                                                                                                                                 [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 8,
+        "name": "dataQualityImplementation2",
+        "type": "radiogroup",
+        "title": "Is this information publicly available?",
+        "match_score": 100.0,
+        "answer": "No                                                                                                                                 [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 9,
+        "name": "dataQualityImplementation5",
+        "type": "radiogroup",
+        "title": "Have you undertaken a Gender Based Analysis Plus of the data?",
+        "match_score": 100.0,
+        "answer": "No                                                                                                                                 [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 10,
+        "name": "dataQualityImplementation2",
+        "type": "radiogroup",
+        "title": "Is this information publicly available?",
+        "match_score": 100.0,
+        "answer": "No                                                                                                                                 [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 11,
+        "name": "dataQualityImplementation7",
+        "type": "radiogroup",
+        "title": "Have you assigned accountability in your institution for the design, development, maintenance, and improvement of the system?",
+        "match_score": 100.0,
+        "answer": "Yes                                                                                                                                [ Points: +2 ]",
+        "value": "item1-2"
+      },
+      {
+        "number": 12,
+        "name": "dataQualityImplementation8",
+        "type": "radiogroup",
+        "title": "Do you have a documented process to manage the risk that outdated or unreliable data is used to make an automated decision?",
+        "match_score": 100.0,
+        "answer": "No                                                                                                                                 [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 13,
+        "name": "dataQualityImplementation4",
+        "type": "radiogroup",
+        "title": "Is this information publicly available?",
+        "match_score": 100.0,
+        "answer": "No                                                                                                                                 [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 14,
+        "name": "dataQualityImplementation10",
+        "type": "radiogroup",
+        "title": "Is the data used for this system posted on the Open Government Portal?",
+        "match_score": 100.0,
+        "answer": "No                                                                                                                                 [ Points: +0 ]\n\nDe-Risking and Mitigation Measures - Procedural\nFairness",
+        "value": "item2-0"
+      },
+      {
+        "number": 15,
+        "name": "fairnessImplementation1",
+        "type": "radiogroup",
+        "title": "Does the audit trail identify the authority or delegated authority identified in legislation?",
+        "match_score": 100.0,
+        "answer": "No                                                                                                                                 [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 16,
+        "name": "fairnessImplementation2",
+        "type": "radiogroup",
+        "title": "Does the system provide an audit trail that records all the recommendations or decisions made by the system?",
+        "match_score": 100.0,
+        "answer": "Yes                                                                                                                                [ Points: +2 ]",
+        "value": "item1-2"
+      },
+      {
+        "number": 17,
+        "name": "fairnessImplementation3",
+        "type": "radiogroup",
+        "title": "Are all key decision points identifiable in the audit trail?",
+        "match_score": 100.0,
+        "answer": "No                                                                                                                                 [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 18,
+        "name": "fairnessImplementation4",
+        "type": "radiogroup",
+        "title": "Are all key decision points within the automated system's logic linked to the relevant legislation, policy or procedures?",
+        "match_score": 100.0,
+        "answer": "No                                                                                                                                 [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 19,
+        "name": "fairnessImplementation5",
+        "type": "radiogroup",
+        "title": "Do you maintain a current and up to date log detailing all of the changes made to the model and the system?",
+        "match_score": 100.0,
+        "answer": "No                                                                                                                                 [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 20,
+        "name": "fairnessImplementation6",
+        "type": "radiogroup",
+        "title": "Does the system's audit trail indicate all of the decision points made by the system?",
+        "match_score": 100.0,
+        "answer": "No                                                                                                                                 [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 21,
+        "name": "fairnessImplementation7",
+        "type": "radiogroup",
+        "title": "Can the audit trail generated by the system be used to help generate a notification of the decision (including a statement of reasons or other notifications) where required?",
+        "match_score": 100.0,
+        "answer": "No                                                                                                                                 [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 22,
+        "name": "fairnessImplementation8",
+        "type": "radiogroup",
+        "title": "Does the audit trail identify precisely which version of the system was used for each decision it supports?",
+        "match_score": 100.0,
+        "answer": "No                                                                                                                                 [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 23,
+        "name": "fairnessImplementation9",
+        "type": "radiogroup",
+        "title": "Does the audit trail show who an authorized decision-maker is?",
+        "match_score": 100.0,
+        "answer": "Yes                                                                                                                                [ Points: +1 ]",
+        "value": "item1-1"
+      },
+      {
+        "number": 24,
+        "name": "fairnessImplementation10",
+        "type": "radiogroup",
+        "title": "Is the system able to produce reasons for its decisions or recommendations when required?",
+        "match_score": 100.0,
+        "answer": "No                                                                                                                                 [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 25,
+        "name": "fairnessImplementation11",
+        "type": "radiogroup",
+        "title": "Is there a process in place to grant, monitor, and revoke access permission to the system?",
+        "match_score": 100.0,
+        "answer": "Yes                                                                                                                                [ Points: +1 ]",
+        "value": "item1-1"
+      },
+      {
+        "number": 26,
+        "name": "fairnessImplementation12",
+        "type": "radiogroup",
+        "title": "Is there a mechanism to capture feedback by users of the system?",
+        "match_score": 100.0,
+        "answer": "Yes                                                                                                                                [ Points: +1 ]",
+        "value": "item1-1"
+      },
+      {
+        "number": 27,
+        "name": "fairnessImplementation13",
+        "type": "radiogroup",
+        "title": "Is there a recourse process established for clients that wish to challenge the decision?",
+        "match_score": 100.0,
+        "answer": "No                                                                                                                                 [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 28,
+        "name": "fairnessImplementation14",
+        "type": "radiogroup",
+        "title": "Does the system enable human override of system decisions?",
+        "match_score": 100.0,
+        "answer": "Yes                                                                                                                                [ Points: +2 ]",
+        "value": "item1-2"
+      },
+      {
+        "number": 29,
+        "name": "fairnessImplementation15",
+        "type": "radiogroup",
+        "title": "Is there a process in place to log the instances when overrides were performed?",
+        "match_score": 100.0,
+        "answer": "Yes                                                                                                                                [ Points: +1 ]",
+        "value": "item1-1"
+      },
+      {
+        "number": 30,
+        "name": "fairnessImplementation16",
+        "type": "radiogroup",
+        "title": "Does the system's audit trail include change control processes to record modifications to the system's operation or performance?",
+        "match_score": 100.0,
+        "answer": "No                                                                                                                                 [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 31,
+        "name": "fairnessImplementation17",
+        "type": "radiogroup",
+        "title": "Have you prepared a concept case to the Government of Canada Enterprise Architecture Review Board?",
+        "match_score": 100.0,
+        "answer": "No                                                                                                                                 [ Points: +0 ]\n\nDe-Risking and Mitigation Measures - Privacy",
+        "value": "item2-0"
+      },
+      {
+        "number": 32,
+        "name": "privacyImplementation1",
+        "type": "radiogroup",
+        "title": "If your system uses or creates personal information, have you undertaken a Privacy Impact Assessment, or updated an existing one?",
+        "match_score": 100.0,
+        "answer": "Yes                                                                                                                                [ Points: +1 ]",
+        "value": "item1-1"
+      },
+      {
+        "number": 33,
+        "name": "privacyImplementation5",
+        "type": "comment",
+        "title": "Please indicate the following in your answer: Title and scope of the Privacy Impact Assessment; How the automation project fits into the program; and Date of Privacy Impact Assessment completion or modification.",
+        "match_score": 100.0,
+        "answer": "PIA is collateral to FVEYE Hash Sharing Agreement reviewed by RCMP Legal,\nATIP, DSB, LSU and other internal stakeholders which defines personal\ninformation as it pertains to this data type. Documentation regarding the use\nof hashes and derivative meta data have been produced for collateral issues\nand can be provided upon request.",
+        "value": "PIA is collateral to FVEYE Hash Sharing Agreement reviewed by RCMP Legal,\nATIP, DSB, LSU and other internal stakeholders which defines personal\ninformation as it pertains to this data type. Documentation regarding the use\nof hashes and derivative meta data have been produced for collateral issues\nand can be provided upon request."
+      },
+      {
+        "number": 34,
+        "name": "privacyImplementation2",
+        "type": "radiogroup",
+        "title": "Have you designed and built security and privacy into your systems from the concept stage of the project?",
+        "match_score": 100.0,
+        "answer": "Yes                                                                                                                                [ Points: +1 ]",
+        "value": "item1-1"
+      },
+      {
+        "number": 35,
+        "name": "privacyImplementation3",
+        "type": "radiogroup",
+        "title": "Is the information used within a closed system (i.e. no connections to the Internet, Intranet or any other system)?",
+        "match_score": 100.0,
+        "answer": "Yes                                                                                                                                [ Points: +1 ]",
+        "value": "item1-1"
+      },
+      {
+        "number": 36,
+        "name": "privacyImplementation4",
+        "type": "radiogroup",
+        "title": "If the sharing of personal information is involved, has an agreement or arrangement with appropriate safeguards been established?",
+        "match_score": 100.0,
+        "answer": "Yes                                                                                                                                [ Points: +1 ]",
+        "value": "item1-1"
+      },
+      {
+        "number": 37,
+        "name": "privacyImplementation7",
+        "type": "radiogroup",
+        "title": "Will you de-identify any personal information used or created by the system at any point in the lifecycle?",
+        "match_score": 100.0,
+        "answer": "No                                                                                                                                 [ Points: +0 ]",
+        "value": "item2-0"
+      }
+    ],
+    "unresolved": [
+      "riskProfile5"
+    ]
+  },
+  "french": {
+    "matched_questions": 71,
+    "schema_questions": 153,
+    "matches": [
+      {
+        "number": 1,
+        "name": "projectDetailsRespondent",
+        "type": "text",
+        "title": "Nom de la personne sondée",
+        "match_score": 100.0,
+        "answer": "Serg. Tom Guineau",
+        "value": "Serg. Tom Guineau"
+      },
+      {
+        "number": 2,
+        "name": "projectDetailsJob",
+        "type": "text",
+        "title": "Titre du poste",
+        "match_score": 100.0,
+        "answer": "Gestionnaire technique",
+        "value": "Gestionnaire technique"
+      },
+      {
+        "number": 3,
+        "name": "projectDetailsBranch",
+        "type": "text",
+        "title": "Direction",
+        "match_score": 96.0,
+        "answer": "Opérations techniques de la DG/SESND/Groupe de la technologie du CNCEE",
+        "value": "Opérations techniques de la DG/SESND/Groupe de la technologie du CNCEE"
+      },
+      {
+        "number": 5,
+        "name": "projectDetailsTitle",
+        "type": "text",
+        "title": "Titre du projet",
+        "match_score": 100.0,
+        "answer": "Griffeye",
+        "value": "Griffeye"
+      },
+      {
+        "number": 6,
+        "name": "projectDetailsID",
+        "type": "text",
+        "title": "Identifiant du projet provenant du Plan TI",
+        "match_score": 100.0,
+        "answer": "Griffeye CS et Di Pro",
+        "value": "Griffeye CS et Di Pro"
+      },
+      {
+        "number": 7,
+        "name": "projectDetailsPhase",
+        "type": "radiogroup",
+        "title": "Phase du projet",
+        "match_score": 96.0,
+        "answer": "Mise en œuvre                                                                                                [ Points : 0 ]",
+        "value": "item2"
+      },
+      {
+        "number": 9,
+        "name": "projectDetailsDescription",
+        "type": "comment",
+        "title": "Veuillez fournir une description du projet :",
+        "match_score": 100.0,
+        "answer": "LOGICIEL déjà utilisé – Outil développé pour catégoriser et classer les images et les\nvidéos d’exploitation d’enfants. Il intègre les contenus multimédias provenant des\néléments de preuve saisis et des transmissions des partenaires (NCMEC, Cyberaide et\nd’autres organismes d’application de la loi) et il présente tous les contenus\nmultimédias et les métadonnées intégrées connexes (données EXIF, etc.) dans un\nespace de travail où les catégories conformes à l’art. 163 du Code criminel peuvent\nêtre appliquées, où les contenus multimédias peuvent être regroupés à l’aide de\ndivers filtres et où une précatégorisation est effectuée dans les bases de données des\ncondensés du matériel connu. Cet outil offre la capacité d’utiliser la mise en œuvre de\nl’IA pour évaluer les images et les vidéos et déterminer si de la pornographie juvénile\nest présente en appliquant une fonction de classification entraînée aux contenus\nmultimédias aux fins d’examen par un humain. Cette fonction d’IA est aussi en\nmesure d’effectuer une correspondance faciale (et non une reconnaissance faciale)\navec d’autres contenus multimédias qui se trouvent dans l’espace de travail pour\nessayer de regrouper des individus qui possèdent des caractéristiques similaires. La\nfonction intégrée de correspondance faciale peut être utilisée et elle ne fait pas appel\naux autres systèmes pour reconnaître le visage d’une personne en particulier qui est\nidentifiable. Une fois le processus terminé, les condensés et les métadonnées\nconnexes peuvent être exportés pour être transmis à d’autres outils compatibles au\nmoyen du format PVIC, puis être partagés au besoin ou être autorisés.\n\nÀ propos du système",
+        "value": "LOGICIEL déjà utilisé – Outil développé pour catégoriser et classer les images et les\nvidéos d’exploitation d’enfants. Il intègre les contenus multimédias provenant des\néléments de preuve saisis et des transmissions des partenaires (NCMEC, Cyberaide et\nd’autres organismes d’application de la loi) et il présente tous les contenus\nmultimédias et les métadonnées intégrées connexes (données EXIF, etc.) dans un\nespace de travail où les catégories conformes à l’art. 163 du Code criminel peuvent\nêtre appliquées, où les contenus multimédias peuvent être regroupés à l’aide de\ndivers filtres et où une précatégorisation est effectuée dans les bases de données des\ncondensés du matériel connu. Cet outil offre la capacité d’utiliser la mise en œuvre de\nl’IA pour évaluer les images et les vidéos et déterminer si de la pornographie juvénile\nest présente en appliquant une fonction de classification entraînée aux contenus\nmultimédias aux fins d’examen par un humain. Cette fonction d’IA est aussi en\nmesure d’effectuer une correspondance faciale (et non une reconnaissance faciale)\navec d’autres contenus multimédias qui se trouvent dans l’espace de travail pour\nessayer de regrouper des individus qui possèdent des caractéristiques similaires. La\nfonction intégrée de correspondance faciale peut être utilisée et elle ne fait pas appel\naux autres systèmes pour reconnaître le visage d’une personne en particulier qui est\nidentifiable. Une fois le processus terminé, les condensés et les métadonnées\nconnexes peuvent être exportés pour être transmis à d’autres outils compatibles au\nmoyen du format PVIC, puis être partagés au besoin ou être autorisés.\n\nÀ propos du système"
+      },
+      {
+        "number": 10,
+        "name": "aboutSystem1",
+        "type": "checkbox",
+        "title": "Veuillez indiquer laquelle des capacités suivantes s'applique à votre système.",
+        "match_score": 98.09,
+        "answer": "Reconnaissance d’images et d’objets : analyser de vastes ensembles de données pour\n automatiser la reconnaissance, la classification et le contexte associés à une image ou à un objet.\n Production de contenu : analyser de vastes ensembles de données pour catégoriser, traiter,\n trier, personnaliser et présenter du contenu particulier en fonction du contexte.\n Évaluation du risque : analyser de vastes ensembles de données pour relever des\n tendances, recommander des plans d’action et, dans certains cas, exécuter des tâches\n précises.\n\n Cote actuelle : 39\n\n Cote d’incidence brute : 39\n\n Cote d’atténuation : 16\n\nExamen par les pairs\nConsulter au moins un des experts suivants et publier l’examen complet ou un résumé en\nlangage clair des conclusions sur un site Web du gouvernement du Canada :\n    expert qualifié d’une institution gouvernementale fédérale, provinciale, territoriale ou municipale;\n   membres qualifiés d’une faculté d’un établissement postsecondaire;\n    chercheurs qualifiés d’une organisation non gouvernementale pertinente;\n     tiers fournisseur contractuel avec une spécialisation pertinente;\n    un comité consultatif des données et d’automatisation spécifié par le Secrétariat du Conseil du Trésor\ndu Canada.\nOU\n\nPublier les spécifications du système décisionnel automatisé dans une revue à comité de lecture. Lorsque\nl’accès à la revue publiée est restreint, veiller à ce qu’un résumé des conclusions en langage clair soit\nlibrement accessible.\n\nAnalyse comparative entre les sexes plus\nS’assurer que l’analyse comparative entre les sexes plus aborde les questions suivantes :\n     les incidences du projet d’automatisation (y compris le système, les données et la décision) sur le\n    genre ou d’autres facteurs d’identité;\n     les mesures prévues ou existantes pour faire face aux risques identifiés par l’analyse comparative\n  entre les sexes plus.\nAvis\nAvis en langage simple fourni par l’entremise de tous les modes de prestation de services utilisés\n(Internet, en personne, par courrier, par téléphone).\n\nMaillon humain de la prise de décisions\nDes décisions peuvent être prises sans participation humaine directe.\n\nExplication\nEn plus de toute exigence juridique applicable, s’assurer qu’une explication significative est fournie au\nclient avec toute décision qui entraîne le refus de prestation ou de service, ou qui implique une autre\nmesure réglementaire. L’explication doit fournir des renseignements au client, en langage clair, sur ce qui\nsuit :\n\n     le rôle du système dans le processus de décision;\n     les données d’apprentissage et relatives aux clients, leur source et leur méthode de collecte, le cas\n    échéant;\n     les critères utilisés pour évaluer les données des clients et les opérations appliquées pour les\n     traiter;\n     le résultat produit par le système et toute information pertinente nécessaire pour l’interpréter\n  dans le contexte de la décision administrative;\n une justification de la décision administrative, y compris les principaux facteurs qui l’ont motivée.\nLes explications doivent également fournir des renseignements aux clients sur les possibilités de recours\npertinentes, le cas échéant.\n\nUne description générale de ces éléments doit également être mise à disposition par l’entremise\nde l’évaluation de l’incidence algorithmique et être repérable sur le site Web de l’organisation.\n\nFormation\nDocuments sur la conception et la fonctionnalité du système.\n\nGestion de la TI et de la continuité des activités\nAucune\n\nApprobation de l’exploitation du système\nAucune\nAutres exigences\nLa Directive sur la prise de décisions automatisée comprend également d’autres exigences qui doivent\nêtre respectées pour tous les niveaux d’incidence.\n\n Lien vers la Directive sur la prise de décisions automatisée\n\nContactez le bureau de l’AIPRP de votre établissement pour discuter de l’exigence d’une évaluation des\nfacteurs relatifs à la vie privée conformément à la Directive sur l’évaluation des facteurs relatifs à la vie\nprivée.\n\nRaisons de l’automatisation\n 1. Qu’est-ce qui motive votre équipe à introduire l’automatisation dans ce processus décisionnel?\n   (Cochez toutes les réponses qui s’appliquent.)\n Améliorer la qualité générale des décisions.\n Le système exécute des tâches que les humains ne pourraient pas accomplir dans un délai\n raisonnable.\n Utiliser des approches innovatrices.\n\n Retard à rattraper dans le travail ou les dossiers.\nCoûts moindres par transaction dans un programme\nactuel.\nAutre (veuillez préciser).\n\n 2. Veuillez fournir une description :\nEn ce qui concerne la pornographie juvénile et les vidéos et les images d’exploitation\nsexuelle d’enfants, l’examen et la prise de décisions par un humain sont toujours\nrequis pour identifier, localiser et protéger rapidement les enfants qui en sont\nvictimes. Comme chaque dossier unique contient en moyenne plus de trois millions\nd’éléments de médias, ces outils sont utilisés pour déterminer quels contenus\nmultimédias ont déjà fait l’objet d’un examen ou d’une enquête, puis pour regrouper\nles « nouveaux contenus multimédias » afin qu’ils soient examinés par un humain en\nvue de déterminer plus rapidement quel type d’intervention ou de sauvetage la police\ndevra effectuer. En éliminant la nécessité de toujours revoir les mêmes contenus\nmultimédias atroces, nous améliorons non seulement l’efficacité avec laquelle nous\nprotégeons les enfants, mais nous protégeons aussi la santé et le bien-être des\nenquêteurs en réduisant leur exposition à ces contenus.\n\n 3. Quels sont les besoins des clients auxquels le système répondra et comment le système y\n   répondra-t-il? Si possible, décrivez la façon dont les besoins des clients ont été déterminés.\nPlusieurs clients sont impliqués. En premier lieu, il faut identifier les enfants qui sont\nvictimes et qui sont exploités, puis il faut les localiser et les retirer de la situation\nabusive le plus rapidement possible, peu importe l’endroit où ils se trouvent. Si les\nmaigres ressources d’application de la loi passent leur temps à examiner des fichiers\nnon pertinents ou non urgents, cela retardera la découverte des abus pendant des\nmois ou des années, laissant les victimes subir d’autres violences en dépit du fait que\nl’organisation possède des renseignements à jour pour les sauver. De tels systèmes\naident à établir l’ordre de priorité dans lequel les contenus multimédias doivent être\nexaminés par des humains dans le but de déterminer la probabilité qu’un enfant soit\nactuellement à risque.\n\n 4. Veuillez décrire tous les bienfaits d’intérêt public que le système devrait avoir.\n   Outre ce qui précède, le public s’attend à ce que les organismes d’application de la loi donnent suite\n   aux renseignements et protègent les personnes en temps opportun. Si une intervention était\n   effectuée des semaines après un appel au 911, la sécurité du public serait menacée, de même que la\n   confiance dans la capacité d’assurer la sécurité d’une personne. La mise en place de systèmes\n   permettant d’organiser les données de manière à ce que les personnes vulnérables puissent bénéficier\n   plus rapidement d’une aide est essentielle.\n\n 5. Dans quelle mesure le système sera-t-il efficace pour répondre aux besoins des clients?\n Très efficace.                                                                                                  [ Points : +0 ]\n\n 6. Veuillez décrire les améliorations, les bienfaits ou les avantages que vous attendez de l’utilisation d’un\n   système automatisé. Cela pourrait inclure des indicateurs de programme et des objectifs de\n   rendement pertinents.\n   Griffeye Analyze est l’un des très rares outils spécialisés qui permettent de catégoriser les contenus\n   multimédias liés aux enquêtes sur la pornographie juvénile. Voici les avantages liés à l’utilisation de\n    tels outils :\n -     mener des enquêtes et identifier, localiser et protéger plus rapidement les\n enfants à risque; faciliter l’échange de preuves et de renseignements avec des\n partenaires externes et internes puisque ces outils utilisent un format normalisé pour\n exporter et importer des données; réduire les blessures psychologiques et la douleur\n des enquêteurs en réduisant le nombre de traumatismes auxquels ils sont\n constamment exposés;\n -      être en mesure de fournir aux procureurs des données factuelles concernant\n la gravité et l’étendue des collectes de contenus multimédias par les contrevenants;\n -      être en mesure de fournir des données statistiques au gouvernement pour lui\n faire connaître l’ampleur des abus et l’intervention policière qui y est associée.\n\n 7.  Veuillez décrire la façon dont vous allez vous assurer que le système se limite à répondre aux besoins\n    des clients mentionnés ci-dessus.\nL’outil Griffeye Analyze sert précisément à catégoriser les contenus multimédias de\ncette nature (comme d’autres solutions spécialisées concurrentes) et il est conçu en\ntenant compte de ces besoins.\n\n 8.  Veuillez décrire toutes les concessions mutuelles entre les intérêts des clients et les objectifs du\n    programme que vous avez pris en considération lors de l’élaboration du projet.\nAucune\n\n 9.  D’autres options de processus non automatisés ont-elles été envisagées?\nOui                                                                                                               [ Points : +0 ]\n 10. Si des processus non automatisés ont été envisagés, pourquoi l’automatisation a-t-elle été l’option\n     choisie?\nPar le passé, les enquêteurs avaient l’habitude d’imprimer des images d’abus à partir\nde disquettes et d’autres supports numériques, ce qui faisait en sorte que peu de\ncontenus multimédias devaient être examinés et évalués par des humains. Avec\nl’avènement des supports de mémoire de masse et de la disponibilité d’Internet haute\nvitesse, la production, la transmission et la collecte de vidéos et d’images sont\npresque instantanées et il est possible de recueillir en moyenne plus de deux à\ntrois millions de contenus multimédias au cours d’une seule enquête (un grand\nnombre d’ordinateurs, de téléphones cellulaires, de tablettes et d’autres appareils\nd’usage courant ayant une grande capacité de stockage et une connectivité à Internet\npeuvent se trouver dans toutes les résidences). L’examen et l’évaluation par un\nhumain de chaque vidéo ou image ne peuvent pas être effectués par une seule\npersonne si elle doit toujours examiner chaque image d’abus, chaque logo de\nWindows ou chaque liste d’Amazon qu’elle a déjà vus. Sans un traitement et une\nanalyse numériques des médias qui peuvent reconnaître du contenu déjà visionné ou\nsans la capacité de regrouper des contenus multimédias avec des produits communs\n(même caméra, même utilisateur informatique, même site Web, etc.), il faudrait un\nmois à un enquêteur seulement pour évaluer les risques associés à un dossier, sans\nparler de tous les signalements reçus au quotidien.\n\n 11. Quelle serait la conséquence du non-déploiement du système?\n Le service ne peut pas être fourni de façon rapide et efficace                                    [ Points : +2 ]\n Les coûts du service sont trop élevés                                                                   [ Points : 0 ]\n La qualité du service n’est pas aussi élevée                                                           [ Points : 0 ]\n La prestation du service ne peut pas atteindre les objectifs de rendement                   [ Points : 0 ]\n Autre (veuillez préciser)                                                                                    [ Points : 0 ]\n 12. Veuillez fournir une description :\nLes enfants continueront d’être filmés pendant qu’ils sont agressés sexuellement ou\ntorturés en raison des retards liés à l’évaluation et à la priorisation des contenus\nmultimédias qui font l’objet d’une enquête.\n\nProfil de risque\n 13. Le projet fait-il l’objet d’un examen public approfondi (p. ex. en raison de préoccupations liées à la\n     protection de la vie privée) ou de litiges fréquents?\nNon                                                                                                              [ Points : +0 ]",
+        "value": [
+          "item6"
+        ]
+      },
+      {
+        "number": 14,
+        "name": "riskProfile4",
+        "type": "radiogroup",
+        "title": "Ce projet aura-t-il d'importantes répercussions sur le personnel, que ce soit en termes de nombre ou de rôle?",
+        "match_score": 93.12,
+        "answer": "",
+        "value": null
+      },
+      {
+        "number": 15,
+        "name": "riskProfile3",
+        "type": "radiogroup",
+        "title": "Les enjeux des décisions de ce programme sont-ils très élevés?",
+        "match_score": 100.0,
+        "answer": "Oui                                                                                                               [ Points : +4 ]",
+        "value": "item1-4"
+      },
+      {
+        "number": 16,
+        "name": "riskProfile4",
+        "type": "radiogroup",
+        "title": "Ce projet aura-t-il d'importantes répercussions sur le personnel, que ce soit en termes de nombre ou de rôle?",
+        "match_score": 100.0,
+        "answer": "Oui                                                                                                               [ Points : +3 ]",
+        "value": "item1-3"
+      },
+      {
+        "number": 17,
+        "name": "riskProfile5",
+        "type": "radiogroup",
+        "title": "L’utilisation du système entraînera-t-elle des difficultés pour les personnes en situation de handicap ou les accentuera-t-elle?",
+        "match_score": 92.18,
+        "answer": "Non                                                                                                              [ Points : +0 ]\n\nChargé de projet",
+        "value": "item2-0"
+      },
+      {
+        "number": 18,
+        "name": "projectAuthority1",
+        "type": "radiogroup",
+        "title": "Aurez-vous besoin d'une nouvelle autorisation en termes de politiques pour ce projet ?",
+        "match_score": 96.0,
+        "answer": "Non                                                                                                              [ Points : +0 ]\n\nÀ propos de l’algorithme",
+        "value": "item2-0"
+      },
+      {
+        "number": 19,
+        "name": "aboutAlgorithm1",
+        "type": "radiogroup",
+        "title": "L'algorithme utilisé sera un secret (commercial)",
+        "match_score": 98.97,
+        "answer": "Non                                                                                                              [ Points : +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 20,
+        "name": "aboutAlgorithm2",
+        "type": "radiogroup",
+        "title": "Le processus algorithmique sera difficile à interpréter ou à expliquer",
+        "match_score": 99.29,
+        "answer": "Non                                                                                                              [ Points : +0 ]\n\nÀ propos de la décision",
+        "value": "item2-0"
+      },
+      {
+        "number": 21,
+        "name": "decisionSector3",
+        "type": "comment",
+        "title": "Veuillez décrire la ou les décisions qui seront automatisées.",
+        "match_score": 100.0,
+        "answer": "Cet outil permet de regrouper des contenus multimédias de différentes façons qui ne\nsont pas axées sur l’IA (regroupement par exif, chemin d’accès, condensés binaires,\netc.) et il peut aussi jouter des modules d’apprentissage automatique pour regrouper\ndes images et des vidéos si elles contiennent des enfants, différentes agressions\nsexuelles et divers niveaux de nudité. Les décisions visent à regrouper des médias et à\nles signaler à l’enquêteur afin de prioriser leur examen et leur évaluation manuels par\nun humain – c’est donc dire que la décision finale appartient toujours à la personne\nqui utilise l’outil. L’IA aide à repérer rapidement les contenus multimédias qui\ncontiennent des éléments d’abus sexuel et d’abus d’enfants parmi les masses de\ncontenus multimédias indépendants, comme des pages Web, des images de systèmes\nd’exploitation et d’autres contenus multimédias légitimes.",
+        "value": "Cet outil permet de regrouper des contenus multimédias de différentes façons qui ne\nsont pas axées sur l’IA (regroupement par exif, chemin d’accès, condensés binaires,\netc.) et il peut aussi jouter des modules d’apprentissage automatique pour regrouper\ndes images et des vidéos si elles contiennent des enfants, différentes agressions\nsexuelles et divers niveaux de nudité. Les décisions visent à regrouper des médias et à\nles signaler à l’enquêteur afin de prioriser leur examen et leur évaluation manuels par\nun humain – c’est donc dire que la décision finale appartient toujours à la personne\nqui utilise l’outil. L’IA aide à repérer rapidement les contenus multimédias qui\ncontiennent des éléments d’abus sexuel et d’abus d’enfants parmi les masses de\ncontenus multimédias indépendants, comme des pages Web, des images de systèmes\nd’exploitation et d’autres contenus multimédias légitimes."
+      },
+      {
+        "number": 22,
+        "name": "decisionSector1",
+        "type": "checkbox",
+        "title": "La décision s'applique-t-elle à l'une ou l'autre des catégories ci-dessous (*Cochez toutes les réponses qui s'appliquent) :",
+        "match_score": 99.59,
+        "answer": "Autre (veuillez préciser)                                                                                    [ Points : +1 ]",
+        "value": [
+          "item6-1"
+        ]
+      },
+      {
+        "number": 23,
+        "name": "impact30",
+        "type": "radiogroup",
+        "title": "Parmi les propositions suivantes, laquelle décrit le mieux le type d’automatisation que vous envisagez?",
+        "match_score": 90.41,
+        "answer": "envisagez?\n Automatisation partielle (le système facilitera la prise de décisions administratives en\n appuyant un agent au moyen d’évaluations, de recommandations, de décisions\n provisoires ou d’autres résultats).\n                                                                                                                     [ Points : +2 ]",
+        "value": "item2-2"
+      },
+      {
+        "number": 25,
+        "name": "impact31",
+        "type": "comment",
+        "title": "Veuillez décrire le rôle du système dans le processus de prise de décisions.",
+        "match_score": 100.0,
+        "answer": "Veuillez vous reporter à l’information précédente.",
+        "value": "Veuillez vous reporter à l’information précédente."
+      },
+      {
+        "number": 26,
+        "name": "impact3",
+        "type": "radiogroup",
+        "title": "Le système prendra-t-il des décisions ou effectuera-t-il des évaluations qui exigent du jugement ou de la discrétion?",
+        "match_score": 100.0,
+        "answer": "Non                                                                                                              [ Points : +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 27,
+        "name": "impact20",
+        "type": "comment",
+        "title": "Veuillez décrire les critères utilisés pour évaluer les données des clients et les procédures appliquées pour les traiter.",
+        "match_score": 100.0,
+        "answer": "Le système (lorsqu’il utilise une fonction d’IA) tente d’examiner le contenu d’images ou\nde vidéos pour déterminer si certains éléments visuels ou comportementaux sont\nprésents dans celles-ci (c.-à-d. Est-ce qu’un enfant est présent? Est-ce qu’il y a un\nadulte? Est-ce qu’il y a des activités sexuelles? Peut-on voir des organes génitaux?). Les\ncontenus multimédias qui contiennent certains éléments sont signalés et portés à\nl’attention de l’opérateur qui doit déterminer si de la pornographie juvénile est\nprésente dans ces contenus multimédias.",
+        "value": "Le système (lorsqu’il utilise une fonction d’IA) tente d’examiner le contenu d’images ou\nde vidéos pour déterminer si certains éléments visuels ou comportementaux sont\nprésents dans celles-ci (c.-à-d. Est-ce qu’un enfant est présent? Est-ce qu’il y a un\nadulte? Est-ce qu’il y a des activités sexuelles? Peut-on voir des organes génitaux?). Les\ncontenus multimédias qui contiennent certains éléments sont signalés et portés à\nl’attention de l’opérateur qui doit déterminer si de la pornographie juvénile est\nprésente dans ces contenus multimédias."
+      },
+      {
+        "number": 28,
+        "name": "impact21",
+        "type": "comment",
+        "title": "Veuillez décrire le résultat produit par le système et les renseignements pertinents nécessaires à l’interprétation dans le contexte de la décision administrative.",
+        "match_score": 100.0,
+        "answer": "Les contenus multimédias marqués doivent être examinés par un humain en priorité.\nL’enquêteur peut ensuite visionner la vidéo ou regarder l’image pour vérifier le\ncontenu et confirmer qu’il s’agit de pornographie juvénile au sens du Code criminel et\nensuite décider s’il y a un risque actuel pour la ou les personnes qui doivent\nimmédiatement faire l’objet d’une intervention.",
+        "value": "Les contenus multimédias marqués doivent être examinés par un humain en priorité.\nL’enquêteur peut ensuite visionner la vidéo ou regarder l’image pour vérifier le\ncontenu et confirmer qu’il s’agit de pornographie juvénile au sens du Code criminel et\nensuite décider s’il y a un risque actuel pour la ou les personnes qui doivent\nimmédiatement faire l’objet d’une intervention."
+      },
+      {
+        "number": 29,
+        "name": "impact22",
+        "type": "radiogroup",
+        "title": "Le système effectuera-t-il une évaluation ou une autre activité qui ne serait autrement pas réalisée par un humain?",
+        "match_score": 100.0,
+        "answer": "Non                                                                                                              [ Points : +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 30,
+        "name": "impact5",
+        "type": "radiogroup",
+        "title": "Le système est-il utilisé par une partie de l’organisation différente de celle à laquelle appartiennent ceux qui l’ont développé?",
+        "match_score": 100.0,
+        "answer": "Non                                                                                                              [ Points : +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 31,
+        "name": "impact6",
+        "type": "dropdown",
+        "title": "Les incidences découlant de la décision sont-elles réversibles?",
+        "match_score": 100.0,
+        "answer": "Réversible                                                                                                      [ Points : +1 ]",
+        "value": "item1-1"
+      },
+      {
+        "number": 32,
+        "name": "impact7",
+        "type": "dropdown",
+        "title": "Combien de temps les incidences de la décision dureront-elles?",
+        "match_score": 100.0,
+        "answer": "Les incidences seront très probablement brèves.                                                    [ Points : +1 ]",
+        "value": "item1-1"
+      },
+      {
+        "number": 33,
+        "name": "impact9",
+        "type": "dropdown",
+        "title": "Les incidences de la décision sur les droits ou libertés des personnes seront probablement les suivantes :",
+        "match_score": 96.0,
+        "answer": "Incidence faible ou nulle                                                                                    [ Points : +1 ]",
+        "value": "item1-1"
+      },
+      {
+        "number": 35,
+        "name": "impact24",
+        "type": "dropdown",
+        "title": "Les incidences de la décision sur l’égalité, la dignité, la vie privée et l’autonomie des personnes seront probablement :",
+        "match_score": 96.0,
+        "answer": "Incidence faible ou nulle                                                                                    [ Points : +1 ]",
+        "value": "item1-1"
+      },
+      {
+        "number": 37,
+        "name": "impact11",
+        "type": "dropdown",
+        "title": "Les incidences de la décision sur la santé et le bien-être des personnes seront probablement les suivantes :",
+        "match_score": 96.0,
+        "answer": "Incidence faible ou nulle                                                                                    [ Points : +1 ]\n\n 39. Veuillez décrire pourquoi les incidences découlant de la décision sont conformes à l’option choisie.\nL’IA sert d’aide et n’a pas de rôle décisionnel dans le processus d’enquête. Cependant,\nl’utilisation de l’outil permet de réduire le temps nécessaire à la protection des\nenfants victimes d’agressions sexuelles ou de tortures, ce qui sera bénéfique pour la\nvictime si les secours sont apportés le plus tôt possible. Par ailleurs, la réduction de\nl’exposition répétitive des enquêteurs à des événements traumatisants sera\nbénéfique pour leur bien-être.",
+        "value": "item1-1"
+      },
+      {
+        "number": 40,
+        "name": "impact13",
+        "type": "dropdown",
+        "title": "Les incidences de la décision sur les intérêts économiques des personnes seront probablement les suivantes :",
+        "match_score": 100.0,
+        "answer": "Incidence faible ou nulle                                                                                    [ Points : +1 ]",
+        "value": "item1-1"
+      },
+      {
+        "number": 41,
+        "name": "impact15",
+        "type": "dropdown",
+        "title": "Les incidences de la décision sur la pérennité d’un écosystème environnemental seront probablement les suivantes :",
+        "match_score": 96.0,
+        "answer": "Incidence faible ou nulle                                                                                    [ Points : +1 ]",
+        "value": "item1-1"
+      },
+      {
+        "number": 43,
+        "name": "aboutDataSource1",
+        "type": "radiogroup",
+        "title": "Le système de décision automatisé utilisera-t-il des renseignements personnels comme données d’entrée?",
+        "match_score": 96.0,
+        "answer": "Non                                                                                                              [ Points : +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 45,
+        "name": "aboutDataSource2",
+        "type": "dropdown",
+        "title": "Quelle est la classification de sécurité la plus élevée des données d’entrée utilisées par le système? (N’en choisir qu’une seule)",
+        "match_score": 100.0,
+        "answer": "Protégé B / Protégé C                                                                                       [ Points : +3 ]",
+        "value": "item2-1"
+      },
+      {
+        "number": 46,
+        "name": "aboutDataSource3",
+        "type": "dropdown",
+        "title": "Qui contrôle les données?",
+        "match_score": 100.0,
+        "answer": "Gouvernement fédéral                                                                                      [ Points : +1 ]",
+        "value": "item2-1"
+      },
+      {
+        "number": 47,
+        "name": "aboutDataSource4",
+        "type": "radiogroup",
+        "title": "Les données utilisées par le système proviendront-elles de plusieurs sources différentes?",
+        "match_score": 100.0,
+        "answer": "Oui                                                                                                               [ Points : +4 ]",
+        "value": "item1-4"
+      },
+      {
+        "number": 48,
+        "name": "aboutDataSource5",
+        "type": "radiogroup",
+        "title": "Le système aura-t-il besoin de données d’entrée provenant d’un appareil connecté à Internet ou à la téléphonie? (P. ex., internet des objets, un Capteur)",
+        "match_score": 99.02,
+        "answer": "Non                                                                                                              [ Points : +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 49,
+        "name": "aboutDataSource6",
+        "type": "radiogroup",
+        "title": "Le système interagira-t-il avec d’autres systèmes des TI?",
+        "match_score": 100.0,
+        "answer": "Oui                                                                                                               [ Points : +4 ]",
+        "value": "item1-4"
+      },
+      {
+        "number": 50,
+        "name": "aboutDataSource7",
+        "type": "dropdown",
+        "title": "Qui a recueilli les données utilisées pour préparer le système?",
+        "match_score": 100.0,
+        "answer": "Un gouvernement étranger ou un tiers non gouvernemental                                    [ Points : +4 ]",
+        "value": "item4-4"
+      },
+      {
+        "number": 51,
+        "name": "aboutDataSource8",
+        "type": "dropdown",
+        "title": "Qui a recueilli les données d’entrée utilisées par le système?",
+        "match_score": 100.0,
+        "answer": "Votre institution                                                                                              [ Points : +1 ]",
+        "value": "item1-1"
+      },
+      {
+        "number": 52,
+        "name": "aboutDataSource13",
+        "type": "comment",
+        "title": "Veuillez décrire les données d’entrée collectées et utilisées par le système, leur source et leur méthode de collecte.",
+        "match_score": 95.36,
+        "answer": "Les données d’entrée (images et vidéos) sont des preuves soumises par la police, des\nONG et d’autres secteurs de l’industrie dans le cadre du signalement d’une infraction\ncriminelle. Elles peuvent provenir d’une saisie policière (autorisations judiciaires) ou\nêtre transmises par un tiers (signalements fournis par Cyberaide, le NCMEC et\nl’industrie). Certaines données sont recueillies par les spécialistes judiciaires et d’autres\npas voie électronique par la partie qui les a reçues ou lorsqu’elles transitent par leurs\nsystèmes informatiques et sont signalées pour être transmises à la police. Les services\nde police reçoivent ces contenus multimédias directement des victimes ou des\nplaignants ou par l’intermédiaire de demandes d’assistance émanant d’autres services\nde police.\n\nÀ propos des données - B. Type de données",
+        "value": "Les données d’entrée (images et vidéos) sont des preuves soumises par la police, des\nONG et d’autres secteurs de l’industrie dans le cadre du signalement d’une infraction\ncriminelle. Elles peuvent provenir d’une saisie policière (autorisations judiciaires) ou\nêtre transmises par un tiers (signalements fournis par Cyberaide, le NCMEC et\nl’industrie). Certaines données sont recueillies par les spécialistes judiciaires et d’autres\npas voie électronique par la partie qui les a reçues ou lorsqu’elles transitent par leurs\nsystèmes informatiques et sont signalées pour être transmises à la police. Les services\nde police reçoivent ces contenus multimédias directement des victimes ou des\nplaignants ou par l’intermédiaire de demandes d’assistance émanant d’autres services\nde police.\n\nÀ propos des données - B. Type de données"
+      },
+      {
+        "number": 53,
+        "name": "consultationImplementation1",
+        "type": "radiogroup",
+        "title": "Intervenants internes (institutions fédérales et fonction publique fédérale)",
+        "match_score": 96.0,
+        "answer": "Oui                                                                                                                [ Points: +1 ]",
+        "value": "item1-1"
+      },
+      {
+        "number": 2,
+        "name": "consultationImplementation2",
+        "type": "checkbox",
+        "title": "Quels intervenants internes avez-vous consulté?",
+        "match_score": 98.95,
+        "answer": "Politique et planification stratégiques\nGouvernance des données\nServices juridiques\nBureau de l’Accès à l’information et de la protection des renseignements personnels\nPolitique du programme",
+        "value": [
+          "item2",
+          "item3",
+          "item4",
+          "item6"
+        ]
+      },
+      {
+        "number": 3,
+        "name": "consultationImplementation4",
+        "type": "checkbox",
+        "title": "Quels intervenants externes avez-vous consulté?",
+        "match_score": 90.04,
+        "answer": "Milieu universitaire\nIndustrie\nGouvernements dans d’autres territoires de compétence\nOrganisations internationales\n\nÉlimination des risques et mesures d’atténuation –\nQualité des données",
+        "value": [
+          "item7",
+          "item8",
+          "item13"
+        ]
+      },
+      {
+        "number": 5,
+        "name": "dataQualityImplementation1",
+        "type": "radiogroup",
+        "title": "Disposez-vous de processus documentés pour tester les jeux de données en fonction de biais et d’autres résultats inattendus? Par exemple, ceci pourrait inclure une expérience dans l’application de cadres, de méthodes, de lignes directrices ou d’outils d’évaluation.",
+        "match_score": 100.0,
+        "answer": "Non                                                                                                              [ Points : +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 6,
+        "name": "dataQualityImplementation3",
+        "type": "radiogroup",
+        "title": "Avez-vous élaboré un processus permettant de documenter la façon dont les problèmes de qualité des données qui seront résolus pendant le processus de conception?",
+        "match_score": 92.22,
+        "answer": "Non                                                                                                              [ Points : +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 8,
+        "name": "dataQualityImplementation5",
+        "type": "radiogroup",
+        "title": "Avez-vous entrepris une analyse comparative entre les sexes plus des données?",
+        "match_score": 89.33,
+        "answer": "Non                                                                                                              [ Points : +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 10,
+        "name": "dataQualityImplementation7",
+        "type": "radiogroup",
+        "title": "Dans votre établissement, existe-t-il des responsables de la conception, du développement, de la maintenance et de l’amélioration du système?",
+        "match_score": 96.0,
+        "answer": "Oui                                                                                                               [ Points : +2 ]",
+        "value": "item1-2"
+      },
+      {
+        "number": 12,
+        "name": "dataQualityImplementation8",
+        "type": "radiogroup",
+        "title": "Disposez-vous d'un processus documenté pour gérer le risque que des données périmées ou non fiables soient utilisées pour prendre une décision automatisée?",
+        "match_score": 100.0,
+        "answer": "Non                                                                                                              [ Points : +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 13,
+        "name": "dataQualityImplementation10",
+        "type": "radiogroup",
+        "title": "Les données utilisées pour ce système seront-elles affichées sur la portail du gouvernement ouvert?",
+        "match_score": 94.52,
+        "answer": "Non                                                                                                              [ Points : +0 ]\n\nÉlimination des risques et mesures d’atténuation - Équité\nprocédurale",
+        "value": "item2-0"
+      },
+      {
+        "number": 15,
+        "name": "fairnessImplementation1",
+        "type": "radiogroup",
+        "title": "La piste de vérification permet-elle de déterminer les pouvoirs ou les pouvoirs délégués prévus par la lois?",
+        "match_score": 99.53,
+        "answer": "Non                                                                                                              [ Points : +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 16,
+        "name": "fairnessImplementation2",
+        "type": "radiogroup",
+        "title": "Le système fournit-il une piste de vérification qui enregistre toutes les recommandations ou décisions prises par le système?",
+        "match_score": 100.0,
+        "answer": "Oui                                                                                                               [ Points : +2 ]",
+        "value": "item1-2"
+      },
+      {
+        "number": 17,
+        "name": "fairnessImplementation3",
+        "type": "radiogroup",
+        "title": "Est-ce que tous les points de décision clés peuvent être identifiés dans la piste de vérification?",
+        "match_score": 100.0,
+        "answer": "Non                                                                                                              [ Points : +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 18,
+        "name": "fairnessImplementation4",
+        "type": "radiogroup",
+        "title": "Est-ce que toutes les décisions clés sont liées à une législation, politique ou à une procédure pertinente?",
+        "match_score": 97.27,
+        "answer": "Non                                                                                                              [ Points : +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 19,
+        "name": "fairnessImplementation5",
+        "type": "radiogroup",
+        "title": "Avez-vous un journal détaillant toutes les modifications apportées au modèle et au système?",
+        "match_score": 100.0,
+        "answer": "Non                                                                                                              [ Points : +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 20,
+        "name": "fairnessImplementation6",
+        "type": "radiogroup",
+        "title": "Est-ce que la piste de vérification indique tous les points de décision pris par le système?",
+        "match_score": 100.0,
+        "answer": "No                                                                                                                [ Points : +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 21,
+        "name": "fairnessImplementation7",
+        "type": "radiogroup",
+        "title": "La piste de vérification générée par le système peut-elle être utilisée pour aider à produire une notification de la décision (y compris un énoncé des motifs ou une autre notification) au besoin?",
+        "match_score": 100.0,
+        "answer": "Non                                                                                                              [ Points : +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 22,
+        "name": "fairnessImplementation8",
+        "type": "radiogroup",
+        "title": "La piste de vérification permet-elle de déterminer précisément quelle version du système a été utilisée pour chaque décision qu'elle appuie?",
+        "match_score": 100.0,
+        "answer": "Non                                                                                                              [ Points : +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 23,
+        "name": "fairnessImplementation9",
+        "type": "radiogroup",
+        "title": "La piste de vérification indique-t-elle qui est le décideur autorisé?",
+        "match_score": 100.0,
+        "answer": "Oui                                                                                                               [ Points : +1 ]",
+        "value": "item1-1"
+      },
+      {
+        "number": 24,
+        "name": "fairnessImplementation10",
+        "type": "radiogroup",
+        "title": "Le système est-il en mesure de justifier ses décisions ou ses recommandations au besoin?",
+        "match_score": 100.0,
+        "answer": "Non                                                                                                              [ Points : +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 25,
+        "name": "fairnessImplementation11",
+        "type": "radiogroup",
+        "title": "Avez-vous un processus en place pour accorder, surveiller et révoquer l'autorisation d'accès au système?",
+        "match_score": 100.0,
+        "answer": "Oui                                                                                                               [ Points : +1 ]",
+        "value": "item1-1"
+      },
+      {
+        "number": 26,
+        "name": "fairnessImplementation12",
+        "type": "radiogroup",
+        "title": "Avez-vous un mécanisme pour recueillir les commentaires des utilisateurs du système?",
+        "match_score": 100.0,
+        "answer": "Oui                                                                                                               [ Points : +1 ]",
+        "value": "item1-1"
+      },
+      {
+        "number": 27,
+        "name": "fairnessImplementation13",
+        "type": "radiogroup",
+        "title": "Avez-vous un processus de recours prévu ou établi pour les clients qui souhaitent contester la décision?",
+        "match_score": 100.0,
+        "answer": "Non                                                                                                              [ Points : +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 28,
+        "name": "fairnessImplementation14",
+        "type": "radiogroup",
+        "title": "Le système permet-il à une personne de passer outre aux décisions du système?",
+        "match_score": 100.0,
+        "answer": "Oui                                                                                                               [ Points : +2 ]",
+        "value": "item1-2"
+      },
+      {
+        "number": 29,
+        "name": "fairnessImplementation15",
+        "type": "radiogroup",
+        "title": "Avez-vous un processus en place pour consigner les cas où des dérogations ont été effectuées?",
+        "match_score": 100.0,
+        "answer": "Oui                                                                                                               [ Points : +1 ]",
+        "value": "item1-1"
+      },
+      {
+        "number": 30,
+        "name": "fairnessImplementation16",
+        "type": "radiogroup",
+        "title": "Avez-vous des processus en place pour enregistrer les modifications apportées au fonctionnement ou au rendement du système?",
+        "match_score": 100.0,
+        "answer": "Non                                                                                                              [ Points : +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 31,
+        "name": "fairnessImplementation17",
+        "type": "radiogroup",
+        "title": "Avez-vous préparé un dossier conceptuel à l'intention du Comité d'examen de l'architecture d'entreprise du gouvernement du Canada?",
+        "match_score": 95.31,
+        "answer": "Non                                                                                                              [ Points : +0 ]\n\nÉlimination des risques et mesures d’atténuation -\nConfidentialité",
+        "value": "item2-0"
+      },
+      {
+        "number": 32,
+        "name": "privacyImplementation1",
+        "type": "radiogroup",
+        "title": "Si votre système utilise ou crée des renseignements personnels, avez-vous entrepris une évaluation des facteurs relatifs à la vie privée ou révisé une évaluation existante?",
+        "match_score": 100.0,
+        "answer": "Oui                                                                                                               [ Points : +1 ]",
+        "value": "item1-1"
+      },
+      {
+        "number": 33,
+        "name": "privacyImplementation5",
+        "type": "comment",
+        "title": "Veuillez indiquer les éléments suivants dans votre réponse : titre et portée de l’évaluation des facteurs relatifs à la vie privée; la manière dont le projet d’automatisation s’intègre au programme; date d’achèvement ou de modification de l’évaluation des facteurs relatifs à la vie privée.",
+        "match_score": 96.0,
+        "answer": "facteurs relatifs à la vie privée (EFVP); comment le projet d’automatisation cadre dans le programme\n    et date de l’achèvement ou de la modification de l’évaluation des facteurs relatifs à la vie privée.\n    L’EFVP est une garantie de l’entente de mise en commun des condensés du Groupe des cinq qui\n    examinée par les Services juridiques de la GRC, le bureau de l’AIPRP, la SDSM, le GDJ et d’autres\n    intervenants internes qui définissent l’information qui concerne ce type de données. Des documents\n    concernant l’utilisation des condensés et des métadonnées dérivées sont produits et peuvent être\n    fournis sur demande.",
+        "value": "facteurs relatifs à la vie privée (EFVP); comment le projet d’automatisation cadre dans le programme\n    et date de l’achèvement ou de la modification de l’évaluation des facteurs relatifs à la vie privée.\n    L’EFVP est une garantie de l’entente de mise en commun des condensés du Groupe des cinq qui\n    examinée par les Services juridiques de la GRC, le bureau de l’AIPRP, la SDSM, le GDJ et d’autres\n    intervenants internes qui définissent l’information qui concerne ce type de données. Des documents\n    concernant l’utilisation des condensés et des métadonnées dérivées sont produits et peuvent être\n    fournis sur demande."
+      },
+      {
+        "number": 34,
+        "name": "privacyImplementation2",
+        "type": "radiogroup",
+        "title": "Avez-vous conçu et intégré la sécurité et la confidentialité dans vos systèmes dès la phase de conception du projet?",
+        "match_score": 100.0,
+        "answer": "Oui                                                                                                               [ Points : +1 ]",
+        "value": "item1-1"
+      },
+      {
+        "number": 35,
+        "name": "privacyImplementation3",
+        "type": "radiogroup",
+        "title": "Les informations sont-elles utilisées dans un système fermé (c'est-à-dire sans connexion à Internet, Intranet ou tout autre système)?",
+        "match_score": 100.0,
+        "answer": "Oui                                                                                                               [ Points : +1 ]",
+        "value": "item1-1"
+      },
+      {
+        "number": 36,
+        "name": "privacyImplementation7",
+        "type": "radiogroup",
+        "title": "Allez-vous dépersonnaliser les renseignements personnels utilisés ou établis par le système à tout moment du cycle de vie?",
+        "match_score": 96.0,
+        "answer": "Non                                                                                                              [ Points : +0 ]",
+        "value": "item2-0"
+      }
+    ],
+    "unresolved": [
+      "riskProfile4"
+    ]
+  },
+  "output": "/home/runner/work/aia-eia-js/aia-eia-js/recovered_aia_json/89898244-aaae-4591-ba9b-fe5cd81d5924/aia-results.json"
+}

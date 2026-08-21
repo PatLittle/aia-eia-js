@@ -1,0 +1,500 @@
+Résultats de l'évaluation de l'incidence
+algorithmique
+
+Version: 0.10.0
+Détails du projet
+1. Nom de la personne sondée
+Christie Sainsbury
+
+2. Titre du poste
+Gestionnaire, EDLS
+
+3. Ministère
+Gendarmerie royale du Canada
+
+4. Direction
+Services de police spécialisés
+
+5. Titre du projet
+Voice2Text
+
+6. Identifiant du projet provenant du Plan TI
+N/A
+
+7. Programme ministériel (Cadre ministériel des résultats)
+Services d'enquêtes techniques
+
+8. Phase du projet
+Conception                                                                                                                  [ Points: 0 ]
+
+9. Veuillez fournir une description du projet :
+Le projet consiste à créer une application Web hors ligne, sur serveur local, qui
+repose sur l’intelligence artificielle (IA) pour faciliter la transcription ou la
+traduction d’enregistrements audio recueillis dans le cadre d’enquêtes.
+L’application traitera les enregistrements audio et produira une transcription
+ou une traduction qui sera ensuite révisée par des transcripteurs ou
+traducteurs avant la divulgation. Le projet vise à améliorer l’efficacité du
+processus de transcription et de traduction, et non pas à le remplacer. Il aidera
+à réduire l’arriéré et à combler des besoins opérationnels en permettant aux
+enquêteurs d’obtenir plus rapidement des détails importants sur leur
+opération qui pourraient avoir une incidence sur la surveillance, la sécurité des
+policiers et la possibilité d’avoir à rectifier des autorisations. Des
+transcripteurs ou traducteurs devront tout de même réviser la transcription
+produite par l’application afin d’en assurer l’exactitude.
+
+À propos du système
+10. Veuillez indiquer laquelle des capacités suivantes s'applique à votre système.
+Analyse du texte et de la parole: Analyser de vastes jeux de données pour
+reconnaître, traiter et étiqueter le texte, la parole, la voix et faire des
+recommendations en fonction du marquage.
+Section 1: Niveau d'incidence: 1
+
+Cote actuelle : 28
+
+Cote d'incidence brute : 28
+
+Cote d'atténuation : 6
+Section 2: Exigences spécifiques au niveau
+d'incidence 1
+Examen par les pairs
+
+Aucune
+Analyse comparative entre les sexes plus
+
+Aucune
+Avis
+
+Aucune
+Maillon humain de la prise de décisions
+
+Des décisions peuvent être prises sans participation humaine directe.
+Explication
+
+En plus de toute exigence juridique applicable, s’assurer qu’une explication significative des
+résultats communs des décisions soit publiée. L’explication doit fournir une description générale
+des points suivants :
+
+    le rôle du système dans le processus de décision;
+   les données d’entrée, leur source et leur méthode de collecte;
+   les critères utilisés pour évaluer les données d’entrée et les opérations appliquées pour les
+    traiter;
+    le résultat produit par le système et toute information pertinente nécessaire pour l’interpréter
+   dans le contexte de la décision administrative;
+   les principaux facteurs à l’origine d’une décision.
+
+Les explications doivent également fournir des renseignements aux clients sur les possibilités de
+recours pertinentes, le cas échéant.
+
+Les descriptions doivent être offertes en langage clair par l’entremise de l’évaluation de
+l’incidence algorithmique et être repérables sur le site Web de l’institution.
+Formation
+
+Aucune
+Gestion de la TI et de la continuité des activités
+
+Aucune
+Approbation de l’exploitation du système
+
+Aucune
+Autres exigences
+
+La Directive sur la prise de décisions automatisée comprend également d'autres exigences qui
+doivent être respectées pour tous les niveaux d'incidences.
+
+Lien vers la Directive sur la prise de décisions automatisée
+
+Contactez le bureau de l'AIPRP de votre établissement pour discuter de l'exigence d'une
+évaluation des facteurs relatifs à la vie privée conformément à la Directive sur l'évaluation des
+facteurs relatifs à la vie privée.
+Section 3: Questions et réponses
+Section 3.1: Questions et réponses liées aux risques
+Raisons de l'automatisation
+1. Qu'est-ce qui motive votre équipe à introduire l'automatisation dans ce processus
+décisionnel? (Cochez toutes les réponses qui s'appliquent.)
+Arriéré de travail ou de cas existant
+Utilisation d'approches novatrices
+
+2. Quels sont les besoins des clients auxquels le système répondra et comment le système y
+répondra-t-il? Si possible, décrivez la façon dont les besoins des clients ont été déterminés.
+La transcription et la traduction d’enregistrements audio est un processus qui
+nécessite beaucoup de temps et de travail. L’utilisation de moteurs d’IA pour
+faciliter la transcription et la traduction permettra de réduire le temps et le
+travail nécessaires pour les transcripteurs et les traducteurs en générant une
+ébauche de transcription qu’ils pourront réviser plutôt que d’avoir à faire la
+transcription et la traduction eux-mêmes.
+
+3. Veuillez décrire tous les bienfaits d’intérêt public que le système devrait avoir.
+L’amélioration de l’efficacité de la transcription et de la traduction des
+enregistrements audio permettra aux enquêteurs d’obtenir rapidement des
+détails importants sur leur opération qui pourraient avoir une incidence sur la
+surveillance, la sécurité des policiers et la possibilité d’avoir à rectifier des
+autorisations. Elle aura aussi une incidence sur le délai de la divulgation à la
+cour, ce qui pourrait accélérer le traitement des cas publics.
+
+4. Dans quelle mesure le système sera-t-il efficace pour répondre aux besoins des clients?
+Modérément efficace                                                                                                  [ Points: +1 ]
+
+5. Veuillez décrire les améliorations, les bienfaits ou les avantages que vous attendez de
+l’utilisation d’un système automatisé. Cela pourrait inclure des indicateurs de programme et des
+objectifs de rendement pertinents.
+L’automatisation du processus de transcription et de traduction améliorera
+l’efficacité du processus par un facteur d’au moins 10. Les enquêteurs auront
+accès à l’information importante sur leur opération en temps plus opportun et
+la divulgation à la cour pourra se faire plus rapidement que maintenant.
+
+6. Veuillez décrire la façon dont vous allez vous assurer que le système se limite à répondre aux
+besoins des clients mentionnés ci-dessus.
+L’application utilise les paramètres de connexion d’Active Directory pour
+limiter l’accès aux personnes qui ont l’autorisation de consulter le système.
+Des méthodes de fonctionnement normalisées (MFN) seront élaborées pour
+assurer l’utilisation adéquate du système. Des essais seront effectués et des
+commentaires seront recueillis pour veiller à ce que l’efficacité du processus
+et l’exactitude des transcriptions et des traductions générées par l’application
+soient acceptables.
+
+7. Veuillez décrire toutes les concessions mutuelles entre les intérêts des clients et les objectifs
+du programme que vous avez pris en considération lors de l’élaboration du projet.
+Les préoccupations en matière de confidentialité et de sécurité exprimées par
+les clients ont été prises en considération. Le système est conçu par la GRC et
+sera exploité hors ligne et sur place. Les données opérationnelles ne seront
+pas conservées dans le système. Une fois que la transcription générée aura
+été téléchargée par l’utilisateur, l’enregistrement audio et la transcription
+seront supprimés du système.
+
+8. D’autres options de processus non automatisés ont-elles été envisagées?
+Oui                                                                                                                                [ Points: +0 ]
+
+9. Si des processus non automatisés ont été envisagés, pourquoi l’automatisation a-t-elle été
+l’option choisie?
+La traduction et la transcription manuelles nécessitent beaucoup de temps et
+de travail de la part des transcripteurs et des traducteurs, ce qui a donné lieu à
+un arriéré d’enregistrements audio à transcrire et entraîné des retards dans la
+divulgation. L’application produit automatiquement la transcription ou la
+traduction et les transcripteurs ou traducteurs n’ont qu’à la réviser, ce qui
+nécessite moins de temps et de travail que de faire la transcription au
+complet.
+
+10. Quelle serait la conséquence du non-déploiement du système?
+Autre (veuillez préciser)
+
+11. S'il vous plait décrire
+Le processus de transcription ne changerait pas et le niveau d’efficacité
+demeurerait le même.
+
+Profil de risque
+12. Le projet fait-il l'objet d'un examen public approfondi (e.g.: en raison de préoccupations liées
+à la protection de la vie privée) et/ou de litiges fréquents?
+Non                                                                                                                               [ Points: +0 ]
+
+13. Les clients de ce secteur d'activité sont-ils particulièrement vulnérables?
+Non                                                                                                                               [ Points: +0 ]
+14. Les enjeux des décisions de ce programme sont-ils très élevés?
+Non                                                                                                                               [ Points: +0 ]
+
+15. Ce projet aura-t-il d'importantes répercussions sur le personnel, que ce soit en termes de
+nombre ou de rôle?
+Non                                                                                                                               [ Points: +0 ]
+
+16. L’utilisation du système entraînera-t-elle des difficultés pour les personnes en situation de
+handicap ou les accentuera-t-elle?
+Non                                                                                                                               [ Points: +0 ]
+
+Autorité de projet
+17. Aurez-vous besoin d'une nouvelle autorisation en termes de politiques pour ce projet ?
+Non                                                                                                                               [ Points: +0 ]
+
+À propos de l'algorithme
+18. L'algorithme utilisé sera un secret (commercial)
+Non                                                                                                                               [ Points: +0 ]
+
+19. Le processus algorithmique sera difficile à interpréter ou à expliquer
+Non                                                                                                                               [ Points: +0 ]
+
+À propos de la décision
+20. Veuillez décrire la ou les décisions qui seront automatisées.
+Le système ne prendra pas de décisions. Les transcripteurs et les traducteurs
+réviseront les transcriptions et traductions générées par le système afin d’en
+assurer l’exactitude et d’apporter les corrections nécessaires. Les
+transcriptions générées par le moteur d’IA ne seront pas utilisées à moins
+d’avoir été examinées et corrigées par un humain.
+
+21. La décision s'applique-t-elle à l'une ou l'autre des catégories ci-dessous (*Cochez toutes les
+réponses qui s'appliquent) :
+Autre (veuillez préciser)                                                                                              [ Points: +1 ]
+
+22. S'il vous plait décrire
+Le système ne prendra pas de décisions.
+
+Évaluation de l'incidence
+23. Parmi les propositions suivantes, laquelle décrit le mieux le type d’automatisation que vous
+envisagez?
+Automatisation partielle (le système facilitera la prise de décisions
+administratives en appuyant un agent au moyen d’évaluations, de
+recommandations, de décisions provisoires ou d’autres résultats)                         [ Points: +2 ]
+
+24. Veuillez décrire le rôle du système dans le processus de prise de décisions.
+Le système ne prendra pas de décisions. Les transcriptions générées par le
+moteur d’IA ne seront pas utilisées telles quelles pour la prise de décisions ou
+la divulgation. Elles devront d’abord être révisées par un transcripteur ou un
+traducteur.
+25. Le système prendra-t-il des décisions ou effectuera-t-il des évaluations qui exigent du
+jugement ou de la discrétion?
+Non                                                                                                                               [ Points: +0 ]
+
+26. Veuillez décrire les critères utilisés pour évaluer les données des clients et les procédures
+appliquées pour les traiter.
+Les données des clients sont des enregistrements audio téléversés dans
+l’application. Les enregistrements seront traités par un modèle de
+reconnaissance de la parole pour produire une transcription ou une
+traduction.
+
+27. Veuillez décrire le résultat produit par le système et les renseignements pertinents
+nécessaires à l’interprétation dans le contexte de la décision administrative.
+Le résultat produit par le système est une transcription (texte) de
+l’enregistrement audio. L’enregistrement audio original est nécessaire pour la
+vérification de l’exactitude de la transcription par le transcripteur ou le
+traducteur.
+
+28. Le système effectuera-t-il une évaluation ou une autre activité qui ne serait autrement pas
+réalisée par un humain?
+Non                                                                                                                               [ Points: +0 ]
+
+29. Le système est-il utilisé par une partie de l’organisation différente de celle à laquelle
+appartiennent ceux qui l’ont développé?
+Non                                                                                                                               [ Points: +0 ]
+
+30. Les incidences découlant de la décision sont-elles réversibles?
+Réversible                                                                                                                    [ Points: +1 ]
+
+31. Combien de temps les incidences de la décision dureront-elles?
+Les incidences risquent fort probablement d’être brèves                                         [ Points: +1 ]
+
+32. Veuillez indiquer pour quelle raison les incidences découlant de la décision sont (selon
+l’option sélectionnée ci-dessus).
+Les transcriptions ne seront jamais utilisées dans le format brut fourni par
+l’application. Elles devront être vérifiées par un humain, soit un transcripteur
+ou un traducteur, afin d’en assurer l’exactitude avant qu’elles soient
+transmises.
+
+33. Les incidences de la décision sur les droits ou libertés des personnes seront probablement
+les suivantes :
+Incidence faible ou nulle                                                                                             [ Points: +1 ]
+
+34. Veuillez indiquer pour quelle raison les incidences découlant de la décision sont (selon
+l’option sélectionnée ci-dessus).
+Aucune incidence sur les droits des personnes. Les enregistrements audio
+versés dans le système auront été obtenus légalement. L’application ne devra
+pas obligatoirement être utilisée si une transcription manuelle est nécessaire
+ou privilégiée.
+
+35. Les incidences de la décision sur l’égalité, la dignité, la vie privée et l’autonomie des
+personnes seront probablement :
+Incidence faible ou nulle                                                                                             [ Points: +1 ]
+36. Veuillez indiquer pour quelle raison les incidences découlant de la décision sont (selon
+l’option sélectionnée ci-dessus).
+Aucune incidence sur des personnes. Voice2Text est un outil qui vise à aider
+les transcripteurs de la GRC et non à les remplacer.
+
+37. Les incidences de la décision sur la santé et le bien-être des personnes seront
+probablement les suivantes :
+Incidence faible ou nulle                                                                                             [ Points: +1 ]
+
+38. Veuillez indiquer pour quelle raison les incidences découlant de la décision sont (selon
+l’option sélectionnée ci-dessus).
+Le système ne conservera pas les enregistrements audio et les transcriptions
+à long terme. Une fois que la transcription générée aura été téléchargée,
+toutes les données seront supprimées du système. L’application ne recueillera
+aucun renseignement personnel sur l’utilisateur.
+
+39. Les incidences de la décision sur les intérêts économiques des personnes seront
+probablement les suivantes :
+Incidence faible ou nulle                                                                                             [ Points: +1 ]
+
+40. Veuillez indiquer pour quelle raison les incidences découlant de la décision sont (selon
+l’option sélectionnée ci-dessus).
+Aucune incidence économique.
+
+41. Les incidences de la décision sur la pérennité d’un écosystème environnemental seront
+probablement les suivantes :
+Incidence faible ou nulle                                                                                             [ Points: +1 ]
+
+42. Veuillez indiquer pour quelle raison les incidences découlant de la décision sont (selon
+l’option sélectionnée ci-dessus).
+Aucune incidence sur la pérennité ou l’environnement.
+
+À propos des données - A. Source des données
+43. Le système de décision automatisé utilisera-t-il des renseignements personnels comme
+données d’entrée?
+Non                                                                                                                               [ Points: +0 ]
+
+44. Quelle est la classification de sécurité la plus élevée des données d’entrée utilisées par le
+système? (N’en choisir qu’une seule)
+Protégé B/Protégé C                                                                                                   [ Points: +3 ]
+
+45. Qui contrôle les données?
+Gouvernement fédéral                                                                                                 [ Points: +1 ]
+
+46. Les données utilisées par le système proviendront-elles de plusieurs sources différentes?
+Oui                                                                                                                                [ Points: +4 ]
+
+47. Le système aura-t-il besoin de données d’entrée provenant d’un appareil connecté à Internet
+ou à la téléphonie? (P. ex., internet des objets, un Capteur)
+Non                                                                                                                               [ Points: +0 ]
+
+48. Le système interagira-t-il avec d’autres systèmes des TI?
+Oui                                                                                                                                [ Points: +4 ]
+
+49. Qui a recueilli les données utilisées pour préparer le système?
+Un gouvernement étranger ou un tiers non gouvernemental                                   [ Points: +4 ]
+
+50. Qui a recueilli les données d’entrée utilisées par le système?
+Votre institution                                                                                                           [ Points: +1 ]
+
+51. Veuillez décrire les données d’entrée collectées et utilisées par le système, leur source et
+leur méthode de collecte.
+Les données d’entrée utilisées dans le système auront été obtenues
+légalement par la GRC en tant qu’éléments de preuve, de différentes façons.
+Les enregistrements seront téléversés dans le système, transcrits ou traduits,
+puis supprimés du système une fois que la transcription aura été téléchargée.
+
+À propos des données - B. Type de données
+52. Le système exigera-t-il l’analyse de données non structurées pour faire une
+recommandation ou prendre une décision?
+Non                                                                                                                               [ Points: 0 ]
+
+Section 3.2: Questions et réponses liées aux mesures
+d'atténuation
+1. Intervenants internes (institutions fédérales, y compris la fonction publique fédérale)
+Oui                                                                                                                                [ Points: +1 ]
+
+2. Quels intervenants internes allez-vous consulter?
+Gouvernance des données
+Services légaux
+Services des communications
+Ressources humaines
+Politique sur le numérique
+
+3. Intervenants externes (groupes d’autres secteurs ou administrations)
+Non                                                                                                                               [ Points: +0 ]
+
+Élimination des risques et mesures d'atténuation - Qualité
+des données
+4. Disposerez-vous de processus documentés pour tester les jeux de données en fonction de
+biais et d’autres résultats inattendus? Par exemple, ceci pourrait inclure une expérience dans
+l’application de cadres, de méthodes, de lignes directrices ou d’outils d’évaluation.
+Non                                                                                                                               [ Points: +0 ]
+
+5. Allez-vous élaborer un processus permettant de documenter la façon dont les problèmes de
+qualité des données qui seront résolus pendant le processus de conception?
+Non                                                                                                                               [ Points: +0 ]
+
+6. Allez-vous rendre cette information disponible publiquement?
+Non                                                                                                                               [ Points: +0 ]
+7. Entreprendrez-vous une analyse comparative entre les sexes plus des données?
+Non                                                                                                                               [ Points: +0 ]
+
+8. Allez-vous rendre cette information disponible publiquement?
+Non                                                                                                                               [ Points: +0 ]
+
+9. Dans votre établissement, existe-t-il des responsables de la conception, du développement,
+de la maintenance et de l’amélioration du système?
+Oui                                                                                                                                [ Points: +2 ]
+
+10. Disposerez-vous d'un processus documenté pour gérer le risque que des données périmées
+ou non fiables soient utilisées pour prendre une décision automatisée?
+Non                                                                                                                               [ Points: +0 ]
+
+11. Allez-vous rendre cette information disponible publiquement?
+Non                                                                                                                               [ Points: +0 ]
+
+12. Les données utilisées pour ce système seront-elles affichées sur la portail du gouvernement
+ouvert?
+Non                                                                                                                               [ Points: +0 ]
+
+Élimination des risques et mesures d'atténuation - Équité
+procédurale
+13. La piste de vérification permettra-t-elle de déterminer les pouvoirs ou les pouvoirs délégués
+prévus par la lois?
+Non                                                                                                                               [ Points: +0 ]
+
+14. Le système fournira-t-il une piste de vérification qui enregistre toutes les recommandations
+ou décisions prises par le système?
+Non                                                                                                                               [ Points: +0 ]
+
+15. Pourra-t-on identifier tous les points de décision clés dans la piste de vérification?
+Non                                                                                                                               [ Points: +0 ]
+
+16. Est-ce que toutes les décisions clés seront liées à une législation, politique ou à une
+procédure pertinente?
+Non                                                                                                                               [ Points: +0 ]
+
+17. Tiendrez-vous un journal détaillant toutes les modifications apportées au modèle et au
+système?
+Non                                                                                                                               [ Points: +0 ]
+
+18. La piste de vérification indiquera-t-elle clairement tous les points de décision prise par le
+système?
+Non                                                                                                                               [ Points: +0 ]
+
+19. La piste de vérification générée par le système pourrait-elle être utilisée pour aider à
+produire une notification de la décision (y compris un énoncé des motifs ou une autre
+notification) au besoin?
+Non                                                                                                                               [ Points: +0 ]
+20. La piste de vérification permettra-t-elle de déterminer précisément quelle version du
+système a été utilisée pour chaque décision qu'elle appuie?
+Non                                                                                                                               [ Points: +0 ]
+
+21. La piste de vérification indiquera-t-elle qui est le décideur autorisé?
+Non                                                                                                                               [ Points: +0 ]
+
+22. Le système sera-t-il en mesure de justifier ses décisions ou ses recommandations au
+besoin?
+Non                                                                                                                               [ Points: +0 ]
+
+23. Y aura-t-il un processus en place pour accorder, surveiller et révoquer l'autorisation d'accès
+au système?
+Oui                                                                                                                                [ Points: +1 ]
+
+24. Y aura-t-il un mécanisme pour recueillir les commentaires des utilisateurs du système?
+Oui                                                                                                                                [ Points: +1 ]
+
+25. Y aura-t-il un processus de recours prévu ou établi pour les clients qui souhaitent contester
+la décision?
+Non                                                                                                                               [ Points: +0 ]
+
+26. Le système permettra-t-il à une personne de passer outre aux décisions du système?
+Non                                                                                                                               [ Points: +0 ]
+
+27. Y aura-t-il un processus en place pour consigner les cas où des dérogations ont été
+effectuées?
+Non                                                                                                                               [ Points: +0 ]
+
+28. La piste de vérification comprendra-t-elle des processus pour enregistrer les modifications
+apportées au fonctionnement ou au rendement du système?
+Non                                                                                                                               [ Points: +0 ]
+
+29. Allez-vous préparer un dossier conceptuel à l'intention du Comité d'examen de l'architecture
+d'entreprise du gouvernement du Canada?
+Non                                                                                                                               [ Points: +0 ]
+
+Élimination des risques et mesures d'atténuation -
+Confidentialité
+30. Si votre système utilise ou crée des renseignements personnels, avez-vous ou allez-vous
+entreprendre une évaluation des facteurs relatifs à la vie privée ou réviser une évaluation
+existante?
+Non                                                                                                                               [ Points: +0 ]
+
+31. Concevrez-vous et intégrerez-vous la sécurité et la confidentialité dans vos systèmes dès la
+phase de conception du projet?
+Oui                                                                                                                                [ Points: +1 ]
+
+32. Les informations seront-elles utilisées dans un système fermé (c'est-à-dire sans connexion
+à Internet, Intranet ou tout autre système)?
+Non                                                                                                                               [ Points: +0 ]
+33. Si le partage de renseignements personnels est impliqué, un accord ou un arrangement
+avec des garanties appropriées a-t-il été établi?
+Non                                                                                                                               [ Points: +0 ]
+
+34. Allez-vous dépersonnaliser les renseignements personnels utilisés ou établis par le système
+à tout moment du cycle de vie?
+Non                                                                                                                               [ Points: +0 ]

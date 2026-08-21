@@ -1,0 +1,816 @@
+Algorithmic Impact Assessment Results
+
+Version: 0.10.0
+Project Details
+1. Name of Respondent
+Mike Leahy
+
+2. Job Title
+Director General
+
+3. Department
+Canada Border Services Agency
+
+4. Branch
+Commercial & Trade Branch
+
+5. Project Title
+CBSA Assessment and Revenue Management (CARM)
+
+6. Project ID from IT Plan
+PRJ-00005304
+
+7. Departmental Program (from Department Results Framework)
+PI 10500 Commercial Facilitation and Compliance Program
+
+8. Project Phase
+Implementation                                                                                                           [ Points: 0 ]
+
+9. Please provide a project description:
+The CBSA’s mandate is to provide integrated border services that support
+national security and public safety priorities while facilitating the free flow of
+persons and goods that meet all requirements under its program legislation.
+Managing the efficient importation of commercial goods into Canada,
+including the accurate and effective assessment and collection of duties and
+taxes owed to the Government of Canada, is key to the facilitation aspect of
+the CBSA’s mandate.
+
+In 2009, the Office of the Auditor General (OAG) appeared before the Standing
+Committee on Public Accounts (PACP). The OAG noted that CBSA had
+difficulty in reconciling information in various reports taken from its tax
+program systems, which led to unexplained differences at year-end. The
+Committee was told that this was due to information technology systems not
+being able to share data. As a result, PACP recommended that the CBSA
+provide the Committee with a detailed plan specifying the steps it would take
+to improve its tax revenue accounting systems. It is from this
+recommendation that the CBSA Assessment and Revenue Management
+(CARM) project was created.
+
+The CBSA Assessment and Revenue Management Program (CARM) is a
+multi-year transformation initiative that will aid the Government of Canada in
+protecting and growing $40 billion a year in revenue for Canadians. In fiscal
+year 2022–2023, the CBSA collected $39.7 billion in duties and taxes on
+imported goods.
+
+The CARM project is modernizing and simplifying the accounting process
+related to imported goods, providing a more efficient means for Trade Chain
+Partners (TCPs) (e.g. importers, customs brokers, carriers, freight forwarders,
+customs bonded and sufferance warehouse operators, and duty free shop
+operators) and the CBSA to interact during the importation process and when
+accounting for commercial goods, and when corrections or amendments to
+accounting documentation are required.
+
+The CARM System was developed by both CBSA, and third-party consultants,
+such as Deloitte and Accenture. Creating a new method to submit
+Commercial Accounting Data, and automating certain administrative
+processes within the system in order to increase compliance activities, and
+modernize and streamline the accounting process for importing commercial
+goods into Canada.
+
+The CARM System is a rule-based automated decision system, which uses
+automation to generate reports of potentially non-compliant transactions,
+using established risking rules; and calculates duties and taxes based on the
+goods being imported, according to the Customs Act. In all scenarios, human
+intervention, and overriding is possible, and established recourse processes
+continue to serve TCPs.
+
+The CARM system will replace manual processes and aging systems, some of
+which are more than 30 years old. It is designed to address many issues the
+CBSA and TCPs face in the importation process relating to the assessment
+and collection of duties and taxes, including:
+•inefficiencies resulting from a reliance on manual and, in some instances,
+paper-based processes;
+•difficulties in collecting on debts owed to the Government of Canada and in
+facilitating compliance with the trade rules and regulations governing the
+importation of commercial goods into Canada; and
+•challenges in navigating overly complex processes and rules related to
+commercial accounting and payment of owed amounts, including non-
+harmonized payment due dates.
+
+The launch of CARM facilitates the impact of customs activities on Trade
+Chain Partners, by modernizing the regulatory framework around managing
+import accounting and the payments owed to the Government of Canada.
+CARM has been designed to give TCPs improved access to their import
+account information with the CBSA, and to make it easier for them to
+communicate with the CBSA and remain compliant with commercial goods
+accounting requirements. CARM offers TCPs a number of benefits by:
+• Eliminating cumbersome and time-consuming paper-based processes (e.g.
+TCPs are no longer required to submit paper-based documentation to specific
+CBSA officers or locations, which is administratively cumbersome for TCPs
+and the Government of Canada alike)
+• Providing better tools to improve fairness and consistency in the treatment
+of all importers, reducing missed opportunities to apply taxes and/or duties,
+thereby reducing revenue leakage (e.g. Previously, the importing process
+relied on paper-based accounting and correction which creates inefficiencies,
+creating the potential for records to be inadvertently destroyed or misplaced,
+and creates challenges to assembling a clear picture of an entity’s compliance
+with accounting and payment obligations)
+•Offering importers the ability to enroll in commercial programs, submit
+accounting documents, and receive notifications through their CARM Client
+Portal account (e.g. TCPs now have a centralized portal that streamlines all
+commercial interaction in one view)
+•Creating harmonized billing cycles (e.g. TCPs now have one comprehensive
+monthly payment. The former process prescribed multiple payment due dates
+for various amounts, which created confusion for TCPs.)
+
+A Privacy Impact Assessment (PIA) has been created for the CARM project,
+noting limited administrative risks. The initial PIA was completed for the first
+phase of the CARM project that was implemented in January 2016 and then
+amended throughout the CARM project lifetime up to the PIA version that was
+approved in April 2024. The CARM solution collects and uses commercial
+data to enable the CBSA to administer the process of the importation of
+commercial goods. The CARM system shares information with the Canada
+Revenue Agency, Public Services and Procurement Canada, Innovation
+Science and Economic Development, Office of the Auditor General, Canadian
+Centre for Cyber Security, Department of Finance, and Statistics Canada.
+Information is shared with these partners in accordance with the Customs
+Act, Customs Tariff, Special Import Measures Act, Excise Tax Act, Excise Act
+and the Excise Act, 2001, Income Tax Act, and the Statistics Act. Subsequent
+use and disclosure of this information is restricted by the Privacy Act.
+
+CARM was released in several phases:
+
+Release 0 – R0 (January 2021) moved the Accounts Receivable Ledger (ARL)
+(Released in April 2015) to CARM using the latest technology hosted within a
+cloud environment.
+
+Release 1 – R1 (May 2021) was the introduction of an internal portal which
+set the foundation for case management. The CARM Client Portal also went
+live to TCPs importing goods into Canada to complete the following tasks:
+view transactions posted to their accounts, make payments by credit card,
+online banking or set up pre-authorized debit, request and track the progress
+of rulings electronically, and classify goods and estimate duties and taxes.
+
+Release 2 – R2 (May 2024) An internal launch of the CARM system to begin
+compliance verification activities with Trade Chain Partners.
+
+Release 3 – R3 (October 2024) The external launch of the CARM system for
+importers and other trade chain partners, becoming the official system of
+record for imposing or levying duties and taxes. It involved the transition from
+CBSA legacy revenue management systems to the new system of record, and
+introduced new measures such as Trade Chain Partner registration and
+enrolment availability, and increased portal functionality, including: changes to
+the Release Prior to Payment (RPP) Program, electronic commercial
+accounting declarations that you can correct and adjust, harmonized billing
+cycles, new offsetting options, electronic management of appeals and
+compliance actions, the ability for resident trade chain partners to register for
+a Business Number (BN9), and enrolment in various CBSA commercial
+programs.
+Release 4 - R4 (August 2025) A significant system maintenance upgrade of
+CARM's base software. Also includes some CARM Portal enhancements,
+improvements to CBSA operations and increased Trade Chain Partner
+efficiency (e.g. increased visibility on program account management status
+and business relationships)
+
+The CARM program will continue to transform and modernize the commercial
+importation process through future releases, benefitting the Government of
+Canada, the trade community, and Canadians.
+
+About The System
+10. Please check which of the following capabilities apply to your system.
+Risk assessment: Analyzing very large data sets to identify patterns and
+recommend courses of action and in some cases trigger specific actions
+Process optimization and workflow automation: Analyzing large data sets to
+identify and anomalies, cluster patterns, predict outcomes or ways to
+optimize; and automate specific workflows
+Content generation: Analyzing large data sets to categorize, process, triage,
+personalize, and serve specific content for specific contexts
+
+Section 1: Impact Level : 1
+
+Current Score: 28
+
+Raw Impact Score: 33
+
+Mitigation Score: 37
+Section 2: Requirements Specific to Impact Level 1
+Peer review
+
+None
+Gender-based Analysis Plus
+
+None
+Notice
+
+None
+Human-in-the-loop for decisions
+
+Decisions may be rendered without direct human involvement.
+Explanation
+
+In addition to any applicable legal requirement, ensure that a meaningful explanation is published
+for common decision results. The explanation must provide a general description of:
+
+   the role of the system in the decision-making process;
+   input data, its source and method of collection;
+   the criteria used to evaluate input data and the operations applied to process it;
+   the output produced by the system and any relevant information needed to interpret it in the
+   context of the administrative decision; and
+   the principal factors behind a decision.
+
+Explanations must also inform clients of relevant recourse options, where appropriate.
+
+Descriptions must be made available in plain language through the Algorithmic Impact
+Assessment and discoverable via a departmental website.
+Training
+
+None
+IT and business continuity management
+
+None
+Approval for the system to operate
+
+None
+Other requirements
+
+The Directive on Automated Decision-Making also includes other requirements that must be met
+for all impact levels.
+
+Link to the Directive on Automated Decision-Making
+
+Contact your institution's ATIP office to discuss the requirement for a Privacy Impact
+Assessment as per the Directive on Privacy Impact Assessment.
+Section 3: Questions and Answers
+Section 3.1: Impact Questions and Answers
+Reasons for Automation
+1. What is motivating your team to introduce automation into this decision-making process?
+(Check all that apply)
+Existing backlog of work or cases
+Improve overall quality of decisions
+Lower transaction costs of an existing program
+The system is performing tasks that humans could not accomplish in a
+reasonable period of time
+Use innovative approaches
+
+2. What client needs will the system address and how will this system meet them? If possible,
+describe how client needs have been identified.
+The utilization of the CARM system will enable Trade Chain Partners (TCPs) to
+meet all of the requirements governing the accounting of commercial goods
+imported into Canada, including, but not limited to:
+• classifying their commercial goods under the appropriate tariff
+classification
+• accurately declaring the origin and value of the goods, in accordance with
+legislative requirements
+• paying the appropriate duties and taxes on the goods
+• eliminating cumbersome and time-consuming paper-based processes
+• streamlining access to tools and information to enroll in commercial
+programs, submit accounting documents, receive electronic notifications and
+make electronic payments
+
+The need for better compliance has been demonstrated in many ways
+throughout the years. The 2017 Spring Reports of the Auditor General of
+Canada to the Parliament of Canada: Report 2 —Customs Duties identified
+missing revenues as a result of the self-assessment system used by the
+importing community to declare the classification and duties owing, to the
+best of their knowledge. Additionally, the CBSA conducted a CARM Client
+experience Simulation (CES 2.0) from February to June 2023 where TCPs
+participated in a number of simulations of CARM business processes and
+interactions. The CBSA identified many client errors in this non-production
+simulated environment, highlighting knowledge gaps and the need for further
+client education, and building participant readiness for the CARM external
+launch in October 2024. Having better compliance when declaring
+transactions to the CBSA will reduce the risk of penalties or interest
+payments, as more compliance means a more accurate assessment of duties
+and taxes. Errors and omissions in customs payments create an unfair
+competitive advantage for those not paying the correct amount owed.
+
+3. Please describe any public benefits the system is expected to have.
+When importers and other trade chain partners are compliant with applicable
+legislation and revenue requirements, the correct amount of duties and taxes
+are remitted to the Crown. The CARM system better equips the CBSA to
+protect and grow $40 billion a year in revenue for Canadians. Additionally, the
+integrity of Canada’s import regime is a public benefit, as CARM ensures a
+level playing field for all businesses by providing the CBSA better compliance
+and enforcement tools.
+
+4. How effective will the system likely be in meeting client needs?
+Very effective                                                                                                               [ Points: +0 ]
+
+5. Please describe any improvements, benefits, or advantages you expect from using an
+automated system. This could include relevant program indicators and performance targets.
+The system's automated features are strengthening the Agency’s ability to
+accurately assess duties and taxes owed on imported goods by further
+enabling importers to self-assess and comply with Canada’s trade
+requirements through compliance tools and education. Additionally, CARM
+allows for TCPs to directly submit accounting declarations to the CBSA, and
+for the Agency to calculate and notify the TCP of assessed duties and taxes in
+a timely manner. CARM provides expanded reporting and analytical
+capabilities beyond what is available without automation.
+
+In the greater context of its trade compliance activities, the CBSA measures
+return on investment by comparing the total duties assessed versus the total
+expenditures for such activities. In 2022 to 2023, the Agency achieved a return
+on investment ratio of 16:1, doubling its target of 8:1. CARM enables the CBSA
+to better identify non-compliant transactions by using the new automated
+CARM risking rules. Integrating this technology allows the CBSA to narrow it’s
+focus on the noncompliant importers. For example, there are now greater data
+validation rules (proper classification/excise/GST mapping) which prevents
+previous errors as these data elements were not system-validated in legacy
+programs. In addition, CARM offers more validation on import permits and
+remission orders that are coded for specific commodities, thus ensuring
+permits are used for the approved purpose only.
+
+The CBSA will monitor the process of CARM to ensure desired benefits are
+realized as planned:
+• Reduced administrative burden for Canadian importers and other TCPs (e.g.
+percentage of annual payments made using electronic payment methods);
+• Increased Government of Canada revenues (e.g. additional revenue
+generated per year as a result of improvements in verification approaches and
+improved compliance); and,
+• Improved CBSA efficiency (e.g. reduced maintenance costs or trade and
+revenue management IT systems).
+
+6. Please describe how you will ensure that the system is confined to addressing the client
+needs identified above.
+The CARM Client Portal allows for Trade Chain Partners (TCPs) who have a
+business number and enrolled in CBSA commercial programs to have direct
+access to the accounting functions that CBSA uses, allows TCPs to
+automatically register and enroll into different commercial programs, view
+calculated duties and taxes and payment due dates, receive financial
+statements and make electronic payments, and allows for importers to make
+appeals and adjustments to their accounting declarations, etc. CARM internal
+access oversight controls are managed to ensure specific individuals are
+given access to CARM data to perform roles relating to their job, e.g.
+compliance monitoring, managing corrections and adjustments, processing
+appeals, etc.
+CARM has governance bodies in place to review any requests to change
+functionality from the original design. The system continues to be assessed
+and evaluated as there are some systemic requirements that still need to be
+met in order to meet client needs.
+
+7. Please describe any trade-offs between client interests and program objectives that you have
+considered during the design of the project.
+Extensive consultations with the trade community occurred during the design
+phase of the project through working groups, training sessions, and trade
+committees which resulted in an agreed approach to deployments occurring
+over a number of releases. Trade chain partners (TCPs) made significant
+investments to upgrade their systems to align to CARM program requirements
+and objectives, and significant time and effort conducting extensive testing of
+the new system with the CBSA, and training to use the new portal. CARM is
+widely available to all importers and other trade chain partners, using the
+CARM client portal that allows TCPs to access, an online portal, to submit
+their commercial accounting declarations to the CBSA, manage adjustments
+and corrections, and more. After releasing the system, the CBSA provides the
+CARM Client Support Helpdesk ensures that TCPs have constant access
+support as needed.
+8. Have alternative non-automated processes been considered?
+Yes                                                                                                                                [ Points: +0 ]
+
+9. If non-automated processes were considered, why was automation identified as the preferred
+option?
+Risking officers manually assess transactions with conventional tools and a
+much smaller set of criteria. Due to the high volume of transactions, this is an
+extremely inefficient risking strategy. Continuing to operate with outdated
+systems, would lead to missed revenues and limit compliance activities that
+the CBSA officers can undertake. Additionally, calculating duties and taxes is
+now completed through the CARM system and can be done much more
+efficiently than completing the previous paper-based B3 forms.
+
+10. What would be the consequence of not deploying the system?
+Service quality is not as high
+Service delivery cannot achieve performance targets
+
+Risk Profile
+11. Is the project within an area of intense public scrutiny (e.g. because of privacy concerns)
+and/or frequent litigation?
+No                                                                                                                                 [ Points: +0 ]
+
+12. Are clients in this line of business particularly vulnerable?
+No                                                                                                                                 [ Points: +0 ]
+
+13. Are stakes of the decisions very high?
+No                                                                                                                                 [ Points: +0 ]
+
+14. Will this project have major impacts on staff, either in terms of their numbers or their roles?
+No                                                                                                                                 [ Points: +0 ]
+
+15. Will the use of the system create or exacerbate barriers for persons with disabilities?
+No                                                                                                                                 [ Points: +0 ]
+
+Project Authority
+16. Will you require new policy authority for this project?
+No                                                                                                                                 [ Points: +0 ]
+
+About the Algorithm
+17. The algorithm used will be a (trade) secret
+Yes                                                                                                                                [ Points: +3 ]
+
+18. The algorithmic process will be difficult to interpret or to explain
+No                                                                                                                                 [ Points: +0 ]
+
+About the Decision
+19. Please describe the decision(s) that will be automated.
+The CARM system delivers outputs to the CBSA using business rules and
+mathematical logic including:
+• Calculate duties and taxes owed, financial security bonds, penalties, and
+interest based on legislative requirements defined through the Customs Act.
+• Analyze transactions and identify trade compliance risks through data
+provided by Trade Chain Partners as well as financial transactions stored
+within CARM, and will create reports of potentially non-compliant
+transactions.
+• Validate data submitted to ensure that it is correctly entered according to
+formatting rules (e.g. syntax errors, etc.)
+• Verify TCP registration data against current information in the Accounts
+Receivable Ledger (ARL) as well as Client Master Data (CMD), if applicable.
+• Notify Trade Chain Partners electronically regarding updates to cases
+submitted to CARM, or of validation errors in forms submitted.
+• Review transactions/requests submitted by TCPs according to business
+rules and determines if CBSA manual intervention and approval by a
+delegated CBSA authority is required.
+Officers review outputs and make the final decisions.
+
+20. Does the decision pertain to any of the categories below (check all that apply):
+Other (please specify)                                                                                                 [ Points: +1 ]
+
+21. Please describe
+Border Management: Accounting and risk assessment of import transactions
+
+Impact Assessment
+22. Which of the following best describes the type of automation you are planning?
+Partial automation (the system will contribute to administrative decision-
+making by supporting an officer through assessments, recommendations,
+intermediate decisions, or other outputs)                                                                  [ Points: +2 ]
+
+23. Please describe the role of the system in the decision-making process.
+The CARM system uses mathematical logic and business rules to deliver the
+following examples of outputs to aid CBSA in decision-making:
+• Providing compliance assessments based on business rules to CBSA
+Officers
+• Provide CBSA Officers a list of transactions which require manual
+intervention or approval by a delegated CBSA authority
+• Notifying clients of decisions rendered by CBSA Officers
+• Calculate estimated duties and taxes based on accounting rules and notify
+clients of assessed duties and taxes
+
+24. Will the system be making decisions or assessments that require judgement or discretion?
+No                                                                                                                                 [ Points: +0 ]
+
+25. Please describe the criteria used to evaluate client data and the operations applied to
+process it.
+The system uses a set of risk rules that produce transactional lists based on
+the criteria in the rules being met or not met. The new risk rules integrated in
+CARM were developed based on legislative requirements in the Customs Act.
+For example, the officer could decide to use the system to look at transactions
+above a certain declared Value for Duty.
+These rules were also validated against previous results of trade compliance
+verifications and were recently tested during the CARM Client Experience
+Simulation (CES 2.0) exercise.
+The system also uses importer data for accounting declarations, business
+numbers (BNs) registration and enrolment, acceptance of payment, sub-
+location enrolment and other system functions.
+
+26. Please describe the output produced by the system and any relevant information needed to
+interpret it in the context of the administrative decision.
+The CARM system will create a list of potentially non-compliant transactions
+(shipments imported into Canada) based on the established risk criteria that
+can include elements of the Importer’s customs declaration, such as the
+value, origin or tariff classification of the goods being imported to Canada.
+
+These lists of transactions will be further reviewed by CBSA officers who will
+determine whether further action is needed, which could include a Trade
+advisory notice (TAN) or a Compliance validation letter for example. This
+helps officers focus on the transactions with a higher potential of
+noncompliance.
+
+The CARM system will also provide CBSA with transactions that require
+manual intervention or approval by a delegated CBSA authority, which would
+include TCP-provided transaction information for the CBSA to make the final
+decision.
+
+The CARM system also creates reports according to program and legislative
+requirements and provides notification of assessed duties and taxes, using
+commercial accounting declaration data submitted by TCP.
+
+27. Will the system perform an assessment or other operation that would not otherwise be
+completed by a human?
+No                                                                                                                                 [ Points: +0 ]
+
+28. Is the system used by a different part of the organization than the ones who developed it?
+No                                                                                                                                 [ Points: +0 ]
+
+29. Are the impacts resulting from the decision reversible?
+Reversible                                                                                                                    [ Points: +1 ]
+
+30. How long will impacts from the decision last?
+Impacts are most likely to be brief                                                                             [ Points: +1 ]
+
+31. Please describe why the impacts resulting from the decision are as per selected option
+above.
+Impacts are most likely to be brief. If the officer recommends a compliance
+activity and this results in reassessments, the client may choose to appeal the
+decision and they have recourse mechanisms available to them.
+
+CBSA Officers can decide to discard transactions recommended by the
+system and also have the ability to decide which compliance activity to
+recommend based on their assessment. Should an importer or business
+disagree with a CBSA assessment or decision resulting from a trade
+compliance activity may be eligible to apply for a further re-determination or
+review using existing recourse mechanisms, which can be found here: https://
+www.cbsa-asfc.gc.ca/recourse-recours/
+32. The impacts that the decision will have on the rights or freedoms of individuals will likely be:
+Little to no impact                                                                                                       [ Points: +1 ]
+
+33. Please describe why the impacts resulting from the decision are as per selected option
+above.
+The CARM system will have little to no impact because it won’t be rendering
+decisions regarding commercial importation. Instead, it sorts data relating to
+commercial goods being imported into Canada such as Origin, Value or Tariff
+Classification of these commercial goods.
+
+The CARM system operates on a ‘post-entry’ verification model. Meaning that
+no shipments will be stopped at the border nor will importers be prohibited
+from importing their goods as a result of a compliance verification. Rather, the
+system will result in helping importers that may not yet be fully compliant as
+per the existing legislation and regulations. Identifying such gaps, will lead to
+more accurate declaration of goods, regardless of the nature of the goods.
+
+34. The impacts that the decision will have on the equality, dignity, privacy, and autonomy of
+individuals will likely be:
+Little to no impact                                                                                                       [ Points: +1 ]
+
+35. Please describe why the impacts resulting from the decision are as per selected option
+above.
+The CARM system will have little to no impact since it sorts data relating to
+commercial goods being imported into Canada such as Origin, Value or Tariff
+Classification of these commercial goods. It does not assess demographic
+information of importers.
+
+The compliance verification decisions rendered by an officer, as a result of
+using the CARM system, will not impact an individual’s equality, dignity,
+privacy or autonomy since it is based on risk rules applied to the commercial
+trade data.
+
+36. The impacts that the decision will have on the health and well-being of individuals will likely
+be:
+Little to no impact                                                                                                       [ Points: +1 ]
+
+37. Please describe why the impacts resulting from the decision are as per selected option
+above.
+The CARM system operates on a ‘post-entry’ verification model. Meaning that
+no shipments will be stopped at the border by using this system. No importer
+will be prohibited from importing anything directly, the result of this tool is that
+importers will become more compliant with legislation and regulation,
+meaning that they declare their goods correctly, regardless of the nature of
+the goods.
+
+38. The impacts that the decision will have on the economic interests of individuals will likely
+be:
+Little to no impact                                                                                                       [ Points: +1 ]
+
+39. Please describe why the impacts resulting from the decision are as per selected option
+above.
+The CARM system is used to assess compliance, assess and collect duties
+and taxes on commercial goods, and to streamline the process for TCPs to
+importing commercial goods. By increasing the success rate of trade
+compliance activities, this may result in importers having to pay duties and
+taxes that may have been undetected otherwise. These same amounts would
+have been due if the initial declaration submitted by the importer was correct.
+Importers have an obligation to correctly declare the goods that they are
+bringing into Canada.
+
+Only clients considered to be non-compliant will have to face a potential
+economic impact, which will result in adjusting the amount of duties and
+taxes owed to the Government of Canada. This will only impact the small
+number of clients who are non-compliant. Errors and omissions in customs
+payments create an unfair competitive advantage for those not paying their
+fair share.
+
+40. The impacts that the decision will have on the ongoing sustainability of an environmental
+ecosystem, will likely be:
+Little to no impact                                                                                                       [ Points: +1 ]
+
+41. Please describe why the impacts resulting from the decision are as per selected option
+above.
+The CARM system is fully electronic and will rely very little on paper
+documents, having little to no impact on Government utilization of paper
+resources and having a negligible impact on the environment.
+
+About the Data - A. Data Source
+42. Will the Automated Decision System use personal information as input data?
+Yes                                                                                                                                [ Points: +4 ]
+
+43. Have you verified that the use of personal information is limited to only what is directly
+related to delivering a program or service?
+Yes                                                                                                                                [ Points: +0 ]
+
+44. Is the personal information of individuals being used in a decision-making process that
+directly affects those individuals?
+Yes                                                                                                                                [ Points: +2 ]
+
+45. Have you verified if the system is using personal information in a way that is consistent
+with: (a) the current Personal Information Banks (PIBs) and Privacy Impact Assessments (PIAs)
+of your programs or (b) planned or implemented modifications to the PIBs or PIAs that take new
+uses and processes into account?
+Yes                                                                                                                                [ Points: +0 ]
+
+46. Please list relevant PIB Bank Numbers.
+CBSA PPU 1501
+
+47. What is the highest security classification of the input data used by the system? (Select one)
+Protected B / Protected C                                                                                           [ Points: +3 ]
+
+48. Who controls the data?
+Federal government                                                                                                    [ Points: +1 ]
+49. Will the system use data from multiple different sources?
+Yes                                                                                                                                [ Points: +4 ]
+
+50. Will the system require input data from an Internet- or telephony-connected device? (e.g.
+Internet of Things, sensor)
+No                                                                                                                                 [ Points: +0 ]
+
+51. Will the system interface with other IT systems?
+Yes                                                                                                                                [ Points: +4 ]
+
+52. Who collected the data used for training the system?
+Your institution                                                                                                            [ Points: +1 ]
+
+53. Who collected the input data used by the system?
+Your institution                                                                                                            [ Points: +1 ]
+
+54. Please describe the input data collected and used by the system, its source, and method of
+collection.
+The TCP inputs data elements related to program enrolment and registration
+such as Importer Name, Address, and contact information. Data elements
+may be considered mandatory, optional or conditional. A full list of data
+elements can be found in the Electronic Commerce Client Requirements
+Document (ECCRD), Chapter 26: Commercial Accounting Declarations,
+Appendix D - Data Elements which can be requested here: https://www.cbsa-
+asfc.gc.ca/eservices/eccrd-eng.html. These data elements are collected
+electronically from the TCP via the CARM Client Portal or through Electronic
+Data Interchange (EDI) / Application Programming Interface (API)
+transmission.
+All electronic records are maintained in the CARM system using the Amazon
+Web Services (AWS) Canadian Cloud Service, a dedicated OpenText service in
+the AWS Cloud and CBSA's Enterprise Data Warehouse.
+
+About the Data - B. Type of Data
+55. Will the system require the analysis of unstructured data to render a recommendation or a
+decision?
+No                                                                                                                                 [ Points: 0 ]
+
+Section 3.2: Mitigation Questions and Answers
+Consultations
+1. Internal Stakeholders (federal institutions, including the federal public service)
+Yes                                                                                                                                [ Points: +1 ]
+
+2. Which Internal Stakeholders have you engaged?
+Data Governance
+Strategic Policy and Planning
+Program Policy
+Access to Information and Privacy Office
+Communications services
+TBS Office of the Chief Information Officer
+Legal Services
+3. External Stakeholders (groups in other sectors or jurisdictions)
+Yes                                                                                                                                [ Points: +1 ]
+
+4. Which External Stakeholders have you engaged?
+Clients or their Representatives
+International Organizations
+Governments in other Jurisdictions
+Industry
+
+De-Risking and Mitigation Measures - Data Quality
+5. Do you have documented processes in place to test datasets against biases and other
+unexpected outcomes? This could include experience in applying frameworks, methods,
+guidelines or other assessment tools.
+Yes                                                                                                                                [ Points: +2 ]
+
+6. Is this information publicly available?
+No                                                                                                                                 [ Points: +0 ]
+
+7. Have you developed a process to document how data quality issues were resolved during the
+design process?
+Yes                                                                                                                                [ Points: +1 ]
+
+8. Is this information publicly available?
+No                                                                                                                                 [ Points: +0 ]
+
+9. Have you undertaken a Gender Based Analysis Plus of the data?
+Yes                                                                                                                                [ Points: +1 ]
+
+10. Is this information publicly available?
+No                                                                                                                                 [ Points: +0 ]
+
+11. Have you assigned accountability in your institution for the design, development,
+maintenance, and improvement of the system?
+Yes                                                                                                                                [ Points: +2 ]
+
+12. Do you have a documented process to manage the risk that outdated or unreliable data is
+used to make an automated decision?
+Yes                                                                                                                                [ Points: +2 ]
+
+13. Is this information publicly available?
+No                                                                                                                                 [ Points: +0 ]
+
+14. Is the data used for this system posted on the Open Government Portal?
+No                                                                                                                                 [ Points: +0 ]
+
+De-Risking and Mitigation Measures - Procedural
+Fairness
+15. Does the audit trail identify the authority or delegated authority identified in legislation?
+Yes                                                                                                                                [ Points: +1 ]
+16. Does the system provide an audit trail that records all the recommendations or decisions
+made by the system?
+Yes                                                                                                                                [ Points: +2 ]
+
+17. Are all key decision points identifiable in the audit trail?
+Yes                                                                                                                                [ Points: +2 ]
+
+18. Are all key decision points within the automated system's logic linked to the relevant
+legislation, policy or procedures?
+Yes                                                                                                                                [ Points: +1 ]
+
+19. Do you maintain a current and up to date log detailing all of the changes made to the model
+and the system?
+Yes                                                                                                                                [ Points: +2 ]
+
+20. Does the system's audit trail indicate all of the decision points made by the system?
+Yes                                                                                                                                [ Points: +1 ]
+
+21. Can the audit trail generated by the system be used to help generate a notification of the
+decision (including a statement of reasons or other notifications) where required?
+No                                                                                                                                 [ Points: +0 ]
+
+22. Does the audit trail identify precisely which version of the system was used for each
+decision it supports?
+Yes                                                                                                                                [ Points: +2 ]
+
+23. Does the audit trail show who an authorized decision-maker is?
+Yes                                                                                                                                [ Points: +1 ]
+
+24. Is the system able to produce reasons for its decisions or recommendations when required?
+Yes                                                                                                                                [ Points: +2 ]
+
+25. Is there a process in place to grant, monitor, and revoke access permission to the system?
+Yes                                                                                                                                [ Points: +1 ]
+
+26. Is there a mechanism to capture feedback by users of the system?
+Yes                                                                                                                                [ Points: +1 ]
+
+27. Is there a recourse process established for clients that wish to challenge the decision?
+Yes                                                                                                                                [ Points: +2 ]
+
+28. Does the system enable human override of system decisions?
+Yes                                                                                                                                [ Points: +2 ]
+
+29. Is there a process in place to log the instances when overrides were performed?
+Yes                                                                                                                                [ Points: +1 ]
+
+30. Does the system's audit trail include change control processes to record modifications to the
+system's operation or performance?
+Yes                                                                                                                                [ Points: +2 ]
+
+31. Have you prepared a concept case to the Government of Canada Enterprise Architecture
+Review Board?
+Yes                                                                                                                                [ Points: +1 ]
+
+De-Risking and Mitigation Measures - Privacy
+32. If your system uses or creates personal information, have you undertaken a Privacy Impact
+Assessment, or updated an existing one?
+Yes                                                                                                                                [ Points: +1 ]
+
+33. Please indicate the following in your answer: Title and scope of the Privacy Impact
+Assessment; How the automation project fits into the program; and Date of Privacy Impact
+Assessment completion or modification.
+Title: CBSA Assessment and Revenue Management (CARM) Privacy Impact
+Assessment (PIA)
+
+Date of completion: The initial PIA was completed for the first phase of the
+CARM project that was implemented in January 2016 and then amended
+throughout the CARM project lifetime up to the PIA version that was approved
+in April 2024
+
+Scope: The CARM solution collects and uses personal information pertaining
+to certain individuals. The information held within the CARM solution is
+mostly commercial in nature: corporate contact information and corporate
+business numbers. CARM holds information about importers (domestic and
+foreign), trade service advisors, carriers, couriers, duty free shop owners,
+warehouse owners and customs brokerages, during the application phase and
+once confirmed as business partners. In some cases, the importers or carriers
+may be small-scale, sole proprietors and, in those cases, the client identifier
+(CRA-issued Business Numbers, Carrier Codes or Business Partner ID) could
+be considered to be personal information. Personal information about
+business owners is collected during the application phase in order to
+establish that the business meets specific requirements
+
+How automation project fits into the program: Client information and financial
+transaction information will be stored within CARM and this information may
+be used for the assessment of duties and taxes, program enrolment, non-
+compliant transactions, and other program requirements.
+
+34. Have you designed and built security and privacy into your systems from the concept stage
+of the project?
+Yes                                                                                                                                [ Points: +1 ]
+
+35. Is the information used within a closed system (i.e. no connections to the Internet, Intranet
+or any other system)?
+No                                                                                                                                 [ Points: +0 ]
+
+36. If the sharing of personal information is involved, has an agreement or arrangement with
+appropriate safeguards been established?
+Yes                                                                                                                                [ Points: +1 ]
+
+37. Will you de-identify any personal information used or created by the system at any point in
+the lifecycle?
+No                                                                                                                                 [ Points: +0 ]

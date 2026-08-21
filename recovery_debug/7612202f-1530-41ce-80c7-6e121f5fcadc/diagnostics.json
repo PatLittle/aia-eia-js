@@ -1,0 +1,1547 @@
+{
+  "package_id": "7612202f-1530-41ce-80c7-6e121f5fcadc",
+  "package_title": "Algorithmic Impact Assessments Results - Voice 2 Text application",
+  "survey_version": "v0.10.0",
+  "schema_source": "https://raw.githubusercontent.com/canada-ca/aia-eia-js/v0.10.0/src/survey-enfr.json",
+  "english_resource": {
+    "id": "f98eae5a-e3f2-472a-a20c-129fc060ccc9",
+    "name": "Algorithmic Impact Assessments Results - Voice 2 Text application.",
+    "url": "https://open.canada.ca/data/dataset/7612202f-1530-41ce-80c7-6e121f5fcadc/resource/f98eae5a-e3f2-472a-a20c-129fc060ccc9/download/voice2text_aia-en.pdf"
+  },
+  "french_resource": {
+    "id": "9d266f4d-41b6-4958-9d29-06b234aff468",
+    "name": "Algorithmic Impact Assessments Results - Voice 2 Text application.",
+    "url": "https://open.canada.ca/data/dataset/7612202f-1530-41ce-80c7-6e121f5fcadc/resource/9d266f4d-41b6-4958-9d29-06b234aff468/download/voice2text_aia-fr.pdf"
+  },
+  "english": {
+    "matched_questions": 84,
+    "schema_questions": 153,
+    "matches": [
+      {
+        "number": 1,
+        "name": "projectDetailsRespondent",
+        "type": "text",
+        "title": "Name of Respondent",
+        "match_score": 100.0,
+        "answer": "Christie Sainsbury",
+        "value": "Christie Sainsbury"
+      },
+      {
+        "number": 2,
+        "name": "projectDetailsJob",
+        "type": "text",
+        "title": "Job Title",
+        "match_score": 100.0,
+        "answer": "Manager, SSDU",
+        "value": "Manager, SSDU"
+      },
+      {
+        "number": 3,
+        "name": "projectDetailsDepartment-NS",
+        "type": "dropdown",
+        "title": "Department",
+        "match_score": 100.0,
+        "answer": "Royal Canadian Mounted Police",
+        "value": "030"
+      },
+      {
+        "number": 4,
+        "name": "projectDetailsBranch",
+        "type": "text",
+        "title": "Branch",
+        "match_score": 100.0,
+        "answer": "Specialized Policing Services",
+        "value": "Specialized Policing Services"
+      },
+      {
+        "number": 5,
+        "name": "projectDetailsTitle",
+        "type": "text",
+        "title": "Project Title",
+        "match_score": 100.0,
+        "answer": "Voice2Text",
+        "value": "Voice2Text"
+      },
+      {
+        "number": 6,
+        "name": "projectDetailsID",
+        "type": "text",
+        "title": "Project ID from IT Plan",
+        "match_score": 100.0,
+        "answer": "N/A",
+        "value": "N/A"
+      },
+      {
+        "number": 7,
+        "name": "projectDetailsProgram",
+        "type": "text",
+        "title": "Departmental Program (from Department Results Framework)",
+        "match_score": 100.0,
+        "answer": "Technical Investigation Services",
+        "value": "Technical Investigation Services"
+      },
+      {
+        "number": 8,
+        "name": "projectDetailsPhase",
+        "type": "radiogroup",
+        "title": "Project Phase",
+        "match_score": 100.0,
+        "answer": "Design                                                                                                                          [ Points: 0 ]",
+        "value": "item1"
+      },
+      {
+        "number": 9,
+        "name": "projectDetailsDescription",
+        "type": "comment",
+        "title": "Please provide a project description:",
+        "match_score": 100.0,
+        "answer": "The project involves building a web-based offline, on-premise application that\nuses AI engines to assist with the transcription and/or translation of audio\nfiles collected during investigations. The application will process audio files\nand generate a transcription and/or translation that will then be reviewed and\nedited by transcribers/translators prior to disclosure. The goal of the project\nis to increase the efficiency of the transcription/translation process, not to\nreplace it.  It will help to reduce backlogs and improve operational necessity\nby allowing investigations timelier access to relevant details of their operation\nwhich could impact surveillance, officer safety and potential Authorization re­\nwrites. Transcribers/translators will still need to review the generated\ntranscriptions for accuracy and make any necessary edits.\n\nAbout The System",
+        "value": "The project involves building a web-based offline, on-premise application that\nuses AI engines to assist with the transcription and/or translation of audio\nfiles collected during investigations. The application will process audio files\nand generate a transcription and/or translation that will then be reviewed and\nedited by transcribers/translators prior to disclosure. The goal of the project\nis to increase the efficiency of the transcription/translation process, not to\nreplace it.  It will help to reduce backlogs and improve operational necessity\nby allowing investigations timelier access to relevant details of their operation\nwhich could impact surveillance, officer safety and potential Authorization re­\nwrites. Transcribers/translators will still need to review the generated\ntranscriptions for accuracy and make any necessary edits.\n\nAbout The System"
+      },
+      {
+        "number": 10,
+        "name": "aboutSystem1",
+        "type": "checkbox",
+        "title": "Please check which of the following capabilities apply to your system.",
+        "match_score": 100.0,
+        "answer": "Text and speech analysis: Analyzing large data sets to recognize, process, and\ntag text, speech, voice, and make recommendations based on the tagging\n\n\nCurrent Score: 28\nRaw Impact Score: 28\n\nMitigation Score: 6\nPeer review\n\nNone\nGender-based Analysis Plus\n\nNone\nNotice\n\nNone\nHuman-in-the-loop for decisions\n\nDecisions may be rendered without direct human involvement.\nExplanation\n\nIn addition to any applicable legal requirement, ensure that a meaningful explanation is published\nfor common decision results. The explanation must provide a general description of:\n\n   the role of the system in the decision-making process;\n   input data, its source and method of collection;\n   the criteria used to evaluate input data and the operations applied to process it;\n   the output produced by the system and any relevant information needed to interpret it in the\n   context of the administrative decision; and\n   the principal factors behind a decision.\n\nExplanations must also inform clients of relevant recourse options, where appropriate.\n\nDescriptions must be made available in plain language through the Algorithmic Impact\nAssessment and discoverable via a departmental website.\nTraining\n\nNone\nIT and business continuity management\n\nNone\nApproval for the system to operate\n\nNone\nOther requirements\n\nThe Directive on Automated Decision-Making also includes other requirements that must be met\nfor all impact levels.\n\nLink to the Directive on Automated Decision-Making\n\nContact your institution's ATIP office to discuss the requirement for a Privacy Impact\nAssessment as per the Directive on Privacy Impact Assessment.\nReasons for Automation\n1. What is motivating your team to introduce automation into this decision-making process?\n(Check all that apply)\nExisting backlog of work or cases\nUse innovative approaches\n\n2. What client needs will the system address and how will this system meet them? If possible,\ndescribe how client needs have been identified.\nTranscribing and translating audio is a labour and time intensive process. The\nuse of AI engines to assist with the transcription/translation will reduce the\namount of labour and time required by transcribers/translators by generating\na draft transcription that they can then review and edit instead of performing\nthe transcription/translation themselves from scratch.",
+        "value": [
+          "item2"
+        ]
+      },
+      {
+        "number": 3,
+        "name": "aboutSystem2",
+        "type": "comment",
+        "title": "Please describe",
+        "match_score": 96.0,
+        "answer": "Increasing the efficiency of the transcription/translation of audio files will\nallow investigators timelier access to relevant details of their operation which\ncould impact surveillance, officer safety and potential Authorization re-writes.\nIt will also impact how quickly disclosure can be provided to the court,\npotentially increasing the rate at which public cases are processed.\n\n4. How effective will the system likely be in meeting client needs?\nModerately effective                                                                                                   [ Points: +1 ]\n\n5. Please describe any improvements, benefits, or advantages you expect from using an\nautomated system. This could include relevant program indicators and performance targets.\nThe automation of the transcription/translation process will increase the\nefficiency of the process by a factor of at least 10. This will allow\ninvestigators more timely access to information important for their\noperations, and enable disclosure to the courts to be completed more quickly.\n\n6. Please describe how you will ensure that the system is confined to addressing the client\nneeds identified above.\nThe application uses a login based on Active Directory to limit access to only\nusers with proper authorization. SOPs will be put in place to ensure the\nproper use of the system.  Testing will be done, and feedback gathered, to\nensure that the efficiency and accuracy of the transcriptions/translations\ngenerated by the application are within an acceptable range.\n7. Please describe any trade-offs between client interests and program objectives that you have\nconsidered during the design of the project.\nWe have considered clients' privacy and security concerns. The system is\ndesigned by the RCMP, operated offline and on-premise. No operational data\nis stored by the system. Once the transcriptions have been generated and\ndownloaded by the user, the original audio and the transcription are deleted\nfrom the system.\n\n8. Have alternative non-automated processes been considered?\nYes                                                                                                                                [ Points: +0 ]\n\n9. If non-automated processes were considered, why was automation identified as the preferred\noption?\nManual transcription/translation requires a significant amount of labour and\ntime from transcribers/translators and has led to a backlog of audio files\nwaiting to be transcribed, thus delaying disclosure. This application will\nautomatically generate the transcriptions/translations and the transcribers/\ntranslators will only have to review them and perform edits which is less\nlabour and time intensive than transcribing them from scratch.\n\n10. What would be the consequence of not deploying the system?\nOther (please specify)\n\n11. Please describe\nThe transcription process will continue as it is now, at the same efficiency\nlevel\n\nRisk Profile\n12. Is the project within an area of intense public scrutiny (e.g. because of privacy concerns)\nand/or frequent litigation?\nNo                                                                                                                                 [ Points: +0 ]\n\n13. Are clients in this line of business particularly vulnerable?\nNo                                                                                                                                 [ Points: +0 ]",
+        "value": "Increasing the efficiency of the transcription/translation of audio files will\nallow investigators timelier access to relevant details of their operation which\ncould impact surveillance, officer safety and potential Authorization re-writes.\nIt will also impact how quickly disclosure can be provided to the court,\npotentially increasing the rate at which public cases are processed.\n\n4. How effective will the system likely be in meeting client needs?\nModerately effective                                                                                                   [ Points: +1 ]\n\n5. Please describe any improvements, benefits, or advantages you expect from using an\nautomated system. This could include relevant program indicators and performance targets.\nThe automation of the transcription/translation process will increase the\nefficiency of the process by a factor of at least 10. This will allow\ninvestigators more timely access to information important for their\noperations, and enable disclosure to the courts to be completed more quickly.\n\n6. Please describe how you will ensure that the system is confined to addressing the client\nneeds identified above.\nThe application uses a login based on Active Directory to limit access to only\nusers with proper authorization. SOPs will be put in place to ensure the\nproper use of the system.  Testing will be done, and feedback gathered, to\nensure that the efficiency and accuracy of the transcriptions/translations\ngenerated by the application are within an acceptable range.\n7. Please describe any trade-offs between client interests and program objectives that you have\nconsidered during the design of the project.\nWe have considered clients' privacy and security concerns. The system is\ndesigned by the RCMP, operated offline and on-premise. No operational data\nis stored by the system. Once the transcriptions have been generated and\ndownloaded by the user, the original audio and the transcription are deleted\nfrom the system.\n\n8. Have alternative non-automated processes been considered?\nYes                                                                                                                                [ Points: +0 ]\n\n9. If non-automated processes were considered, why was automation identified as the preferred\noption?\nManual transcription/translation requires a significant amount of labour and\ntime from transcribers/translators and has led to a backlog of audio files\nwaiting to be transcribed, thus delaying disclosure. This application will\nautomatically generate the transcriptions/translations and the transcribers/\ntranslators will only have to review them and perform edits which is less\nlabour and time intensive than transcribing them from scratch.\n\n10. What would be the consequence of not deploying the system?\nOther (please specify)\n\n11. Please describe\nThe transcription process will continue as it is now, at the same efficiency\nlevel\n\nRisk Profile\n12. Is the project within an area of intense public scrutiny (e.g. because of privacy concerns)\nand/or frequent litigation?\nNo                                                                                                                                 [ Points: +0 ]\n\n13. Are clients in this line of business particularly vulnerable?\nNo                                                                                                                                 [ Points: +0 ]"
+      },
+      {
+        "number": 14,
+        "name": "riskProfile5",
+        "type": "radiogroup",
+        "title": "Will the use of the system create or exacerbate barriers for persons with disabilities?",
+        "match_score": 96.0,
+        "answer": "",
+        "value": null
+      },
+      {
+        "number": 15,
+        "name": "riskProfile4",
+        "type": "radiogroup",
+        "title": "Will this project have major impacts on staff, either in terms of their numbers or their roles?",
+        "match_score": 100.0,
+        "answer": "No                                                                                                                                 [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 16,
+        "name": "riskProfile5",
+        "type": "radiogroup",
+        "title": "Will the use of the system create or exacerbate barriers for persons with disabilities?",
+        "match_score": 100.0,
+        "answer": "No                                                                                                                                 [ Points: +0 ]\n\nProject Authority",
+        "value": "item2-0"
+      },
+      {
+        "number": 17,
+        "name": "projectAuthority1",
+        "type": "radiogroup",
+        "title": "Will you require new policy authority for this project?",
+        "match_score": 100.0,
+        "answer": "No                                                                                                                                 [ Points: +0 ]\n\nAbout the Algorithm",
+        "value": "item2-0"
+      },
+      {
+        "number": 18,
+        "name": "aboutAlgorithm1",
+        "type": "radiogroup",
+        "title": "The algorithm used will be a (trade) secret",
+        "match_score": 100.0,
+        "answer": "No                                                                                                                                 [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 19,
+        "name": "aboutAlgorithm2",
+        "type": "radiogroup",
+        "title": "The algorithmic process will be difficult to interpret or to explain",
+        "match_score": 100.0,
+        "answer": "No                                                                                                                                 [ Points: +0 ]\n\nAbout the Decision",
+        "value": "item2-0"
+      },
+      {
+        "number": 20,
+        "name": "decisionSector3",
+        "type": "comment",
+        "title": "Please describe the decision(s) that will be automated.",
+        "match_score": 100.0,
+        "answer": "The system does not make any decisions. Transcribers/translators will be\nreviewing all transcriptions for accuracy and editing them when necessary.\nThe raw transcriptions generated by the AI engine will not be relied on without\nthat review and editing process by a human.",
+        "value": "The system does not make any decisions. Transcribers/translators will be\nreviewing all transcriptions for accuracy and editing them when necessary.\nThe raw transcriptions generated by the AI engine will not be relied on without\nthat review and editing process by a human."
+      },
+      {
+        "number": 21,
+        "name": "decisionSector1",
+        "type": "checkbox",
+        "title": "Does the decision pertain to any of the categories below (check all that apply):",
+        "match_score": 100.0,
+        "answer": "Other (please specify)                                                                                                 [ Points: +1 ]",
+        "value": [
+          "item6-1"
+        ]
+      },
+      {
+        "number": 22,
+        "name": "aboutSystem2",
+        "type": "comment",
+        "title": "Please describe",
+        "match_score": 100.0,
+        "answer": "The system does not make decisions\n\nImpact Assessment",
+        "value": "The system does not make decisions\n\nImpact Assessment"
+      },
+      {
+        "number": 23,
+        "name": "impact30",
+        "type": "radiogroup",
+        "title": "Which of the following best describes the type of automation you are planning?",
+        "match_score": 100.0,
+        "answer": "Partial automation (the system will contribute to administrative decision-\nmaking by supporting an officer through assessments, recommendations,\nintermediate decisions, or other outputs)                                                                  [ Points: +2 ]",
+        "value": "item2-2"
+      },
+      {
+        "number": 24,
+        "name": "impact31",
+        "type": "comment",
+        "title": "Please describe the role of the system in the decision-making process.",
+        "match_score": 100.0,
+        "answer": "The system does not make decisions. Transcriptions generated by the AI\nengine will not be relied on as-is for any decision making or for disclosure.\nThey must be reviewed and edited by a transcriber/translator before being\nreleased.",
+        "value": "The system does not make decisions. Transcriptions generated by the AI\nengine will not be relied on as-is for any decision making or for disclosure.\nThey must be reviewed and edited by a transcriber/translator before being\nreleased."
+      },
+      {
+        "number": 25,
+        "name": "impact3",
+        "type": "radiogroup",
+        "title": "Will the system be making decisions or assessments that require judgement or discretion?",
+        "match_score": 100.0,
+        "answer": "No                                                                                                                                 [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 26,
+        "name": "impact20",
+        "type": "comment",
+        "title": "Please describe the criteria used to evaluate client data and the operations applied to process it.",
+        "match_score": 100.0,
+        "answer": "Client data are audio files that are uploaded to the application. They are\nprocessed by the AI speech recognition model to generate a transcription/\ntranslation.",
+        "value": "Client data are audio files that are uploaded to the application. They are\nprocessed by the AI speech recognition model to generate a transcription/\ntranslation."
+      },
+      {
+        "number": 27,
+        "name": "impact21",
+        "type": "comment",
+        "title": "Please describe the output produced by the system and any relevant information needed to interpret it in the context of the administrative decision.",
+        "match_score": 100.0,
+        "answer": "The output of the system is a text file transcription of the input audio file. The\noriginal audio file is needed by verify the accuracy of the text transcription by\na transcriber/translator.",
+        "value": "The output of the system is a text file transcription of the input audio file. The\noriginal audio file is needed by verify the accuracy of the text transcription by\na transcriber/translator."
+      },
+      {
+        "number": 28,
+        "name": "impact22",
+        "type": "radiogroup",
+        "title": "Will the system perform an assessment or other operation that would not otherwise be completed by a human?",
+        "match_score": 100.0,
+        "answer": "No                                                                                                                                 [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 29,
+        "name": "impact5",
+        "type": "radiogroup",
+        "title": "Is the system used by a different part of the organization than the ones who developed it?",
+        "match_score": 100.0,
+        "answer": "No                                                                                                                                 [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 30,
+        "name": "impact6",
+        "type": "dropdown",
+        "title": "Are the impacts resulting from the decision reversible?",
+        "match_score": 100.0,
+        "answer": "Reversible                                                                                                                    [ Points: +1 ]",
+        "value": "item1-1"
+      },
+      {
+        "number": 31,
+        "name": "impact7",
+        "type": "dropdown",
+        "title": "How long will impacts from the decision last?",
+        "match_score": 100.0,
+        "answer": "Impacts are most likely to be brief                                                                             [ Points: +1 ]",
+        "value": "item1-1"
+      },
+      {
+        "number": 32,
+        "name": "impact8",
+        "type": "comment",
+        "title": "Please describe why the impacts resulting from the decision are as per selected option above.",
+        "match_score": 100.0,
+        "answer": "Transcriptions are never used in raw format from the application. They must\nbe reviewed by a human transcriber/translator for accuracy before they are\nreleased.",
+        "value": "Transcriptions are never used in raw format from the application. They must\nbe reviewed by a human transcriber/translator for accuracy before they are\nreleased."
+      },
+      {
+        "number": 33,
+        "name": "impact9",
+        "type": "dropdown",
+        "title": "The impacts that the decision will have on the rights or freedoms of individuals will likely be:",
+        "match_score": 100.0,
+        "answer": "Little to no impact                                                                                                       [ Points: +1 ]",
+        "value": "item1-1"
+      },
+      {
+        "number": 34,
+        "name": "impact8",
+        "type": "comment",
+        "title": "Please describe why the impacts resulting from the decision are as per selected option above.",
+        "match_score": 100.0,
+        "answer": "No impact on the rights of individuals. Audio uploaded to the system is\nlawfully obtained. The application doesn't have to be used if manual\ntranscription is required/preferred.",
+        "value": "No impact on the rights of individuals. Audio uploaded to the system is\nlawfully obtained. The application doesn't have to be used if manual\ntranscription is required/preferred."
+      },
+      {
+        "number": 35,
+        "name": "impact24",
+        "type": "dropdown",
+        "title": "The impacts that the decision will have on the equality, dignity, privacy, and autonomy of individuals will likely be:",
+        "match_score": 100.0,
+        "answer": "Little to no impact                                                                                                       [ Points: +1 ]",
+        "value": "item1-1"
+      },
+      {
+        "number": 36,
+        "name": "impact8",
+        "type": "comment",
+        "title": "Please describe why the impacts resulting from the decision are as per selected option above.",
+        "match_score": 100.0,
+        "answer": "No impact to any individual. Voice2Text is a tool to assist transcribers at the\nRCMP, not replace them.",
+        "value": "No impact to any individual. Voice2Text is a tool to assist transcribers at the\nRCMP, not replace them."
+      },
+      {
+        "number": 37,
+        "name": "impact11",
+        "type": "dropdown",
+        "title": "The impacts that the decision will have on the health and well-being of individuals will likely be:",
+        "match_score": 100.0,
+        "answer": "Little to no impact                                                                                                       [ Points: +1 ]",
+        "value": "item1-1"
+      },
+      {
+        "number": 38,
+        "name": "impact10",
+        "type": "comment",
+        "title": "Please describe why the impacts resulting from the decision are as per selected option above.",
+        "match_score": 100.0,
+        "answer": "The system does not store the audio files or transcriptions long-term. Once\nthe transcriptions are completed and downloaded, all data is deleted from the\nsystem. The application does not collect any personal information of the\nuser.",
+        "value": "The system does not store the audio files or transcriptions long-term. Once\nthe transcriptions are completed and downloaded, all data is deleted from the\nsystem. The application does not collect any personal information of the\nuser."
+      },
+      {
+        "number": 39,
+        "name": "impact13",
+        "type": "dropdown",
+        "title": "The impacts that the decision will have on the economic interests of individuals will likely be:",
+        "match_score": 100.0,
+        "answer": "Little to no impact                                                                                                       [ Points: +1 ]",
+        "value": "item1-1"
+      },
+      {
+        "number": 40,
+        "name": "impact25",
+        "type": "comment",
+        "title": "Please describe why the impacts resulting from the decision are as per selected option above.",
+        "match_score": 100.0,
+        "answer": "No economic impact.",
+        "value": "No economic impact."
+      },
+      {
+        "number": 41,
+        "name": "impact15",
+        "type": "dropdown",
+        "title": "The impacts that the decision will have on the ongoing sustainability of an environmental ecosystem, will likely be:",
+        "match_score": 100.0,
+        "answer": "Little to no impact                                                                                                       [ Points: +1 ]",
+        "value": "item1-1"
+      },
+      {
+        "number": 42,
+        "name": "impact12",
+        "type": "comment",
+        "title": "Please describe why the impacts resulting from the decision are as per selected option above.",
+        "match_score": 100.0,
+        "answer": "No impact on sustainability or environment.\n\nAbout the Data - A. Data Source",
+        "value": "No impact on sustainability or environment.\n\nAbout the Data - A. Data Source"
+      },
+      {
+        "number": 43,
+        "name": "aboutDataSource1",
+        "type": "radiogroup",
+        "title": "Will the Automated Decision System use personal information as input data?",
+        "match_score": 100.0,
+        "answer": "No                                                                                                                                 [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 44,
+        "name": "aboutDataSource2",
+        "type": "dropdown",
+        "title": "What is the highest security classification of the input data used by the system? (Select one)",
+        "match_score": 100.0,
+        "answer": "Protected B / Protected C                                                                                           [ Points: +3 ]",
+        "value": "item4-3"
+      },
+      {
+        "number": 45,
+        "name": "aboutDataSource3",
+        "type": "dropdown",
+        "title": "Who controls the data?",
+        "match_score": 100.0,
+        "answer": "Federal government                                                                                                    [ Points: +1 ]",
+        "value": "item2-1"
+      },
+      {
+        "number": 46,
+        "name": "aboutDataSource4",
+        "type": "radiogroup",
+        "title": "Will the system use data from multiple different sources?",
+        "match_score": 100.0,
+        "answer": "Yes                                                                                                                                [ Points: +4 ]",
+        "value": "item1-4"
+      },
+      {
+        "number": 47,
+        "name": "aboutDataSource5",
+        "type": "radiogroup",
+        "title": "Will the system require input data from an Internet- or telephony-connected device? (e.g. Internet of Things, sensor)",
+        "match_score": 100.0,
+        "answer": "No                                                                                                                                 [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 48,
+        "name": "aboutDataSource6",
+        "type": "radiogroup",
+        "title": "Will the system interface with other IT systems?",
+        "match_score": 100.0,
+        "answer": "Yes                                                                                                                                [ Points: +4 ]",
+        "value": "item1-4"
+      },
+      {
+        "number": 49,
+        "name": "aboutDataSource7",
+        "type": "dropdown",
+        "title": "Who collected the data used for training the system?",
+        "match_score": 100.0,
+        "answer": "A foreign government or non-government third party                                               [ Points: +4 ]",
+        "value": "item4-4"
+      },
+      {
+        "number": 50,
+        "name": "aboutDataSource8",
+        "type": "dropdown",
+        "title": "Who collected the input data used by the system?",
+        "match_score": 100.0,
+        "answer": "Your institution                                                                                                            [ Points: +1 ]",
+        "value": "item1-1"
+      },
+      {
+        "number": 51,
+        "name": "aboutDataSource13",
+        "type": "comment",
+        "title": "Please describe the input data collected and used by the system, its source, and method of collection.",
+        "match_score": 100.0,
+        "answer": "Input data used in the system is lawfully collected by the RCMP as evidence\nusing various means.  It is uploaded to the system, transcribed/translated,\nand subsequently deleted from the system after the transcription has been\ndownloaded.\n\nAbout the Data - B. Type of Data",
+        "value": "Input data used in the system is lawfully collected by the RCMP as evidence\nusing various means.  It is uploaded to the system, transcribed/translated,\nand subsequently deleted from the system after the transcription has been\ndownloaded.\n\nAbout the Data - B. Type of Data"
+      },
+      {
+        "number": 52,
+        "name": "aboutDataType1",
+        "type": "radiogroup",
+        "title": "Will the system require the analysis of unstructured data to render a recommendation or a decision?",
+        "match_score": 100.0,
+        "answer": "No                                                                                                                                 [ Points: 0 ]\n\nConsultations",
+        "value": "item2"
+      },
+      {
+        "number": 1,
+        "name": "consultationDesign1",
+        "type": "radiogroup",
+        "title": "Internal Stakeholders (federal institutions, including the federal public service)",
+        "match_score": 100.0,
+        "answer": "Yes                                                                                                                                [ Points: +1 ]",
+        "value": "item1-1"
+      },
+      {
+        "number": 2,
+        "name": "consultationDesign2",
+        "type": "checkbox",
+        "title": "Which Internal Stakeholders will you be engaging?",
+        "match_score": 100.0,
+        "answer": "Data Governance\nLegal Services\nCommunications services\nHuman Resources\nDigital Policy",
+        "value": [
+          "item3",
+          "item5",
+          "item7",
+          "item10",
+          "item11"
+        ]
+      },
+      {
+        "number": 3,
+        "name": "consultationDesign3",
+        "type": "radiogroup",
+        "title": "External Stakeholders (groups in other sectors or jurisdictions)",
+        "match_score": 100.0,
+        "answer": "No                                                                                                                                 [ Points: +0 ]\n\nDe-Risking and Mitigation Measures - Data Quality",
+        "value": "item2-0"
+      },
+      {
+        "number": 4,
+        "name": "dataQualityDesign1",
+        "type": "radiogroup",
+        "title": "Will you have documented processes in place to test datasets against biases and other unexpected outcomes? This could include experience in applying frameworks, methods, guidelines or other assessment tools.",
+        "match_score": 100.0,
+        "answer": "No                                                                                                                                 [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 5,
+        "name": "dataQualityDesign3",
+        "type": "radiogroup",
+        "title": "Will you be developing a process to document how data quality issues were resolved during the design process?",
+        "match_score": 100.0,
+        "answer": "No                                                                                                                                 [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 6,
+        "name": "dataQualityDesign2",
+        "type": "radiogroup",
+        "title": "Will you be making this information publicly available?",
+        "match_score": 100.0,
+        "answer": "No                                                                                                                                 [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 7,
+        "name": "dataQualityDesign5",
+        "type": "radiogroup",
+        "title": "Will you undertake a Gender Based Analysis Plus of the data?",
+        "match_score": 100.0,
+        "answer": "No                                                                                                                                 [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 8,
+        "name": "dataQualityDesign2",
+        "type": "radiogroup",
+        "title": "Will you be making this information publicly available?",
+        "match_score": 100.0,
+        "answer": "No                                                                                                                                 [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 9,
+        "name": "dataQualityDesign7",
+        "type": "radiogroup",
+        "title": "Have you assigned accountability in your institution for the design, development, maintenance, and improvement of the system?",
+        "match_score": 100.0,
+        "answer": "Yes                                                                                                                                [ Points: +2 ]",
+        "value": "item1-2"
+      },
+      {
+        "number": 10,
+        "name": "dataQualityDesign8",
+        "type": "radiogroup",
+        "title": "Will you have a documented process to manage the risk that outdated or unreliable data is used to make an automated decision?",
+        "match_score": 100.0,
+        "answer": "No                                                                                                                                 [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 11,
+        "name": "dataQualityDesign4",
+        "type": "radiogroup",
+        "title": "Will you be making this information publicly available?",
+        "match_score": 100.0,
+        "answer": "No                                                                                                                                 [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 12,
+        "name": "dataQualityDesign10",
+        "type": "radiogroup",
+        "title": "Will the data used for this system be posted on the Open Government Portal?",
+        "match_score": 100.0,
+        "answer": "No                                                                                                                                 [ Points: +0 ]\n\nDe-Risking and Mitigation Measures - Procedural\nFairness",
+        "value": "item2-0"
+      },
+      {
+        "number": 13,
+        "name": "fairnessDesign1",
+        "type": "radiogroup",
+        "title": "Will the audit trail identify the authority or delegated authority identified in legislation?",
+        "match_score": 100.0,
+        "answer": "No                                                                                                                                 [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 14,
+        "name": "fairnessDesign2",
+        "type": "radiogroup",
+        "title": "Will the system provide an audit trail that records all the recommendations or decisions made by the system?",
+        "match_score": 100.0,
+        "answer": "No                                                                                                                                 [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 15,
+        "name": "fairnessDesign3",
+        "type": "radiogroup",
+        "title": "Will all key decision points be identifiable in the audit trail?",
+        "match_score": 100.0,
+        "answer": "No                                                                                                                                 [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 16,
+        "name": "fairnessDesign4",
+        "type": "radiogroup",
+        "title": "Will all key decision points within the automated system's logic be linked to the relevant legislation, policy or procedure?",
+        "match_score": 100.0,
+        "answer": "No                                                                                                                                 [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 17,
+        "name": "fairnessDesign5",
+        "type": "radiogroup",
+        "title": "Will you maintain a log detailing all of the changes made to the model and the system?",
+        "match_score": 100.0,
+        "answer": "No                                                                                                                                 [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 18,
+        "name": "fairnessDesign6",
+        "type": "radiogroup",
+        "title": "Will the audit trail clearly set out all decision points made by the system?",
+        "match_score": 100.0,
+        "answer": "No                                                                                                                                 [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 19,
+        "name": "fairnessDesign7",
+        "type": "radiogroup",
+        "title": "Could the audit trail generated by the system be used to help generate a notification of the decision (including a statement of reasons or other notification) where required?",
+        "match_score": 100.0,
+        "answer": "No                                                                                                                                 [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 20,
+        "name": "fairnessDesign8",
+        "type": "radiogroup",
+        "title": "Will the audit trail identify precisely which version of the system was used for each decision it supports?",
+        "match_score": 100.0,
+        "answer": "No                                                                                                                                 [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 21,
+        "name": "fairnessDesign9",
+        "type": "radiogroup",
+        "title": "Will the audit trail show who the authorized decision-maker is?",
+        "match_score": 100.0,
+        "answer": "No                                                                                                                                 [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 22,
+        "name": "fairnessDesign10",
+        "type": "radiogroup",
+        "title": "Will the system be able to produce reasons for its decisions or recommendations when required?",
+        "match_score": 100.0,
+        "answer": "No                                                                                                                                 [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 23,
+        "name": "fairnessDesign11",
+        "type": "radiogroup",
+        "title": "Will there be a process in place to grant, monitor, and revoke access permission to the system?",
+        "match_score": 100.0,
+        "answer": "Yes                                                                                                                                [ Points: +1 ]",
+        "value": "item1-1"
+      },
+      {
+        "number": 24,
+        "name": "fairnessDesign12",
+        "type": "radiogroup",
+        "title": "Will there be a mechanism to capture feedback by users of the system?",
+        "match_score": 100.0,
+        "answer": "Yes                                                                                                                                [ Points: +1 ]",
+        "value": "item1-1"
+      },
+      {
+        "number": 25,
+        "name": "fairnessDesign13",
+        "type": "radiogroup",
+        "title": "Will there be a recourse process planned or established for clients that wish to challenge the decision?",
+        "match_score": 100.0,
+        "answer": "No                                                                                                                                 [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 26,
+        "name": "fairnessDesign14",
+        "type": "radiogroup",
+        "title": "Will the system enable human override of system decisions?",
+        "match_score": 100.0,
+        "answer": "No                                                                                                                                 [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 27,
+        "name": "fairnessDesign15",
+        "type": "radiogroup",
+        "title": "Will there be a process in place to log the instances when overrides were performed?",
+        "match_score": 100.0,
+        "answer": "No                                                                                                                                 [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 28,
+        "name": "fairnessDesign16",
+        "type": "radiogroup",
+        "title": "Will the audit trail include change control processes to record modifications to the system's operation or performance?",
+        "match_score": 100.0,
+        "answer": "No                                                                                                                                 [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 29,
+        "name": "fairnessDesign17",
+        "type": "radiogroup",
+        "title": "Will you be preparing a concept case to the Government of Canada Enterprise Architecture Review Board?",
+        "match_score": 100.0,
+        "answer": "No                                                                                                                                 [ Points: +0 ]\nDe-Risking and Mitigation Measures - Privacy",
+        "value": "item2-0"
+      },
+      {
+        "number": 30,
+        "name": "privacyDesign1",
+        "type": "radiogroup",
+        "title": "If your system uses or creates personal information, will you undertake or have you undertaken a Privacy Impact Assessment, or updated an existing one?",
+        "match_score": 100.0,
+        "answer": "No                                                                                                                                 [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 31,
+        "name": "privacyDesign2",
+        "type": "radiogroup",
+        "title": "Will you design and build security and privacy into your systems from the concept stage of the project?",
+        "match_score": 100.0,
+        "answer": "Yes                                                                                                                                [ Points: +1 ]",
+        "value": "item1-1"
+      },
+      {
+        "number": 32,
+        "name": "privacyDesign3",
+        "type": "radiogroup",
+        "title": "Will information be used within a closed system (i.e. no connections to the Internet, Intranet or any other system)?",
+        "match_score": 100.0,
+        "answer": "No                                                                                                                                 [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 33,
+        "name": "privacyDesign4",
+        "type": "radiogroup",
+        "title": "If the sharing of personal information is involved, has an agreement or arrangement with appropriate safeguards been established?",
+        "match_score": 100.0,
+        "answer": "No                                                                                                                                 [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 34,
+        "name": "privacyDesign7",
+        "type": "radiogroup",
+        "title": "Will you de-identify any personal information used or created by the system at any point in the lifecycle?",
+        "match_score": 100.0,
+        "answer": "No                                                                                                                                 [ Points: +0 ]",
+        "value": "item2-0"
+      }
+    ],
+    "unresolved": [
+      "riskProfile5"
+    ]
+  },
+  "french": {
+    "matched_questions": 82,
+    "schema_questions": 153,
+    "matches": [
+      {
+        "number": 1,
+        "name": "projectDetailsRespondent",
+        "type": "text",
+        "title": "Nom de la personne sondée",
+        "match_score": 100.0,
+        "answer": "Christie Sainsbury",
+        "value": "Christie Sainsbury"
+      },
+      {
+        "number": 2,
+        "name": "projectDetailsJob",
+        "type": "text",
+        "title": "Titre du poste",
+        "match_score": 100.0,
+        "answer": "Gestionnaire, EDLS",
+        "value": "Gestionnaire, EDLS"
+      },
+      {
+        "number": 3,
+        "name": "projectDetailsDepartment-NS",
+        "type": "dropdown",
+        "title": "Ministère",
+        "match_score": 100.0,
+        "answer": "Gendarmerie royale du Canada",
+        "value": "030"
+      },
+      {
+        "number": 4,
+        "name": "projectDetailsBranch",
+        "type": "text",
+        "title": "Direction",
+        "match_score": 100.0,
+        "answer": "Services de police spécialisés",
+        "value": "Services de police spécialisés"
+      },
+      {
+        "number": 5,
+        "name": "projectDetailsTitle",
+        "type": "text",
+        "title": "Titre du projet",
+        "match_score": 100.0,
+        "answer": "Voice2Text",
+        "value": "Voice2Text"
+      },
+      {
+        "number": 6,
+        "name": "projectDetailsID",
+        "type": "text",
+        "title": "Identifiant du projet provenant du Plan TI",
+        "match_score": 100.0,
+        "answer": "N/A",
+        "value": "N/A"
+      },
+      {
+        "number": 7,
+        "name": "projectDetailsProgram",
+        "type": "text",
+        "title": "Programme ministériel (Cadre ministériel des résultats)",
+        "match_score": 100.0,
+        "answer": "Services d'enquêtes techniques",
+        "value": "Services d'enquêtes techniques"
+      },
+      {
+        "number": 8,
+        "name": "projectDetailsPhase",
+        "type": "radiogroup",
+        "title": "Phase du projet",
+        "match_score": 100.0,
+        "answer": "Conception                                                                                                                  [ Points: 0 ]",
+        "value": "item1"
+      },
+      {
+        "number": 9,
+        "name": "projectDetailsDescription",
+        "type": "comment",
+        "title": "Veuillez fournir une description du projet :",
+        "match_score": 100.0,
+        "answer": "Le projet consiste à créer une application Web hors ligne, sur serveur local, qui\nrepose sur l’intelligence artificielle (IA) pour faciliter la transcription ou la\ntraduction d’enregistrements audio recueillis dans le cadre d’enquêtes.\nL’application traitera les enregistrements audio et produira une transcription\nou une traduction qui sera ensuite révisée par des transcripteurs ou\ntraducteurs avant la divulgation. Le projet vise à améliorer l’efficacité du\nprocessus de transcription et de traduction, et non pas à le remplacer. Il aidera\nà réduire l’arriéré et à combler des besoins opérationnels en permettant aux\nenquêteurs d’obtenir plus rapidement des détails importants sur leur\nopération qui pourraient avoir une incidence sur la surveillance, la sécurité des\npoliciers et la possibilité d’avoir à rectifier des autorisations. Des\ntranscripteurs ou traducteurs devront tout de même réviser la transcription\nproduite par l’application afin d’en assurer l’exactitude.\n\nÀ propos du système",
+        "value": "Le projet consiste à créer une application Web hors ligne, sur serveur local, qui\nrepose sur l’intelligence artificielle (IA) pour faciliter la transcription ou la\ntraduction d’enregistrements audio recueillis dans le cadre d’enquêtes.\nL’application traitera les enregistrements audio et produira une transcription\nou une traduction qui sera ensuite révisée par des transcripteurs ou\ntraducteurs avant la divulgation. Le projet vise à améliorer l’efficacité du\nprocessus de transcription et de traduction, et non pas à le remplacer. Il aidera\nà réduire l’arriéré et à combler des besoins opérationnels en permettant aux\nenquêteurs d’obtenir plus rapidement des détails importants sur leur\nopération qui pourraient avoir une incidence sur la surveillance, la sécurité des\npoliciers et la possibilité d’avoir à rectifier des autorisations. Des\ntranscripteurs ou traducteurs devront tout de même réviser la transcription\nproduite par l’application afin d’en assurer l’exactitude.\n\nÀ propos du système"
+      },
+      {
+        "number": 10,
+        "name": "aboutSystem1",
+        "type": "checkbox",
+        "title": "Veuillez indiquer laquelle des capacités suivantes s'applique à votre système.",
+        "match_score": 100.0,
+        "answer": "Analyse du texte et de la parole: Analyser de vastes jeux de données pour\nreconnaître, traiter et étiqueter le texte, la parole, la voix et faire des\nrecommendations en fonction du marquage.\n\nCote actuelle : 28\n\nCote d'incidence brute : 28\n\nCote d'atténuation : 6\nd'incidence 1\nExamen par les pairs\n\nAucune\nAnalyse comparative entre les sexes plus\n\nAucune\nAvis\n\nAucune\nMaillon humain de la prise de décisions\n\nDes décisions peuvent être prises sans participation humaine directe.\nExplication\n\nEn plus de toute exigence juridique applicable, s’assurer qu’une explication significative des\nrésultats communs des décisions soit publiée. L’explication doit fournir une description générale\ndes points suivants :\n\n    le rôle du système dans le processus de décision;\n   les données d’entrée, leur source et leur méthode de collecte;\n   les critères utilisés pour évaluer les données d’entrée et les opérations appliquées pour les\n    traiter;\n    le résultat produit par le système et toute information pertinente nécessaire pour l’interpréter\n   dans le contexte de la décision administrative;\n   les principaux facteurs à l’origine d’une décision.\n\nLes explications doivent également fournir des renseignements aux clients sur les possibilités de\nrecours pertinentes, le cas échéant.\n\nLes descriptions doivent être offertes en langage clair par l’entremise de l’évaluation de\nl’incidence algorithmique et être repérables sur le site Web de l’institution.\nFormation\n\nAucune\nGestion de la TI et de la continuité des activités\n\nAucune\nApprobation de l’exploitation du système\n\nAucune\nAutres exigences\n\nLa Directive sur la prise de décisions automatisée comprend également d'autres exigences qui\ndoivent être respectées pour tous les niveaux d'incidences.\n\nLien vers la Directive sur la prise de décisions automatisée\n\nContactez le bureau de l'AIPRP de votre établissement pour discuter de l'exigence d'une\névaluation des facteurs relatifs à la vie privée conformément à la Directive sur l'évaluation des\nfacteurs relatifs à la vie privée.\nRaisons de l'automatisation\n1. Qu'est-ce qui motive votre équipe à introduire l'automatisation dans ce processus\ndécisionnel? (Cochez toutes les réponses qui s'appliquent.)\nArriéré de travail ou de cas existant\nUtilisation d'approches novatrices\n\n2. Quels sont les besoins des clients auxquels le système répondra et comment le système y\nrépondra-t-il? Si possible, décrivez la façon dont les besoins des clients ont été déterminés.\nLa transcription et la traduction d’enregistrements audio est un processus qui\nnécessite beaucoup de temps et de travail. L’utilisation de moteurs d’IA pour\nfaciliter la transcription et la traduction permettra de réduire le temps et le\ntravail nécessaires pour les transcripteurs et les traducteurs en générant une\nébauche de transcription qu’ils pourront réviser plutôt que d’avoir à faire la\ntranscription et la traduction eux-mêmes.\n\n3. Veuillez décrire tous les bienfaits d’intérêt public que le système devrait avoir.\nL’amélioration de l’efficacité de la transcription et de la traduction des\nenregistrements audio permettra aux enquêteurs d’obtenir rapidement des\ndétails importants sur leur opération qui pourraient avoir une incidence sur la\nsurveillance, la sécurité des policiers et la possibilité d’avoir à rectifier des\nautorisations. Elle aura aussi une incidence sur le délai de la divulgation à la\ncour, ce qui pourrait accélérer le traitement des cas publics.\n\n4. Dans quelle mesure le système sera-t-il efficace pour répondre aux besoins des clients?\nModérément efficace                                                                                                  [ Points: +1 ]\n\n5. Veuillez décrire les améliorations, les bienfaits ou les avantages que vous attendez de\nl’utilisation d’un système automatisé. Cela pourrait inclure des indicateurs de programme et des\nobjectifs de rendement pertinents.\nL’automatisation du processus de transcription et de traduction améliorera\nl’efficacité du processus par un facteur d’au moins 10. Les enquêteurs auront\naccès à l’information importante sur leur opération en temps plus opportun et\nla divulgation à la cour pourra se faire plus rapidement que maintenant.\n\n6. Veuillez décrire la façon dont vous allez vous assurer que le système se limite à répondre aux\nbesoins des clients mentionnés ci-dessus.\nL’application utilise les paramètres de connexion d’Active Directory pour\nlimiter l’accès aux personnes qui ont l’autorisation de consulter le système.\nDes méthodes de fonctionnement normalisées (MFN) seront élaborées pour\nassurer l’utilisation adéquate du système. Des essais seront effectués et des\ncommentaires seront recueillis pour veiller à ce que l’efficacité du processus\net l’exactitude des transcriptions et des traductions générées par l’application\nsoient acceptables.\n\n7. Veuillez décrire toutes les concessions mutuelles entre les intérêts des clients et les objectifs\ndu programme que vous avez pris en considération lors de l’élaboration du projet.\nLes préoccupations en matière de confidentialité et de sécurité exprimées par\nles clients ont été prises en considération. Le système est conçu par la GRC et\nsera exploité hors ligne et sur place. Les données opérationnelles ne seront\npas conservées dans le système. Une fois que la transcription générée aura\nété téléchargée par l’utilisateur, l’enregistrement audio et la transcription\nseront supprimés du système.\n\n8. D’autres options de processus non automatisés ont-elles été envisagées?\nOui                                                                                                                                [ Points: +0 ]\n\n9. Si des processus non automatisés ont été envisagés, pourquoi l’automatisation a-t-elle été\nl’option choisie?\nLa traduction et la transcription manuelles nécessitent beaucoup de temps et\nde travail de la part des transcripteurs et des traducteurs, ce qui a donné lieu à\nun arriéré d’enregistrements audio à transcrire et entraîné des retards dans la\ndivulgation. L’application produit automatiquement la transcription ou la\ntraduction et les transcripteurs ou traducteurs n’ont qu’à la réviser, ce qui\nnécessite moins de temps et de travail que de faire la transcription au\ncomplet.",
+        "value": [
+          "item2"
+        ]
+      },
+      {
+        "number": 10,
+        "name": "aboutSystem2",
+        "type": "comment",
+        "title": "S'il vous plait décrire",
+        "match_score": 96.0,
+        "answer": "Le processus de transcription ne changerait pas et le niveau d’efficacité\ndemeurerait le même.\n\nProfil de risque\n12. Le projet fait-il l'objet d'un examen public approfondi (e.g.: en raison de préoccupations liées\nà la protection de la vie privée) et/ou de litiges fréquents?\nNon                                                                                                                               [ Points: +0 ]\n\n13. Les clients de ce secteur d'activité sont-ils particulièrement vulnérables?\nNon                                                                                                                               [ Points: +0 ]\n14. Les enjeux des décisions de ce programme sont-ils très élevés?\nNon                                                                                                                               [ Points: +0 ]",
+        "value": "Le processus de transcription ne changerait pas et le niveau d’efficacité\ndemeurerait le même.\n\nProfil de risque\n12. Le projet fait-il l'objet d'un examen public approfondi (e.g.: en raison de préoccupations liées\nà la protection de la vie privée) et/ou de litiges fréquents?\nNon                                                                                                                               [ Points: +0 ]\n\n13. Les clients de ce secteur d'activité sont-ils particulièrement vulnérables?\nNon                                                                                                                               [ Points: +0 ]\n14. Les enjeux des décisions de ce programme sont-ils très élevés?\nNon                                                                                                                               [ Points: +0 ]"
+      },
+      {
+        "number": 15,
+        "name": "riskProfile5",
+        "type": "radiogroup",
+        "title": "L’utilisation du système entraînera-t-elle des difficultés pour les personnes en situation de handicap ou les accentuera-t-elle?",
+        "match_score": 96.0,
+        "answer": "Non                                                                                                                               [ Points: +0 ]\n\nAutorité de projet",
+        "value": "item2-0"
+      },
+      {
+        "number": 17,
+        "name": "projectAuthority1",
+        "type": "radiogroup",
+        "title": "Aurez-vous besoin d'une nouvelle autorisation en termes de politiques pour ce projet ?",
+        "match_score": 100.0,
+        "answer": "Non                                                                                                                               [ Points: +0 ]\n\nÀ propos de l'algorithme",
+        "value": "item2-0"
+      },
+      {
+        "number": 18,
+        "name": "aboutAlgorithm1",
+        "type": "radiogroup",
+        "title": "L'algorithme utilisé sera un secret (commercial)",
+        "match_score": 100.0,
+        "answer": "Non                                                                                                                               [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 19,
+        "name": "aboutAlgorithm2",
+        "type": "radiogroup",
+        "title": "Le processus algorithmique sera difficile à interpréter ou à expliquer",
+        "match_score": 100.0,
+        "answer": "Non                                                                                                                               [ Points: +0 ]\n\nÀ propos de la décision",
+        "value": "item2-0"
+      },
+      {
+        "number": 20,
+        "name": "decisionSector3",
+        "type": "comment",
+        "title": "Veuillez décrire la ou les décisions qui seront automatisées.",
+        "match_score": 100.0,
+        "answer": "Le système ne prendra pas de décisions. Les transcripteurs et les traducteurs\nréviseront les transcriptions et traductions générées par le système afin d’en\nassurer l’exactitude et d’apporter les corrections nécessaires. Les\ntranscriptions générées par le moteur d’IA ne seront pas utilisées à moins\nd’avoir été examinées et corrigées par un humain.",
+        "value": "Le système ne prendra pas de décisions. Les transcripteurs et les traducteurs\nréviseront les transcriptions et traductions générées par le système afin d’en\nassurer l’exactitude et d’apporter les corrections nécessaires. Les\ntranscriptions générées par le moteur d’IA ne seront pas utilisées à moins\nd’avoir été examinées et corrigées par un humain."
+      },
+      {
+        "number": 21,
+        "name": "decisionSector1",
+        "type": "checkbox",
+        "title": "La décision s'applique-t-elle à l'une ou l'autre des catégories ci-dessous (*Cochez toutes les réponses qui s'appliquent) :",
+        "match_score": 100.0,
+        "answer": "Autre (veuillez préciser)                                                                                              [ Points: +1 ]",
+        "value": [
+          "item6-1"
+        ]
+      },
+      {
+        "number": 22,
+        "name": "aboutSystem2",
+        "type": "comment",
+        "title": "S'il vous plait décrire",
+        "match_score": 100.0,
+        "answer": "Le système ne prendra pas de décisions.\n\nÉvaluation de l'incidence",
+        "value": "Le système ne prendra pas de décisions.\n\nÉvaluation de l'incidence"
+      },
+      {
+        "number": 23,
+        "name": "impact30",
+        "type": "radiogroup",
+        "title": "Parmi les propositions suivantes, laquelle décrit le mieux le type d’automatisation que vous envisagez?",
+        "match_score": 100.0,
+        "answer": "Automatisation partielle (le système facilitera la prise de décisions\nadministratives en appuyant un agent au moyen d’évaluations, de\nrecommandations, de décisions provisoires ou d’autres résultats)                         [ Points: +2 ]",
+        "value": "item2-2"
+      },
+      {
+        "number": 24,
+        "name": "impact31",
+        "type": "comment",
+        "title": "Veuillez décrire le rôle du système dans le processus de prise de décisions.",
+        "match_score": 100.0,
+        "answer": "Le système ne prendra pas de décisions. Les transcriptions générées par le\nmoteur d’IA ne seront pas utilisées telles quelles pour la prise de décisions ou\nla divulgation. Elles devront d’abord être révisées par un transcripteur ou un\ntraducteur.",
+        "value": "Le système ne prendra pas de décisions. Les transcriptions générées par le\nmoteur d’IA ne seront pas utilisées telles quelles pour la prise de décisions ou\nla divulgation. Elles devront d’abord être révisées par un transcripteur ou un\ntraducteur."
+      },
+      {
+        "number": 25,
+        "name": "impact3",
+        "type": "radiogroup",
+        "title": "Le système prendra-t-il des décisions ou effectuera-t-il des évaluations qui exigent du jugement ou de la discrétion?",
+        "match_score": 100.0,
+        "answer": "Non                                                                                                                               [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 26,
+        "name": "impact20",
+        "type": "comment",
+        "title": "Veuillez décrire les critères utilisés pour évaluer les données des clients et les procédures appliquées pour les traiter.",
+        "match_score": 100.0,
+        "answer": "Les données des clients sont des enregistrements audio téléversés dans\nl’application. Les enregistrements seront traités par un modèle de\nreconnaissance de la parole pour produire une transcription ou une\ntraduction.",
+        "value": "Les données des clients sont des enregistrements audio téléversés dans\nl’application. Les enregistrements seront traités par un modèle de\nreconnaissance de la parole pour produire une transcription ou une\ntraduction."
+      },
+      {
+        "number": 27,
+        "name": "impact21",
+        "type": "comment",
+        "title": "Veuillez décrire le résultat produit par le système et les renseignements pertinents nécessaires à l’interprétation dans le contexte de la décision administrative.",
+        "match_score": 100.0,
+        "answer": "Le résultat produit par le système est une transcription (texte) de\nl’enregistrement audio. L’enregistrement audio original est nécessaire pour la\nvérification de l’exactitude de la transcription par le transcripteur ou le\ntraducteur.",
+        "value": "Le résultat produit par le système est une transcription (texte) de\nl’enregistrement audio. L’enregistrement audio original est nécessaire pour la\nvérification de l’exactitude de la transcription par le transcripteur ou le\ntraducteur."
+      },
+      {
+        "number": 28,
+        "name": "impact22",
+        "type": "radiogroup",
+        "title": "Le système effectuera-t-il une évaluation ou une autre activité qui ne serait autrement pas réalisée par un humain?",
+        "match_score": 100.0,
+        "answer": "Non                                                                                                                               [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 29,
+        "name": "impact5",
+        "type": "radiogroup",
+        "title": "Le système est-il utilisé par une partie de l’organisation différente de celle à laquelle appartiennent ceux qui l’ont développé?",
+        "match_score": 100.0,
+        "answer": "Non                                                                                                                               [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 30,
+        "name": "impact6",
+        "type": "dropdown",
+        "title": "Les incidences découlant de la décision sont-elles réversibles?",
+        "match_score": 100.0,
+        "answer": "Réversible                                                                                                                    [ Points: +1 ]",
+        "value": "item1-1"
+      },
+      {
+        "number": 31,
+        "name": "impact7",
+        "type": "dropdown",
+        "title": "Combien de temps les incidences de la décision dureront-elles?",
+        "match_score": 100.0,
+        "answer": "Les incidences risquent fort probablement d’être brèves                                         [ Points: +1 ]",
+        "value": "item1-1"
+      },
+      {
+        "number": 32,
+        "name": "impact8",
+        "type": "comment",
+        "title": "Veuillez indiquer pour quelle raison les incidences découlant de la décision sont (selon l’option sélectionnée ci-dessus).",
+        "match_score": 100.0,
+        "answer": "Les transcriptions ne seront jamais utilisées dans le format brut fourni par\nl’application. Elles devront être vérifiées par un humain, soit un transcripteur\nou un traducteur, afin d’en assurer l’exactitude avant qu’elles soient\ntransmises.",
+        "value": "Les transcriptions ne seront jamais utilisées dans le format brut fourni par\nl’application. Elles devront être vérifiées par un humain, soit un transcripteur\nou un traducteur, afin d’en assurer l’exactitude avant qu’elles soient\ntransmises."
+      },
+      {
+        "number": 33,
+        "name": "impact9",
+        "type": "dropdown",
+        "title": "Les incidences de la décision sur les droits ou libertés des personnes seront probablement les suivantes :",
+        "match_score": 100.0,
+        "answer": "Incidence faible ou nulle                                                                                             [ Points: +1 ]",
+        "value": "item1-1"
+      },
+      {
+        "number": 34,
+        "name": "impact8",
+        "type": "comment",
+        "title": "Veuillez indiquer pour quelle raison les incidences découlant de la décision sont (selon l’option sélectionnée ci-dessus).",
+        "match_score": 100.0,
+        "answer": "Aucune incidence sur les droits des personnes. Les enregistrements audio\nversés dans le système auront été obtenus légalement. L’application ne devra\npas obligatoirement être utilisée si une transcription manuelle est nécessaire\nou privilégiée.",
+        "value": "Aucune incidence sur les droits des personnes. Les enregistrements audio\nversés dans le système auront été obtenus légalement. L’application ne devra\npas obligatoirement être utilisée si une transcription manuelle est nécessaire\nou privilégiée."
+      },
+      {
+        "number": 35,
+        "name": "impact24",
+        "type": "dropdown",
+        "title": "Les incidences de la décision sur l’égalité, la dignité, la vie privée et l’autonomie des personnes seront probablement :",
+        "match_score": 100.0,
+        "answer": "Incidence faible ou nulle                                                                                             [ Points: +1 ]",
+        "value": "item1-1"
+      },
+      {
+        "number": 36,
+        "name": "impact8",
+        "type": "comment",
+        "title": "Veuillez indiquer pour quelle raison les incidences découlant de la décision sont (selon l’option sélectionnée ci-dessus).",
+        "match_score": 100.0,
+        "answer": "Aucune incidence sur des personnes. Voice2Text est un outil qui vise à aider\nles transcripteurs de la GRC et non à les remplacer.",
+        "value": "Aucune incidence sur des personnes. Voice2Text est un outil qui vise à aider\nles transcripteurs de la GRC et non à les remplacer."
+      },
+      {
+        "number": 37,
+        "name": "impact11",
+        "type": "dropdown",
+        "title": "Les incidences de la décision sur la santé et le bien-être des personnes seront probablement les suivantes :",
+        "match_score": 100.0,
+        "answer": "Incidence faible ou nulle                                                                                             [ Points: +1 ]",
+        "value": "item1-1"
+      },
+      {
+        "number": 38,
+        "name": "impact10",
+        "type": "comment",
+        "title": "Veuillez indiquer pour quelle raison les incidences découlant de la décision sont (selon l’option sélectionnée ci-dessus).",
+        "match_score": 100.0,
+        "answer": "Le système ne conservera pas les enregistrements audio et les transcriptions\nà long terme. Une fois que la transcription générée aura été téléchargée,\ntoutes les données seront supprimées du système. L’application ne recueillera\naucun renseignement personnel sur l’utilisateur.",
+        "value": "Le système ne conservera pas les enregistrements audio et les transcriptions\nà long terme. Une fois que la transcription générée aura été téléchargée,\ntoutes les données seront supprimées du système. L’application ne recueillera\naucun renseignement personnel sur l’utilisateur."
+      },
+      {
+        "number": 39,
+        "name": "impact13",
+        "type": "dropdown",
+        "title": "Les incidences de la décision sur les intérêts économiques des personnes seront probablement les suivantes :",
+        "match_score": 100.0,
+        "answer": "Incidence faible ou nulle                                                                                             [ Points: +1 ]",
+        "value": "item1-1"
+      },
+      {
+        "number": 40,
+        "name": "impact25",
+        "type": "comment",
+        "title": "Veuillez indiquer pour quelle raison les incidences découlant de la décision sont (selon l’option sélectionnée ci-dessus).",
+        "match_score": 100.0,
+        "answer": "Aucune incidence économique.",
+        "value": "Aucune incidence économique."
+      },
+      {
+        "number": 41,
+        "name": "impact15",
+        "type": "dropdown",
+        "title": "Les incidences de la décision sur la pérennité d’un écosystème environnemental seront probablement les suivantes :",
+        "match_score": 100.0,
+        "answer": "Incidence faible ou nulle                                                                                             [ Points: +1 ]",
+        "value": "item1-1"
+      },
+      {
+        "number": 42,
+        "name": "impact12",
+        "type": "comment",
+        "title": "Veuillez indiquer pour quelle raison les incidences découlant de la décision sont (selon l’option sélectionnée ci-dessus).",
+        "match_score": 100.0,
+        "answer": "Aucune incidence sur la pérennité ou l’environnement.\n\nÀ propos des données - A. Source des données",
+        "value": "Aucune incidence sur la pérennité ou l’environnement.\n\nÀ propos des données - A. Source des données"
+      },
+      {
+        "number": 43,
+        "name": "aboutDataSource1",
+        "type": "radiogroup",
+        "title": "Le système de décision automatisé utilisera-t-il des renseignements personnels comme données d’entrée?",
+        "match_score": 100.0,
+        "answer": "Non                                                                                                                               [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 44,
+        "name": "aboutDataSource2",
+        "type": "dropdown",
+        "title": "Quelle est la classification de sécurité la plus élevée des données d’entrée utilisées par le système? (N’en choisir qu’une seule)",
+        "match_score": 100.0,
+        "answer": "Protégé B/Protégé C                                                                                                   [ Points: +3 ]",
+        "value": "item4-3"
+      },
+      {
+        "number": 45,
+        "name": "aboutDataSource3",
+        "type": "dropdown",
+        "title": "Qui contrôle les données?",
+        "match_score": 100.0,
+        "answer": "Gouvernement fédéral                                                                                                 [ Points: +1 ]",
+        "value": "item2-1"
+      },
+      {
+        "number": 46,
+        "name": "aboutDataSource4",
+        "type": "radiogroup",
+        "title": "Les données utilisées par le système proviendront-elles de plusieurs sources différentes?",
+        "match_score": 100.0,
+        "answer": "Oui                                                                                                                                [ Points: +4 ]",
+        "value": "item1-4"
+      },
+      {
+        "number": 47,
+        "name": "aboutDataSource5",
+        "type": "radiogroup",
+        "title": "Le système aura-t-il besoin de données d’entrée provenant d’un appareil connecté à Internet ou à la téléphonie? (P. ex., internet des objets, un Capteur)",
+        "match_score": 100.0,
+        "answer": "Non                                                                                                                               [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 48,
+        "name": "aboutDataSource6",
+        "type": "radiogroup",
+        "title": "Le système interagira-t-il avec d’autres systèmes des TI?",
+        "match_score": 100.0,
+        "answer": "Oui                                                                                                                                [ Points: +4 ]",
+        "value": "item1-4"
+      },
+      {
+        "number": 49,
+        "name": "aboutDataSource7",
+        "type": "dropdown",
+        "title": "Qui a recueilli les données utilisées pour préparer le système?",
+        "match_score": 100.0,
+        "answer": "Un gouvernement étranger ou un tiers non gouvernemental                                   [ Points: +4 ]",
+        "value": "item4-4"
+      },
+      {
+        "number": 50,
+        "name": "aboutDataSource8",
+        "type": "dropdown",
+        "title": "Qui a recueilli les données d’entrée utilisées par le système?",
+        "match_score": 100.0,
+        "answer": "Votre institution                                                                                                           [ Points: +1 ]",
+        "value": "item1-1"
+      },
+      {
+        "number": 51,
+        "name": "aboutDataSource13",
+        "type": "comment",
+        "title": "Veuillez décrire les données d’entrée collectées et utilisées par le système, leur source et leur méthode de collecte.",
+        "match_score": 100.0,
+        "answer": "Les données d’entrée utilisées dans le système auront été obtenues\nlégalement par la GRC en tant qu’éléments de preuve, de différentes façons.\nLes enregistrements seront téléversés dans le système, transcrits ou traduits,\npuis supprimés du système une fois que la transcription aura été téléchargée.\n\nÀ propos des données - B. Type de données",
+        "value": "Les données d’entrée utilisées dans le système auront été obtenues\nlégalement par la GRC en tant qu’éléments de preuve, de différentes façons.\nLes enregistrements seront téléversés dans le système, transcrits ou traduits,\npuis supprimés du système une fois que la transcription aura été téléchargée.\n\nÀ propos des données - B. Type de données"
+      },
+      {
+        "number": 52,
+        "name": "aboutDataType1",
+        "type": "radiogroup",
+        "title": "Le système exigera-t-il l’analyse de données non structurées pour faire une recommandation ou prendre une décision?",
+        "match_score": 100.0,
+        "answer": "Non                                                                                                                               [ Points: 0 ]\n\nd'atténuation",
+        "value": "item2"
+      },
+      {
+        "number": 1,
+        "name": "consultationDesign1",
+        "type": "radiogroup",
+        "title": "Intervenants internes (institutions fédérales, y compris la fonction publique fédérale)",
+        "match_score": 100.0,
+        "answer": "Oui                                                                                                                                [ Points: +1 ]",
+        "value": "item1-1"
+      },
+      {
+        "number": 2,
+        "name": "consultationDesign2",
+        "type": "checkbox",
+        "title": "Quels intervenants internes allez-vous consulter?",
+        "match_score": 100.0,
+        "answer": "Gouvernance des données\nServices légaux\nServices des communications\nRessources humaines\nPolitique sur le numérique",
+        "value": [
+          "item3",
+          "item5",
+          "item7",
+          "item10",
+          "item11"
+        ]
+      },
+      {
+        "number": 3,
+        "name": "consultationDesign3",
+        "type": "radiogroup",
+        "title": "Intervenants externes (groupes d’autres secteurs ou administrations)",
+        "match_score": 100.0,
+        "answer": "Non                                                                                                                               [ Points: +0 ]\n\nÉlimination des risques et mesures d'atténuation - Qualité\ndes données",
+        "value": "item2-0"
+      },
+      {
+        "number": 4,
+        "name": "dataQualityDesign1",
+        "type": "radiogroup",
+        "title": "Disposerez-vous de processus documentés pour tester les jeux de données en fonction de biais et d’autres résultats inattendus? Par exemple, ceci pourrait inclure une expérience dans l’application de cadres, de méthodes, de lignes directrices ou d’outils d’évaluation.",
+        "match_score": 100.0,
+        "answer": "Non                                                                                                                               [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 5,
+        "name": "dataQualityDesign3",
+        "type": "radiogroup",
+        "title": "Allez-vous élaborer un processus permettant de documenter la façon dont les problèmes de qualité des données qui seront résolus pendant le processus de conception?",
+        "match_score": 100.0,
+        "answer": "Non                                                                                                                               [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 6,
+        "name": "dataQualityDesign2",
+        "type": "radiogroup",
+        "title": "Allez-vous rendre cette information disponible publiquement?",
+        "match_score": 100.0,
+        "answer": "Non                                                                                                                               [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 7,
+        "name": "dataQualityDesign5",
+        "type": "radiogroup",
+        "title": "Entreprendrez-vous une analyse comparative entre les sexes plus des données?",
+        "match_score": 100.0,
+        "answer": "Non                                                                                                                               [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 8,
+        "name": "dataQualityDesign2",
+        "type": "radiogroup",
+        "title": "Allez-vous rendre cette information disponible publiquement?",
+        "match_score": 100.0,
+        "answer": "Non                                                                                                                               [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 9,
+        "name": "dataQualityDesign7",
+        "type": "radiogroup",
+        "title": "Dans votre établissement, existe-t-il des responsables de la conception, du développement, de la maintenance et de l’amélioration du système?",
+        "match_score": 100.0,
+        "answer": "Oui                                                                                                                                [ Points: +2 ]",
+        "value": "item1-2"
+      },
+      {
+        "number": 10,
+        "name": "dataQualityDesign8",
+        "type": "radiogroup",
+        "title": "Disposerez-vous d'un processus documenté pour gérer le risque que des données périmées ou non fiables soient utilisées pour prendre une décision automatisée?",
+        "match_score": 100.0,
+        "answer": "Non                                                                                                                               [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 11,
+        "name": "dataQualityDesign4",
+        "type": "radiogroup",
+        "title": "Allez-vous rendre cette information disponible publiquement?",
+        "match_score": 100.0,
+        "answer": "Non                                                                                                                               [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 12,
+        "name": "dataQualityDesign10",
+        "type": "radiogroup",
+        "title": "Les données utilisées pour ce système seront-elles affichées sur la portail du gouvernement ouvert?",
+        "match_score": 100.0,
+        "answer": "Non                                                                                                                               [ Points: +0 ]\n\nÉlimination des risques et mesures d'atténuation - Équité\nprocédurale",
+        "value": "item2-0"
+      },
+      {
+        "number": 13,
+        "name": "fairnessDesign1",
+        "type": "radiogroup",
+        "title": "La piste de vérification permettra-t-elle de déterminer les pouvoirs ou les pouvoirs délégués prévus par la lois?",
+        "match_score": 100.0,
+        "answer": "Non                                                                                                                               [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 14,
+        "name": "fairnessDesign2",
+        "type": "radiogroup",
+        "title": "Le système fournira-t-il une piste de vérification qui enregistre toutes les recommandations ou décisions prises par le système?",
+        "match_score": 100.0,
+        "answer": "Non                                                                                                                               [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 15,
+        "name": "fairnessDesign3",
+        "type": "radiogroup",
+        "title": "Pourra-t-on identifier tous les points de décision clés dans la piste de vérification?",
+        "match_score": 100.0,
+        "answer": "Non                                                                                                                               [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 16,
+        "name": "fairnessDesign4",
+        "type": "radiogroup",
+        "title": "Est-ce que toutes les décisions clés seront liées à une législation, politique ou à une procédure pertinente?",
+        "match_score": 100.0,
+        "answer": "Non                                                                                                                               [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 17,
+        "name": "fairnessDesign5",
+        "type": "radiogroup",
+        "title": "Tiendrez-vous un journal détaillant toutes les modifications apportées au modèle et au système?",
+        "match_score": 100.0,
+        "answer": "Non                                                                                                                               [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 18,
+        "name": "fairnessDesign6",
+        "type": "radiogroup",
+        "title": "La piste de vérification indiquera-t-elle clairement tous les points de décision prise par le système?",
+        "match_score": 100.0,
+        "answer": "Non                                                                                                                               [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 19,
+        "name": "fairnessDesign7",
+        "type": "radiogroup",
+        "title": "La piste de vérification générée par le système pourrait-elle être utilisée pour aider à produire une notification de la décision (y compris un énoncé des motifs ou une autre notification) au besoin?",
+        "match_score": 100.0,
+        "answer": "Non                                                                                                                               [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 20,
+        "name": "fairnessDesign8",
+        "type": "radiogroup",
+        "title": "La piste de vérification permettra-t-elle de déterminer précisément quelle version du système a été utilisée pour chaque décision qu'elle appuie?",
+        "match_score": 100.0,
+        "answer": "Non                                                                                                                               [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 21,
+        "name": "fairnessDesign9",
+        "type": "radiogroup",
+        "title": "La piste de vérification indiquera-t-elle qui est le décideur autorisé?",
+        "match_score": 100.0,
+        "answer": "Non                                                                                                                               [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 22,
+        "name": "fairnessDesign10",
+        "type": "radiogroup",
+        "title": "Le système sera-t-il en mesure de justifier ses décisions ou ses recommandations au besoin?",
+        "match_score": 100.0,
+        "answer": "Non                                                                                                                               [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 23,
+        "name": "fairnessDesign11",
+        "type": "radiogroup",
+        "title": "Y aura-t-il un processus en place pour accorder, surveiller et révoquer l'autorisation d'accès au système?",
+        "match_score": 100.0,
+        "answer": "Oui                                                                                                                                [ Points: +1 ]",
+        "value": "item1-1"
+      },
+      {
+        "number": 24,
+        "name": "fairnessDesign12",
+        "type": "radiogroup",
+        "title": "Y aura-t-il un mécanisme pour recueillir les commentaires des utilisateurs du système?",
+        "match_score": 100.0,
+        "answer": "Oui                                                                                                                                [ Points: +1 ]",
+        "value": "item1-1"
+      },
+      {
+        "number": 25,
+        "name": "fairnessDesign13",
+        "type": "radiogroup",
+        "title": "Y aura-t-il un processus de recours prévu ou établi pour les clients qui souhaitent contester la décision?",
+        "match_score": 100.0,
+        "answer": "Non                                                                                                                               [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 26,
+        "name": "fairnessDesign14",
+        "type": "radiogroup",
+        "title": "Le système permettra-t-il à une personne de passer outre aux décisions du système?",
+        "match_score": 100.0,
+        "answer": "Non                                                                                                                               [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 27,
+        "name": "fairnessDesign15",
+        "type": "radiogroup",
+        "title": "Y aura-t-il un processus en place pour consigner les cas où des dérogations ont été effectuées?",
+        "match_score": 100.0,
+        "answer": "Non                                                                                                                               [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 28,
+        "name": "fairnessDesign16",
+        "type": "radiogroup",
+        "title": "La piste de vérification comprendra-t-elle des processus pour enregistrer les modifications apportées au fonctionnement ou au rendement du système?",
+        "match_score": 100.0,
+        "answer": "Non                                                                                                                               [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 29,
+        "name": "fairnessDesign17",
+        "type": "radiogroup",
+        "title": "Allez-vous préparer un dossier conceptuel à l'intention du Comité d'examen de l'architecture d'entreprise du gouvernement du Canada?",
+        "match_score": 100.0,
+        "answer": "Non                                                                                                                               [ Points: +0 ]\n\nÉlimination des risques et mesures d'atténuation -\nConfidentialité",
+        "value": "item2-0"
+      },
+      {
+        "number": 30,
+        "name": "privacyDesign1",
+        "type": "radiogroup",
+        "title": "Si votre système utilise ou crée des renseignements personnels, avez-vous ou allez-vous entreprendre une évaluation des facteurs relatifs à la vie privée ou réviser une évaluation existante?",
+        "match_score": 100.0,
+        "answer": "Non                                                                                                                               [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 31,
+        "name": "privacyDesign2",
+        "type": "radiogroup",
+        "title": "Concevrez-vous et intégrerez-vous la sécurité et la confidentialité dans vos systèmes dès la phase de conception du projet?",
+        "match_score": 100.0,
+        "answer": "Oui                                                                                                                                [ Points: +1 ]",
+        "value": "item1-1"
+      },
+      {
+        "number": 32,
+        "name": "privacyDesign3",
+        "type": "radiogroup",
+        "title": "Les informations seront-elles utilisées dans un système fermé (c'est-à-dire sans connexion à Internet, Intranet ou tout autre système)?",
+        "match_score": 100.0,
+        "answer": "Non                                                                                                                               [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 33,
+        "name": "privacyDesign4",
+        "type": "radiogroup",
+        "title": "Si le partage de renseignements personnels est impliqué, un accord ou un arrangement avec des garanties appropriées a-t-il été établi?",
+        "match_score": 100.0,
+        "answer": "Non                                                                                                                               [ Points: +0 ]",
+        "value": "item2-0"
+      },
+      {
+        "number": 34,
+        "name": "privacyDesign7",
+        "type": "radiogroup",
+        "title": "Allez-vous dépersonnaliser les renseignements personnels utilisés ou établis par le système à tout moment du cycle de vie?",
+        "match_score": 100.0,
+        "answer": "Non                                                                                                                               [ Points: +0 ]",
+        "value": "item2-0"
+      }
+    ],
+    "unresolved": []
+  },
+  "output": "/home/runner/work/aia-eia-js/aia-eia-js/recovered_aia_json/7612202f-1530-41ce-80c7-6e121f5fcadc/aia-results.json"
+}

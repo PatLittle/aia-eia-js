@@ -1,0 +1,923 @@
+Résultats de l'évaluation de l'incidence
+algorithmique
+
+Version: 0.10.0
+Détails du projet
+1. Nom de la personne sondée
+Mike Leahy
+
+2. Titre du poste
+Directeur général
+
+3. Ministère
+Agence des services frontaliers du Canada
+
+4. Direction
+Direction générale du secteur commercial et des échanges commerciaux
+
+5. Titre du projet
+Gestion des cotisations et des recettes de l’ASFC (GCRA)
+
+6. Identifiant du projet provenant du Plan TI
+PRJ-00005304
+
+7. Programme ministériel (Cadre ministériel des résultats)
+PI 10500 Programme de facilitation commerciale et de conformité
+
+8. Phase du projet
+Mise en oeuvre                                                                                                            [ Points: 0 ]
+
+9. Veuillez fournir une description du projet :
+Le mandat de l'ASFC est de fournir des services frontaliers intégrés qui
+appuient des priorités en matière de sécurité nationale et de sécurité publique
+tout en facilitant la libre circulation des personnes et des biens qui satisfont à
+toutes les exigences prévues par la loi sur laquelle s'appuie le programme. La
+gestion efficace de l’importation des marchandises commerciales au Canada,
+y compris l'évaluation exacte et la collecte efficace des droits et taxes dues au
+gouvernement du Canada, est essentielle à la facilitation du mandat de
+l'ASFC.
+
+En 2009, le Bureau du vérificateur général (BVG) a comparu devant le Comité
+permanent des comptes publics (CPCP). Le BVG a noté que l'ASFC avait
+difficulté à rapprocher les informations contenues dans divers rapports tirés
+de ses programmes fiscaux, ce qui entraînait des écarts inexpliqués à la fin de
+l'exercice. Le Comité a été informé que cela était dû au fait que les systèmes
+informatiques n’étaient pas capables de partager les données. En
+conséquence, le CPCP a recommandé à l'ASFC de fournir au Comité un plan
+détaillé précisant les mesures qu'elle prendrait pour améliorer ses systèmes
+de comptabilité des recettes fiscales. C'est à partir de cette recommandation
+que le projet de la Gestion des cotisations et des recettes de l'ASFC (GCRA) a
+été créé.
+Le programme de la Gestion des cotisations et des recettes de l'ASFC (GCRA)
+est une initiative de transformation pluriannuelle qui aidera le gouvernement
+du Canada à protéger et accroître les recettes fiscales de 40 milliards de
+dollars par an pour les Canadiens. Au cours de l'exercice 2022-2023, l'ASFC a
+collecté 39,7 milliards de dollars en droits et taxes sur les marchandises
+importées.
+
+Le projet de la GCRA modernise et simplifie le processus de comptabilisation
+des marchandises importées, offrant ainsi un moyen plus efficace aux
+partenaires de la chaîne commerciale (PCC) (par ex., les importateurs, les
+courtiers en douane, les transporteurs, les transitaires, les opérateurs des
+entrepôts de stockage des douanes et d'entrepôts d’attente des douanes,
+ainsi qu'aux exploitants de boutiques hors taxes) et l'ASFC d'interagir pendant
+le processus d'importation et lors de la déclaration des marchandises
+commerciales, ainsi que lorsque des corrections ou des modifications doivent
+être apportées aux documents comptables.
+
+Le système de la GCRA a été développé conjointement par l'ASFC et des
+consultants tiers, tels que Deloitte et Accenture. Ce système a créé une
+nouvelle méthode pour soumettre données de comptabilité commerciale et a
+automatisé certains processus administratifs au sein du système afin
+d'améliorer les activités de conformité, aux fins de moderniser et rationaliser
+le processus de comptabilisation pour l'importation des biens commerciaux
+au Canada.
+
+La GCRA est un système décisionnel automatisé basé sur des règles, qui
+utilise l'automatisation pour générer des rapports sur les transactions
+potentiellement non conformes, en utilisant des règles de risque établies ; et il
+calcule les droits et taxes en fonction des marchandises importées,
+conformément à la Loi sur les douanes. Dans tous les cas, l'intervention
+humaine et la dérogation sont possibles, et les processus de recours établis
+continuent de servir les PCC.
+
+Le système de la GCRA remplacera les processus manuels et les systèmes
+vieillissants, dont certains datent de plus de 30 ans. Il est conçu pour
+répondre à de nombreux problèmes que l’ASFC et les PCC rencontrent dans le
+processus d'importation en matière d'évaluation et la perception des droits et
+taxes, notamment :
+• les inefficacités résultant du recours à des processus manuels et, dans
+certains cas, sur des processus en papier ;
+•les difficultés à percevoir les créances dues au gouvernement du Canada et à
+faciliter le respect des règles et règlements commerciaux régissant
+l'importation de marchandises commerciales au Canada; et
+•les défis liés à la navigation dans des processus et des règles trop
+complexes en matière de la comptabilité commerciale et le paiement des
+montants dus, y compris les dates d'échéance des paiements non
+harmonisées.
+
+Le lancement de la GCRA facilite l'impact des activités douanières sur les
+partenaires de la chaîne commerciale en modernisant le cadre réglementaire
+régissant la gestion de la comptabilisation des importations et des paiements
+dus au gouvernement du Canada.
+La GCRA a été conçue pour permettre aux PCC d'accéder plus facilement aux
+informations relatives à leurs importations auprès de l'ASFC et de leur
+permettre de communiquer plus facilement avec l'ASFC et de se conformer
+aux exigences en matière de comptabilisation des marchandises
+commerciales. La GCRA offre aux PCC un certain nombre d'avantages,
+notamment en :
+• Éliminant des processus papier fastidieux et chronophages (par ex. les PCC
+ne sont plus tenus de soumettre des documents papier à des agents ou à des
+bureaux spécifiques de l'ASFC, ce qui représente une lourde charge
+administrative pour les PCC et pour le gouvernement du Canada)
+• Fournissant de meilleurs outils pour améliorer l'équité et l'uniformité du
+traitement de tous les importateurs, ce qui réduit les occasions manquées
+d'appliquer des taxes et/ou des droits, et donc les pertes de recettes (par ex.
+auparavant, le processus d'importation reposait sur une comptabilité et des
+corrections sur papier, ce qui créait des inefficacités et risquait de voir des
+documents détruits ou égarés par inadvertance,
+et rendait difficile l'obtention d'une image claire de la conformité d'une entité
+avec ses obligations comptables et de paiement).
+•Offrant aux importateurs la possibilité de s'inscrire à des programmes
+commerciaux, de soumettre documents comptables et de recevoir des
+notifications via leur compte du portail client de la GCRA (par ex. les PCC
+disposent désormais d'un portail centralisé qui rationalise toutes les
+interactions commerciales en un seul endroit)
+•Créant des cycles de facturation harmonisés (par ex. les PCC ont désormais
+un paiement mensuel unique et global. L'ancien processus prévoyait plusieurs
+dates d'échéance pour différents montants, ce qui créait de la confusion pour
+les PCC).
+
+Une évaluation des facteurs relatifs à la vie privée (EFVP) a été réalisée pour
+le projet de la GCRA, qui a mis en évidence des risques administratifs limités.
+L’EFVP initiale a été réalisée pour la première phase du projet de la GCRA dont
+la mise en œuvre en janvier 2016, puis modifiée tout au long du projet de la
+GCRA jusqu'à la version de l'EFVP approuvée en avril 2024. La solution de la
+GCRA recueille et utilise des données commerciales afin de permettre à
+l'ASFC d'administrer le processus d'importation de marchandises
+commerciales. Le système de la GCRA partage des informations avec
+l’Agence du revenu du Canada, les Services publics et Approvisionnement
+Canada, l’Innovation, Sciences et Développement économique Canada, le
+Bureau du vérificateur général du Canada, le Centre canadien pour la
+cybersécurité, le Ministère des Finances Canada, et Statistique Canada. Les
+renseignements sont communiqués à ces partenaires conformément à la Loi
+sur les douanes, le Tarif des douanes, la Loi sur les mesures d'importation
+spéciales, la Loi sur la taxe d'accise et la Loi de 2001 sur l'accise, la Loi de
+l'impôt sur le revenu et la Loi sur la statistique. L'utilisation et la divulgation
+ultérieures de ces renseignements sont utilisation et la divulgation de ces
+renseignements sont assujetties à la Loi sur la protection des renseignements
+personnels.
+
+La GCRA a été publié en plusieurs phases :
+
+Version 0 – V0 (janvier 2021) : transfert du Grand livre de comptes clients
+(GLCC)
+(publié en avril 2015) vers la GCRA à l'aide de la technologie la plus récente
+hébergée dans un environnement cloud.
+Version 1 – V1 (mai 2021) a introduit un portail interne qui a jeté les bases de
+la gestion des dossiers. Le portail client de la GCRA a également été mis en
+œuvre pour les PCC qui importent des marchandises au Canada afin de leur
+permettre d'effectuer les tâches suivantes : consulter les transactions
+enregistrées sur leurs comptes, effectuer des paiements par carte de crédit,
+effectuer des opérations bancaires en ligne ou mettre en place des
+prélèvements automatiques, demander et suivre l'avancement des décisions
+par voie électronique, ainsi que classer les marchandises et estimer les droits
+et taxes.
+
+Version 2 – V2 (mai 2024) Lancement interne du système de la GCRA afin de
+commencer les activités de vérification de la conformité avec les partenaires
+de la chaîne commerciale.
+
+Version 3 – V3 (octobre 2024) Lancement externe du système de la GCRA
+pour les
+les importateurs et autres partenaires de la chaîne commerciale, devenant
+ainsi le système officiel d'enregistrement des droits et taxes à imposer ou à
+percevoir. Il implique la transition des anciens systèmes de gestion des
+recettes de l'ASFC au nouveau système d'enregistrement, et l'introduction de
+nouvelles mesures telles que l'enregistrement des partenaires de la chaîne
+commerciale et la disponibilité de l'inscription, et a amélioré les
+fonctionnalités du portail, notamment : des modifications au programme de
+mainlevée avant paiement (MAP), les déclarations commerciales
+électroniques que l’on peut corriger et ajuster, des cycles de facturation
+harmonisés, de nouvelles options de compensation, la gestion électronique
+des recours et des mesures de conformité, la possibilité pour les partenaires
+de la chaîne commerciale résidents de s'inscrire pour obtenir un numéro
+d'entreprise (NE9) et l'inscription à divers programmes commerciaux de
+l'ASFC.
+
+Version 4 - V4 (août 2025) Mise à niveau d’entretien importante du logiciel de
+base de la GCRA. Comprend également certaines améliorations du portail de
+la GCRA, améliorations des opérations de l'ASFC et une efficacité accrue des
+partenaires de la chaîne commerciale (par ex. une meilleure visibilité sur l'état
+de la gestion des comptes du programme et des relations commerciales).
+
+Le programme de la GCRA continuera de transformer et de moderniser le
+processus d'importation commerciale au moyen de futures versions, au profit
+du gouvernement du Canada, la communauté commerciale et les Canadiens.
+
+À propos du système
+10. Veuillez indiquer laquelle des capacités suivantes s'applique à votre système.
+Évaluation des risques: Analyser de volumineux jeux de données pour
+déterminer les tendances et recommander des mesures et, dans certains cas,
+déclencher la prise de mesures précises.
+Optimisation des processus et automatisation des flux de travail: Analyser de
+vastes jeux de données pour déterminer et corriger les anomalies, les
+modèles de grappes, prévoir les résultats ou les façons d'optimiser; et
+d'automatiser des flux de travail spécifique.
+Génération de contenu: Analyser de vastes jeux de données pour créer des
+catégories, traiter, trier, personnaliser et servir un contenu spécifique destiné à
+des contextes particuliers.
+
+Section 1: Niveau d'incidence: 1
+
+Cote actuelle : 28
+
+Cote d'incidence brute : 33
+
+Cote d'atténuation : 37
+Section 2: Exigences spécifiques au niveau
+d'incidence 1
+Examen par les pairs
+
+Aucune
+Analyse comparative entre les sexes plus
+
+Aucune
+Avis
+
+Aucune
+Maillon humain de la prise de décisions
+
+Des décisions peuvent être prises sans participation humaine directe.
+Explication
+
+En plus de toute exigence juridique applicable, s’assurer qu’une explication significative des
+résultats communs des décisions soit publiée. L’explication doit fournir une description générale
+des points suivants :
+
+    le rôle du système dans le processus de décision;
+   les données d’entrée, leur source et leur méthode de collecte;
+   les critères utilisés pour évaluer les données d’entrée et les opérations appliquées pour les
+    traiter;
+    le résultat produit par le système et toute information pertinente nécessaire pour l’interpréter
+   dans le contexte de la décision administrative;
+   les principaux facteurs à l’origine d’une décision.
+
+Les explications doivent également fournir des renseignements aux clients sur les possibilités de
+recours pertinentes, le cas échéant.
+
+Les descriptions doivent être offertes en langage clair par l’entremise de l’évaluation de
+l’incidence algorithmique et être repérables sur le site Web de l’institution.
+Formation
+Aucune
+Gestion de la TI et de la continuité des activités
+
+Aucune
+Approbation de l’exploitation du système
+
+Aucune
+Autres exigences
+
+La Directive sur la prise de décisions automatisée comprend également d'autres exigences qui
+doivent être respectées pour tous les niveaux d'incidences.
+
+Lien vers la Directive sur la prise de décisions automatisée
+
+Contactez le bureau de l'AIPRP de votre établissement pour discuter de l'exigence d'une
+évaluation des facteurs relatifs à la vie privée conformément à la Directive sur l'évaluation des
+facteurs relatifs à la vie privée.
+Section 3: Questions et réponses
+Section 3.1: Questions et réponses liées aux risques
+Raisons de l'automatisation
+1. Qu'est-ce qui motive votre équipe à introduire l'automatisation dans ce processus
+décisionnel? (Cochez toutes les réponses qui s'appliquent.)
+Arriéré de travail ou de cas existant
+Amélioration de la qualité générale des décisions
+Réduction des coûts de transaction d'un programme existant
+Le système exécute des tâches que les humains ne sont pas en mesure
+d'accomplir dans un délai raisonnable
+Utilisation d'approches novatrices
+
+2. Quels sont les besoins des clients auxquels le système répondra et comment le système y
+répondra-t-il? Si possible, décrivez la façon dont les besoins des clients ont été déterminés.
+L'utilisation du système de la GCRA permettra aux partenaires de la chaîne
+commerciale (PCC) de satisfaire à toutes les exigences régissant la
+comptabilisation des marchandises commerciales importées au Canada, y
+compris, mais sans s'y limiter :
+•  classer leurs marchandises commerciales dans la classification tarifaire
+appropriée
+•  déclarer avec exactitude l'origine et la valeur des marchandises,
+conformément aux exigences législatives
+•  payer les droits et taxes appropriés sur les marchandises
+•  éliminer les processus papier fastidieux et chronophages
+•  simplifier l'accès aux outils et à l'information nécessaires pour s'inscrire à
+des programmes commerciaux, soumettre des documents comptables,
+recevoir des avis électroniques et effectuer des paiements électroniques
+
+La nécessité d'améliorer la conformité a été démontrée de nombreuses
+façons au fil des ans. Les rapports du printemps 2017 du vérificateur général
+du Canada au Parlement du Canada : Rapport 2 — Droits de douane ont mis
+en évidence des pertes de recettes résultant du système d'autocotisation
+utilisé par la communauté des importateurs pour déclarer, au mieux de leurs
+connaissances, la classification et les droits exigibles. De plus, l'ASFC a mené
+une simulation de l'expérience client de la GCRA (SEG 2.0) de février à juin
+2023, au cours de laquelle les PCC ont participé à plusieurs simulations des
+processus opérationnels et des interactions de la GCRA. L'ASFC a relevé de
+nombreuses erreurs commises par les clients dans cet environnement simulé
+hors production, mettant en évidence des lacunes dans les connaissances et
+la nécessité de mieux informer les clients, et préparant les participants au
+lancement externe de la GCRA en octobre 2024. Une meilleure conformité lors
+de la déclaration des transactions à l'ASFC réduira le risque de pénalités ou de
+paiements d'intérêts, car une meilleure conformité signifie une évaluation plus
+précise des droits et des taxes. Les erreurs et les omissions dans les
+paiements douaniers créent un avantage concurrentiel déloyal pour ceux qui
+ne paient pas le montant exact dû.
+
+3. Veuillez décrire tous les bienfaits d’intérêt public que le système devrait avoir.
+Lorsque les importateurs et les autres partenaires de la chaîne commercial se
+conforment à la législation applicable et aux exigences en matière de
+recettes, le montant exact des droits et taxes sont versés à l'État. Le système
+de la GCRA permet à l'ASFC de mieux protéger et accroître les recettes
+fiscales de 40 milliards de dollars par année pour les Canadiens. De plus,
+l'intégrité du régime d'importation du Canada est un avantage public, car le
+système de la GCRA garantit des règles du jeu équitables pour toutes les
+entreprises en fournissant à l'ASFC de meilleurs outils de conformité et
+d'application de la loi.
+
+4. Dans quelle mesure le système sera-t-il efficace pour répondre aux besoins des clients?
+Très efficace                                                                                                                [ Points: +0 ]
+
+5. Veuillez décrire les améliorations, les bienfaits ou les avantages que vous attendez de
+l’utilisation d’un système automatisé. Cela pourrait inclure des indicateurs de programme et des
+objectifs de rendement pertinents.
+Les fonctionnalités automatisées du système renforcent la capacité de
+l'Agence à évaluer avec précision les droits et taxes exigibles sur les
+marchandises importées en permettant davantage aux importateurs
+d'autoévaluer et de se conformer aux exigences commerciales du Canada
+grâce à des outils de conformité et à la formation. De plus, la GCRA permet
+aux PCC de soumettre directement leurs déclarations comptables à l'ASFC et
+à l'Agence de calculer et de notifier aux PCC les droits et taxes évalués en
+temps opportun. La GCRA offre des capacités de rapport et d'analyse
+étendues qui vont au-delà de ce qui est disponible sans automatisation.
+
+Dans le contexte plus large de ses activités de conformité commerciale,
+l'ASFC mesure le rendement du capital investi en comparant le total des droits
+évalués au total des dépenses engagées pour ces activités. En 2022-2023,
+l'Agence a atteint un ratio de rendement du capital investi de 16:1, doublant
+ainsi son objectif de 8:1. La GCRA permet à l'ASFC de mieux identifier les
+transactions non conformes grâce aux nouvelles règles automatisées de
+détermination des risques de la GCRA. L'intégration de cette technologie
+permet à l'ASFC de concentrer ses efforts sur les importateurs non
+conformes. Par exemple, il existe désormais des règles de validation des
+données plus strictes (classification correcte, accise, correspondance avec la
+TPS) qui permettent d'éviter les erreurs antérieures, car ces éléments de
+données n'étaient pas validés par le système dans les anciens programmes.
+En outre, la GCRA offre une validation plus poussée des permis d'importation
+et des ordonnances de remise qui sont codés pour des produits spécifiques,
+garantissant ainsi que les permis sont utilisés uniquement aux fins
+approuvées.
+
+L'ASFC surveillera le processus de la GCRA afin de s'assurer que les avantages
+escomptés sont réalisés comme prévu :
+•  Réduction de la charge administrative pour les importateurs canadiens et
+les autres participants au programme PCC (exemple : pourcentage des
+paiements annuels effectués par des moyens de paiement électroniques) ;
+•  Augmentation des recettes du gouvernement du Canada (exemple :
+recettes supplémentaires générées chaque année grâce à l'amélioration des
+méthodes de vérification et à une meilleure conformité)
+•  Amélioration de l'efficacité de l'ASFC (exemple : réduction des coûts
+d'entretien ou des systèmes informatiques du secteur commercial et des
+échanges commerciaux).
+
+6. Veuillez décrire la façon dont vous allez vous assurer que le système se limite à répondre aux
+besoins des clients mentionnés ci-dessus.
+Le portail client de la GCRA permet aux partenaires de la chaîne commerciale
+(PCC) qui ont un numéro d'entreprise et inscrits aux programmes
+commerciaux de l'ASFC, d'accéder directement aux fonctions comptables
+utilisées par l'ASFC, de s'inscrire automatiquement à différents programmes
+commerciaux, de consulter les droits et taxes calculés et les dates
+d'échéance des paiements, de recevoir des états financiers et d'effectuer des
+paiements électroniques, et permet aux importateurs de faire appel et
+d'apporter des modifications à leurs déclarations comptables, etc. Les
+contrôles internes d'accès au GCRA sont gérés de manière à garantir que
+seules les personnes autorisées ont accès aux données de la GCRA pour
+exercer leurs fonctions, par exemple. la surveillance de la conformité, la
+gestion des corrections et des ajustements, le traitement des appels, etc.
+
+La GCRA dispose d'organes de gouvernance chargés d'examiner toute
+demande de modification des fonctionnalités par rapport à la conception
+initiale. Le système continue d'être évalué et analysé, car certaines exigences
+systémiques doivent encore être satisfaites afin de répondre aux besoins des
+clients.
+
+7. Veuillez décrire toutes les concessions mutuelles entre les intérêts des clients et les objectifs
+du programme que vous avez pris en considération lors de l’élaboration du projet.
+De vastes consultations avec la communauté commerciale ont eu lieu
+pendant la phase de conception du projet, par le biais de groupes de travail, de
+sessions de formation et de comités commerciaux, qui ont abouti à une
+approche concertée pour les déploiements au fil de plusieurs versions. Les
+partenaires de la chaîne commerciale (PCC) ont réalisé d'importants
+investissements pour mettre à niveau leurs systèmes afin de se conformer
+aux exigences et aux objectifs du programme de la GCRA, et ont consacré
+beaucoup de temps et d'efforts à tester de manière approfondie le nouveau
+système avec l'ASFC et à former leur personnel à l'utilisation du nouveau
+portail. La GCRA est largement accessible à tous les importateurs et autres
+partenaires de la chaîne commerciale grâce au portail client de la GCRA, qui
+permet aux PCC d'accéder à un portail en ligne pour soumettre leurs
+déclarations comptables commerciales à l'ASFC, gérer les ajustements et les
+corrections, et plus encore. Après la mise en service du système, l'ASFC met à
+disposition le service d'assistance à la clientèle de la GCRA afin de garantir
+aux PCC un accès constant à l'aide dont ils ont besoin.
+
+8. D’autres options de processus non automatisés ont-elles été envisagées?
+Oui                                                                                                                                [ Points: +0 ]
+
+9. Si des processus non automatisés ont été envisagés, pourquoi l’automatisation a-t-elle été
+l’option choisie?
+Les agents chargés de l'évaluation des risques évaluent manuellement les
+transactions à l'aide d'outils conventionnels et d'un ensemble de critères
+beaucoup plus restreints. En raison du volume élevé des transactions, il s'agit
+d'une stratégie de gestion des risques extrêmement inefficace. Continuer à
+utiliser des systèmes obsolètes entraînerait des pertes de revenus et limiterait
+les activités de conformité que les agents de l'ASFC peuvent mener. De plus,
+le calcul des droits et des taxes est désormais effectué à l'aide du système de
+la GCRA, ce qui est beaucoup plus efficace que les anciens formulaires B3 sur
+papier.
+
+10. Quelle serait la conséquence du non-déploiement du système?
+La qualité du service n’est pas aussi élevée
+La prestation du service ne parvient pas à atteindre les objectifs de
+rendement
+
+Profil de risque
+11. Le projet fait-il l'objet d'un examen public approfondi (e.g.: en raison de préoccupations liées
+à la protection de la vie privée) et/ou de litiges fréquents?
+Non                                                                                                                               [ Points: +0 ]
+
+12. Les clients de ce secteur d'activité sont-ils particulièrement vulnérables?
+Non                                                                                                                               [ Points: +0 ]
+
+13. Les enjeux des décisions de ce programme sont-ils très élevés?
+Non                                                                                                                               [ Points: +0 ]
+
+14. Ce projet aura-t-il d'importantes répercussions sur le personnel, que ce soit en termes de
+nombre ou de rôle?
+Non                                                                                                                               [ Points: +0 ]
+
+15. L’utilisation du système entraînera-t-elle des difficultés pour les personnes en situation de
+handicap ou les accentuera-t-elle?
+Non                                                                                                                               [ Points: +0 ]
+
+Autorité de projet
+16. Aurez-vous besoin d'une nouvelle autorisation en termes de politiques pour ce projet ?
+Non                                                                                                                               [ Points: +0 ]
+
+À propos de l'algorithme
+17. L'algorithme utilisé sera un secret (commercial)
+Oui                                                                                                                                [ Points: +3 ]
+
+18. Le processus algorithmique sera difficile à interpréter ou à expliquer
+Non                                                                                                                               [ Points: +0 ]
+
+À propos de la décision
+19. Veuillez décrire la ou les décisions qui seront automatisées.
+Le système de la GCRA fournit des résultats à l'ASFC à l'aide de règles
+opérationnelles et d'une logique mathématique, notamment :
+•  Calculer les droits et taxes dus, les cautionnements financiers, les
+pénalités et les intérêts en fonction des exigences législatives définies dans la
+Loi sur les douanes.
+•  Analyser les transactions et identifier les risques de non-conformité
+commerciale à l'aide des données fournies par les partenaires de la chaîne
+commerciale ainsi que des transactions financières stockées dans la GCRA,
+et créer des rapports sur les transactions potentiellement non conformes.
+•  Valider les données soumises afin de s'assurer qu'elles ont été saisies
+correctement, conformément aux règles de formatage (exemple : erreurs de
+syntaxe, etc.).
+•   Vérifier les données d'enregistrement PCC par rapport aux informations
+actuelles du grand livre des comptes clients (GLCC) ainsi que des données de
+référence des clients (DRC), le cas échéant.
+•  Informer par voie électronique les partenaires de la chaîne commerciale
+des mises à jour apportées aux dossiers soumis au GCRA ou des erreurs de
+validation dans les formulaires soumis.
+•  Examiner les transactions/demandes soumises par les PCC
+conformément aux règles opérationnelles et déterminer si une intervention
+manuelle de l'ASFC et l'approbation d'une autorité déléguée de l'ASFC sont
+nécessaires.
+
+Les agents examinent les résultats et prennent les décisions finales.
+
+20. La décision s'applique-t-elle à l'une ou l'autre des catégories ci-dessous (*Cochez toutes les
+réponses qui s'appliquent) :
+Autre (veuillez préciser)                                                                                              [ Points: +1 ]
+
+21. S'il vous plait décrire
+Gestion des frontières : comptabilisation et évaluation des risques liés aux
+transactions à l'importation
+
+Évaluation de l'incidence
+22. Parmi les propositions suivantes, laquelle décrit le mieux le type d’automatisation que vous
+envisagez?
+Automatisation partielle (le système facilitera la prise de décisions
+administratives en appuyant un agent au moyen d’évaluations, de
+recommandations, de décisions provisoires ou d’autres résultats)                         [ Points: +2 ]
+
+23. Veuillez décrire le rôle du système dans le processus de prise de décisions.
+Le système de la GCRA utilise la logique mathématique et des règles
+opérationnelles pour fournir les exemples de résultats suivants afin d’aider
+l’ASFC dans sa prise de décision :
+•  Fournir des évaluations de conformité basées sur des règles métier aux
+agents de l'ASFC
+•  Fournir aux agents de l'ASFC une liste des transactions qui nécessitent une
+intervention manuelle ou l'approbation d'une autorité déléguée de l'ASFC.
+•  Informer les clients des décisions rendues par les agents de l'ASFC
+•  Calculer les droits et taxes estimés en fonction des règles comptables et
+informer les clients des droits et taxes évalués
+
+24. Le système prendra-t-il des décisions ou effectuera-t-il des évaluations qui exigent du
+jugement ou de la discrétion?
+Non                                                                                                                               [ Points: +0 ]
+
+25. Veuillez décrire les critères utilisés pour évaluer les données des clients et les procédures
+appliquées pour les traiter.
+Le système utilise un ensemble de règles de risque qui produisent des listes
+de transactions basées sur le respect ou non des critères énoncés dans les
+règles. Les nouvelles règles en matière de risque intégrées dans GCRA ont été
+élaborées sur la base des exigences législatives de la Loi sur les douanes. Par
+exemple, l'agent pourrait décider d'utiliser le système pour examiner les
+transactions dont la valeur en douane déclarée dépasse un certain seuil.
+Ces règles ont également été validées par rapport aux résultats antérieurs des
+vérifications de conformité commerciale et ont récemment été testées dans
+le cadre de l'exercice de simulation de l'expérience client de la GCRA (SEG
+2.0).
+Le système utilise également les données des importateurs pour les
+déclarations comptables, l'enregistrement et l'inscription des numéros
+d'entreprise (NE), l'acceptation des paiements, l'inscription des sous-
+emplacements et d'autres fonctions du système.
+
+26. Veuillez décrire le résultat produit par le système et les renseignements pertinents
+nécessaires à l’interprétation dans le contexte de la décision administrative.
+Le système de la GCRA créera une liste des transactions potentiellement non
+conformes (expéditions importées au Canada) en fonction des critères de
+risque établis qui peuvent inclure des éléments de la déclaration en douane de
+l’importateur, tels que la valeur, l’origine ou la classification tarifaire des
+marchandises importées au Canada.
+
+Ces listes de transactions seront ensuite examinées par des agents de l'ASFC,
+qui détermineront si d'autres mesures sont nécessaires, comme par exemple
+un avis consultatif sur le commerce (ACC) ou une lettre de validation de
+conformité. Cela permet aux agents de se concentrer sur les transactions
+présentant un risque plus élevé de non-conformité.
+
+Le système de la GCRA fournira également à l'ASFC les transactions qui
+nécessitent une intervention manuelle ou l'approbation d'une autorité
+déléguée de l'ASFC, y compris les renseignements sur les transactions fournis
+par le PCC afin que l'ASFC puisse prendre la décision finale.
+
+Le système de la GCRA crée également des rapports conformément aux
+exigences du programme et de la législation et fournit des avis de droits et
+taxes évalués, à partir des données de déclaration comptable commerciale
+soumises par le PCC.
+27. Le système effectuera-t-il une évaluation ou une autre activité qui ne serait autrement pas
+réalisée par un humain?
+Non                                                                                                                               [ Points: +0 ]
+
+28. Le système est-il utilisé par une partie de l’organisation différente de celle à laquelle
+appartiennent ceux qui l’ont développé?
+Non                                                                                                                               [ Points: +0 ]
+
+29. Les incidences découlant de la décision sont-elles réversibles?
+Réversible                                                                                                                    [ Points: +1 ]
+
+30. Combien de temps les incidences de la décision dureront-elles?
+Les incidences risquent fort probablement d’être brèves                                         [ Points: +1 ]
+
+31. Veuillez indiquer pour quelle raison les incidences découlant de la décision sont (selon
+l’option sélectionnée ci-dessus).
+Les incidences seront très probablement de courte durée. Si l’agent
+recommande une conformité activité et que cela donne lieu à des
+réévaluations, le client peut choisir de faire appel de la décision et dispose de
+mécanismes de recours.
+
+Les agents de l'ASFC peuvent décider de rejeter les transactions
+recommandées par le système et ont également la possibilité de décider des
+mesures de conformité à recommander en fonction de leur évaluation. Si un
+importateur ou une entreprise n'est pas d'accord avec une évaluation ou une
+décision de l'ASFC résultant d'une activité de conformité commerciale, il peut
+être admissible à demander une nouvelle détermination ou un nouvel examen
+en utilisant les mécanismes de recours existants, qui peuvent être consultés
+ici : https://www.cbsa-asfc.gc.ca/recourse-recours/menu-fra.html
+
+32. Les incidences de la décision sur les droits ou libertés des personnes seront probablement
+les suivantes :
+Incidence faible ou nulle                                                                                             [ Points: +1 ]
+
+33. Veuillez indiquer pour quelle raison les incidences découlant de la décision sont (selon
+l’option sélectionnée ci-dessus).
+Le système de la GCRA aura peu ou pas d'impact car il ne rendra pas
+décisions relatives à l'importation commerciale. Il trie plutôt les données
+relatives aux marchandises commerciales importées au Canada, telles que
+l'origine, la valeur ou la classification tarifaire de ces marchandises
+commerciales.
+
+Le système de la GCRA fonctionne selon un modèle de vérification « post-
+entrée ». Cela signifie qu'aucune expédition ne sera arrêtée à la frontière et
+qu'aucun importateur ne se verra interdire d'importer ses marchandises à la
+suite d'une vérification de conformité. Le système aidera plutôt les
+importateurs qui ne sont peut-être pas encore en totale conformité avec la
+législation et la réglementation en vigueur. L'identification de ces lacunes
+permettra une déclaration plus précise des marchandises, quelle que soit leur
+nature.
+
+34. Les incidences de la décision sur l’égalité, la dignité, la vie privée et l’autonomie des
+personnes seront probablement :
+Incidence faible ou nulle                                                                                             [ Points: +1 ]
+
+35. Veuillez indiquer pour quelle raison les incidences découlant de la décision sont (selon
+l’option sélectionnée ci-dessus).
+Le système de la GCRA aura peu ou pas d’impact puisqu’il trie les données
+relatives à les marchandises commerciales importées au Canada, telles que
+leur origine, leur valeur ou leur classification tarifaire. Il n'évalue pas les
+informations démographiques des importateurs.
+
+Les décisions de vérification de la conformité rendues par un agent à la suite
+de l'utilisation du système de la GCRA n'auront aucune incidence sur l'égalité,
+la dignité, la vie privée ou l'autonomie d'une personne, car elles sont fondées
+sur des règles de risque appliquées aux données commerciales.
+
+36. Les incidences de la décision sur la santé et le bien-être des personnes seront
+probablement les suivantes :
+Incidence faible ou nulle                                                                                             [ Points: +1 ]
+
+37. Veuillez indiquer pour quelle raison les incidences découlant de la décision sont (selon
+l’option sélectionnée ci-dessus).
+Le système de la GCRA fonctionne selon un modèle de vérification « post-
+entrée ». Cela signifie que aucune expédition ne sera bloquée à la frontière
+grâce à ce système. Aucun importateur ne sera empêché d'importer
+directement quoi que ce soit. Cet outil permettra aux importateurs de mieux
+respecter la législation et la réglementation, ce qui signifie qu'ils déclareront
+correctement leurs marchandises, quelle que soit leur nature.
+
+38. Les incidences de la décision sur les intérêts économiques des personnes seront
+probablement les suivantes :
+Incidence faible ou nulle                                                                                             [ Points: +1 ]
+
+39. Veuillez indiquer pour quelle raison les incidences découlant de la décision sont (selon
+l’option sélectionnée ci-dessus).
+Le système de la GCRA est utilisé pour évaluer la conformité, évaluer et
+percevoir les droits et taxes sur les marchandises commerciales, et de
+rationaliser le processus d'importation de marchandises commerciales pour
+les PCC. En augmentant le taux de réussite des activités de conformité
+commerciale, cela peut avoir pour conséquence que les importateurs doivent
+payer des droits et taxes qui n'auraient pas été détectés autrement. Ces
+mêmes montants auraient été dus si la déclaration initiale soumise par
+l'importateur avait été correcte. Les importateurs ont l'obligation de déclarer
+correctement les marchandises qu'ils importent au Canada.
+
+Seuls les clients jugés non conformes devront faire face à un impact
+économique potentiel, qui se traduira par un ajustement du montant des
+droits et taxes dus au gouvernement du Canada. Cela n'aura d'incidence que
+sur le petit nombre de clients qui ne se conforment pas aux règles. Les
+erreurs et omissions dans les paiements douaniers créent un avantage
+concurrentiel déloyal pour ceux qui ne paient pas leur juste part.
+
+40. Les incidences de la décision sur la pérennité d’un écosystème environnemental seront
+probablement les suivantes :
+Incidence faible ou nulle                                                                                             [ Points: +1 ]
+41. Veuillez indiquer pour quelle raison les incidences découlant de la décision sont (selon
+l’option sélectionnée ci-dessus).
+Le système de la GCRA est entièrement électronique et ne dépendra que très
+peu de documents papier, ce qui aura peu ou pas d’impact sur l’utilisation des
+ressources papier par le gouvernement et un impact négligeable sur
+l’environnement.
+
+À propos des données - A. Source des données
+42. Le système de décision automatisé utilisera-t-il des renseignements personnels comme
+données d’entrée?
+Oui                                                                                                                                [ Points: +4 ]
+
+43. Avez-vous vérifié que l'utilisation des renseignements personnels est limitée à ce qui est
+directement lié à la prestation d'un programme ou d'un service?
+Oui                                                                                                                                [ Points: +0 ]
+
+44. Les renseignements personnels des individus sont-ils utilisés dans un processus
+décisionnel qui affecte directement ces individus?
+Oui                                                                                                                                [ Points: +2 ]
+
+45. Avez-vous vérifié si le système utilise les renseignements personnels d'une manière
+compatible avec: (a) les fichiers de renseignements personnels (FRP) et évaluations des
+facteurs relatifs à la vie privée (EFVP) de vos programmes ou (b) les modifications prévues ou
+mises en oeuvre des FRP ou des EFVP qui tiennent compte des nouveaux usages et processus?
+Oui                                                                                                                                [ Points: +0 ]
+
+46. Veuillez énumérer les numéros de fichiers FRP pertinents.
+CBSA PPU 1501
+
+47. Quelle est la classification de sécurité la plus élevée des données d’entrée utilisées par le
+système? (N’en choisir qu’une seule)
+Protégé B/Protégé C                                                                                                   [ Points: +3 ]
+
+48. Qui contrôle les données?
+Gouvernement fédéral                                                                                                 [ Points: +1 ]
+
+49. Les données utilisées par le système proviendront-elles de plusieurs sources différentes?
+Oui                                                                                                                                [ Points: +4 ]
+
+50. Le système aura-t-il besoin de données d’entrée provenant d’un appareil connecté à Internet
+ou à la téléphonie? (P. ex., internet des objets, un Capteur)
+Non                                                                                                                               [ Points: +0 ]
+
+51. Le système interagira-t-il avec d’autres systèmes des TI?
+Oui                                                                                                                                [ Points: +4 ]
+
+52. Qui a recueilli les données utilisées pour préparer le système?
+Votre institution                                                                                                           [ Points: +1 ]
+
+53. Qui a recueilli les données d’entrée utilisées par le système?
+Votre institution                                                                                                           [ Points: +1 ]
+54. Veuillez décrire les données d’entrée collectées et utilisées par le système, leur source et
+leur méthode de collecte.
+Le PCC saisit les données relatives à l'inscription et à l'enregistrement au
+programme tels que le nom de l'importateur, son adresse et ses coordonnées.
+Les éléments de données peuvent être considérés comme obligatoires,
+facultatifs ou conditionnels. Une liste complète des éléments de données
+figure dans le document sur les exigences à l'égard des clients du commerce
+électronique (DECCE), chapitre 26 : Déclarations comptables commerciales,
+annexe D - Éléments de données, qui peut être consulté à l'adresse suivante :
+https://www.cbsa-asfc.gc.ca/eservices/eccrd-eng.html. Ces éléments de
+données sont recueillis électroniquement auprès du PCC par l'intermédiaire
+du portail client de la GCRA ou par Échange de données informatisées (EDI) /
+interface de programmation d'application (API).
+
+Tous les dossiers électroniques sont conservés dans le système de la GCRA à
+l'aide du service Amazon Web Services (AWS) Canadian Cloud, un service
+OpenText dédié dans le cloud AWS et l'entrepôt de données d'entreprise de
+l'ASFC.
+
+À propos des données - B. Type de données
+55. Le système exigera-t-il l’analyse de données non structurées pour faire une
+recommandation ou prendre une décision?
+Non                                                                                                                               [ Points: 0 ]
+
+Section 3.2: Questions et réponses liées aux mesures
+d'atténuation
+1. Intervenants internes (institutions fédérales et fonction publique fédérale)
+Oui                                                                                                                                [ Points: +1 ]
+
+2. Quels intervenants internes avez-vous consulté?
+Gouvernance des données
+Politique et planification stratégiques
+Politique du programme
+Bureau de l'accès à l'information et de la protection des renseignements
+personnels
+Services des communications
+Bureau de la dirigeante principale de l’information du SCT
+Services légaux
+
+3. Intervenants externes (groupes d’autres secteurs ou administrations)
+Oui                                                                                                                                [ Points: +1 ]
+
+4. Quels intervenants externes avez-vous consulté?
+Clients ou leurs représentants
+Organisations internationales
+Gouvernements d’autres administrations
+Industrie
+
+Élimination des risques et mesures d'atténuation - Qualité
+des données
+5. Disposez-vous de processus documentés pour tester les jeux de données en fonction de
+biais et d’autres résultats inattendus? Par exemple, ceci pourrait inclure une expérience dans
+l’application de cadres, de méthodes, de lignes directrices ou d’outils d’évaluation.
+Oui                                                                                                                                [ Points: +2 ]
+
+6. Cette information est-elle publiquement disponible?
+Non                                                                                                                               [ Points: +0 ]
+
+7. Avez-vous élaboré un processus permettant de documenter la façon dont les problèmes de
+qualité des données qui seront résolus pendant le processus de conception?
+Oui                                                                                                                                [ Points: +1 ]
+
+8. Cette information est-elle publiquement disponible?
+Non                                                                                                                               [ Points: +0 ]
+
+9. Avez-vous entrepris une analyse comparative entre les sexes plus des données?
+Oui                                                                                                                                [ Points: +1 ]
+
+10. Cette information est-elle publiquement disponible?
+Non                                                                                                                               [ Points: +0 ]
+
+11. Dans votre établissement, existe-t-il des responsables de la conception, du développement,
+de la maintenance et de l’amélioration du système?
+Oui                                                                                                                                [ Points: +2 ]
+
+12. Disposez-vous d'un processus documenté pour gérer le risque que des données périmées
+ou non fiables soient utilisées pour prendre une décision automatisée?
+Oui                                                                                                                                [ Points: +2 ]
+
+13. Cette information est-elle publiquement disponible?
+Non                                                                                                                               [ Points: +0 ]
+
+14. Les données utilisées pour ce système seront-elles affichées sur la portail du gouvernement
+ouvert?
+Non                                                                                                                               [ Points: +0 ]
+
+Élimination des risques et mesures d'atténuation - Équité
+procédurale
+15. La piste de vérification permet-elle de déterminer les pouvoirs ou les pouvoirs délégués
+prévus par la lois?
+Oui                                                                                                                                [ Points: +1 ]
+
+16. Le système fournit-il une piste de vérification qui enregistre toutes les recommandations ou
+décisions prises par le système?
+Oui                                                                                                                                [ Points: +2 ]
+
+17. Est-ce que tous les points de décision clés peuvent être identifiés dans la piste de
+vérification?
+Oui                                                                                                                                [ Points: +2 ]
+18. Est-ce que toutes les décisions clés sont liées à une législation, politique ou à une
+procédure pertinente?
+Oui                                                                                                                                [ Points: +1 ]
+
+19. Avez-vous un journal détaillant toutes les modifications apportées au modèle et au
+système?
+Oui                                                                                                                                [ Points: +2 ]
+
+20. Est-ce que la piste de vérification indique tous les points de décision pris par le système?
+Oui                                                                                                                                [ Points: +1 ]
+
+21. La piste de vérification générée par le système peut-elle être utilisée pour aider à produire
+une notification de la décision (y compris un énoncé des motifs ou une autre notification) au
+besoin?
+Non                                                                                                                               [ Points: +0 ]
+
+22. La piste de vérification permet-elle de déterminer précisément quelle version du système a
+été utilisée pour chaque décision qu'elle appuie?
+Oui                                                                                                                                [ Points: +2 ]
+
+23. La piste de vérification indique-t-elle qui est le décideur autorisé?
+Oui                                                                                                                                [ Points: +1 ]
+
+24. Le système est-il en mesure de justifier ses décisions ou ses recommandations au besoin?
+Oui                                                                                                                                [ Points: +2 ]
+
+25. Avez-vous un processus en place pour accorder, surveiller et révoquer l'autorisation d'accès
+au système?
+Oui                                                                                                                                [ Points: +1 ]
+
+26. Avez-vous un mécanisme pour recueillir les commentaires des utilisateurs du système?
+Oui                                                                                                                                [ Points: +1 ]
+
+27. Avez-vous un processus de recours prévu ou établi pour les clients qui souhaitent contester
+la décision?
+Oui                                                                                                                                [ Points: +2 ]
+
+28. Le système permet-il à une personne de passer outre aux décisions du système?
+Oui                                                                                                                                [ Points: +2 ]
+
+29. Avez-vous un processus en place pour consigner les cas où des dérogations ont été
+effectuées?
+Oui                                                                                                                                [ Points: +1 ]
+
+30. Avez-vous des processus en place pour enregistrer les modifications apportées au
+fonctionnement ou au rendement du système?
+Oui                                                                                                                                [ Points: +2 ]
+
+31. Avez-vous préparé un dossier conceptuel à l'intention du Comité d'examen de l'architecture
+d'entreprise du gouvernement du Canada?
+Oui                                                                                                                                [ Points: +1 ]
+Élimination des risques et mesures d'atténuation -
+Confidentialité
+32. Si votre système utilise ou crée des renseignements personnels, avez-vous entrepris une
+évaluation des facteurs relatifs à la vie privée ou révisé une évaluation existante?
+Oui                                                                                                                                [ Points: +1 ]
+
+33. Veuillez indiquer les éléments suivants dans votre réponse : titre et portée de l’évaluation
+des facteurs relatifs à la vie privée; la manière dont le projet d’automatisation s’intègre au
+programme; date d’achèvement ou de modification de l’évaluation des facteurs relatifs à la vie
+privée.
+Titre : Évaluation de la protection de la vie privée de l’Agence des services
+frontaliers du Canada (ASFC) et de la Gestion des cotisations et des recettes
+de l’ASFC (GCRA) Évaluation des incidences privée (EIP)
+
+Date d’achèvement : L’EIP initiale a été réalisée pour la première phase du
+projet de la GCRA qui a été mise en œuvre en janvier 2016, puis modifiée tout
+au long de la durée de vie du projet de la GCRA jusqu’à la version de l’EIP qui a
+été approuvée en avril 2024.
+
+Portée : La solution de la GCRA recueille et utilise des renseignements
+personnels relatifs à certaines personnes. Les informations contenues dans
+la solution de la GCRA sont principalement de nature commerciale :
+coordonnées des entreprises et numéros d'entreprise. GCRA détient des
+informations sur les importateurs (nationaux et étrangers), les conseillers en
+services commerciaux, les transporteurs, les coursiers, les propriétaires de
+boutiques hors taxes, les propriétaires d'entrepôts et les courtiers en douane,
+pendant la phase de candidature et une fois qu'ils ont été confirmés comme
+partenaires commerciaux. Dans certains cas, les importateurs ou les
+transporteurs peuvent être des petites entreprises ou des entrepreneurs
+individuels, auquel cas l'identifiant du client (numéro d'entreprise attribué par
+l'Agence du revenu du Canada (ARC), code de transporteur ou identifiant de
+partenaire commercial) peut être considéré comme une information
+personnelle. Les informations personnelles sur les propriétaires d'entreprises
+sont collectées pendant la phase de candidature afin de vérifier que
+l'entreprise répond à des exigences spécifiques.
+
+Comment le projet d'automatisation s'inscrit dans le programme : Les
+informations sur les clients et les transactions financières seront stockées
+dans la GCRA et ces informations pourront être utilisées pour l'évaluation des
+droits et taxes, l'inscription au programme, les transactions non conformes et
+d'autres exigences du programme.
+
+34. Avez-vous conçu et intégré la sécurité et la confidentialité dans vos systèmes dès la phase
+de conception du projet?
+Oui                                                                                                                                [ Points: +1 ]
+
+35. Les informations sont-elles utilisées dans un système fermé (c'est-à-dire sans connexion à
+Internet, Intranet ou tout autre système)?
+Non                                                                                                                               [ Points: +0 ]
+
+36. Si le partage de renseignements personnels est impliqué, un accord ou un arrangement
+avec des garanties appropriées a-t-il été établi?
+Oui                                                                                                                                [ Points: +1 ]
+
+37. Allez-vous dépersonnaliser les renseignements personnels utilisés ou établis par le système
+à tout moment du cycle de vie?
+Non                                                                                                                               [ Points: +0 ]

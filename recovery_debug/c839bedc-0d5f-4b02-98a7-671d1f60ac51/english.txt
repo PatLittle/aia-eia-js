@@ -1,0 +1,1217 @@
+Algorithmic Impact Assessment Results
+Version: 1.0.1
+Section 1: Impact Level : 2
+Current Score: 56
+Raw Impact Score: 56
+Mitigation Score: 56
+Section 2: Requirements Speciﬁc to Impact Level 2
+Notice
+Plain language notice posted through all service delivery channels in use (Internet, in
+person, mail or telephone).
+Explanation
+The explanation from level I is published.
+In addition, a more detailed, meaningful, plain language, explanation is provided to the
+client with any decision that results in the denial of a beneﬁt or service, or involves a
+regulatory action.
+This explanation must inform the client of the reason or justiﬁcation of the administrative
+decision. This involves a clear and client-focused description of how the automated
+decision system came to the output it did, including:
+
+   •  the principal factors that led to it, such as, where appropriate, a description of the
+       decision tree, scoring or weights of certain factors, and
+
+   •  how the automated decision system output was used by human officers
+The client must also be provided with the link to the published level I explanation.
+Peer review
+Consult at least one of the following qualiﬁed experts and publish the complete review or a
+plain language summary on a Government of Canada website:
+
+   •  Experts from a federal, provincial, territorial or municipal government institution
+
+   •  Faculty members of a post-secondary institution
+
+
+                                                                 Page 1 of 32
+   •  Researchers from a relevant non-governmental organization
+
+   •  Contracted third-party vendor with a relevant specialization
+
+   •  A data and automation advisory board speciﬁed by Treasury Board of Canada
+       Secretariat
+Gender-based Analysis Plus
+Ensure that the Gender-based Analysis Plus has been consulted with your department's
+diversity and inclusion experts and includes:
+
+   •  An assessment of how the automation project might impact different population
+      groups. This includes consideration of the impacts of the automated decision
+      system and data used in the project, as well as the likely impact of the ﬁnal
+       decision. Where possible, cite the data used to assess the impacts. It is
+     recommended that the data be gender-disaggregated and include other
+       intersecting identity factors such as age, disability and race. If the data is
+       unavailable, identify where the data gaps exist
+
+   •  Details of planned or existing measures to address risks identiﬁed through the
+      Gender-based Analysis Plus or other assessments
+Training
+Role-based training on how to appropriately use and explain the functionalities of the
+automated decision system, at a high level.
+Ensuring human involvement
+The system may make decisions and assessments without direct human involvement.
+Humans are to be involved in system quality assurance and can intervene in the making of
+decisions by the system where appropriate.
+Approval for the system to operate
+Assistant deputy minister responsible for the program.
+Other requirements
+The Directive on Automated Decision-Making also includes other requirements that must
+be met for all impact levels.
+Link to the Directive on Automated Decision-Making
+Contact your institution's ATIP office to discuss the requirement for a Privacy Impact
+Assessment as per the Directive on Privacy Impact Assessment.
+
+
+                                                                 Page 2 of 32
+Section 3: Questions and Answers
+Section 3.1: Project Details
+1. Published AIA version number
+1.0
+2. Name of Respondent
+Shawn MacDougall
+3. Job Title
+Senior Director, Disability Beneﬁts Program Management
+4. Name of ADM responsible for the program using the automated decision system
+Steven Harris
+5. Department
+Veterans Affairs (Department of)
+6. Branch
+Service Delivery Branch
+7. Teams consulted on completion of the Algorithmic Impact Assessment
+Veterans Affairs Canada AI and Automation Development Team, Enterprise Architecture
+Team, Disability Beneﬁts Program Management, Treasury Board of Canada Secretariat
+Privacy and Responsible Data Division, Immigration, Refugees and Citizenship Canada,
+Justice Canada
+8. Project Title
+Claim Summary Tool
+9. Project ID from IT Plan
+PRJ-00013860
+10. Service ID
+1257
+11. Departmental Program (from Departmental Results Framework)
+Disability Beneﬁts
+12. Project Phase
+Implementation [ Points: 0 ]
+
+                                                                 Page 3 of 32
+13. Provide a project description:
+Veterans Affairs Canada is introducing a new artiﬁcial intelligence (AI) Claim Summary Tool
+(CST) to assist decision makers by reviewing and organizing the large volumes of
+documentation associated with Disability Beneﬁt applications.
+Processing Disability Beneﬁt applications, such as Disability Pension and Pain and
+Suffering Compensation, is a time-consuming process. The average application, including
+supporting documentation such as military records, contains over 800 pages. Veterans
+Affairs decision makers review these documents to identify facts related to the claimed
+condition. Demand for Disability Beneﬁts has increased signiﬁcantly, with application
+volumes rising by 122% over the past decade. Increased volumes and more complex cases
+have slowed processing times.
+To deliver faster service for Veterans and their families, Veterans Affairs Canada developed
+the CST. The CST uses AI to scan application documents, organize content, and highlight
+key details so decision makers can locate relevant information more quickly. Each
+summary includes direct links to the source documentation to support transparency and
+accuracy, and all scanned documentation remains fully searchable by the decision maker.
+When the summary provides enough information for a favourable decision, the decision
+maker can proceed more quickly. If the summary does not provide enough information for
+a favourable decision, the decision maker will review the entire ﬁle manually before
+ﬁnalizing the decision. This approach ensures AI is used to speed up processing without
+negatively impacting the quality of decisions Veterans receive.
+The CST does not make decisions. Every decision is made by trained VAC decision makers
+in accordance with legislation, regulations, and policy. The CST provides a structured
+summary of evidence and links each element back to the original document for easy
+veriﬁcation.
+Learn more about Artiﬁcial intelligence at Veterans Affairs Canada.
+(Full URL: https://veterans.gc.ca/en/about-vac/our-values/transparency/artiﬁcial-
+intelligence-veterans-affairs-canada )
+
+
+
+
+
+                                                                 Page 4 of 32
+Section 3.2: Impact Questions and Answers
+Reasons for Automation
+1. What is motivating your team to introduce automation into this decision-making
+process?
+(Check all that apply)
+
+   •  Improve overall quality of decisions
+
+   •  Perform tasks that humans could not accomplish in a reasonable period of
+
+   •  time
+
+   •  Reduce existing backlog of work or cases
+
+   •  Use innovative approaches
+
+   •  Other (specify)
+2. Please describe (other)
+The primary barrier to timely Disability Beneﬁt decisions is the large volume of
+documentation that must be reviewed. The average application, including supporting
+documentation such as military records, contains over 800 pages. Veterans Affairs
+decision makers review these documents to identify facts related to the claimed condition.
+As a result, decision makers currently spend signiﬁcant time manually reviewing ﬁles to
+locate information related to the claimed condition, such as injury dates or diagnosis
+conﬁrmations, before they can begin to make their decision.
+The CST is being implemented to address this challenge. The CST scans the application
+and supporting documents and assembles the relevant evidence into a structured,
+traceable and accurate summary for the decision maker. By automating the most
+repetitive and time-intensive aspects of document review, the CST reduces administrative
+workload and will help improve turnaround times and service to Veterans without
+compromising quality.
+3. What are the client needs the system will address? Describe how client needs have
+been identiﬁed.
+Clients and client advocacy groups have consistently emphasized the importance of the
+Disability Beneﬁt application process meeting the Departmental service standard. Delays
+in processing can limit Veterans’ timely access to ﬁnancial support, health services, and
+other beneﬁts that may be critical to their well-being. The CST supports improved
+timeliness by automating the initial review of applications and supporting documentation,
+allowing relevant information to be identiﬁed more quickly for the decision maker.
+
+
+
+                                                                 Page 5 of 32
+4. Describe any positive impacts on clients and Canadian society that the system is
+expected to have.
+The CST is expected to have positive impacts on Veterans by reducing the time required to
+process Disability Beneﬁt applications. By reducing manual document review, the CST
+supports more efficient decision making and enables Veterans Affairs Canada to meet
+service standards more consistently. Timelier decisions can reduce wait times and
+uncertainty for Veterans, supporting earlier access to beneﬁts that may contribute to their
+health, ﬁnancial stability, and overall well-being.
+More broadly, improved Disability Beneﬁts application processing supports a responsive
+and sustainable public service, strengthens conﬁdence in government programs, and
+helps ensure public resources are used effectively.
+5. How effective will the system likely be in meeting client needs?
+Very effective [ Points: +0 ]
+6. Describe why effectiveness is as selected.
+The CST is expected to be very effective in meeting client needs by scanning applications
+and supporting documentation and highlighting, assembling, and presenting relevant
+evidence in a clear, structured, and traceable format for the decision maker. Each
+summary will include links to the source documentation to support transparency and
+accuracy, and all of the supporting documentation that was scanned by the CST will
+remain searchable by the decision maker. If the summary does not contain sufficient
+information for a favourable decision, the decision maker will conduct a comprehensive
+manual review of the entire ﬁle to ensure no critical information is overlooked before
+making a decision.
+Testing indicates that the CST can reduce the number of pages requiring review by more
+than 90% and reduce the average time required to review an application and supporting
+documentation by approximately 50%. The CST will, therefore, assist decision makers in
+meeting the service standard and will reduce turn-around times while maintaining decision
+quality.
+7. Describe how you will ensure that the system is conﬁned to addressing the client
+needs identiﬁed.
+The CST is designed to condense large volumes of material, including the application and
+supporting documentation, into concise, structured summaries that highlight information
+relevant to the claimed condition in Disability Beneﬁt applications. The CST does not make
+decisions. Veterans Affairs Canada has implemented several controls to ensure the CST
+remains conﬁned to this deﬁned purpose and continues to align with the client needs
+identiﬁed:
+
+   •  Clear and Limited Functionality: The CST is restricted to extracting, organizing, and
+       presenting factual information from the application and supporting documentation.
+
+                                                                 Page 6 of 32
+   •  Testing, Validation, and Performance Monitoring: Controlled testing, including
+       double-adjudication of test cases, veriﬁes that summaries are accurate, reliable,
+     and consistent. Performance metrics such as time savings and reduction in
+       administrative review burden are monitored to ensure the CST is delivering
+       efficiency improvements without any expansion of scope.
+
+   •  Mandatory Human Oversight: Decision makers review all CST outputs, validate the
+      evidence presented, and retain full responsibility for determining eligibility. If the
+     summary produced by the CST enables a decision maker to reach a favourable
+       decision, the ﬁle can be processed faster (i.e., without a full manual review of all
+      documents). If the ﬁle is not approved based on a review of the summary, the
+       decision maker will review the entire ﬁle manually before ﬁnalizing the decision.
+
+   •  Feedback and Continuous Improvement: User feedback and quality assessments
+      inform reﬁnements to the summarization process. Enhancements focus solely on
+      improving accuracy, clarity, and usability.
+8. Describe any trade-offs between client interests and program objectives that you
+have considered during the design of the project.
+The introduction of the CST requires balancing the program objectives of improving
+efficiency and reducing processing times with protecting client interests and maintaining
+trust in the Disability Beneﬁt adjudication process. While the CST offers signiﬁcant
+administrative beneﬁts, there are several potential trade-offs that must be carefully
+managed.
+One key consideration relates to decision quality and client conﬁdence. There is a risk that
+automated summaries may omit or insufficiently describe relevant information, and some
+clients or stakeholders may have concerns about the use of AI in the adjudication process.
+To address these risks, Veterans Affairs Canada has implemented multiple safeguards.
+
+   •   All summaries must be veriﬁed by a human decision-maker,
+
+   •  Supporting source documents must be reviewed prior to rendering any decision,
+
+   •  Summaries include direct links to source documentation to support transparency
+     and accuracy, and
+
+   •  When a summary does not contain sufficient information to support a favourable
+       decision, the decision maker must conduct a comprehensive manual review of the
+         full ﬁle.
+These measures ensure that efficiency gains do not compromise accuracy, fairness, or
+trust in the adjudication process.
+A further consideration relates to privacy and security. To protect client information, the
+Department conducted rigorous compliance reviews and ensured full adherence to
+
+                                                                 Page 7 of 32
+Government of Canada privacy, security, and responsible AI standards before
+implementation.
+9. Describe any improvements, beneﬁts, or advantages your department expects from
+using an automated system.
+VAC’s service standard for Disability Beneﬁts requires that 80% of decisions be rendered
+within 16 weeks. In ﬁscal year 2024–2025, compliance with this standard declined from
+69% to 47% due to increased program demand. While VAC improved internal efficiency,
+application intake exceeded internal efficiency gains. With modernization initiatives,
+including the implementation of the CST, VAC will be better positioned to meet service
+standards and manage growing intake volumes.
+Testing indicates that the CST can reduce the number of pages requiring review by more
+than 90% and reduce the average time required to review an application and supporting
+documentation by approximately 50%. The CST will, therefore, assist decision makers in
+meeting the service standard by improving efficiency, reducing turn-around times and
+maintaining decision quality.
+10. What are your current program indicators, service standards or performance
+targets?
+The current service standard for the Disability Beneﬁt program is that 80% of Disability
+Beneﬁt decisions must be made within 16 weeks for ﬁrst applications.
+11. What is your current performance level against these indicators, standards or
+targets?
+The performance level for the 2024-2025 ﬁscal year was 47%.
+12. How do you expect the system will change performance against your program
+indicators, service standards or performance targets?
+The Department expects that the CST will reduce average processing times for Disability
+Beneﬁt applications by automating labour-intensive document review. While it is difficult
+to precisely forecast the CST’s impact on overall service standard results given that
+application volumes are driven by factors outside the Department’s control, the
+productivity gains are expected to increase processing capacity. This will support Veterans
+Affairs Canada in meeting service standards and managing growing intake volumes.
+13. Have alternative non-automated processes been considered?
+Yes [ Points: +0 ]
+14. If non-automated processes were considered, why was automation identiﬁed as
+the preferred option?
+Partial automation was selected as the preferred option because Disability Beneﬁt
+decisions require the review of large volumes of documentation and have direct impacts
+on Veterans’ ﬁnancial security, access to health services, and overall well-being. The
+
+                                                                 Page 8 of 32
+average application, including supporting documentation such as military records,
+contains over 800 pages that a VAC decision maker reviews before making a decision. Fully
+automating the decision making process would not be appropriate given the need for
+human judgment, contextual understanding, and accountability in each case. In addition,
+there is no legal authority under the Pension Act or the Veterans
+Well-being Act for the Department to use an electronic system, including an automated
+system, to make a decision or determination without human intervention.
+Partial automation enables Veterans Affairs Canada to apply automation in a
+proportionate manner by supporting administrative tasks such as scanning, identifying,
+and organizing relevant information while maintaining human oversight and decision
+making authority at all stages. Trained VAC decision makers remain responsible for
+reviewing the evidence, applying legislation and policy, exercising professional judgment,
+and making the ﬁnal decision on each application. This approach improves efficiency and
+timeliness while ensuring transparency, fairness, and accountability in decisions that
+directly affect Veterans.
+15. What would be the consequence of not deploying the system?
+
+   •  Service quality is not as high
+
+   •  Service delivery cannot achieve performance targets
+
+   •  Service cannot be delivered in a timely or efficient manner
+Risk Proﬁle
+16. Is the project within an area of intense public scrutiny (for example, because of
+privacy concerns) and/or frequent litigation?
+Yes [ Points: +3 ]
+17. Does the line of business serve equity denied groups?
+Yes [ Points: +3 ]
+18. Indicate which equity denied groups are served and describe your mitigation
+strategies to prevent adverse impacts for these groups.
+Through the application of Gender-Based Analysis Plus (GBA+), Veterans Affairs Canada
+considered potential impacts on equity-denied groups, including women, Indigenous
+Peoples, persons with disabilities, members of 2SLGBTQI+ communities, and visible
+minorities. The CST is designed to support administrative efficiency by summarizing
+application materials and does not differentiate treatment based on personal
+characteristics. It does not automate decisions, and all determinations remain fully
+human-driven.
+
+
+
+                                                                 Page 9 of 32
+Decision makers are required to verify summaries against source documents and apply
+legislation and policy consistently, which mitigates the risk of adverse or inequitable
+outcomes.
+The primary population served by the CST is Canadian Armed Forces Veterans applying for
+Disability Beneﬁts due to physical or mental health conditions. This population includes a
+signiﬁcant proportion of equity-denied groups, including persons with disabilities, women,
+Indigenous Veterans, 2SLGBTQI+ Veterans, and visible minorities. In particular, Indigenous
+and 2SLGBTQI+ persons are overrepresented in the Veteran population vis-à-vis the
+Canadian general population, according to Census 2021 and Canadian Veteran Health
+Survey 2022 ﬁgures. Similarly, disabled Veterans are signiﬁcantly overrepresented relative
+to the Canadian general population in all age groups analyzed by Statistics Canada (i.e., 17
+to 44, 45 to 64, and 65+) in the Canadian Survey of Disability 2022. By reducing the time
+required to process Disability Beneﬁt applications, the tool supports more timely access to
+ﬁnancial support, health services, and other beneﬁts for all Veterans, including equity-
+denied groups.
+In addition, improved workload management and processing efficiency are expected to
+support more consistent achievement of service standards and reduce application
+backlogs. The use of modernized tools such as the CST also enhances the Department’s
+ability to monitor service delivery using administrative and demographic data, including
+GBA+-informed analysis. Over time, these improvements support equitable access to
+beneﬁts and services, particularly for equity-denied Veteran populations whose
+representation within the Canadian Armed Forces has increased and is expected to
+continue to increase into the future.
+19. Are there any population groups that the automated decision system should not
+be applied to?
+No [ Points: +0 ]
+20. Has the system been assessed to understand whether it would create or
+exacerbate barriers for persons with disabilities, and are measures in place to
+address any identiﬁed issues?
+Assessment has been conducted, and no barriers were identiﬁed. [ Points: +0 ]
+21. Could the automated decision-system be at heightened risk of being an
+exploitation target for malicious actors (for example, fraud for ﬁnancial gain)?
+No [ Points: +0 ]
+22. Have potential issues or harms with the existing service delivery approach been
+raised by clients or their representatives, the media, audits or parliamentary
+committees?
+Yes [ Points: +1 ]
+
+
+                                                                Page 10 of 32
+23. Indicate the issue or harm, the group that raised them, and how these have been
+addressed.
+The current manual service delivery approach for reviewing documentation related to
+Disability Beneﬁt applications has been the subject of sustained criticism from Veterans,
+their representatives, Veterans’ advocacy organizations, the media, and Parliamentary
+committees. These groups have consistently raised concerns about the signiﬁcant harms
+associated with the existing process, including excessive wait times for Disability Beneﬁt
+decisions that often far exceed established service standards, and a persistent and
+growing backlog which has created delays that affect Veterans’ well-being by impacting
+their access to ﬁnancial support and health services.
+The Department is implementing the CST to reduce labour intensive document review and
+improve overall efficiency. This approach is expected to reduce processing times and help
+Veterans Affairs Canada meet its service standard of rendering 80% of ﬁrst applications
+within 16 weeks without compromising quality.
+24. Have you submitted a concept case to TBS and presented the project to the
+Government of Canada Enterprise Architecture Review Board?
+Yes [ Points: +0 ]
+Project Authority
+25. Will you require new policy or legal authority for this project?
+No [ Points: +0 ]
+26. Indicate why you have chosen the response.
+The Department of Veterans Affairs does not require new policy or legal authority to
+implement the CST because the CST does not alter Disability Beneﬁt eligibility rules,
+decision making authority, adjudication procedures, Veterans’ rights, or recourse
+mechanisms.
+About The System
+27. Check which of the following capabilities apply to your system.
+Text and speech analysis: Analyzing large data sets to recognize, process, and categorize
+text, speech and voice, and make recommendations based on the categorization
+Process optimization and workﬂow automation: Analyzing large data sets to identify any
+anomalies, cluster patterns, predict outcomes or ways to optimize; and automate speciﬁc
+workﬂows
+Content generation: Analyzing large data sets to categorize, process, triage, personalize,
+and serve speciﬁc content for speciﬁc contexts
+
+
+
+                                                                Page 11 of 32
+Image and object recognition: Analyzing large data sets to automate the recognition,
+classiﬁcation, and context associated with an image or object
+28. Who developed the system?
+Your institution [ Points: +0 ]
+29. Who conﬁgured the system?
+Your institution [ Points: +0 ]
+30. Is the system:
+Custom built [ Points: +1 ]
+31. Have you assigned accountability in your institution for the design, development,
+and maintenance, of the system?
+Yes [ Points: +0 ]
+32. Is there a group in your institution responsible for identifying and implementing
+opportunities for improvement?
+Yes [ Points: +0 ]
+33. Does your system conform with the appropriate clauses of standard CAN/ASC EN
+301549:2024, Accessibility requirements for Information and Communication
+Technology (ICT) products and services?
+Yes [ Points: +0 ]
+34. Is a non-automated alternative planned and available in the event the automated
+decision system was unavailable for an extended period of time?
+Yes [ Points: +0 ]
+35. Is there a process in place to grant, monitor, and revoke access permission to the
+system?
+Yes [ Points: +0 ]
+36. The impacts that the development, operation, and maintenance of the system
+could have on the ongoing sustainability of an environmental ecosystem, may be:
+Little to no impact [ Points: +1 ]
+37. Describe why the impacts resulting from the system's development, operations
+and maintenance are as selected.
+The CST will have little or no impact on the environmental ecosystem because it is used to
+scan Disability Beneﬁt applications and supporting documentation, and to assemble
+relevant evidence into a structured, traceable, and accurate summary for the decision
+maker.
+
+                                                                Page 12 of 32
+About the Algorithm
+38. The algorithm used will be a (trade) secret
+Yes [ Points: +1 ]
+39. The algorithmic process will be difficult to interpret or to explain
+No [ Points: +0 ]
+40. Is the algorithm (Check all that apply):
+Based on patterns in data identiﬁed by the AI model (for example, neural network, deep
+learning) [ Points: +1 ]
+41. If the automated decision-system is model based, is the model inference (select
+all that apply):
+Probabilistic (infer several models to explain data) [ Points: +1 ]
+42. Is the model:
+Generative (for example, linear discriminant analysis, naïve Bayes) [ Points: +1 ]
+43. Describe the model being used.
+The CST leverages a "Retrieval-Augmented Generation" architecture hosted entirely within
+VAC’s secure Microsoft Azure cloud environment. The system operates in four distinct
+stages:
+1.  Ingestion & Handwriting Recognition (OCR)
+    1.1. The system ﬁrst retrieves Service Health Records and application documents from
+      VAC’s Digital Image (DIGIMG) repository. It utilizes Azure AI Document Intelligence
+        to separate documents into individual pages and extract machine readable text.
+        This model is capable of recognizing and digitizing handwritten content, as well as
+        identifying structural elements like forms, tables, and headings.
+2. Information Retrieval (The "Search" Layer)
+    2.1. The processed text and metadata are temporarily indexed in an Azure AI Search
+        index. When a speciﬁc medical diagnosis and associated medical code is
+       provided, the system queries this index to retrieve only the speciﬁc pages and
+       paragraphs relevant to that condition. This ensures the AI focuses exclusively on
+       the client's existing records.
+3. Generative Summarization (The LLM) The retrieved content is passed as context to the
+   Azure OpenAI service (currently utilizing the GPT-5 model).
+    3.1. Function: The model identiﬁes, organizes, and summarizes the evidence related to
+       the claimed condition.
+
+
+                                                                Page 13 of 32
+    3.2. Constraint: The model operates under strict instructions to summarize only; it does
+       not apply eligibility rules, or assign outcomes.
+    3.3. Traceability: The ﬁnal output includes hyperlinks connecting every summarized
+       point directly back to the source page in the original ﬁle.
+4. Data Lifecycle & Security
+    4.1. Zero Retention: Once the summary is generated, all temporary AI processing data,
+       including the vectorized document content and the Search index, is deleted.
+    4.2. Storage: The ﬁnal summary is saved as a PDF in the DIGIMG repository and the
+        client’s electronic case ﬁle.
+    4.3. Governance: No external partners are involved in the model's operation, and
+       Service Health Records (including those from DND) are accessed solely through
+      VAC's authorized repositories.
+The CST does not make decisions.
+49. Describe why you have not evaluated whether variables could be proxies for
+protected characteristics.
+It was chosen based on cost considerations, inclusion of health information and testing
+results.
+45. Will the algorithm continue to learn and evolve as it is used?
+No [ Points: +0 ]
+46. Does the algorithm consider protected characteristics to make its decisions or
+recommendations?
+Yes [ Points: +2 ]
+47. Describe why protected characteristics are being considered and any mitigations
+in place to address potential issues with bias or discrimination.
+Personal characteristics such as disability, age, and gender are essential pieces of
+information in the Disability Beneﬁt adjudication process. These factors directly inﬂuence
+eligibility, entitlement, and assessment under the governing legislation and policies.
+Because they are integral to understanding the nature of the claim, the CST must process
+and reﬂect this information when generating a summary of the documents relevant to the
+application.
+48. Have you evaluated whether variables that the system bases its decisions or
+recommendations on could be proxies for protected characteristics?
+No [ Points: +2 ]
+
+                                                                Page 14 of 32
+49. Describe why you have not evaluated whether variables could be proxies for
+protected characteristics.
+The Department has not evaluated whether any variables could act as proxies for
+protected characteristics because these characteristics are already explicitly included in
+the information that must be reviewed as part of the Disability Beneﬁt adjudication
+process. Since protected characteristics must be considered directly and cannot be
+replaced or inferred through proxies when summarizing information contained in Service
+Health Records and other documentation, a proxy analysis would not be meaningful or
+applicable in this context.
+About the Decision
+50. Describe the administrative decision(s) that is being supported or made by the
+algorithm.
+When Veterans Affairs Canada receives a Disability Beneﬁt application, the application is
+registered in departmental systems and supporting service and medical records are
+gathered from multiple sources. Once the ﬁle is complete, it is assigned to a trained
+decision maker, who reviews extensive documentation to identify information relevant to
+the claimed condition. The decision maker considers evidence such as service health
+records, medical diagnoses, injury or onset dates, continuity of symptoms, and other
+relevant facts in order to determine entitlement and, where applicable, assess the level of
+beneﬁt in accordance with legislation, regulations, and policy.
+The CST does not change these steps or make entitlement decisions. Instead, it supports
+the document review stage by scanning, organizing, and summarizing large volumes of
+documentation to help decision makers identify relevant evidence more efficiently. Human
+decision makers continue to review the complete record, apply legislation and policy,
+exercise professional judgment, and make the ﬁnal decision in all cases.
+51. Does the decision pertain to any of the categories below (check all that apply).
+Note that the examples in brackets are not exhaustive.
+Social assistance (employment insurance, disability or housing beneﬁts, children or
+seniors programs) [ Points: +1 ]
+Impact Assessment
+52. Which of the following best describes the type of automation you are planning?
+Partial automation (the system will contribute to administrative decision making by
+supporting an officer with assessments, recommendations, intermediate decisions, or
+other outputs) [ Points: +2 ]
+53. Describe the role of the system in the decision-making process.
+The primary challenge in Disability Beneﬁt decision making is the volume of
+documentation that must be reviewed. The average application, including supporting
+
+                                                                Page 15 of 32
+documentation such as military records, contains more than 800 pages that are reviewed
+to identify facts related to the claimed condition for consideration by the decision maker
+before a determination is made.
+The CST supports this stage of the process by scanning, organizing, and summarizing large
+volumes of application materials and supporting documentation. The system highlights
+and assembles relevant evidence into a structured, traceable and accurate summary for
+the decision maker. Each summary includes links to the original source documents, and
+all scanned documentation remains fully searchable, supporting transparency and
+veriﬁcation.
+The CST does not change the Disability Beneﬁt adjudication process and does not make
+decisions. If a summary does not contain sufficient information to support a favourable
+decision, the decision maker conducts a comprehensive review of the full record to ensure
+no critical information is overlooked. In all cases, trained VAC decision makers review the
+complete evidence, apply legislation and policy, exercise professional judgment, and
+make the ﬁnal decision.
+By supporting the document review and information identiﬁcation stages of the process,
+the CST assists decision makers in working more efficiently and helps Veterans Affairs
+Canada meet service standards and reduce turnaround times, without compromising
+decision quality or accountability.
+54. Will the system be making decisions or assessments that require judgment or
+discretion?
+No [ Points: +0 ]
+55. Describe.
+The CST does not make Disability Beneﬁt decisions or perform assessments requiring
+judgment or discretion. There is no legal authority under the Pension Act or the Veterans
+Well-being Act for an electronic system, including an automated system, to make a
+decision or determination without human intervention. All Disability Beneﬁt decisions
+therefore remain the responsibility of VAC decision makers.
+56. Will this project have major impacts on staff, either in terms of their numbers or
+their roles?
+Yes [ Points: +2 ]
+57. Describe the criteria used to evaluate client data and the operations applied to
+process it.
+
+   •  Training of model / prompt engineering
+
+   •  Bias detection
+
+   •  Testing data and test cases with SMEs
+
+                                                                Page 16 of 32
+   •  Speciﬁc LLM
+
+   •  User feedback
+58. Describe the output produced by the system and any relevant information needed
+to interpret it in the context of the administrative decision.
+The CST produces a summary that is a subset of a larger set of documents that is being
+reviewed including the Disability Beneﬁt application, Service Health Records and medical
+Questionnaires. The CST scans the application and supporting documentation, and then
+highlights, assembles and presents the relevant evidence in a clear, structured, and
+traceable format to the decision maker. Each summary includes links to the source
+documentation to support transparency and accuracy, and all of the supporting
+documentation that was scanned by the CST remains searchable by the decision maker. If
+the summary does not contain sufficient information for a favourable decision, the
+decision maker will conduct a comprehensive review of the entire ﬁle before making a
+decision to ensure no critical information is overlooked.
+The CST does not make Disability Beneﬁt decisions or determine Disability Beneﬁt
+eligibility. Every Disability Beneﬁt decision will continue to be made by Veterans Affairs
+Canada decision makers who will verify the facts, conﬁrm policy application, and ﬁnalize
+the decision.
+59. Will the system perform an assessment or other operation that is not currently
+completed by a human?
+No [ Points: +0 ]
+60. Is the system used by a different part of the organization than the ones who
+developed it?
+Yes [ Points: +2 ]
+61. Are the impacts resulting from the decision reversible?
+Reversible [ Points: +1 ]
+62. How long could impacts from the decision last?
+Impacts are most likely to be brief [ Points: +1 ]
+63. Describe why the impacts resulting from the decision are as selected, including
+potential risks identiﬁed and mitigations in place.
+The CST provides partial automation limited to administrative tasks, speciﬁcally,
+extracting, organizing, and summarizing information from Disability Beneﬁt applications
+and supporting documentation for decision makers. All Disability Beneﬁt decisions remain
+fully human-made. Decision makers retain complete authority, accountability, and
+discretion over every determination.
+
+
+                                                                Page 17 of 32
+The summary produced by the CST is reviewed by the decision maker. Each summary
+includes hyperlinks to the original source documents to enable veriﬁcation. If the summary
+does not provide sufficient information, the decision maker will conduct a comprehensive
+manual review of the full ﬁle before making a determination.
+64. The impacts that the decision could have on the rights or freedoms of individuals
+may be:
+Little to no impact [ Points: +1 ]
+65. Describe how this impact level was determined. Include which human rights
+frameworks were assessed, potential risk that were identiﬁed and mitigations put in
+place.
+The CST has little or no impact on the rights or freedoms of individuals. The system
+provides partial automation limited to administrative tasks, speciﬁcally, extracting,
+organizing, and summarizing information from Disability Beneﬁt applications and
+supporting documentation for decision makers.
+All Disability Beneﬁt decisions remain fully human-made. Decision makers retain
+complete authority, accountability, and discretion over every determination. They may
+consult the summary for efficiency, but they continue to have full access to the complete
+record reviewed by the Claim Summary Tool and can independently verify all facts and
+evidence.
+66. The impacts that the decision could have on the equality, dignity, privacy, and
+autonomy of individuals may be:
+Little to no impact [ Points: +1 ]
+67. Describe why the impacts resulting from the decision are as selected, including
+potential risks identiﬁed and mitigations in place.
+The CST has little to no impact on the equality, dignity, privacy, or autonomy of individuals.
+It performs limited administrative automation by organizing and summarizing information
+from Disability Beneﬁt applications and supporting documents and does not make
+decisions or replace the judgment of Veterans Affairs Canada decision makers.
+All decisions remain fully human-made. Decision makers retain full access to all source
+documents, can independently verify all information, and exercise full discretion. Personal
+information is used solely for the administration of Disability Beneﬁt applications and is
+handled in accordance with the Privacy Act, the Pension Act, the Veterans Well-being Act
+and departmental privacy requirements.
+68. The impacts that the decision could have on the health and well-being of
+individuals may be:
+Little to no impact [ Points: +1 ]
+
+
+                                                                Page 18 of 32
+69. Describe why the impacts resulting from the decision are as selected, including
+potential risks identiﬁed and mitigations in place.
+The CST is expected to have little or no impact on the health and well-being of individuals.
+The CST does not make Disability Beneﬁt decisions, and all decisions remain the
+responsibility of Veterans Affairs Canada decision makers, who retain full authority and
+discretion.
+The summary produced by the CST is reviewed by the decision maker and is used only
+when it supports a favourable outcome. Each summary includes hyperlinks to the original
+source documents to enable veriﬁcation. If the summary does not provide sufficient
+information, the decision maker will conduct a comprehensive manual review of the full
+ﬁle before making a determination.
+70. The impacts that the decision could have on the economic interests of individuals
+may be:
+Little to no impact [ Points: +1 ]
+71. Describe why the impacts resulting from the decision are as selected, including
+potential risks identiﬁed and mitigations in place.
+The CST has little or no impact on the economic interests of individuals. Although Disability
+Beneﬁts are monetary in nature, the CST does not make decisions, determine eligibility, or
+replace human judgement. All Disability Beneﬁt decisions remain fully under the authority
+of Veterans Affairs Canada decision makers.
+72. The impacts that the decision could have on the ongoing sustainability of an
+environmental ecosystem, may be:
+Little to no impact [ Points: +1 ]
+73. Describe why the impacts resulting from the decision are as selected, including
+potential risks identiﬁed and mitigations in place.
+The CST will have little or no impact on the ongoing sustainability of an environmental
+ecosystem because it is purely a digital administrative tool.
+74. Have you assessed system performance for clients with a range of personal and
+intersectional identity factors (for example, gender, age, race, language, ethnicity,
+disability) to verify that decisions and outcomes are fair for a diverse group of people,
+and have the identiﬁed disparities been addressed?
+Assessment conducted; no performance differences identiﬁed. [ Points: +0 ]
+75. Describe your approach to assessing system performance.
+Through several iterations of testing, Veterans Affairs Canada used a subset of claims
+(conditions) with representations of gender, age and language that is reﬂective of the same
+
+
+                                                                Page 19 of 32
+factors for the larger submission data for the full year. There have been no indications of
+unfairness against speciﬁc groups.
+76. Have you tested system performance for clients with a variety of different
+disabilities?
+Yes [ Points: +0 ]
+77. Describe any differences in system performance identiﬁed and mitigations in
+place to address them.
+Through several iterations of testing, we used a subset of claims (conditions) with
+representations of gender, age, language and geographic location that is reﬂective of the
+same factors for the larger submission data for the full year. There have been no
+differences in system performance identiﬁed.
+78. Are there clients or groups of clients that will experience the most signiﬁcant
+negative impacts from the system being used?
+No [ Points: +0 ]
+79. Describe
+No groups of clients have been identiﬁed that will experience negative impacts from the
+use of the CST. All decisions remain fully human-made. Decision makers may use the
+summary to support their review, but they retain full access to the complete set of
+documents reviewed by the CST and can independently verify all information. The CST
+does not constrain a decision maker’s ability to exercise discretion, nor does it limit the
+evidence available for consideration.
+80. What proportion of clients will the system be applied to?
+76 to 99% [ Points: +0 ]
+81. Could not being subject to the use of the tool have a negative impact on an
+individual or groups of individuals?
+Yes [ Points: +1 ]
+82. Describe
+Claims not processed using the CST will not beneﬁt from improved turnaround times and
+their Disability Beneﬁt decision will take longer to make.
+83. The impact of individuals being wrongfully included or overlooked by the system
+could be:
+Little to no impact [ Points: +1 ]
+84. Describe why the impact of being wrongfully included or overlooked by the system
+is as selected.
+
+                                                                Page 20 of 32
+There is no indication that individuals will be wrongfully included or overlooked by the CST.
+The CST provides partial automation limited to administrative tasks; speciﬁcally,
+extracting, organizing, and summarizing information from Disability Beneﬁt applications
+and supporting documentation. It does not make decisions, determine eligibility, or
+generate outputs that inﬂuence decisions requiring judgment or discretion.
+Because the CST does not replace human decision making, does not limit access to
+information, and does not generate determinations that could affect an individual’s
+beneﬁts, rights, or entitlements, the use of the CST does not create a risk of individuals
+being wrongfully included or overlooked.
+About the Data
+85. Will the system use personal information as input data?
+Yes [ Points: +2 ]
+86. Have you veriﬁed that the collection of personal information is limited to only what
+is directly related to a program or activity of your institution?
+Yes [ Points: +0 ]
+87. Is the personal information of individuals used in a decision-making process that
+affects those individuals?
+Yes [ Points: +2 ]
+88. Have you veriﬁed whether the system is using personal information in a way that is
+consistent with: (a) the current personal information banks (PIBs) and privacy impact
+assessments (PIAs) of your programs or (b) planned or implemented modiﬁcations to
+the PIBs or PIAs that take new uses and processes into account?
+Yes [ Points: +0 ]
+89. List relevant PIB numbers.
+VAC PPU 601,VAC PPU 602,VAC PPU 604,VAC PPU 700,VAC PPU 716,VAC PPU 717,VAC
+PPU 718
+90. Will the personal information be shared (check all that apply)
+Within your department [ Points: +1 ]
+91. Is the training and testing data for the system representative of the clients being
+served?Yes [ Points: +0 ]
+92. Describe how you have assessed that data was representative.
+Through several iterations of testing and piloting, Veterans Affairs Canada used a subset of
+claims (conditions) with representations of gender, age, and language that were reﬂective
+of the same factors present in full-year submission data. No indications of unfairness
+affecting speciﬁc groups were identiﬁed through this testing. Our Operations group will
+                                                                Page 21 of 32
+monitor outputs in the same manner on an ongoing basis. Findings from GBA+ analysis
+and operational testing inform these ongoing monitoring activities.
+93. Are there biases in the training data that could increase the likelihood of
+discriminatory outcomes or lead to other impacts on human rights?
+No [ Points: +0 ]
+94. Explain the process taken to conﬁrm that there are no biases in the training data
+that could increase the likelihood of discriminatory outcomes or other impacts on
+human rights.
+Testing was conducted using a subset of claims reﬂective of full-year submission data
+across gender, age, and language. No indications of unfairness affecting speciﬁc groups
+were identiﬁed, and ongoing operational monitoring is in place to identify potential issues
+over time.
+95. What is the highest security classiﬁcation of the input data used by the system?
+(Select one)
+Protected B [ Points: +3 ]
+96. Are there measures in place to ensure the accuracy of the personal information
+used?
+Yes [ Points: +0 ]
+97. If yes, describe the measures taken to ensure and verify the accuracy of personal
+information.
+Information is collected directly from clients, other government agencies/ departments
+and health professionals. Source documents are available to be viewed by users and are
+cited speciﬁcally in the summary.
+98. Who controls the data?
+Federal Government [ Points: +1 ]
+99. Will the system use data from multiple different sources?
+Yes [ Points: +2 ]
+100. Will the system require input data from a network-connected device? (such as
+Internet of Things, sensor)
+No [ Points: +0 ]
+101. Will the system interface with other IT systems?
+Yes [ Points: +4 ]
+102. Who collected the data used for training the system?
+
+                                                                Page 22 of 32
+Your institution [ Points: +1 ]
+103. Who collected the input data used by the system?
+Your institution [ Points: +1 ]
+104. Describe the input data collected and used by the system, its source, method of
+collection, and any quality assurance measures in place.
+The CST uses information that is already collected and lawfully held by Veterans Affairs
+Canada. The system does not collect new information from clients. The input data consists
+of:
+
+   •  Standardized Forms: The Application for Disability Beneﬁts (PEN 923) and speciﬁc
+      Medical Questionnaires (e.g., Psychiatric/Psychological Conditions Medical
+       Questionnaire, Thoracolumbar Spine Conditions Medical Questionnaire).
+
+   •  Service Health Records: A wide variety of medical and personnel documents,
+       including handwritten clinical progress notes, specialist reports (audiograms,
+       surgical reports), and dental records spanning a Veterans career.
+
+   •  Diagnostic Evidence: Medical reports and diagnostic imaging results provided by
+       private practitioners or military medical officers.
+
+   •  Service Documents: Personnel records utilized to conﬁrm service dates, rank, and
+       unit deployment history.
+
+   •  Source & Method of Collection The system retrieves documents exclusively from
+      VAC’s official secure repositories. No data is scraped from the internet or unveriﬁed
+       external sources.
+
+   •   Interoperability (DND/RCMP): Service Health Records are retrieved directly through
+      secure, established transfer protocols such as with the Department of National
+      Defence (DND) and RCMP.
+
+   •  Client Submission: Applicants can also submit evidence via My VAC Account
+        (digital upload) or by mail. All documents received are ultimately stored
+       electronically in .PDF format within our Digital Image (DIGIMG) document
+       repository.
+
+   •  System Retrieval: The CST uses the client’s unique identiﬁer (CSDN ID) to query the
+     DIGIMG repository, retrieving only the speciﬁc ﬁles associated with the claimed
+       condition (e.g., fetching only "Knee" related correspondence for a knee claim).
+VAC employs a comprehensive end-to-end human oversight protocol. This framework
+mandates that qualiﬁed staff validate the integrity of the application ﬁle prior to automated
+summarization and verify the accuracy of the generated summary before any
+administrative decision is ﬁnalized.
+
+
+                                                                Page 23 of 32
+   •  Pre-Processing Validation (Claims Preparation): Before the CST is ever triggered, the
+       application ﬁle undergoes a manual "Claims Preparation" business process.
+       Trained VAC staff review the application, medical questionnaires, and submitted
+       materials to validate that the ﬁle is accurate and complete. This critical human
+      gatekeeping ensures that the data fed into the tool is organized and ready for
+       processing, preventing the system from analyzing incomplete or irrelevant ﬁles.
+
+   •  Technical Precision (OCR): The system utilizes Azure AI Document Intelligence to
+       accurately digitize complex inputs. This technology is capable of recognizing
+      handwritten text and preserving document structure (tables, forms), ensuring that
+       older, handwritten service records—which are often critical for long-standing
+      veterans—are accurately captured in the summary.
+
+   •  Post-Processing Veriﬁcation: The CST does not replace the source documents.
+      Every fact, date, or medical ﬁnding in the generated summary includes a direct
+       hyperlink back to the speciﬁc page in the original PDF. The Decision Maker is
+       required to use these links to cross-reference the summary against the original
+      evidence, ensuring that the ﬁnal decision is always grounded in the primary source
+      documents, not just the AI output.
+
+   •  "Manual Review Safeguard" Protocol : If the data quality is poor (e.g., illegible
+      handwriting that OCR cannot parse) or the evidence is insufficient to support a
+       favourable outcome, the decision maker will review the entire ﬁle manually before
+       ﬁnalizing the decision.
+105. Will the system require the analysis of unstructured data to make an
+assessment, recommendation or decision?
+Yes [ Points: +0 ]
+106. What types of unstructured data? (Check all that apply)
+
+   •  Audio and text ﬁles [ Points: +2 ]
+
+   •  Images and videos [ Points: +4 ]
+107. Has there been a decision to exclude certain data?
+No [ Points: +0 ]
+
+
+
+
+
+                                                                Page 24 of 32
+Section 3.3: Mitigation Questions and Answers
+Consultations
+1. Internal Stakeholders (federal institutions, including the federal public service)
+Yes [ Points: +2 ]
+2. Which internal consultees or partners have you engaged?
+
+   •  Access to Information and Privacy
+
+   •  TBS Office of the Chief Information Officer
+
+   •  Office of the Privacy Commissioner of Canada
+
+   •  Program Policy
+
+   •  Communications services
+
+   •  Legal Services
+
+   •  2SLGBTQI+ Secretariat
+
+   •  Strategic Policy and Planning
+3. External consultees or partners (groups in other sectors or jurisdictions).
+Yes [ Points: +2 ]
+4. Which external consultees or partners have you engaged?
+
+   •  Bargaining Agents
+
+   •  Other (describe)
+
+   •  Clients or their Representatives
+5. Please describe
+Office of the Veterans Ombud, Bureau of Pensions Advocates, Veterans Review and
+Appeal Bard, Royal Canadian Mounted Police, Veterans at VAC
+6. Identify the consultees or partners and indicate the project lifecycle stage
+(Concept, Design, Data collection and processing, Building or adapting the model,
+Testing, Deployment, Production, Monitoring, Decommission) in which engagement
+took place.
+Engagement with internal and external stakeholders and partners has occurred throughout
+the project lifecycle and was tailored to the nature of the expertise required at each stage.
+Consultations were undertaken primarily at a strategic, governance, legal, privacy,
+security, and program-integration level, consistent with the CST’s role as a decision-
+support system.
+
+                                                                Page 25 of 32
+Concept and Design: Early engagement focused on validating the business need,
+conﬁrming alignment with program authorities, assessing legal, privacy, security, and
+data-governance considerations, and determining applicability of the Directive on
+Automated Decision-Making and the Algorithmic Impact Assessment framework.
+Data Collection and Processing: Consultations supported the identiﬁcation of appropriate
+data sources, conﬁrmation of lawful authority for data use, privacy safeguards,
+information management practices, and alignment with enterprise architecture, IT, and
+security requirements.
+Testing and Deployment: Engagement emphasized operational readiness, usability for
+decision makers, transparency and traceability requirements, communications
+considerations, and validation that the tool functions strictly as a decision-support aid.
+Production and Monitoring: Ongoing engagement supports governance oversight,
+performance monitoring, privacy and security compliance, audit and evaluation readiness,
+and continuous improvement, including consideration of equity, accessibility, and GBA
+Plus-related impacts.
+Engagement is iterative and ongoing, with different areas and stakeholders being
+consulted as the project evolves and as new risks, considerations, or lifecycle phases
+arise.
+7. Did you consult with the clients that will be most impacted by the system?
+Yes [ Points: +3 ]
+8. Did you consult with clients or communities that will be adversely impacted by the
+system?
+No [ Points: +0 ]
+9. Explain why you did not consult the clients that will be adversely impacted by the
+system.
+No client groups were identiﬁed as being adversely impacted by the system because the
+CST is only used when a favourable decision can be made by the decision maker.
+10. Explain how you documented, analyzed and addressed the feedback received.
+Feedback was documented and analyzed through structured records, including meeting
+notes, consultation records, and review documentation. Feedback was consolidated into
+tracking tables and crosswalks linking identiﬁed issues, risks, and recommendations to
+speciﬁc system design elements, controls, or mitigation measures.
+De-risking and Mitigation Measures - Data Quality
+11. Do you have documented processes in place to test datasets against biases,
+discrimination, and other unexpected outcomes? This could include experience in
+applying frameworks, methods, guidelines, or other assessment tools.
+
+                                                                Page 26 of 32
+Yes [ Points: +3 ]
+12. Is the documented process publicly available?
+No [ Points: +0 ]
+13. Have you developed a process to document how data quality issues were resolved
+during the design process?
+Yes [ Points: +1 ]
+14. Is the process publicly available?
+No [ Points: +0 ]
+15. Have you undertaken a Gender-based Analysis Plus (GBA Plus) of the data?
+Yes [ Points: +2 ]
+16. Are the GBA Plus ﬁndings publicly available?
+No [ Points: +0 ]
+17. Summarize the ﬁndings or provide a link if publicly available.
+Through multiple iterations of testing, a subset of claims (conditions) was used that
+reﬂected the distribution of gender, age, language, and disability status present in full-year
+submission data. The GBA+ analysis examined potential differential impacts on equity-
+denied groups, including women, Indigenous Peoples, persons with disabilities, and
+members of 2SLGBTQI+ communities, with particular attention to persons with disabilities
+given the nature of Disability Beneﬁts programs.
+The GBA+ analysis did not identify material differential adverse impacts or discriminatory
+outcomes for equity-denied groups. Findings indicate that the CST is expected to improve
+productivity and processing times, resulting in improved service delivery to clients.
+Speciﬁcally, the CST is expected to support faster access to Disability Beneﬁt decisions
+and to the associated ﬁnancial beneﬁts and supports.
+Over the longer term, improved workload management through the use of modernized and
+automated tools is expected to increase Veterans Affairs Canada’s capacity to capture
+and analyze client and program demographic data, including GBA+ data. Enhanced
+availability and quality of demographic information is a key enabling factor for monitoring
+equity outcomes and ensuring equitable access to programs and beneﬁts. As a result,
+equity deserving Veteran groups are expected to beneﬁt from more timely processing of
+Disability Beneﬁt applications, especially in light of the evolving demographic proﬁle of
+Canadian Armed Forces personnel.
+18. Do you have a documented process to manage the risk that low quality, outdated
+or unreliable data is used to make an automated decision?
+No [ Points: +0 ]
+
+                                                                Page 27 of 32
+19. Will the data used for this system be posted on the Open Government Portal?
+No [ Points: +0 ]
+De-Risking and Mitigation Measures – Procedural Fairness
+20. Does the audit trail provide information to trace the chain of legislative authority
+for the decision and key decision points?
+Yes [ Points: +1 ]
+21. Are all key decision points in the automated system's logic linked to the relevant
+legislation, policy or procedures?
+Yes [ Points: +1 ]
+22. Does the audit trail capture all the recommendations or decisions made by the
+system?
+Yes [ Points: +2 ]
+23. Are all key decision points identiﬁable in the audit trail?
+Yes [ Points: +2 ]
+24. Is there a process in place to log the instances when overrides were performed?
+Yes [ Points: +2 ]
+25. Is there an up-to-date log of the changes made to the model and the system?
+Yes [ Points: +2 ]
+26. Does the audit trail capture information that can be used to help generate an
+explanation of the decision where required?
+Yes [ Points: +1 ]
+27. Is the system able to produce reasons for its decisions or recommendations when
+required?
+Yes [ Points: +2 ]
+28. Does the audit trail identify precisely which version of the system was used for
+each decision it supports?
+Yes [ Points: +2 ]
+29. Does the audit trail show who the authorized decision-maker is?
+Yes [ Points: +1 ]
+30. Is there a mechanism to capture feedback by users of the system?
+Yes [ Points: +2 ]
+
+                                                                Page 28 of 32
+31. Describe how user feedback informs updates to the system.
+The CST implements a "Finalize" process that captures user feedback at the end of their
+review. User feedback is then reviewed and prioritized for inclusion in future development
+sprints.
+32. Is there a recourse process established for clients to challenge the decision?
+Yes [ Points: +2 ]
+33. Provide information on the recourse process or link to a website where this is
+described.
+The recourse system available to Veterans remains unchanged. The CST does not alter,
+limit, or replace any existing review or appeal rights. Disability Beneﬁts decisions continue
+to be governed by a well-established legislative framework, including the Pension Act, the
+Veterans Well-being Act, and the Veterans Review and Appeal Board Act, which together
+provide multiple levels of recourse to support fairness, transparency, and procedural
+integrity.
+Veterans retain full access to all existing recourse mechanisms, including:
+
+   •  Departmental Review – A review that may be initiated either by Veterans Affairs
+     Canada or by the Veteran.
+
+   •  Veterans Review and Appeal Board (VRAB) – Independent reviews and appeals of
+      departmental decisions.
+
+   •   Judicial Review – Applications for review to the Federal Court of Canada and the
+      Federal Court of Appeal.
+Veterans also continue to have access to the Bureau of Pensions Advocates, which
+provides free legal assistance to Veterans in preparing submissions and navigating the
+review and appeal process.
+Additional information about the appeal and review process: How to review or appeal a
+decision
+(Full URL: https:// www.veterans.gc.ca/en/veterans-rights/how-appeal )
+34. Does the audit trail include change control processes to record modiﬁcations to
+the system's operation or performance?
+Yes [ Points: +2 ]
+35. Does the system base its decision or recommendation on all of the information
+provided by the client?
+Not applicable [ Points: +0 ]
+
+
+
+                                                                Page 29 of 32
+36. Have you undertaken mitigations in algorithm development and model testing to
+address bias and discrimination?
+Yes [ Points: +2 ]
+37. Describe the metrics used and any mitigations taken to address identiﬁed issues.
+The Department will monitor the performance of the CST over time using a combination of
+accuracy-based and distributional metrics. Monitoring is conducted at an aggregate level
+and, where appropriate, across relevant subgroups to identify potential performance
+issues or unintended effects.
+Human decision makers retain full authority for Disability Beneﬁts determinations and are
+responsible for reviewing CST outputs as part of the adjudication process. Decision
+makers are required to use the Tool as an input to their review, while retaining the ability to
+conduct additional examination of the full application record where clariﬁcation or
+veriﬁcation is required. This human-in-the-loop approach ensures that summaries
+support, rather than replace, professional judgment.
+Where monitoring or operational feedback identiﬁes potential performance issues or risks,
+mitigation measures may include reﬁning prompts or model parameters, enhancing quality
+assurance and guidance, increasing targeted human review, or implementing other
+corrective actions in accordance with established governance and oversight processes.
+38. Does the system only consider input data and information relevant to the
+decision?
+Yes [ Points: +2 ]
+39. Are the system rules directly relevant to the administrative decision?
+No [ Points: +0 ]
+40. Indicate additional procedural fairness protections in place (check all that apply):
+
+   •  Clear time frame or service standards for timeliness [ Points: +1 ]
+
+   •  Clients are provided with adequate information about the decision-making process
+     and have the opportunity to meaningfully participate [ Points: +1 ]
+
+   •  Clients are provided with all documents and information in which the administrative
+       decision was based [ Points: +1 ]
+
+   •  Mechanism for assessing and responding to client feedback [ Points: +1 ]
+41. Are there processes in place to ensure impartiality and ethical conduct by the
+decision maker in the use of the system and its outputs?
+Yes [ Points: +2 ]
+
+
+
+                                                                Page 30 of 32
+42. Have you undertaken training on appropriate use and awareness of risks
+associated with automation bias?
+Yes [ Points: +2 ]
+43. Will your team be regularly retraining the model or reviewing the rules?
+No [ Points: +0 ]
+44. Do you have monitoring processes in place to detect changes in system
+performance overtime?
+Yes [ Points: +2 ]
+45. Do you have a process in place to update the system based on the monitoring
+results?
+Yes [ Points: +1 ]
+46. Describe
+We will both monitor results and collect user feedback via a questionnaire. Feedback will
+be shared and reviewed with the development team. Items will be prioritized and
+addressed based on level of urgency.
+De-Risking and Mitigation Measures - Privacy
+47. If your system uses or creates personal information, have you undertaken a PIA, or
+updated an existing one?
+Yes [ Points: +2 ]
+48. Indicate the following in your answer: Title and scope of the PIA; How the
+automation project ﬁts into the program; and Date of PIA completion or modiﬁcation.
+The Privacy Impact Assessment for the Disability Beneﬁts Program was conducted to
+support the introduction of the CST, which is used in the delivery of the Disability Beneﬁts
+program. The CST does not introduce the collection of new personal information, but it
+processes personal information that is collected by Veterans Affairs Canada for the
+administration of the program as outlined in the Disability Beneﬁts Privacy Impact
+Assessment and all relevant Personal Information Banks, and as authorized by the Pension
+Act and the Veterans Well-being Act. The Privacy Impact Assessment was completed in
+February 2026.
+49. Have you designed and built security into your systems from the concept stage of
+the project?
+Yes [ Points: +2 ]
+50. Describe
+
+
+                                                                Page 31 of 32
+Security controls were incorporated from the concept stage of the project and applied
+throughout design and implementation. Access to CST summaries is restricted through
+role-based access controls managed via Active Directory assignments, ensuring that only
+authorized users can view summaries. PDF copies of summaries are stored within
+Veterans Affairs Canada’s approved Digital Images database, which is itself access-
+restricted to speciﬁc user groups.
+Security controls were reviewed and validated through the completion of a
+Security Statement of Authorization. Operational approval was granted because adequate
+security controls have been applied and residual risks have been assessed and reduced to
+an acceptable level in accordance with departmental security requirements.
+51. Have you designed and built privacy into your systems from the concept stage of
+the project?
+Yes [ Points: +2 ]
+52. Describe
+Only authorized users can request and review summaries.
+53. Is the information used within a closed system (no connections to the Internet,
+Intranet or any other system)?
+No [ Points: +0 ]
+54. If the disclosing of personal information is involved, has an agreement or
+arrangement with appropriate safeguards been established?
+No [ Points: +0 ]
+55. Will you de-identify any personal information used or created by the system at any
+point in the lifecycle?
+No [ Points: +0 ]
+
+
+
+
+
+                                                                Page 32 of 32

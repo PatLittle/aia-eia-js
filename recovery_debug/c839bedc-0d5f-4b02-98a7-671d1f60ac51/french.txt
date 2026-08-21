@@ -1,0 +1,1370 @@
+Résultats de l'évaluation de l'incidence
+algorithmique
+Version: 1.0.1
+Section 1 : Niveau d’incidence : 2
+Cote actuelle : 56
+Cote d'incidence brute : 56
+Cote d'atténuation : 56
+Section 2: Exigences spéciﬁques au niveau d'incidence 2
+Avis
+Fournir un avis en langage clair de tous les modes de prestation de services utilisés
+(Internet, en personne, par courrier, par téléphone).
+Explication
+Veiller à ce que l'explication prévue au niveau I soit publiée.
+En plus, veiller à ce qu'une explication plus détaillée, utile et rédigée en langage clair soit
+fournie à la clientèle visée par une décision entraînant le refus d'une prestation ou d'un
+service, ou prévoyant la prise d'une mesure réglementaire.
+Cette explication doit renseigner la personne concernée sur les motifs ou les
+justiﬁcations qui sous-tendent la décision administrative. Elle doit comprendre une
+description claire et axée sur la clientèle du processus qui a conduit le système
+décisionnel automatisé à rendre la décision, y compris :
+   •  les principaux facteurs pris en compte, par exemple la description de l'arbre de
+       décision, la notation ou la pondération de certains facteurs;
+   •   la manière dont les résultats du système décisionnel automatisé ont été utilisés
+      par le personnel.
+Fournir à la clientèle le lien vers l'explication prévue au niveau I.
+
+
+
+
+
+                                                                  page 1 / 37
+Examen par les pairs
+Consulter au moins l'un ou l'une des spécialistes ci-après et publier l'examen complet,
+ou un résumé de ce dernier, en langage clair sur un site Web du gouvernement du
+Canada :
+   •  spécialistes d'une institution gouvernementale fédérale, provinciale, territoriale
+     ou municipale;
+   •  membres d'une faculté d'un établissement postsecondaire;
+   •  membres de l'équipe de recherche d'une organisation non gouvernementale
+       pertinente;
+   •  prestataire de services sous contrat ayant une spécialisation pertinente;
+   •  comité consultatif des données et d'automatisation désigné par le Secrétariat du
+      Conseil du Trésor du Canada.
+Analyse comparative entre les sexes plus
+Veiller à ce que les spécialistes de la diversité et de l'inclusion de votre ministère aient
+été consultés dans le cadre de l'analyse comparative entre les sexes plus et à ce que
+cette dernière comprenne ce qui suit :
+   •  une évaluation de l'incidence possible du projet d'automatisation sur les
+       différents groupes de population. L'évaluation doit notamment prendre en
+      considération l'incidence du système décisionnel automatisé, des données
+       utilisées dans le cadre du projet et des effets probables de la décision déﬁnitive.
+      Les données utilisées aux ﬁns de l'évaluation doivent être citées dans la mesure
+     du possible. Il est recommandé de ventiler les données en fonction de genre et
+       d'inclure d'autres facteurs identitaires tels que l'âge, le handicap et la race. Si ces
+      données ne sont pas disponibles, précisez quelles sont les lacunes en la matière;
+   •  des précisions sur les mesures prévues ou existantes visant à gérer les risques
+      recensés dans le cadre de l'analyse comparative entre les sexes plus ou d'autres
+       évaluations.
+Formation
+Offrir une formation fondée sur les différents rôles visant à expliquer brièvement les
+fonctions du système décisionnel automatisé et leur utilisation appropriée.
+Participation humaine
+Le système peut rendre des décisions et procéder à des évaluations sans aucune
+participation directe du personnel.
+
+
+
+                                                                  page 2 / 37
+Le personnel doit contribuer à l'assurance de la qualité du système et peut déroger aux
+décisions prises par le système, au besoin.
+Approbation de l'exploitation du système
+Sous-ministre adjoint ou sous-ministre adjointe responsable du programme
+Autres exigences
+La Directive sur la prise de décisions automatisée comprend également d'autres
+exigences qui doivent être respectées pour tous les niveaux d'incidences.
+Lien vers la Directive sur la prise de décisions automatisée
+Contactez le bureau de l'AIPRP de votre établissement pour discuter de l'exigence d'une
+évaluation des facteurs relatifs à la vie privée conformément à la Directive sur
+l'évaluation des facteurs relatifs à la vie privée.
+
+
+
+
+
+                                                                  page 3 / 37
+Section 3: Questions et réponses
+Section 3.1: Détails du projet
+1. Numéro de la version publiée de l'évaluation de l'incidence algorithmique (EIA)
+1.0.1
+2. Nom de la personne sondée
+Shawn MacDougall
+3. Titre du poste
+Directeur principal, Gestion du programme de prestations d'invalidité
+4. Nom du sous-ministre adjoint ou de la sous-ministre adjointe responsable du
+programme pour lequel le système décisionnel automatisé est utilisé
+Steven Harris
+5. Ministère
+Anciens Combattants (Ministère des)
+6. Direction générale
+Secteur de la prestation des services
+7. Équipes consultées lors de l'EIA
+Équipe de développement de l'IA et de l'automatisation d'Anciens Combattants Canada,
+Équipe d'architecture d'entreprise, Gestion du programme de prestations d'invalidité,
+Secrétariat du Conseil du Trésor du Canada, Division de la protection des
+renseignements personnels et de l'utilisation responsable des données, Immigration,
+Réfugiés et Citoyenneté Canada, Justice Canada
+8. Titre du projet
+Outil de résumé de la demande d'indemnité d'invalidité
+9. Numéro du projet dans le Plan des TI
+PRJ-00013860
+10. ID du service
+1257
+11. Programme ministériel (Cadre ministériel des résultats)
+Prestations d'invalidité
+12. Phase du projet
+
+                                                                  page 4 / 37
+Mise en oeuvre [ Points: 0 ]
+13. Veuillez fournir une description du projet :
+Anciens Combattants Canada met en place un nouvel Outil de résumé de la demande
+d'indemnité d'invalidité (ORDII) basé sur l'intelligence artiﬁcielle (IA) aﬁn d'aider les
+décideurs à examiner et à organiser les volumes importants de documents liés aux
+demandes de prestations d'invalidité.
+Le traitement des demandes de prestations d'invalidité, telles que la pension d'invalidité
+et l'indemnité pour douleur et souffrance, est un processus qui prend beaucoup de
+temps. Une demande moyenne, y compris les pièces justiﬁcatives telles que les
+dossiers militaires, contient plus de 800 pages. Les décideurs d'Anciens Combattants
+examinent ces documents aﬁn de cerner les faits liés à l’affection faisant l’objet de la
+demande. Les demandes de prestations d'invalidité ont considérablement augmenté ;
+en effet, leur nombre a augmenté de 122 % au cours de la dernière décennie.
+L'augmentation du volume et la complexité croissante des cas ont entraîné des délais
+de traitement plus longs.
+Aﬁn d'offrir un service plus rapide aux vétérans et à leur famille, Anciens Combattants
+Canada a mis au point l'ORDII. L'ORDII utilise l'intelligence artiﬁcielle pour numériser les
+documents de demande, organiser le contenu et mettre en évidence les détails clés aﬁn
+que les décideurs puissent trouver plus rapidement les informations pertinentes.
+Chaque résumé comprend des liens directs vers les documents sources aﬁn de garantir
+la transparence et l'exactitude, et le décideur peut faire des recherches dans l’ensemble
+des documents numérisés.
+Lorsque le résumé fournit suﬃsamment d'informations pour une décision favorable, le
+décideur peut agir plus rapidement. Si ce n’est pas le cas, le décideur examinera
+manuellement l'ensemble du dossier avant de prendre une décision ﬁnale. Cette
+approche permet d’utiliser l’IA pour accélérer le traitement sans nuire à la qualité des
+décisions rendues aux vétérans.
+L'ORDII ne prend pas de décisions. Chaque décision est prise par des décideurs formés
+d'ACC, conformément aux lois, aux règlements et aux politiques. L'ORD fournit un
+résumé structuré des éléments de preuve et relie chaque élément au document original
+pour faciliter la vériﬁcation.
+Trouver des informations supplémentaires sur Utilisation de l’intelligence artiﬁcielle à
+Anciens Combattants Canada
+(URL complète : https://veterans.gc.ca/fr/propos-dacc/nos-valeurs/transparence/
+lintelligenceartiﬁcielle-acc)
+
+
+
+
+
+                                                                  page 5 / 37
+Section 3.2: Questions et réponses liées aux risques
+
+Raisons de l'automatisation
+1. Qu'est-ce qui motive votre équipe à intégrer l'automatisation dans ce processus
+décisionnel?
+(Cochez toutes les réponses qui s'appliquent.)
+   •  Amélioration de la qualité générale des décisions
+   •  Exécution par le système de tâches qu'une personne n'est pas en mesure
+   •  d'accomplir dans un délai raisonnable
+   •  Arriéré de travail ou de cas existant
+   •   Utilisation d'approches novatrices
+   •  Autre (veuillez préciser)
+2. S'il vous plait décrire (autre)
+Le principal obstacle à la prise de décisions rapides en matière de prestations
+d'invalidité est le volume important de documents à examiner. Une demande moyenne,
+y compris les pièces justiﬁcatives telles que les dossiers militaires, contient plus de 800
+pages. Les décideurs d’Anciens Combattants examinent ces documents aﬁn de cerner
+les faits liés à l'affection faisant l’objet de la demande. Par conséquent, les décideurs
+passent actuellement beaucoup de temps à examiner manuellement les dossiers aﬁn
+de trouver les informations relatives à l'affection faisant l’objet de la demande, telles
+que les dates des blessures ou les conﬁrmations de diagnostic, avant de pouvoir
+commencer à prendre leur décision.
+La mise en oeuvre de l'ORDII vise à relever ce déﬁ. L'ORDII numérise la demande et les
+pièces justiﬁcatives et rassemble les éléments de preuve pertinents dans un résumé
+structuré, traçable et précis à l'intention du décideur. En automatisant les aspects les
+plus répétitifs et les plus chronophages de l'examen des documents, l'ORDII réduit la
+charge de travail administratif, ce qui contribuera à améliorer les délais d'exécution et le
+service aux vétérans sans compromettre la qualité.
+3. Quels sont les besoins de la clientèle auxquels le système permettra de répondre?
+Décrivez les mesures prises pour déterminer les besoins de la clientèle.
+Les clients et les groupes de défense des clients ont toujours insisté sur l'importance
+que le processus de demande de prestations d'invalidité respecte la norme de service
+du Ministère. Les retards dans le traitement des demandes peuvent limiter l'accès
+rapide des anciens combattants à l'aide ﬁnancière, aux services de santé et à d'autres
+prestations qui peuvent être essentielles à leur bien-être. L'équipe de soutien technique
+(EST) favorise l'amélioration de la rapidité du traitement en automatisant l'examen
+
+                                                                  page 6 / 37
+initial des demandes et des pièces justiﬁcatives, ce qui permet d'identiﬁer plus
+rapidement les renseignements pertinents pour le décideur.
+4. Veuillez décrire tous les avantages que le système devrait apporter à la clientèle et
+à la société canadienne.
+L'ORDII devrait avoir des répercussions positives sur les vétérans en réduisant le temps
+nécessaire au traitement des demandes de prestations d'invalidité. En réduisant
+l'examen manuel des documents, l'ORDII favorise une prise de décision plus eﬃcace et
+permet à Anciens Combattants Canada de respecter les normes de service de manière
+plus constante. Des décisions plus rapides peuvent réduire les délais d'attente et
+l'incertitude pour les vétérans, leur permettant ainsi d'accéder plus tôt à des prestations
+qui peuvent contribuer à leur santé, à leur stabilité ﬁnancière et à leur bien-être général.
+De façon plus générale, l'amélioration du traitement des demandes de prestations
+d'invalidité favorise un service public réactif et durable, renforce la conﬁance dans les
+programmes gouvernementaux et contribue à garantir une utilisation eﬃcace des
+ressources publiques.
+5. Dans quelle mesure le système permettra-t-il de répondre eﬃcacement aux besoins
+de la clientèle?
+Très eﬃcace [ Points: +0 ]
+6. Préciser les raisons pour lesquelles l'eﬃcacité est telle que sélectionnée.
+L'ORDII devrait être très eﬃcace pour répondre aux besoins des clients en numérisant
+les demandes et les pièces justiﬁcatives, puis en mettant en évidence, en rassemblant
+et en présentant les éléments de preuve pertinents de façon claire, structurée et
+traçable à l'intention du décideur. Chaque résumé comprendra des liens vers les
+documents sources aﬁn de garantir la transparence et l'exactitude, et tous les
+documents justiﬁcatifs numérisés par l'ORDII pourront être consultés par le décideur. Si
+le résumé ne contient pas suﬃsamment d'informations pour rendre une décision
+favorable, le décideur procédera à un examen manuel complet de l'ensemble du dossier
+aﬁn de s'assurer qu'aucune information essentielle n'a été négligée avant de prendre
+une décision.
+Les tests indiquent que l'ORDII peut réduire de plus de 90 % le nombre de pages à
+examiner et réduire d'environ 50 % le temps moyen nécessaire pour examiner une
+demande et les pièces justiﬁcatives. L'ORDII aidera donc les décideurs à respecter la
+norme de service et réduira les délais d'exécution tout en maintenant la qualité des
+décisions.
+7. Veuillez décrire les mesures que vous prendrez pour vous assurer que le système
+ne servira qu'à répondre aux besoins de la clientèle.
+L'ORDII est conçu pour condenser de grands volumes de documents, y compris la
+demande et les pièces justiﬁcatives, en résumés concis et structurés qui mettent en
+évidence les informations pertinentes pour l’affection faisant l’objet de la demande de
+
+                                                                  page 7 / 37
+prestations d'invalidité. L'ORDII ne prend pas de décisions. Anciens Combattants
+Canada a mis en place plusieurs contrôles pour s'assurer que l'ORDII reste limité à cet
+objectif déﬁni et continue de répondre aux besoins ciblés des clients :
+   •  Fonctionnalité claire et limitée : L'ORDII se limite à extraire, organiser et présenter
+       les informations factuelles contenues dans la demande et les pièces
+       justiﬁcatives.
+   •  Tests, validation et suivi du rendement : Des tests contrôlés, y compris un double
+     examen des cas testés, permettent de vériﬁer que les résumés sont exacts,
+      ﬁables et uniformes. Un suivi des indicateurs de rendement tels que le gain de
+     temps et la réduction de la charge administrative liée à l'examen est effectué aﬁn
+      de s'assurer que l'ORDII améliore l'eﬃcacité sans élargir son champ
+       d'application.
+   •  Supervision humaine obligatoire : les décideurs examinent tous les résultats de
+        l’ORDII, valident les éléments de preuve présentés et conservent l'entière
+       responsabilité de déterminer l'admissibilité. Si le résumé produit par l'ORDII
+      permet à un décideur de prendre une décision favorable, le dossier peut être
+        traité plus rapidement (c'est-à-dire sans examen manuel complet de tous les
+      documents). Si le dossier n'est pas approuvé sur la base de l'examen du résumé,
+        le décideur examinera l'ensemble du dossier manuellement avant de ﬁnaliser sa
+       décision.
+   •  Rétroaction et amélioration continue : les commentaires des utilisateurs et les
+      évaluations de la qualité permettent d'aﬃner le processus de synthèse. Les
+      améliorations visent uniquement à accroître la précision, la clarté et la facilité
+        d'utilisation.
+8. Veuillez décrire tous les compromis envisagés lors de la conception du projet pour
+concilier les intérêts de la clientèle et les objectifs du programme.
+La mise en place de l’ORDII nécessite de trouver un équilibre entre les objectifs du
+programme, qui consistent à améliorer l'eﬃcacité et à réduire les délais de traitement,
+et la protection des intérêts des clients et le maintien de la conﬁance dans le processus
+d'évaluation des prestations d'invalidité. Si l'ORDII offre des avantages administratifs
+considérables, il comporte également plusieurs inconvénients potentiels qui doivent
+être gérés avec soin. L'un des principaux enjeux concerne la qualité des décisions et la
+conﬁance des clients. Il existe un risque que les résumés automatisés omettent ou
+décrivent de manière insuﬃsante des informations pertinentes, et certains clients ou
+parties prenantes peuvent avoir des inquiétudes quant à l'utilisation de l'IA dans le
+processus d'évaluation. Pour parer à ces risques, Anciens Combattants Canada a mis
+en place plusieurs mesures de protection.
+   •  Tous les résumés doivent être vériﬁés par un décideur humain.
+   •  Les documents sources justiﬁcatifs doivent être examinés avant toute prise de
+       décision.
+
+                                                                  page 8 / 37
+   •  Les résumés comprennent des liens directs vers les documents sources aux ﬁns
+      d’assurance de la transparence et de l'exactitude.
+   •  Lorsqu'un résumé ne contient pas suﬃsamment d'informations pour justiﬁer une
+      décision favorable, le décideur doit procéder à un examen manuel complet du
+      dossier dans son intégralité. Ces mesures font en sorte que les gains d'eﬃcacité
+      ne compromettent pas l'exactitude, l'équité ou la conﬁance dans le processus
+       décisionnel.
+Il faut également tenir compte de la conﬁdentialité et de la sécurité. Aﬁn de protéger les
+renseignements des clients, avant la mise en oeuvre, le Ministère a procédé à des
+examens de conformité rigoureux et s'est assuré du respect total des normes du
+gouvernement du Canada en matière de conﬁdentialité, de sécurité et d'IA responsable.
+9. Veuillez décrire les améliorations, les bienfaits ou les avantages que votre ministère
+entend obtenir de l'utilisation d'un système automatisé.
+La norme de service d'ACC pour les prestations d'invalidité exige que 80 % des
+décisions soient rendues dans un délai de 16 semaines. Au cours de l'exercice 2024-
+2025, le respect de cette norme a diminué, passant de 69 % à 47 %, en raison de
+l'augmentation de la demande. Bien qu'ACC ait amélioré son eﬃcacité interne, le
+nombre de demandes reçues a dépassé les gains d'eﬃcacité internes. Grâce à des
+initiatives de modernisation, notamment la mise en oeuvre de l’ORDII, ACC sera mieux à
+même de respecter les normes de service et de gérer le volume croissant de demandes.
+Les tests indiquent que l'ORDII peut réduire de plus de 90 % le nombre de pages à
+examiner et diminuer d'environ 50 % le temps moyen nécessaire pour examiner une
+demande et les pièces justiﬁcatives. L'ORDII aidera donc les décideurs à respecter la
+norme de service en améliorant l'eﬃcacité, en réduisant les délais d'exécution et en
+maintenant la qualité des décisions.
+10. Quels sont les indicateurs, les normes de service ou les objectifs de rendement de
+votre programme?
+La norme de service actuelle pour le programme de prestations d'invalidité indique que
+80 % des décisions relatives aux prestations d'invalidité doivent être prises dans un
+délai de 16 semaines pour les premières demandes.
+11. Quel est votre niveau de rendement par rapport à ces indicateurs, à ces normes ou
+à ces objectifs?
+Le niveau de rendement pour l'exercice 2024-2025 était de 47 %.
+12. À votre avis, en quoi le système améliorera-t-il votre rendement par rapport aux
+indicateurs, aux normes de service ou aux objectifs de rendement établis pour votre
+programme?
+Le Ministère s'attend à ce que l'ORDII réduise les délais moyens de traitement des
+demandes de prestations d'invalidité en automatisant l'examen des documents, qui
+
+                                                                  page 9 / 37
+exige beaucoup de travail. Bien qu'il soit diﬃcile de prévoir avec précision l'incidence de
+l’ l'ORDII sur les résultats globaux en matière de normes de service, étant donné que le
+volume de demandes dépend de facteurs indépendants de la volonté du Ministère, les
+gains de productivité devraient permettre d'augmenter la capacité de traitement. Cela
+aidera Anciens Combattants Canada à respecter les normes de service et à gérer le
+volume croissant de demandes.
+13. D'autres processus non automatisés ont-elles été envisagées?
+Oui [ Points: +0 ]
+14. Si oui, pourquoi l'automatisation a-t-elle été la solution choisie?
+L'automatisation partielle a été choisie comme option privilégiée, car les décisions
+relatives aux prestations d'invalidité nécessitent l'examen d'un grand volume de
+documents et ont des répercussions directes sur la sécurité ﬁnancière, l'accès aux
+services de santé et le bien-être général des vétérans.
+Une demande moyenne, y compris les pièces justiﬁcatives telles que les dossiers
+militaires, contient plus de 800 pages que le décideur d'ACC doit examiner avant de
+prendre une décision. L'automatisation complète du processus décisionnel ne serait
+pas appropriée, compte tenu de la nécessité de jugement humain, de compréhension du
+contexte et de responsabilisation dans chaque cas. En outre, ni la Loi sur les pensions
+ni la Loi sur le bien-être des anciens combattants ne confèrent au Ministère le pouvoir
+légal d'utiliser un système électronique, notamment un système automatisé, pour
+prendre une décision sans intervention humaine.
+L'automatisation partielle permet à Anciens Combattants Canada d'appliquer
+l'automatisation de manière proportionnée à la prise en charge de tâches
+administratives telles que la numérisation, l'identiﬁcation et l'organisation des
+informations pertinentes, tout en conservant la supervision humaine et le pouvoir
+décisionnel à toutes les étapes. Les décideurs formés d'ACC restent responsables de
+l'examen des éléments de preuve, de l'application de la législation et des politiques, de
+l'exercice de leur jugement professionnel et de la prise de décision ﬁnale pour chaque
+demande. Cette approche améliore l'eﬃcacité et la rapidité tout en assurant la
+transparence, l'équité et la responsabilité des décisions, qui touchent directement les
+vétérans.
+15. Quelle serait la conséquence du non-déploiement du système?
+   •  La qualité du service ne serait pas aussi élevée
+   •  Les objectifs de rendement liés à la prestation du service ne pourraient pas être
+       atteints
+   •  La prestation du service ne pourrait pas être effectuée en temps voulu ou de
+      manière eﬃcace
+
+
+
+                                                                 page 10 / 37
+Proﬁl de risque
+16. Le projet s'inscrit-il dans un domaine sujet à un examen public approfondi (par
+exemple, en raison de préoccupations liées à la protection de la vie privée) et/ou à des
+litiges fréquents?
+Oui [ Points: +3 ]
+17. Des groupes privés d'équité sont-ils desservis dans ce secteur d'activité?
+Oui [ Points: +3 ]
+18. Veuillez indiquer les groupes privés d'équité desservis et décrire les stratégies
+d'atténuation qui seront prises pour éviter de leur causer préjudice.
+Grâce à l'application de l'analyse comparative entre les sexes plus (ACS+), Anciens
+Combattants Canada a examiné les répercussions potentielles sur les groupes privés
+d’équité, notamment les femmes, les Autochtones, les personnes handicapées, les
+membres des communautés 2ELGBTQI+ et les minorités visibles. L'ORDII est conçu
+pour favoriser l'eﬃcacité administrative en résumant les documents de demande et ne
+fait aucune distinction fondée sur les caractéristiques personnelles. Il n'automatise pas
+les décisions ; celles-ci demeurent entièrement prises par des humains. Les décideurs
+sont tenus de vériﬁer les résumés par rapport aux documents sources et d'appliquer la
+législation et les politiques de manière uniforme, ce qui atténue le risque de résultats
+défavorables ou inéquitables.
+La population principale desservie par l'ORDII est celle des vétérans des Forces armées
+canadiennes qui demandent des prestations d'invalidité en raison de problèmes de
+santé physique ou mentale. Cette population comprend une proportion importante de
+groupes privés d’équité, notamment les personnes handicapées, les femmes, les
+vétérans autochtones, les vétérans 2ELGBTQI+ et les minorités visibles. En particulier,
+les Autochtones et les personnes 2ELGBTQI+ sont surreprésentés dans la population
+des vétérans par rapport à la population générale canadienne, selon les données du
+recensement de 2021 et de l'Enquête sur la santé des anciens combattants canadiens
+de 2022. De même, les vétérans handicapés sont nettement surreprésentés par rapport
+à la population générale canadienne dans tous les groupes d'âge analysés par
+Statistique Canada (c'est-à-dire les 17 à 44 ans, les 45 à 64 ans et les 65 ans et plus)
+dans l'Enquête canadienne sur l'incapacité de 2022. En réduisant le temps nécessaire
+pour traiter les demandes de prestations d'invalidité, l'outil permet à tous les vétérans, y
+compris les groupes privés d’équité, d'accéder plus rapidement à une aide ﬁnancière, à
+des services de santé et à d'autres prestations.
+De plus, l'amélioration de la gestion de la charge de travail et de l'eﬃcacité du
+traitement devrait permettre d'atteindre plus régulièrement les normes de service et de
+réduire les retards dans le traitement des demandes. L'utilisation d'outils modernisés
+tels que l'ORDII renforce également la capacité du Ministère à surveiller la prestation
+des services à l'aide de données administratives et démographiques, y compris
+l'analyse fondée sur l’ACS+. Au ﬁl du temps, ces améliorations favorisent un accès
+
+                                                                 page 11 / 37
+équitable aux prestations et aux services, en particulier pour les populations vétérans
+privés d’équité, dont la représentation au sein des Forces armées canadiennes a
+augmenté et devrait continuer d’augmenter dans l'avenir.
+19. Certains groupes de population ne devraient-ils pas être exclus de l'application du
+système décisionnel automatisé?
+Non [ Points: +0 ]
+20. Le système a-t-il été soumis à une évaluation visant à déterminer s’il est
+susceptible d’accentuer les diﬃcultés auxquelles sont confrontées les personnes en
+situation de handicap ou d’en créer de nouvelles, et des mesures sont-elles en place
+pour résoudre les problèmes cernés?
+Une évaluation a été effectuée et aucune diﬃculté n’a été cernée. [ Points: +0 ]
+21. Le recours au système décisionnel automatisé pourrait-il accroître le risque
+d'exploitation malveillants (par exemple, des fraudes ﬁnancières)?
+Non [ Points: +0 ]
+22. Des problèmes ou des préjudices potentiels liés à l'approche utilisée pour la
+prestation de services ont-ils été soulevés par des personnes utilisant le service ou
+celles les représentant, les médias ou des membres de comités d'audit ou
+parlementaires?
+Oui [ Points: +1 ]
+23. Veuillez préciser le problème ou le préjudice en question, le groupe qui en a fait
+état et la manière dont il a été traité.
+L'approche actuelle de prestation de services manuelle pour l'examen des documents
+liés aux demandes de prestations d'invalidité a fait l'objet de critiques soutenues de la
+part des vétérans, de leurs représentants, des organisations de défense des vétérans,
+des médias et des comités parlementaires. Ces groupes ont constamment fait part de
+leurs préoccupations concernant les inconvénients importants liés au processus actuel,
+notamment les délais d'attente excessifs pour les décisions relatives aux prestations
+d'invalidité, qui dépassent souvent de loin les normes de service établies, et un arriéré
+persistant et croissant à l’origine de retards qui affectent le bien-être des vétérans en
+nuisant à leur accès à l'aide ﬁnancière et aux services de santé.
+Le Ministère met en oeuvre l'ORDII aﬁn de réduire l'examen fastidieux des documents et
+d'améliorer l'eﬃcacité globale. Cette approche devrait réduire les délais de traitement et
+aider Anciens Combattants Canada à respecter sa norme de service, qui consiste à
+traiter 80 % des premières demandes dans un délai de 16 semaines sans compromettre
+la qualité.
+24. Avez-vous soumis un cas conceptuel au Secrétariat du Conseil du Trésor du
+Canada (SCT) et présenté le projet au conseil d'examen de l'architecture intégrée du
+gouvernement du Canada?
+
+                                                                 page 12 / 37
+Oui [ Points: +0 ]
+
+Autorité de projet
+25. Aurez-vous besoin d'une nouvelle autorisation stratégique ou légale pour ce
+projet?
+Non [ Points: +0 ]
+26. Précisez votre réponse.
+Le ministère des Anciens Combattants n'a pas besoin d'une nouvelle politique ou
+autorisation juridique pour mettre en oeuvre l'ORDII, car celui-ci ne modiﬁe pas les
+règles d'admissibilité aux prestations d'invalidité, le pouvoir décisionnel, les procédures
+de prise de décision, les droits des vétérans ou les mécanismes de recours.
+
+À propos du système
+27. Parmi les capacités suivantes, cochez celles qui s'appliquent à votre système.
+Analyse du texte et de la parole : Analyse de vastes jeux de données pour la
+reconnaissance, le traitement et la catégorisation de textes, de la parole et de la voix,
+ainsi que la formulation de recommandations fondées sur la catégorisation
+Optimisation des processus et automatisation des ﬂux de travail : Analyse de vastes
+jeux de données pour le recensement d'anomalies ou de modèles de grappes, la
+prévision des résultats ou de méthodes d'optimisation et l'automatisation de ﬂux de
+travail particuliers
+Génération de contenu : Analyse de vastes jeux de données pour l'établissement de
+catégories, le traitement, le triage, la personnalisation et la présentation de contenus
+adaptés à des contextes particuliers
+Reconnaissance d'images et d'objets : Analyse de vastes jeux de données pour
+l'automatisation de la reconnaissance, de la classiﬁcation et du contexte associés à une
+image ou à un objet
+28. Qui a conçu le système?
+Votre organisation [ Points: +0 ]
+29. Qui a conﬁguré le système?
+Votre organisation [ Points: +0 ]
+30. Le système est-il:
+conçu sur mesure [ Points: +1 ]
+31. Des personnes responsables de la conception, de la mise au point et de l'entretien
+du système ont-elles été désignées au sein de votre organisation?
+
+                                                                 page 13 / 37
+Oui [ Points: +0 ]
+32. Un groupe de votre organisation est-il chargé de recenser les améliorations
+possibles et de les apporter?
+Oui [ Points: +0 ]
+33. Votre système est-il conforme aux dispositions appropriées de la norme CAN/ASC
+EN 301 549:2024, Exigences d'accessibilité pour les produits et services des
+technologies de l'information et de la communication (TIC)?
+Oui [ Points: +0 ]
+34. Une solution non automatisée est-elle également prévue et fonctionnelle au cas où
+le système décisionnel automatisé serait indisponible pendant une période prolongée?
+Oui [ Points: +0 ]
+35. Une procédure permettant d'octroyer, de surveiller et de révoquer une autorisation
+d'accès au système a-t-elle été établie?
+Oui [ Points: +0 ]
+36. L'incidence de la mise au point, de l'exploitation et de l'entretien du système sur la
+durabilité d'un écosystème environnemental sera :
+faible, voire nulle [ Points: +1 ]
+37. Veuillez expliquer votre réponse.
+L'ORDII aura peu ou pas d'incidence sur l'écosystème environnemental, car il sert à
+numériser les demandes de prestations d'invalidité et les pièces justiﬁcatives, et à
+rassembler les éléments de preuve pertinente dans un résumé structuré, traçable
+vériﬁable et précis à l'intention du décideur.
+
+À propos de l'algorithme
+38. L'algorithme utilisé sera un secret (commercial)
+Oui [ Points: +1 ]
+39. Le processus algorithmique sera diﬃcile à interpréter ou à expliquer
+Non [ Points: +0 ]
+40. L'algorithme est (cochez toutes les réponses qui s'appliquent) :
+fondé sur des modèles de données déterminés par le modèle d'IA (par exemple, réseau
+neuronal et apprentissage profond) [ Points: +1 ]
+41. Si le système décisionnel automatisé est fondé sur un modèle, l'inférence du
+modèle est-elle (cochez toutes les réponses qui s'appliquent) :
+
+                                                                 page 14 / 37
+probabiliste (explique les données en appliquant plusieurs modèles) [ Points: +1 ]
+42. Le modèle est :
+génératif (par exemple, analyse discriminante linéaire et classiﬁcation naïve
+bayésienne) [ Points: +1 ]
+43. Veuillez décrire le modèle utilisé.
+L'ORDII exploite une architecture « Retrieval-Augmented Generation » (génération
+augmentée par la récupération) hébergée entièrement dans l'environnement
+infonuagique sécurisé Microsoft Azure de VAC. Le système fonctionne en quatre
+étapes distinctes :
+1. Ingestion et reconnaissance de l'écriture manuscrite (la reconnaissance optique de
+   caractères - ROC)
+    1.1. Le système récupère d'abord les dossiers médicaux et les documents de
+      demande dans le référentiel d'images numériques (DIGIMG) d'ACC. Il utilise
+      Azure AI Document Intelligence pour séparer les documents en pages
+        individuelles et extraire le texte lisible par machine. Ce modèle est capable de
+       reconnaître et de numériser le contenu manuscrit, ainsi que de cerner des
+      éléments structurels tels que les formulaires, les tableaux et les en-têtes.
+2. Récupération d'informations (couche « Recherche »)
+    2.1. Le texte et les métadonnées traités sont temporairement indexés dans un index
+      Azure AI Search. Lorsqu'un diagnostic médical spéciﬁque et un code médical
+      connexe sont fournis, le système interroge cet index pour récupérer uniquement
+        les pages et les paragraphes spéciﬁques pertinents pour cette affection. De
+       cette façon, l'IA se concentre exclusivement sur les dossiers existants du client.
+3. Résumé génératif (le LLM)
+    3.1. Le contenu récupéré est transmis comme contexte au service Azure OpenAI (qui
+         utilise actuellement le modèle GPT-5).
+       3.1.1. Fonction : le modèle cerne, organise et résume les éléments de preuve liés
+         à l’affection faisant l’objet de la demande.
+       3.1.2. Contrainte : le modèle fonctionne selon des instructions strictes visant
+          uniquement à résumer ; il n'applique pas de règles d’admissibilité et
+            n'attribue pas de résultats.
+       3.1.3. Traçabilité : le résultat ﬁnal comprend des hyperliens reliant directement
+         chaque point résumé à la page source dans le ﬁchier d'origine.
+4. Cycle de vie et sécurité des données
+
+
+
+                                                                 page 15 / 37
+    4.1. Conservation zéro : une fois le résumé généré, toutes les données temporaires
+        traitées par l'IA, y compris le contenu vectorisé du document et l'index de
+       recherche, sont supprimées.
+    4.2. Stockage : le résumé ﬁnal est enregistré en format PDF dans le référentiel
+      DIGIMG et dans le dossier électronique du client.
+    4.3. Gouvernance : aucun partenaire externe n’intervient dans le fonctionnement du
+       modèle, et les dossiers médicaux (y compris ceux du MDN) sont accessibles
+      uniquement par l'intermédiaire des référentiels autorisés d'ACC.
+L'ORDII ne prend aucune décision.
+44. Expliquez pourquoi vous avez choisi ce modèle.
+Il a été choisi en fonction de critères de coût, de l'inclusion d'informations sur la santé et
+des résultats des tests.
+45. L'algorithme continuera-t-il à apprendre et à évoluer à mesure qu'il est utilisé?
+Non [ Points: +0 ]
+46. L'algorithme tient-il compte des caractéristiques protégées lors de la prise de
+décisions ou de la formulation de recommandations?
+Oui [ Points: +2 ]
+47. Veuillez préciser les raisons pour lesquelles les caractéristiques protégées sont
+prises en compte et les mesures d'atténuation mises en place pour résoudre les
+problèmes de biais ou de discrimination, le cas échéant.
+Les caractéristiques personnelles telles que le handicap, l'âge et le sexe sont des
+renseignements essentiels dans le processus d'évaluation des prestations d'invalidité.
+Ces facteurs ont une incidence directe sur l'admissibilité, les droits et l'évaluation en
+selon la législation et les politiques en vigueur. Comme ils sont essentiels à la
+compréhension de la nature de la demande, l'ORDII doit traiter et reﬂéter ces
+renseignements lorsqu'il produit un résumé des documents dans le cadre de la
+demande.
+48. Avez-vous vériﬁé si les variables sur lesquelles le système fonde ses décisions ou
+ses recommandations pourraient être des substituts de caractéristiques protégées?
+Non [ Points: +2 ]
+49. Veuillez préciser les raisons pour lesquelles vous n'avez pas vériﬁé si les variables
+peuvent être des substituts de caractéristiques protégées.
+Le Ministère n'a pas évalué si certaines variables pouvaient servir d'indicateurs pour les
+caractéristiques protégées, car ces caractéristiques sont déjà explicitement incluses
+dans les informations qui doivent être examinées dans le cadre du processus
+d'évaluation des prestations d'invalidité. Étant donné que les caractéristiques protégées
+
+                                                                 page 16 / 37
+doivent être prises en compte directement et ne peuvent être remplacées ou déduites à
+l'aide d'indicateurs lors de la synthèse des informations contenues dans les dossiers
+médicaux du service et d'autres documents, une analyse des indicateurs ne serait ni
+pertinente ni applicable dans ce contexte.
+
+À propos de la décision
+50. Veuillez décrire les décisions administratives qui seront appuyées ou exécutées
+par l'algorithme.
+Lorsque le ministère des Anciens Combattants du Canada reçoit une demande de
+prestations d'invalidité, celle-ci est enregistrée dans les systèmes ministériels et les
+dossiers médicaux et de services à l'appui sont rassemblés à partir de multiples
+sources. Une fois que le dossier est complet, il est attribué à un décideur formé, qui
+examine la documentation exhaustive aﬁn cerner les informations pertinentes liées à
+l'état de santé qui fait l’objet de la demande. Le décideur examine les éléments de
+preuve tels que les dossiers médicaux militaires, les diagnostics médicaux, les dates
+des blessures ou de l’apparition des symptômes, la continuité des symptômes et 'autres
+faits pertinents aﬁn de déterminer l'admissibilité et, le cas échéant, d'évaluer le niveau
+de prestation conformément à la législation, à la réglementation et à la politique.
+L'ORDII ne modiﬁe pas ces étapes et ne prend pas de décisions en matière de droits. Il
+soutient plutôt la phase d'examen des documents en numérisant, en organisant et en
+résumant de grands volumes de documents aﬁn d'aider les décideurs à cerner plus
+eﬃcacement les éléments de preuve pertinente. Les décideurs humains continuent
+d'examiner le dossier complet, d'appliquer la législation et les politiques, d'exercer leur
+jugement professionnel et de prendre la décision ﬁnale dans tous les cas.
+
+
+51. La décision s'applique-t-elle à l'une ou l'autre des catégories ci-dessous (cochez
+toutes les réponses qui s'appliquent)? Il convient de préciser que les exemples cités
+entre parenthèses ne sont pas exhaustifs.
+Aide sociale (prestations d'assurance-emploi, d'invalidité ou pour le logement et
+programmes pour les enfants ou les aînés) [ Points: +1 ]
+
+Évaluation de l'incidence
+52. Parmi les énoncés suivants, lequel décrit le mieux le type d'automatisation
+envisagé?
+Automatisation partielle (le système contribuera à la prise de décision administrative en
+fournissant aux fonctionnaires des évaluations, des recommandations, des décisions
+intermédiaires ou d'autres extrants) [ Points: +2 ]
+53. Veuillez décrire le rôle du système dans le cadre du processus décisionnel.
+
+                                                                 page 17 / 37
+Le principal déﬁ dans la prise de décision relative aux prestations d'invalidité est le
+volume de documents à examiner. Une demande moyenne, y compris les pièces
+justiﬁcatives telles que les dossiers militaires, contient plus de 800 pages ; le décideur
+doit les examiner aﬁn de cerner les faits liés à l’affection faisant l’objet de la demande
+avant de prendre une décision.
+L'ORDII soutient cette étape du processus en numérisant, en organisant et en résumant
+de grands volumes de documents de demande et de pièces justiﬁcatives. Le système
+met en évidence et rassemble les éléments de preuve pertinente dans un résumé
+structuré, traçable et précis à l'intention du décideur. Chaque résumé comprend des
+liens vers les documents sources originaux, et tous les documents numérisés
+demeurent accessibles aux ﬁns de consultation, ce qui favorise la transparence et la
+vériﬁcation.
+L'ORDII ne modiﬁe pas le processus d'évaluation des prestations d'invalidité et ne prend
+pas de décisions. Si un résumé ne contient pas suﬃsamment d'informations pour
+appuyer une décision favorable, le décideur procède à un examen complet du dossier
+aﬁn de s'assurer qu'aucune information essentielle n'a été négligée. Dans tous les cas,
+les décideurs formés d'ACC examinent l'ensemble des éléments de preuve, appliquent
+la législation et les politiques, exercent leur jugement professionnel et prennent la
+décision ﬁnale.
+En soutenant les étapes d'examen des documents et d'identiﬁcation des
+renseignements du processus, l'ORDII aide les décideurs à travailler plus eﬃcacement
+et aide Anciens Combattants Canada à respecter les normes de service et à réduire les
+délais d'exécution, sans compromettre la qualité des décisions ni la responsabilité.
+54. Les décisions et les analyses qui exigent du jugement ou du discernement seront-
+elles prises en charge par le système?
+Non [ Points: +0 ]
+55. Veuillez préciser.
+L'ORDII ne prend pas de décisions relatives aux prestations d'invalidité et n'effectue pas
+d'évaluations nécessitant l’exercice de jugement ou de discrétion. La Loi sur les
+Pensons et la Loi sur le bien-être des anciens combattants ne prévoient aucune autorité
+légale permettant à un système électronique, y compris un système automatisé, de
+prendre une décision sans intervention humaine. Toutes les décisions relatives aux
+prestations d'invalidité restent donc la responsabilité des décideurs d'ACC.
+56. Ce projet aura-t-il une incidence importante sur les membres du personnel, que ce
+soit en ce qui a trait à leur nombre ou à leur rôle?
+Oui [ Points: +2 ]
+57. Veuillez décrire les critères utilisés pour l'analyse des données de la clientèle et
+les procédures appliquées pour les traiter.
+
+
+                                                                 page 18 / 37
+   •  Formation sur l'ingénierie des modèles/invites
+   •  Détection des biais
+   •  Mise à l’essai des données et des cas types avec des experts
+   •  LLM spéciﬁque
+   •  Rétroaction des utilisateurs
+58. Veuillez décrire le résultat produit par le système et les renseignements utiles à
+leur interprétation dans le cadre du processus de décision administrative.
+L'ORDII produit un résumé qui est un sous-ensemble d'un ensemble plus large de
+documents en cours d'examen, notamment la demande de prestations d'invalidité, les
+dossiers médicaux et les questionnaires médicaux. L'ORDII examine la demande et les
+pièces justiﬁcatives, puis met en évidence, rassemble et présente au décideur les
+éléments de preuve pertinente dans un format clair, structuré et traçable. Chaque
+résumé comprend des liens vers les documents sources aﬁn d’en assurer la
+transparence et l'exactitude, et tous les documents justiﬁcatifs qui ont été numérisés
+par l’ORDII peuvent être consultés par le décideur. Si le résumé ne contient pas
+suﬃsamment d'informations pour la prise d’une décision favorable, le décideur
+procédera à un examen complet de l'ensemble du dossier avant de prendre une
+décision aﬁn de s'assurer qu'aucune information essentielle n'a été négligée.
+L'ORDII ne prend pas de décisions concernant les prestations d'invalidité et ne
+détermine pas l'admissibilité à ces prestations. Toutes les décisions relatives aux
+prestations d'invalidité continueront d'être prises par les décideurs d'Anciens
+Combattants Canada, qui vériﬁeront les faits, conﬁrmeront l'application des politiques
+et ﬁnaliseront la décision.
+59. Le système effectuera-t-il une évaluation ou une autre opération qui n'est pas
+actuellement exécutée par le personnel?
+Non [ Points: +0 ]
+60. Le système est-il utilisé par une partie de l'organisation autre que celle où il a été
+conçu?
+Oui [ Points: +2 ]
+61. Les incidences de la décision sont-elles réversibles?
+Réversible [ Points: +1 ]
+62. Combien de temps les incidences de la décision dureront-elles?
+Les incidences risquent fort probablement d'être brèves [ Points: +1 ]
+
+
+
+
+                                                                 page 19 / 37
+63. Veuillez préciser les raisons pour lesquelles les incidences de la décision sont
+telles qu'elles ont été déﬁnies, de même que les risques recensés et les mesures
+d'atténuation mises en place.
+L'ORDII assure une automatisation partielle limitée aux tâches administratives, plus
+précisément l'extraction, l'organisation et la synthèse des informations contenues dans
+les demandes de prestations d'invalidité et les pièces justiﬁcatives à l'intention des
+décideurs. Toutes les décisions relatives aux prestations d'invalidité restent
+entièrement prises par des êtres humains. Les décideurs conservent l'autorité, la
+responsabilité et le pouvoir discrétionnaire de chaque décision.
+Le résumé produit par l'ORDII est examiné par le décideur. Chaque résumé comprend
+des hyperliens vers les documents sources originaux aﬁn de permettre leur vériﬁcation.
+Si le résumé ne fournit pas suﬃsamment d'informations, le décideur procède à un
+examen manuel complet du dossier avant de prendre une décision.
+64. Les incidences de la décision sur les droits et libertés des personnes pourraient
+être lessuivants :
+Incidence faible ou nulle [ Points: +1 ]
+65. Veuillez préciser la façon dont la portée des incidences a été déterminée. Indiquez
+les cadres des droits de la personne qui ont été évalués, les risques qui ont été
+recensés ainsi que les mesures d'atténuation qui ont été mises en place.
+L'ORDII n'a que peu ou pas d'incidence sur les droits ou libertés des personnes. Le
+système offre une automatisation partielle limitée aux tâches administratives, plus
+précisément l'extraction, l'organisation et le résumé des renseignements contenus dans
+les demandes de prestations d'invalidité et les documents justiﬁcatifs à l'intention des
+décideurs.
+Toutes les décisions relatives aux prestations d'invalidité restent entièrement prises par
+des humains. Les décideurs conservent toute leur autorité, leur responsabilité et leur
+pouvoir discrétionnaire pour chaque décision. Ils peuvent consulter le résumé aux ﬁns
+d’eﬃcacité, mais ils continuent d'avoir pleinement accès au dossier complet examiné
+par l'outil de synthèse des demandes et peuvent vériﬁer de manière indépendante tous
+les faits et tous les éléments de preuve.
+66. Les incidences de la décision sur l'égalité, la dignité, la vie privée et l'autonomie
+despersonnes pourraient être les suivants :
+Incidence faible ou nulle [ Points: +1 ]
+67. Veuillez préciser les raisons pour lesquelles les incidences de la décision sont
+telles qu'elles ont été déﬁnies, de même que les risques recensés et les mesures
+d'atténuation mises en place.
+L'ORDII n'a que peu ou pas d'incidence sur l'égalité, la dignité, la vie privée ou
+l'autonomie des personnes. Il effectue une automatisation administrative limitée en
+
+                                                                 page 20 / 37
+organisant et en résumant les renseignements contenus dans les demandes de
+prestations d'invalidité et les pièces justiﬁcatives, mais il ne prend pas de décision et ne
+remplace pas le jugement des décideurs d'Anciens Combattants Canada.
+Toutes les décisions restent entièrement prises par des humains. Les décideurs
+conservent un accès complet à tous les documents sources, peuvent vériﬁer de
+manière indépendante toutes les informations et exercer leur entière discrétion. Les
+renseignements personnels sont utilisés uniquement pour l'administration des
+demandes de prestations d'invalidité et sont traités conformément à la Loi sur la
+protection des renseignements personnels, à la Loi sur les pensions, à la Loi sur le bien-
+être des anciens combattants et aux exigences ministérielles en matière de protection
+de la vie privée.
+68. Les incidences de la décision sur la santé et le bien-être des personnes pourraient
+être les suivants :
+Incidence faible ou nulle [ Points: +1 ]
+69. Veuillez préciser les raisons pour lesquelles les incidences de la décision sont
+telles qu'elles ont été déﬁnies, de même que les risques recensés et les mesures
+d'atténuation mises en place.
+L'ORDII devrait avoir peu ou pas d'incidence sur la santé et le bien-être des personnes.
+L'ORDII ne prend pas de décisions concernant les prestations d'invalidité, et toutes les
+décisions restent la responsabilité des décideurs d'Anciens Combattants Canada, qui
+conservent toute leur autorité et tout leur pouvoir discrétionnaire.
+Le résumé produit par l'ORDII est examiné par le décideur et n'est utilisé que lorsqu'il
+appuie une décision favorable. Chaque résumé comprend des hyperliens vers les
+documents sources originaux aﬁn d’en permettre la vériﬁcation. Si le résumé ne fournit
+pas suﬃsamment d'informations, le décideur procédera à un examen manuel complet
+du dossier avant de prendre une décision.
+70. Les incidences de la décision sur les intérêts économiques des personnes
+pourraient être les suivants :
+Incidence faible ou nulle [ Points: +1 ]
+71. Veuillez préciser les raisons pour lesquelles les incidences de la décision sont
+telles qu'elles ont été déﬁnies, de même que les risques recensés et les mesures
+d'atténuation mises en place.
+L'ORDII n'a que peu ou pas d'incidence sur les intérêts économiques des particuliers.
+Bien que les prestations d'invalidité soient de nature monétaire, l'ORDII ne prend pas de
+décisions, ne détermine pas l'admissibilité et ne remplace pas le jugement humain.
+Toutes les décisions relatives aux prestations d'invalidité restent entièrement sous
+l'autorité des décideurs d'Anciens Combattants Canada.
+
+
+
+                                                                 page 21 / 37
+72. Les incidences de la décision sur la pérennité d'un écosystème environnemental
+pourraient être les suivants :
+Incidence faible ou nulle [ Points: +1 ]
+73. Veuillez préciser les raisons pour lesquelles les incidences de la décision sont
+telles qu'elles ont été déﬁnies, de même que les risques recensés et les mesures
+d'atténuation mises en place.
+L’ORDII n'aura que peu ou pas d'incidence sur la durabilité à long terme d'un
+écosystème environnemental, car il s'agit d'un outil administratif purement numérique.
+74. Avez-vous évalué le rendement du système pour les personnes ayant plusieurs
+facteurs d’identité personnels et intersectionnels (par exemple, le genre, l’âge, la race,
+la langue, l’origine ethnique ou le handicap) aﬁn de vous assurer que les décisions et
+les incidences sont équitables pour un groupe diversiﬁé de personnes, et les
+disparités relevées ont-elles été corrigées?
+Une évaluation a été effectuée et aucune différence de rendement n’a étérelevée. [
+Points: +0 ]
+75. Décrivez l’approche que vous avez adoptée pour évaluer le rendement du système.
+Au cours de plusieurs séries de tests, Anciens Combattants Canada a utilisé un sous-
+ensemble de demandes (affections) représentant le sexe, l'âge et la langue de manière
+à reﬂéter les mêmes facteurs que ceux utilisés pour l'ensemble des données soumises
+pour l'année complète. Il n’y aucune indication d’injustice à l'égard de groupes
+particuliers.
+76. Avez-vous testé le rendement du système auprès de personnes ayant divers
+handicaps?
+Oui [ Points: +0 ]
+77. Si oui, décrivez les écarts de rendement constatés et les mesures d'atténuation
+mises en place pour y remédier.
+Au cours de plusieurs séries de tests, nous avons utilisé un sous-ensemble de
+demandes (affections) représentant le sexe, l'âge, la langue et la situation
+géographique, qui reﬂète les mêmes facteurs que les données globales soumises pour
+l'ensemble de l'année. Aucune différence n'a été constatée dans le rendement du
+système.
+78. Les incidences des écarts de rendement que vous avez décrites préalablement
+seront-elles plus importantes pour certaines personnes ou certains groupes de
+personnes?
+Non [ Points: +0 ]
+79. Veuillez expliquer votre réponse.
+
+
+                                                                 page 22 / 37
+Aucun groupe de clients susceptible de subir des répercussions négatives liées à
+l'utilisation de l’ORDII n'a été identiﬁé. Toutes les décisions restent entièrement prises
+par des êtres humains. Les décideurs peuvent utiliser le résumé pour étayer leur
+examen, mais ils conservent un accès complet à l'ensemble des documents examinés
+par l'ORDII et peuvent vériﬁer de manière indépendante toutes les informations. L'ORDII
+ne limite pas la capacité d'un décideur à exercer son pouvoir discrétionnaire, ni les
+éléments de preuve disponibles pour examen.
+80. Quelle proportion de la clientèle sera prise en charge par le système?
+76 % à 99 % [ Points: +0 ]
+81. Les personnes ou les groupes de personnes qui ne seront pas pris en charge par le
+système seront-elles pénalisées?
+Oui [ Points: +1 ]
+82. Veuillez expliquer votre réponse.
+Les demandes qui ne sont pas traitées à l'aide de l’ORDII ne bénéﬁcieront pas de délais
+d'exécution plus courts et il faudra plus de temps pour prendre une décision relative à
+leurs prestations d'invalidité.
+83. L'incidence sur les personnes qui ont été indûment prises en charge ou exclues par
+le système pourrait être :
+faible, voire nulle [ Points: +1 ]
+84. Expliquez pourquoi l'incidence d'une erreur quant à la prise en charge ou à
+l'exclusion d'une personne par le système est telle que vous l'avez mentionnée.
+Rien n'indique que des personnes seront injustement incluses ou omises par l'ORDII.
+L'ORDII offre une automatisation partielle limitée aux tâches administratives, plus
+précisément l'extraction, l'organisation et le résumé des renseignements contenus dans
+les demandes de prestations d'invalidité et les documents justiﬁcatifs. Il ne prend pas
+de décisions, ne détermine pas l'admissibilité et ne génère pas de résultats qui
+inﬂuencent les décisions nécessitant l’exercice de jugement ou de discrétion.
+Étant donné que l'ORDII ne remplace pas la prise de décision humaine, ne limite pas
+l'accès à l'information et ne génère pas de décisions susceptibles d'affecter les
+prestations, les droits ou les avantages d'une personne, son utilisation n’entraîne pas le
+risque que des personnes soient injustement incluses ou ignorées.
+
+À propos des données
+85. Les données saisies dans le système comprendront-elles des renseignements
+personnels?
+Oui [ Points: +2 ]
+
+
+                                                                 page 23 / 37
+86. Avez-vous vériﬁé si les renseignements personnels recueillis se limitent à ceux
+qui sont directement liés à un programme ou à une activité de votre organisation?
+Oui [ Points: +0 ]
+87. Les renseignements personnels recueillis auprès des personnes seront-ils utilisés
+dans le cadre d'un processus décisionnel qui aura une incidence sur elles?
+Oui [ Points: +2 ]
+88. Avez-vous vériﬁé si le système utilise les renseignements personnels d'une
+manière qui est compatible avec : a) les ﬁchiers de renseignements personnels (FRP)
+et les évaluations des facteurs relatifs à la vie privée (EFVP) de vos programmes; b)
+les modiﬁcations prévues ou apportées aux FRP ou aux EFVP qui tiennent compte des
+nouveaux usages et processus?
+Oui [ Points: +0 ]
+89. Veuillez indiquer le numéro des FRP pertinents.
+VAC PPU 601,VAC PPU 602,VAC PPU 604,VAC PPU 700,VAC PPU 716,VAC PPU
+717,VAC PPU 718
+90. Les renseignements personnels recueillis seront-ils communiqués? (Cochez
+toutes les réponses qui s'appliquent):
+Oui, au sein de votre organisation [ Points: +1 ]
+91. Les données utilisées aux ﬁns de l'apprentissage du système et des essais
+réalisés sur celui-ci cadrent-elles avec la clientèle desservie?
+Oui [ Points: +0 ]
+92. Veuillez préciser les mesures que vous avez prises pour vériﬁer que les données
+cadrent bien avec celle-ci.
+Après plusieurs séries de tests et d’essais pilotes, le ministère des Anciens
+Combattants du Canada a utilisé un sous-ensemble de demandes (conditions)
+représentant le sexe, l’âge et la langue, qui reﬂétaient les mêmes facteurs que ceux
+présents dans les données soumises pour l’ensemble de l’année. Ces tests n’ont révélé
+aucun signe d’injustice touchant des groupes particuliers. Notre groupe des opérations
+surveillera les résultats de la même manière de façon continue. Les conclusions de
+l’analyse comparative entre les sexes plus et des tests opérationnels éclairent ces
+activités de surveillance continue.
+93. Les données d'apprentissage comportent-elles des biais susceptibles d'accroître
+le risque de discrimination ou de toute autre répercussion sur les droits de la
+personne?
+Non [ Points: +0 ]
+
+
+                                                                 page 24 / 37
+94. Expliquez les mesures prises pour garantir que les données d'apprentissage ne
+comportent aucun biais susceptible d'accroître le risque de discrimination ou de toute
+autre répercussion sur les droits de la personne.
+Les tests ont été réalisés à partir d’un sous-ensemble de demandes reﬂétant l’ensemble
+des données soumises au cours de l’année, tous sexes, âges et langues confondus.
+Aucun signe d’injustice affectant des groupes spéciﬁques n’a été décelé, et un suivi
+opérationnel continu est en place aﬁn de cerner les problèmes potentiels au ﬁl du
+temps.
+95. Quelle est la classiﬁcation de sécurité la plus élevée des données d'entrée utilisées
+par le système? (N'en choisir qu'une seule)
+Protégé B [ Points: +3 ]
+96. Des mesures ont-elles été mises en place pour garantir l'exactitude des
+renseignements personnels utilisés?
+Oui [ Points: +0 ]
+97. Décrivez les mesures prises pour garantir et vériﬁer l'exactitude des
+renseignements personnels.
+Les informations sont recueillies directement auprès des clients, d’autres
+agences/départements gouvernementaux et des professionnels de santé. Les
+documents sources peuvent être consultés par les utilisateurs et sont cités
+précisément dans le résumé.
+98. Qui contrôle les données?
+Le gouvernement fédéral [ Points: +1 ]
+99. Les données utilisées par le système proviendront-elles de plusieurs sources
+différentes?
+Oui [ Points: +2 ]
+100. Le système devra-t-il utiliser des données provenant d'un appareil connecté à un
+réseau (par exemple, l'Internet des objets et un capteur)?
+Non [ Points: +0 ]
+101. Le système interagira-t-il avec d'autres systèmes des TI?
+Oui [ Points: +4 ]
+102. Qui a recueilli les données utilisées pour l'apprentissage du système?
+Votre institution [ Points: +1 ]
+103. Qui a recueilli les données saisies dans le système?
+Votre institution [ Points: +1 ]
+
+                                                                 page 25 / 37
+104. Veuillez décrire les données recueillies et traitées par le système, leur source, la
+méthode de collecte et toute mesure d'assurance de la qualité mise en place.
+L’ORDII utilise les renseignements déjà recueillis et détenus légalement par Anciens
+Combattants Canada. Le système ne recueille pas de nouveaux renseignements auprès
+des clients. Les données saisies comprennent sont tirées de ce qui suit :
+   •  Formulaires normalisés : la demande de prestations d’invalidité (PEN 923) et des
+      questionnaires médicaux spéciﬁques (p. ex. questionnaire médical sur les
+       affections psychiatriques/psychologiques, questionnaire médical sur les
+       affections de la colonne dorsolombaire).
+   •  Dossiers médicaux militaires : une grande variété de documents médicaux et
+      personnels, y compris des notes cliniques manuscrites, des rapports des
+       spécialistes (audiogrammes, rapports chirurgicaux) et des dossiers dentaires
+      couvrant toute la carrière des vétérans.
+   •  Preuves diagnostiques : rapports médicaux et résultats d’imagerie diagnostique
+       fournis par des praticiens privés ou des médecins militaires.
+   •  Documents militaires : dossiers personnels utilisés pour conﬁrmer les dates de
+       service, le grade et l’historique des déploiements de l’unité.
+   •  Source et méthode de collecte Le système récupère les documents
+      exclusivement à partir des archives oﬃcielles sécurisées d’ACC. Aucune donnée
+       n’est extraite d’Internet ou de sources externes non vériﬁées.
+   •  Interopérabilité (MDN/GRC) : Les dossiers médicaux sont récupérés directement
+     au moyen de protocoles de transfert sécurisés et établis, comme ceux utilisés
+      par le ministère de la Défense nationale (MDN) et la GRC.
+   •  Observations du client : Les demandeurs peuvent également soumettre des
+      preuves par le biais de Mon dossier ACC (téléchargement numérique) ou par la
+      poste. Tous les documents reçus sont ﬁnalement stockés électroniquement au
+      format PDF dans notre référentiel de documents d’images numériques (DIGIMG).
+   •  Récupération par le système : L’ORDII utilise l’identiﬁant unique du client (CSDN
+       ID) pour interroger le référentiel DIGIMG, en récupérant uniquement les ﬁchiers
+      spéciﬁques associés à l’affection déclarée (par exemple, en ne récupérant que la
+      correspondance relative au « genou » pour une demande d’indemnisation liée au
+      genou).
+ACC utilise un protocole complet de supervision humaine de bout en bout. Ce cadre
+exige que le personnel qualiﬁé valide l’intégrité du dossier de demande avant la
+synthèse automatisée et vériﬁe l’exactitude du résumé généré avant que toute décision
+administrative ne soit ﬁnalisée.
+   •  Validation préalable au traitement (préparation des demandes) : avant que
+       l’ORDII ne soit déclenché, le dossier de demande fait l’objet d’un processus
+
+                                                                 page 26 / 37
+      opérationnel manuel de « préparation des demandes ». Le personnel qualiﬁé
+      d’ACC examine la demande, les questionnaires médicaux et les documents
+     soumis aﬁn de vériﬁer que le dossier est exact et complet. Ce contrôle humain
+       essentiel garantit que les données saisies dans l’outil sont organisées et prêtes à
+       être traitées, ce qui empêche le système d’analyser des dossiers incomplets ou
+     non pertinents.
+   •  Précision technique (ROC) : le système utilise Azure AI Document Intelligence
+      pour numériser avec précision des données complexes. Cette technologie est
+      capable de reconnaître le texte manuscrit et de préserver la structure des
+     documents (tableaux, formulaires), de sorte que les anciens dossiers de service
+      manuscrits, souvent essentiels pour les vétérans de longue date, sont
+      correctement repris dans le résumé.
+   •  Vériﬁcation post-traitement : l’ORDII ne remplace pas les documents sources.
+     Chaque fait, date ou résultat médical ﬁgurant dans le résumé généré comprend
+     un lien hypertexte direct vers la page spéciﬁque du PDF original. Le décideur est
+      tenu d’utiliser ces liens pour recouper le résumé avec les preuves originales, aﬁn
+      de s’assurer que la décision ﬁnale est toujours fondée sur les documents
+      sources primaires, et pas seulement sur les résultats de l’IA.
+   •  Protocole de « vériﬁcation manuelle » : Si la qualité des données est médiocre (p.
+       ex. écriture illisible que le logiciel de reconnaissance optique de caractères ne
+      peut analyser) ou si les preuves sont insuﬃsantes pour appuyer une décision
+       favorable, le décideur examinera manuellement l’ensemble du dossier avant de
+      prendre une décision déﬁnitive.
+105. Le système devra-t-il analyser des données non structurées aux ﬁns de la
+réalisation d'évaluations, de la formulation de recommandations ou de la prise de
+décisions?
+Oui [ Points: +0 ]
+106. De quel type de données non structurées s'agit-il (Cochez toutes les réponses qui
+s'appliquent)?
+   •  Fichiers audio et textuels [ Points: +2 ]
+   •  Images et vidéos [ Points: +4 ]
+107. Avez-vous décidé d'exclure certaines données?
+Non [ Points: +0 ]
+
+
+
+
+
+                                                                 page 27 / 37
+Section 3.3: Questions et réponses liées aux mesures
+d'atténuation
+1. Intervenants internes (institutions fédérales et fonction publique fédérale)
+Oui [ Points: +2 ]
+2. Indiquez les partenaires ou les parties consultantes que vous avez mobilisés à
+l'interne.
+   •  Bureau de l'accès à l'information et de la protection des renseignements
+      personnels
+   •  Bureau du dirigeant principal de l'information du SCT
+   •  Commissariat à la protection de la vie privée du Canada
+   •  Politique du programme
+   •  Services des communications
+   •  Services juridiques
+   •  Groupes de travail sur l'accessibilité
+   •  Secrétariat 2ELGBTQI+
+   •  Politique et planiﬁcation stratégiques
+3. Des partenaires ou des parties consultantes à l'externe (groupes d'autres secteurs
+ou administrations)
+Oui [ Points: +2 ]
+4. Indiquez les partenaires ou les parties consultantes que vous avez mobilisés à
+l'externe.
+   •  Agents négociateurs
+   •  Autre (décrire)
+   •  Clientèle ou les personnes qui la représentent
+5. S'il vous plait décrire
+Bureau de l'ombud des vétérans, Bureau de services juridiques des pensions, Tribunal
+des anciens combattants (révision et appel), Gendarmerie royale du Canada, vétérans à
+ACC
+6. Indiquez les partenaires ou les parties consultantes et l'étape du cycle de vie du
+projet (par exemple, le plan de conception, la conception, la collecte de données et le
+traitement, l'élaboration ou l'adaptation du modèle, la mise à l'essai, le déploiement, la
+
+                                                                 page 28 / 37
+production, la surveillance et la mise hors service) au cours de laquelle les activités de
+consultation se sont déroulées.
+La collaboration avec les intervenants et les partenaires internes et externes s’est
+déroulée tout au long du cycle de vie du projet et a été adaptée à la nature de l’expertise
+requise à chaque étape. Les consultations ont principalement porté sur les aspects
+stratégiques, la gouvernance, les questions juridiques, la conﬁdentialité, la sécurité et
+l’intégration des programmes, conformément au rôle de l’ORDII en tant que système
+d’aide à la décision.
+Concept et conception : Au début, la collaboration a porté principalement sur la
+validation des besoins opérationnels, la conﬁrmation de l’harmonisation avec les
+autorités responsables du programme, l’évaluation des considérations juridiques, de
+conﬁdentialité, de sécurité et de gouvernance des données, et la détermination de
+l’applicabilité de la Directive sur la prise de décision automatisée et du cadre
+d’évaluation de l’impact algorithmique.
+Collecte et traitement des données : Les consultations ont permis de cerner les sources
+de données appropriées, de conﬁrmer la légalité de l’utilisation des données, de garantir
+la protection de la vie privée, d’adopter des pratiques de gestion de l’information et
+d’assurer l’harmonisation avec l’architecture d’entreprise, les exigences
+Test et déploiement : L’engagement a mis l’accent sur la préparation opérationnelle, la
+facilité d’utilisation pour les décideurs, les exigences en matière de transparence et de
+traçabilité, les considérations relatives à la communication et la validation du fait que
+l’outil fonctionne strictement comme une aide à la prise de décision.
+Production et surveillance : L’engagement continu soutient la surveillance de la
+gouvernance, le suivi du rendement, la conformité en matière de conﬁdentialité et de
+sécurité, la préparation aux audits et aux évaluations, ainsi que l’amélioration continue, y
+compris la prise en compte de l’équité, de l’accessibilité et des impacts liés à l’ASC
+Plus.
+L’engagement est itératif et continu, différents domaines et parties prenantes étant
+consultés à mesure que le projet évolue et que de nouveaux risques, considérations ou
+phases du cycle de vie se présentent.
+7. Avez-vous consulté les personnes pour lesquelles les incidences de la mise en
+oeuvre du système seront les plus importantes?
+Oui [ Points: +3 ]
+8. Avez-vous consulté les personnes ou les communautés qui seront lésées par la
+mise en oeuvre du système?
+Non [ Points: +0 ]
+
+
+
+
+                                                                 page 29 / 37
+9. Expliquez pourquoi vous n'avez pas consulté les personnes qui seront lésées par la
+mise en oeuvre du système.
+Aucun groupe de clients n’a été identiﬁé comme étant défavorablement touché par le
+système, car l’ORDII n’est utilisé que lorsqu’une décision favorable peut être prise par le
+décideur.
+10. Expliquez comment vous avez documenté, analysé et traité la rétroaction reçue.
+Les commentaires ont été consignés et analysés à l’aide de documents structurés,
+notamment des comptes rendus de réunions, des registres de consultation et des
+documents d’examen. Les commentaires ont été regroupés dans des tableaux de suivi
+et des tableaux de correspondance reliant les problèmes, les risques et les
+recommandations identiﬁés à des éléments spéciﬁques de la conception du système, à
+des contrôles ou à des mesures d’atténuation.
+
+Élimination des risques et mesures d'atténuation – Qualité des données
+11. Disposez-vous de processus documentés permettant de vériﬁer si les jeux de
+données présentent des biais, des éléments discriminatoires et d'autres irrégularités?
+Il peut notamment s'agir de tests réalisés à l'aide de cadres, de méthodes, de lignes
+directrices ou d'outils d'évaluation.
+Oui [ Points: +3 ]
+12. Le processus documenté est-il accessible au public ou le sera-t-il?
+Non [ Points: +0 ]
+13. Avez-vous établi un processus permettant de documenter la façon dont les
+problèmes de qualité des données sont résolus pendant le processus de conception?
+Oui [ Points: +1 ]
+14. Le processus est-il accessible au public ou le sera-t-il?
+Non [ Points: +0 ]
+15. Avez-vous soumis les données à une analyse comparative entre les sexes plus
+(ACS Plus)?
+Oui [ Points: +2 ]
+16. Les résultats de l'ACS Plus sont-ils accessibles au public ou le seront-ils?
+Non [ Points: +0 ]
+17. Veuillez résumer les résultats ou fournir un lien s'ils sont accessibles au public.
+Après plusieurs séries de tests, un sous-ensemble de demandes (conditions) a été
+utilisé aﬁn de reﬂéter la répartition par sexe, âge, langue et handicap présente dans les
+données soumises pour l’ensemble de l’année. L’analyse ACS+ a examiné les impacts
+                                                                 page 30 / 37
+différentiels potentiels sur les groupes victimes d’injustice, notamment les femmes, les
+peuples autochtones, les personnes handicapées et les membres des communautés
+2ELGBTQI+, en accordant une attention particulière aux personnes handicapées compte
+tenu de la nature des programmes de prestations d’invalidité.
+L’analyse ACS+ n’a pas identiﬁé d’impacts négatifs différentiels importants ni de
+résultats discriminatoires pour les groupes victimes d’injustice. Les résultats indiquent
+que l’ORDII devrait améliorer la productivité et les délais de traitement, ce qui se traduira
+par une amélioration de la prestation de services aux clients. Plus précisément, l’ORDII
+devrait permettre d’accélérer l’accès aux décisions relatives aux prestations d’invalidité
+et aux avantages ﬁnanciers et soutiens associés.
+À plus long terme, l’amélioration de la gestion de la charge de travail grâce à l’utilisation
+d’outils modernisés et automatisés devrait permettre à Anciens Combattants Canada
+de mieux saisir et analyser les données démographiques sur les clients et les
+programmes, y compris les données issues de l’analyse comparative entre les sexes
+plus. L’amélioration de la disponibilité et de la qualité des données démographiques est
+un facteur clé pour surveiller les résultats en matière d’équité et garantir un accès
+équitable aux programmes et aux prestations. En conséquence, les groupes d’anciens
+combattants méritant l’équité devraient bénéﬁcier d’un traitement plus rapide des
+demandes de prestations d’invalidité, en particulier compte tenu de l’évolution du proﬁl
+démographique du personnel des Forces armées canadiennes.
+18. Disposez-vous d'un processus documenté permettant de gérer le risque que des
+données obsolètes ou non ﬁables soient utilisées dans le cadre d'une décision
+automatisée?
+Non [ Points: +0 ]
+19. Les données utilisées pour ce système seront-elles publiées sur le Portail du
+gouvernement ouvert?
+Non [ Points: +0 ]
+
+Élimination des risques et mesures d'atténuation – Équité procédurale
+20. La piste de vériﬁcation fournit-elle de l'information permettant de déterminer de
+quelle autorité législative relèvent les décisions et les principaux points de décision?
+Oui [ Points: +1 ]
+21. Les principaux points de décision compris dans la logique du système automatisé
+sont-ils tous reliés aux lois, aux politiques ou aux procédures applicables, ou le
+seront-ils?
+Oui [ Points: +1 ]
+
+
+
+                                                                 page 31 / 37
+22. Les recommandations ou les décisions du système sont-elles toutes consignées
+dans la piste de vériﬁcation?
+Oui [ Points: +2 ]
+23. Les principaux points de décision sont-ils tous clairement indiqués dans la piste
+de vériﬁcation?
+Oui [ Points: +2 ]
+24. Un processus permettant la consignation des cas de dérogation a-t-il établi, ou le
+sera-t-il?
+Oui [ Points: +2 ]
+25. Un registre actualisé des modiﬁcations apportées au modèle et au système a-t-il
+été mis en place?
+Oui [ Points: +2 ]
+26. L'information permettant d'expliquer au besoin, une décision est-elle consignée
+dans la piste de vériﬁcation?
+Oui [ Points: +1 ]
+27. Le système permet-il d'obtenir, au besoin, des justiﬁcations concernant ses
+décisions ou ses recommandations?
+Oui [ Points: +2 ]
+28. La piste de vériﬁcation permet-elle de déterminer précisément la version du
+système qui a été utilisée pour chaque décision?
+Oui [ Points: +2 ]
+29. La personne autorisée à prendre des décisions est-elle indiquée dans la piste de
+vériﬁcation?
+Oui [ Points: +1 ]
+30. Un mécanisme permettant de recueillir les commentaires des utilisateurs du
+système a-t-il été prévu?
+Oui [ Points: +2 ]
+31. Si oui, veuillez décrire la façon dont la rétroaction sera prise en compte dans les
+mises à jour du système.
+L’ORDII met en oeuvre un processus de « ﬁnalisation » qui recueille les commentaires
+des utilisateurs à la ﬁn de leur évaluation. Les commentaires des utilisateurs sont
+ensuite examinés et classés par ordre de priorité en vue de leur intégration dans les
+futurs sprints de développement.
+
+
+                                                                 page 32 / 37
+32. Un processus de recours a-t-il été prévu ou mis en place pour les personnes qui
+souhaitent contester la décision?
+Oui [ Points: +2 ]
+33. Veuillez fournir des renseignements sur la procédure de recours ou un lien vers un
+site web où cette procédure est décrite.
+Le système de recours dont disposent les anciens combattants reste inchangé. L’ORDII
+ne modiﬁe, ne limite ni ne remplace aucun droit de révision ou d’appel existant. Les
+décisions relatives aux prestations d’invalidité continuent d’être régies par un cadre
+législatif bien établi, notamment la Loi sur les pensions, la Loi sur le bien-être des
+vétéran et la Loi sur le Tribunal des anciens combattants (révision et appel), qui,
+ensemble, offrent plusieurs niveaux de recours aﬁn de garantir l’équité, la transparence
+et l’intégrité des procédures.
+Les vétérans conservent un accès complet à tous les mécanismes de recours
+existants, notamment :
+   •  Révision ministérielle – Révision qui peut être demandée soit par Anciens
+      Combattants Canada, soit par le vétéran.
+   •  Tribunal des anciens combattants (révision et appel) (TACRA) – Révisions et
+      appels indépendants des décisions ministérielles.
+   •  Contrôle judiciaire – Demandes de révision auprès de la Cour fédérale du Canada
+       et de la Cour d’appel fédérale.
+Les vétérans continuent également d’avoir accès au Bureau des avocats des pensions,
+qui fournit une assistance juridique gratuite aux anciens combattants pour la
+préparation des demandes et le déroulement du processus de révision et d’appel.
+Vous pouvez obtenir des informations supplémentaires : Comment demander une
+révision ou faire appel d'une décision.
+(URL complète : https://www.veterans.gc.ca/fr/droitsdes-anciens-combattants/pour-
+faireappel)
+34. Des processus permettant le suivi des modiﬁcations apportées au fonctionnement
+ou au rendement du système ont-ils été intégrés à la piste de vériﬁcation?
+Oui [ Points: +2 ]
+ 35. Le système tient-il compte de toute l'information fournie par la clientèle lors de la
+prise de décision ou de la formulation d'une recommandation?
+Sans objet [ Points: +0 ]
+
+
+
+
+                                                                 page 33 / 37
+36. Des mesures d'atténuation ont-elles été prises lors de l'élaboration des
+algorithmes et des essais de modèles pour éliminer tout biais et élément
+discriminatoire?
+Oui [ Points: +2 ]
+37. Veuillez décrire les paramètres et les mesures d'atténuation utilisés pour remédier
+aux problèmes constatés.
+Le Ministère surveillera le rendement de l’ORDII au ﬁl du temps à l’aide d’une
+combinaison de mesures fondées sur l’exactitude et la distribution. La surveillance est
+effectuée à un niveau global et, le cas échéant, dans les sous-groupes pertinents aﬁn de
+cerner les problèmes de rendement potentiels ou les effets imprévus.
+Les décideurs humains conservent toute leur autorité pour déterminer les prestations
+d’invalidité et sont chargés d’examiner les résultats de l’ORDII dans le cadre du
+processus de décision. Les décideurs sont tenus d’utiliser l’outil comme élément d’aide
+à leur examen, tout en conservant la possibilité de procéder à un examen
+supplémentaire du dossier complet lorsque des éclaircissements ou des vériﬁcations
+sont nécessaires. Cette approche humaine fait en sorte que les résumés viennent
+appuyer le jugement professionnel plutôt que de le remplacer.
+Lorsque le suivi ou les commentaires opérationnels cernent des problèmes de
+rendement ou des risques potentiels, les mesures d’atténuation peuvent inclure
+l’aﬃnement des invites ou des paramètres du modèle, l’amélioration de l’assurance
+qualité et des orientations, l’augmentation des examens humains ciblés ou la mise en
+oeuvre d’autres mesures correctives conformément aux processus de gouvernance et
+de surveillance établis.
+38. Le système ne s'appuie-t-il que sur les données d'entrée et l'information se
+rapportant à la décision?
+Oui [ Points: +2 ]
+39. Les règles du système sont-elles directement liées aux décisions administratives?
+Non [ Points: +0 ]
+40. Veuillez indiquer toute autre mesure prise pour garantir l'équité procédurale
+(cochez toutes les réponses qui s'appliquent) :
+   •  Des délais clairs ou des normes de service en matière de rapidité d'exécution ont
+      été établis [ Points: +1 ]
+   •  La clientèle reçoit toute l'information dont elle a besoin sur le processus
+       décisionnel et a la possibilité d'y participer activement [ Points: +1 ]
+   •  La clientèle reçoit tous les documents et l'information sur lesquels reposent les
+      décisions administratives [ Points: +1 ]
+
+
+                                                                 page 34 / 37
+   •  Un mécanisme permettant l'analyse et la prise en compte des commentaires de
+        la clientèle a été mis en place [ Points: +1 ]
+41. Des processus visant à garantir l'impartialité et l'éthique de la personne
+responsable de prendre les décisions quant à l'utilisation du système et à ses résultats
+ont-ils été mis en place?
+Oui [ Points: +2 ]
+42. Avez-vous suivi une formation sur l'utilisation appropriée et la sensibilisation aux
+risques associés aux biais d'automatisation?
+Oui [ Points: +2 ]
+43. Votre équipe procédera-t-elle régulièrement à la mise à jour du modèle ou à
+l'examen des règles?
+Non [ Points: +0 ]
+44. Disposez-vous de processus de surveillance qui vous permettront de déceler les
+changements liés au rendement du système au ﬁl du temps?
+Oui [ Points: +2 ]
+45. Disposez-vous d'un processus de mise à jour du système fondé sur les résultats
+du processus de surveillance?
+Oui [ Points: +1 ]
+46. Veuillez expliquer votre réponse.
+Nous surveillerons les résultats et recueillerons les commentaires des utilisateurs au
+moyen d'un questionnaire. Les commentaires seront partagés et examinés avec
+l'équipe de développement. Les éléments seront classés par ordre de priorité et traités
+en fonction de leur degré d'urgence.
+
+Élimination des risques et mesures d'atténuation – Conﬁdentialité
+47. Si votre système traite ou génère des renseignements personnels, avez-vous
+réalisé une évaluation des facteurs relatifs à la vie privée (EFVP) ou mis à jour une
+évaluation existante avant le lancement du système?
+Oui [ Points: +2 ]
+48. Si oui, veuillez indiquer les éléments suivants dans votre réponse : le titre et la
+portée de l'EFVP; la manière dont le projet d'automatisation s'intègre au programme; la
+date d'achèvement ou de modiﬁcation de l'EFVP.
+L’évaluation des facteurs relatifs à la vie privée pour le Programme de prestations
+d’invalidité a été réalisée aﬁn d’appuyer la mise en place de l’ORDII, qui est utilisé dans
+le cadre de la prestation du Programme de prestations d’invalidité. L’ORDII n’introduit
+
+                                                                 page 35 / 37
+pas la collecte de nouveaux renseignements personnels, mais il traite les
+enseignements personnels qui sont recueillis par Anciens Combattants Canada pour
+l’administration du programme, comme indiqué dans l’évaluation des facteurs relatifs à
+la vie privée du programme de prestations d’invalidité et dans tous les ﬁchiers de
+renseignements personnels pertinents, et comme l’autorisent la Loi sur les pensions et
+la Loi sur le bien-être des anciens combattants. L’évaluation des facteurs relatifs à la vie
+privée a été achevée en février 2026.
+49. Avez-vous conçu des mesures de sécurité et les avez-vous intégrées dans vos
+systèmes dès l'étape de la conception du projet?
+Oui [ Points: +2 ]
+50. Veuillez préciser.
+Les contrôles de sécurité ont été intégrés dès la phase conceptuelle du projet et
+appliqués tout au long de la conception et de la mise en oeuvre. L’accès aux résumés
+de l’ORDII est restreint grâce à des contrôles d’accès basés sur les rôles et gérés par
+des attributions Active Directory, ce qui garantit que seuls les utilisateurs autorisés
+peuvent consulter les résumés. Les copies PDF des résumés sont stockées dans la
+base de données d’images numériques approuvée par Anciens Combattants Canada,
+dont l’accès est lui-même restreint à des groupes d’utilisateurs spéciﬁques.
+Les contrôles de sécurité ont été examinés et validés grâce à la réalisation d’une
+déclaration d’autorisation de sécurité. L’approbation opérationnelle a été accordée car
+des contrôles de sécurité adéquats ont été appliqués et les risques résiduels ont été
+évalués et réduits à un niveau acceptable, conformément aux exigences de sécurité du
+Ministère.
+51. Avez-vous conçu des mesures de la protection des renseignements personnels et
+les avez-vous intégrées dans vos systèmes dès l'étape de la conception du projet?
+Oui [ Points: +2 ]
+52. Veuillez préciser.
+Seuls les utilisateurs autorisés peuvent demander et consulter les résumés.
+53. L'information est-elle utilisée dans un système fermé (c'est-à-dire sans connexion
+à Internet, à l'intranet ou à tout autre système)?
+Non [ Points: +0 ]
+54. Si la transmission de renseignements personnels est prévue, un accord ou un
+arrangement prévoyant des mesures de sécurité appropriées a-t-il été conclu?
+Non [ Points: +0 ]
+
+
+
+
+                                                                 page 36 / 37
+55. Les renseignements personnels traités ou créés par le système seront-ils
+dépersonnalisés à toutes les étapes du cycle de vie?
+Non [ Points: +0 ]
+
+
+
+
+
+                                                                 page 37 / 37

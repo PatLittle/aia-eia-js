@@ -1,0 +1,462 @@
+Algorithmic Impact Assessment Results
+
+Version: 0.10.0
+Project Details
+1. Name of Respondent
+Christie Sainsbury
+
+2. Job Title
+Manager, SSDU
+
+3. Department
+Royal Canadian Mounted Police
+
+4. Branch
+Specialized Policing Services
+
+5. Project Title
+Voice2Text
+
+6. Project ID from IT Plan
+N/A
+
+7. Departmental Program (from Department Results Framework)
+Technical Investigation Services
+
+8. Project Phase
+Design                                                                                                                          [ Points: 0 ]
+
+9. Please provide a project description:
+The project involves building a web-based offline, on-premise application that
+uses AI engines to assist with the transcription and/or translation of audio
+files collected during investigations. The application will process audio files
+and generate a transcription and/or translation that will then be reviewed and
+edited by transcribers/translators prior to disclosure. The goal of the project
+is to increase the efficiency of the transcription/translation process, not to
+replace it.  It will help to reduce backlogs and improve operational necessity
+by allowing investigations timelier access to relevant details of their operation
+which could impact surveillance, officer safety and potential Authorization re­
+writes. Transcribers/translators will still need to review the generated
+transcriptions for accuracy and make any necessary edits.
+
+About The System
+10. Please check which of the following capabilities apply to your system.
+Text and speech analysis: Analyzing large data sets to recognize, process, and
+tag text, speech, voice, and make recommendations based on the tagging
+
+Section 1: Impact Level : 1
+
+Current Score: 28
+Raw Impact Score: 28
+
+Mitigation Score: 6
+Section 2: Requirements Specific to Impact Level 1
+Peer review
+
+None
+Gender-based Analysis Plus
+
+None
+Notice
+
+None
+Human-in-the-loop for decisions
+
+Decisions may be rendered without direct human involvement.
+Explanation
+
+In addition to any applicable legal requirement, ensure that a meaningful explanation is published
+for common decision results. The explanation must provide a general description of:
+
+   the role of the system in the decision-making process;
+   input data, its source and method of collection;
+   the criteria used to evaluate input data and the operations applied to process it;
+   the output produced by the system and any relevant information needed to interpret it in the
+   context of the administrative decision; and
+   the principal factors behind a decision.
+
+Explanations must also inform clients of relevant recourse options, where appropriate.
+
+Descriptions must be made available in plain language through the Algorithmic Impact
+Assessment and discoverable via a departmental website.
+Training
+
+None
+IT and business continuity management
+
+None
+Approval for the system to operate
+
+None
+Other requirements
+
+The Directive on Automated Decision-Making also includes other requirements that must be met
+for all impact levels.
+
+Link to the Directive on Automated Decision-Making
+
+Contact your institution's ATIP office to discuss the requirement for a Privacy Impact
+Assessment as per the Directive on Privacy Impact Assessment.
+Section 3: Questions and Answers
+Section 3.1: Impact Questions and Answers
+Reasons for Automation
+1. What is motivating your team to introduce automation into this decision-making process?
+(Check all that apply)
+Existing backlog of work or cases
+Use innovative approaches
+
+2. What client needs will the system address and how will this system meet them? If possible,
+describe how client needs have been identified.
+Transcribing and translating audio is a labour and time intensive process. The
+use of AI engines to assist with the transcription/translation will reduce the
+amount of labour and time required by transcribers/translators by generating
+a draft transcription that they can then review and edit instead of performing
+the transcription/translation themselves from scratch.
+
+3. Please describe any public benefits the system is expected to have.
+Increasing the efficiency of the transcription/translation of audio files will
+allow investigators timelier access to relevant details of their operation which
+could impact surveillance, officer safety and potential Authorization re-writes.
+It will also impact how quickly disclosure can be provided to the court,
+potentially increasing the rate at which public cases are processed.
+
+4. How effective will the system likely be in meeting client needs?
+Moderately effective                                                                                                   [ Points: +1 ]
+
+5. Please describe any improvements, benefits, or advantages you expect from using an
+automated system. This could include relevant program indicators and performance targets.
+The automation of the transcription/translation process will increase the
+efficiency of the process by a factor of at least 10. This will allow
+investigators more timely access to information important for their
+operations, and enable disclosure to the courts to be completed more quickly.
+
+6. Please describe how you will ensure that the system is confined to addressing the client
+needs identified above.
+The application uses a login based on Active Directory to limit access to only
+users with proper authorization. SOPs will be put in place to ensure the
+proper use of the system.  Testing will be done, and feedback gathered, to
+ensure that the efficiency and accuracy of the transcriptions/translations
+generated by the application are within an acceptable range.
+7. Please describe any trade-offs between client interests and program objectives that you have
+considered during the design of the project.
+We have considered clients' privacy and security concerns. The system is
+designed by the RCMP, operated offline and on-premise. No operational data
+is stored by the system. Once the transcriptions have been generated and
+downloaded by the user, the original audio and the transcription are deleted
+from the system.
+
+8. Have alternative non-automated processes been considered?
+Yes                                                                                                                                [ Points: +0 ]
+
+9. If non-automated processes were considered, why was automation identified as the preferred
+option?
+Manual transcription/translation requires a significant amount of labour and
+time from transcribers/translators and has led to a backlog of audio files
+waiting to be transcribed, thus delaying disclosure. This application will
+automatically generate the transcriptions/translations and the transcribers/
+translators will only have to review them and perform edits which is less
+labour and time intensive than transcribing them from scratch.
+
+10. What would be the consequence of not deploying the system?
+Other (please specify)
+
+11. Please describe
+The transcription process will continue as it is now, at the same efficiency
+level
+
+Risk Profile
+12. Is the project within an area of intense public scrutiny (e.g. because of privacy concerns)
+and/or frequent litigation?
+No                                                                                                                                 [ Points: +0 ]
+
+13. Are clients in this line of business particularly vulnerable?
+No                                                                                                                                 [ Points: +0 ]
+
+14. Are stakes of the decisions very high?
+No                                                                                                                                 [ Points: +0 ]
+
+15. Will this project have major impacts on staff, either in terms of their numbers or their roles?
+No                                                                                                                                 [ Points: +0 ]
+
+16. Will the use of the system create or exacerbate barriers for persons with disabilities?
+No                                                                                                                                 [ Points: +0 ]
+
+Project Authority
+17. Will you require new policy authority for this project?
+No                                                                                                                                 [ Points: +0 ]
+
+About the Algorithm
+18. The algorithm used will be a (trade) secret
+No                                                                                                                                 [ Points: +0 ]
+
+19. The algorithmic process will be difficult to interpret or to explain
+No                                                                                                                                 [ Points: +0 ]
+
+About the Decision
+20. Please describe the decision(s) that will be automated.
+The system does not make any decisions. Transcribers/translators will be
+reviewing all transcriptions for accuracy and editing them when necessary.
+The raw transcriptions generated by the AI engine will not be relied on without
+that review and editing process by a human.
+
+21. Does the decision pertain to any of the categories below (check all that apply):
+Other (please specify)                                                                                                 [ Points: +1 ]
+
+22. Please describe
+The system does not make decisions
+
+Impact Assessment
+23. Which of the following best describes the type of automation you are planning?
+Partial automation (the system will contribute to administrative decision-
+making by supporting an officer through assessments, recommendations,
+intermediate decisions, or other outputs)                                                                  [ Points: +2 ]
+
+24. Please describe the role of the system in the decision-making process.
+The system does not make decisions. Transcriptions generated by the AI
+engine will not be relied on as-is for any decision making or for disclosure.
+They must be reviewed and edited by a transcriber/translator before being
+released.
+
+25. Will the system be making decisions or assessments that require judgement or discretion?
+No                                                                                                                                 [ Points: +0 ]
+
+26. Please describe the criteria used to evaluate client data and the operations applied to
+process it.
+Client data are audio files that are uploaded to the application. They are
+processed by the AI speech recognition model to generate a transcription/
+translation.
+
+27. Please describe the output produced by the system and any relevant information needed to
+interpret it in the context of the administrative decision.
+The output of the system is a text file transcription of the input audio file. The
+original audio file is needed by verify the accuracy of the text transcription by
+a transcriber/translator.
+
+28. Will the system perform an assessment or other operation that would not otherwise be
+completed by a human?
+No                                                                                                                                 [ Points: +0 ]
+
+29. Is the system used by a different part of the organization than the ones who developed it?
+No                                                                                                                                 [ Points: +0 ]
+30. Are the impacts resulting from the decision reversible?
+Reversible                                                                                                                    [ Points: +1 ]
+
+31. How long will impacts from the decision last?
+Impacts are most likely to be brief                                                                             [ Points: +1 ]
+
+32. Please describe why the impacts resulting from the decision are as per selected option
+above.
+Transcriptions are never used in raw format from the application. They must
+be reviewed by a human transcriber/translator for accuracy before they are
+released.
+
+33. The impacts that the decision will have on the rights or freedoms of individuals will likely be:
+Little to no impact                                                                                                       [ Points: +1 ]
+
+34. Please describe why the impacts resulting from the decision are as per selected option
+above.
+No impact on the rights of individuals. Audio uploaded to the system is
+lawfully obtained. The application doesn't have to be used if manual
+transcription is required/preferred.
+
+35. The impacts that the decision will have on the equality, dignity, privacy, and autonomy of
+individuals will likely be:
+Little to no impact                                                                                                       [ Points: +1 ]
+
+36. Please describe why the impacts resulting from the decision are as per selected option
+above.
+No impact to any individual. Voice2Text is a tool to assist transcribers at the
+RCMP, not replace them.
+
+37. The impacts that the decision will have on the health and well-being of individuals will likely
+be:
+Little to no impact                                                                                                       [ Points: +1 ]
+
+38. Please describe why the impacts resulting from the decision are as per selected option
+above.
+The system does not store the audio files or transcriptions long-term. Once
+the transcriptions are completed and downloaded, all data is deleted from the
+system. The application does not collect any personal information of the
+user.
+
+39. The impacts that the decision will have on the economic interests of individuals will likely
+be:
+Little to no impact                                                                                                       [ Points: +1 ]
+
+40. Please describe why the impacts resulting from the decision are as per selected option
+above.
+No economic impact.
+
+41. The impacts that the decision will have on the ongoing sustainability of an environmental
+ecosystem, will likely be:
+Little to no impact                                                                                                       [ Points: +1 ]
+42. Please describe why the impacts resulting from the decision are as per selected option
+above.
+No impact on sustainability or environment.
+
+About the Data - A. Data Source
+43. Will the Automated Decision System use personal information as input data?
+No                                                                                                                                 [ Points: +0 ]
+
+44. What is the highest security classification of the input data used by the system? (Select one)
+Protected B / Protected C                                                                                           [ Points: +3 ]
+
+45. Who controls the data?
+Federal government                                                                                                    [ Points: +1 ]
+
+46. Will the system use data from multiple different sources?
+Yes                                                                                                                                [ Points: +4 ]
+
+47. Will the system require input data from an Internet- or telephony-connected device? (e.g.
+Internet of Things, sensor)
+No                                                                                                                                 [ Points: +0 ]
+
+48. Will the system interface with other IT systems?
+Yes                                                                                                                                [ Points: +4 ]
+
+49. Who collected the data used for training the system?
+A foreign government or non-government third party                                               [ Points: +4 ]
+
+50. Who collected the input data used by the system?
+Your institution                                                                                                            [ Points: +1 ]
+
+51. Please describe the input data collected and used by the system, its source, and method of
+collection.
+Input data used in the system is lawfully collected by the RCMP as evidence
+using various means.  It is uploaded to the system, transcribed/translated,
+and subsequently deleted from the system after the transcription has been
+downloaded.
+
+About the Data - B. Type of Data
+52. Will the system require the analysis of unstructured data to render a recommendation or a
+decision?
+No                                                                                                                                 [ Points: 0 ]
+
+Section 3.2: Mitigation Questions and Answers
+Consultations
+1. Internal Stakeholders (federal institutions, including the federal public service)
+Yes                                                                                                                                [ Points: +1 ]
+
+2. Which Internal Stakeholders will you be engaging?
+Data Governance
+Legal Services
+Communications services
+Human Resources
+Digital Policy
+
+3. External Stakeholders (groups in other sectors or jurisdictions)
+No                                                                                                                                 [ Points: +0 ]
+
+De-Risking and Mitigation Measures - Data Quality
+4. Will you have documented processes in place to test datasets against biases and other
+unexpected outcomes? This could include experience in applying frameworks, methods,
+guidelines or other assessment tools.
+No                                                                                                                                 [ Points: +0 ]
+
+5. Will you be developing a process to document how data quality issues were resolved during
+the design process?
+No                                                                                                                                 [ Points: +0 ]
+
+6. Will you be making this information publicly available?
+No                                                                                                                                 [ Points: +0 ]
+
+7. Will you undertake a Gender Based Analysis Plus of the data?
+No                                                                                                                                 [ Points: +0 ]
+
+8. Will you be making this information publicly available?
+No                                                                                                                                 [ Points: +0 ]
+
+9. Have you assigned accountability in your institution for the design, development,
+maintenance, and improvement of the system?
+Yes                                                                                                                                [ Points: +2 ]
+
+10. Will you have a documented process to manage the risk that outdated or unreliable data is
+used to make an automated decision?
+No                                                                                                                                 [ Points: +0 ]
+
+11. Will you be making this information publicly available?
+No                                                                                                                                 [ Points: +0 ]
+
+12. Will the data used for this system be posted on the Open Government Portal?
+No                                                                                                                                 [ Points: +0 ]
+
+De-Risking and Mitigation Measures - Procedural
+Fairness
+13. Will the audit trail identify the authority or delegated authority identified in legislation?
+No                                                                                                                                 [ Points: +0 ]
+
+14. Will the system provide an audit trail that records all the recommendations or decisions
+made by the system?
+No                                                                                                                                 [ Points: +0 ]
+15. Will all key decision points be identifiable in the audit trail?
+No                                                                                                                                 [ Points: +0 ]
+
+16. Will all key decision points within the automated system's logic be linked to the relevant
+legislation, policy or procedure?
+No                                                                                                                                 [ Points: +0 ]
+
+17. Will you maintain a log detailing all of the changes made to the model and the system?
+No                                                                                                                                 [ Points: +0 ]
+
+18. Will the audit trail clearly set out all decision points made by the system?
+No                                                                                                                                 [ Points: +0 ]
+
+19. Could the audit trail generated by the system be used to help generate a notification of the
+decision (including a statement of reasons or other notification) where required?
+No                                                                                                                                 [ Points: +0 ]
+
+20. Will the audit trail identify precisely which version of the system was used for each decision
+it supports?
+No                                                                                                                                 [ Points: +0 ]
+
+21. Will the audit trail show who the authorized decision-maker is?
+No                                                                                                                                 [ Points: +0 ]
+
+22. Will the system be able to produce reasons for its decisions or recommendations when
+required?
+No                                                                                                                                 [ Points: +0 ]
+
+23. Will there be a process in place to grant, monitor, and revoke access permission to the
+system?
+Yes                                                                                                                                [ Points: +1 ]
+
+24. Will there be a mechanism to capture feedback by users of the system?
+Yes                                                                                                                                [ Points: +1 ]
+
+25. Will there be a recourse process planned or established for clients that wish to challenge the
+decision?
+No                                                                                                                                 [ Points: +0 ]
+
+26. Will the system enable human override of system decisions?
+No                                                                                                                                 [ Points: +0 ]
+
+27. Will there be a process in place to log the instances when overrides were performed?
+No                                                                                                                                 [ Points: +0 ]
+
+28. Will the audit trail include change control processes to record modifications to the system's
+operation or performance?
+No                                                                                                                                 [ Points: +0 ]
+
+29. Will you be preparing a concept case to the Government of Canada Enterprise Architecture
+Review Board?
+No                                                                                                                                 [ Points: +0 ]
+De-Risking and Mitigation Measures - Privacy
+30. If your system uses or creates personal information, will you undertake or have you
+undertaken a Privacy Impact Assessment, or updated an existing one?
+No                                                                                                                                 [ Points: +0 ]
+
+31. Will you design and build security and privacy into your systems from the concept stage of
+the project?
+Yes                                                                                                                                [ Points: +1 ]
+
+32. Will information be used within a closed system (i.e. no connections to the Internet, Intranet
+or any other system)?
+No                                                                                                                                 [ Points: +0 ]
+
+33. If the sharing of personal information is involved, has an agreement or arrangement with
+appropriate safeguards been established?
+No                                                                                                                                 [ Points: +0 ]
+
+34. Will you de-identify any personal information used or created by the system at any point in
+the lifecycle?
+No                                                                                                                                 [ Points: +0 ]

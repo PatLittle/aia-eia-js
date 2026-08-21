@@ -1,0 +1,966 @@
+Résultats de l'évaluation de l'incidence
+algorithmique
+
+Version : 0.10.0
+Détails du projet
+1. Nom du répondant
+Chantal Demers
+
+2. Titre du poste
+Gestionnaire
+
+3. Ministère
+Agence des services frontaliers du Canada
+
+4. Direction générale
+Voyageurs
+
+5. Titre du projet
+Indicateur de conformité des voyageurs
+
+6. Programme ministériel (tiré du Cadre ministériel des résultats)
+Facilitation de la circulation des voyageurs et conformité
+
+7. Phase du projet
+Conception                                                                                            [ Points : 0]
+
+8. Veuillez fournir une description du projet :
+
+L'Agence des services frontaliers du Canada (ASFC) fournit des services frontaliers intégrés pour protéger
+la sécurité nationale et la sécurité publique tout en facilitant la circulation légale des personnes et des
+marchandises à la frontière.
+
+Chaque année, l'ASFC accueille plus de 80 millions de voyageurs. De nouvelles technologies sont mises en
+œuvre pour offrir une expérience frontalière plus efficace ; y compris des outils qui intègrent l'intelligence
+artificielle, dans le cadre de l'Initiative de modernisation des services aux voyageurs de l'ASFC. L'ASFC
+s'engage à protéger la vie privée. Toutes les nouvelles technologies doivent respecter les politiques du
+Canada en matière de protection des renseignements personnels afin de protéger les renseignements
+personnels et de veiller à ce qu'ils soient utilisés de manière responsable.
+
+L'indicateur de conformité des voyageurs (ICV) est un nouvel outil qui fournira plus de renseignements
+aux agents des services frontaliers (ASF) pour les aider à repérer les voyageurs qui satisfont aux
+obligations douanières. L'ICV utilise les données historiques disponibles dans les systèmes de l'ASFC, en
+plus des données réelles sur les voyageurs disponibles au moment de leur entrée au Canada au point
+d'entrée. L'outil devrait faire gagner du temps aux voyageurs en réduisant le nombre d'inspections
+secondaires infructueuses tout en permettant aux agents de concentrer leur attention sur les voyageurs
+qui présentent un risque plus élevé de non-conformité à la législation frontalière et aux règlements
+connexes.
+
+Au cours des dernières années, l'ASFC a investi dans l'élaboration, la mise à l'essai (c.-à-d. que
+des essais hors ligne ont été effectués rétrospectivement à partir des passages effectués) et le
+perfectionnement de l'algorithme de l'ICV et des modèles de notation afin d'identifier les
+voyageurs qui, d'après leurs activités de voyage antérieures, sont plus susceptibles de se
+conformer à la Loi sur les douanes.
+
+Sur le plan méthodologique, le processus de l'ICV commence par le prétraitement des données,
+où les données de deux systèmes distincts de l'ASFC sont liées : l'historique des passages (c.-à-d.
+l'information provenant des lignes d'inspection primaire [LIP]) et le Système intégré d'exécution
+des douanes (SIED) (c.-à-d. les dossiers d'exécution de la loi). Ensuite, l'ingénierie des
+caractéristiques est appliquée pour améliorer l'ensemble de données avec des fonctionnalités
+supplémentaires qui aident à identifier les passages conformes. L'ingénierie des caractéristiques
+fait référence au processus de préparation et de transformation des données brutes en
+caractéristiques significatives (variables ou attributs) qui peuvent améliorer les performances des
+modèles d'apprentissage automatique. Dans ce contexte, les nouvelles fonctionnalités capturent
+les habitudes de voyage, telles que la fréquence, les lieux et les heures de voyage. Les noms ou
+les pièces d'identité des voyageurs sont nécessaires pour suivre les passages historiques ;
+toutefois, seules les données de l'historique des passages et du SIED sont utilisées à cette fin.
+
+Après l'ingénierie des fonctionnalités, les données sont anonymisées pour protéger la vie privée.
+Les renseignements permettant d'identifier une personne (noms, dates de naissance, pièces
+d'identité, numéros de document, date et heure exactes du passage, etc.) sont supprimés. Au
+lieu d'âges précis, les voyageurs sont regroupés en catégories d'âge de quatre ans. Le sexe et la
+nationalité sont conservés pour la prise de décision opérationnelle, et avec tous les autres détails
+d'identification supprimés, l'ensemble de données est considéré comme anonyme.
+
+L'ensemble de données anonymisé est ensuite utilisé pour entraîner un modèle d'apprentissage
+automatique. L'algorithme, structuré comme un arbre de décision, apprend des modèles
+généraux pour prédire la conformité pour les nouveaux passages. Par exemple, il peut apprendre
+que les voyageurs de plus de 60 ans qui voyagent plus tard dans l'année sont généralement
+conformes. Le modèle est mis à l'essai pour s'assurer qu'il est bien généralisé et qu'il ne repose
+pas sur des modèles simplistes ou biaisés. Certaines des mesures visant à atténuer les biais dans
+l'ensemble de données comprennent l'utilisation de référence aléatoires dans les ensembles de
+données de formation afin de réduire le recours uniquement aux référence au secondaires par
+les ASF, ou à ceux générés par les cibles et les avis de surveillance. L'approche utilise
+l'intelligence artificielle explicable, de sorte que la logique de décision peut être facilement
+comprise et analysée.
+
+Lorsqu'il est déployé, le modèle fonctionne en temps réel pendant le passage d'un voyageur à la
+frontière. Le système récupère les antécédents du voyageur, calcule les caractéristiques et prédit
+la conformité. Si une probabilité élevée de conformité est prévue, un indicateur s'affiche à
+l'intention de l'agent.
+
+Les caractéristiques des données utilisées pour entraîner les modèles d'ICV seront examinées à
+la fois en réponse à la surveillance active et continue du rendement du modèle, et à mesure que
+les scientifiques des données de l'ASFC créent de nouvelles caractéristiques dans le but
+d'accroître le pouvoir prédictif et d'atténuer les biais potentiels et la dégradation du rendement
+au fil du temps.
+
+Les résultats de l'ICV seront communiqués au moyen du système d'exploitation interne utilisé
+par les ASF aux postes frontaliers, afin d'appuyer leur processus décisionnel et d'améliorer les
+pratiques de renvoi aux examens secondaires. Le système d'ICV produit deux types de sorties
+sur l'écran de traitement primaire pour un voyageur qui sont disponibles pour que l'ASF en
+tienne compte : une probabilité élevée de conformité, indiquée par un indicateur, ou l'absence
+d'icône, ce qui indique un risque inconnu. Le système d'ICV fonctionnera en même temps que
+d'autres systèmes de l'ASFC pour les voyageurs pendant le processus d'inspection primaire avec
+le même niveau de rapidité de réponse afin de ne pas entraver l'objectif de l'ASFC d'assurer une
+circulation efficace des voyageurs tout en offrant aux ASF un meilleur accès aux données
+historiques sur les passages à la LIP. Bien que l'ICV mesure les voyageurs qui sont très
+susceptibles d'être conformes, d'autres systèmes de l'ASFC sont actuellement en place pour
+signaler les voyageurs à risque élevé, notamment des systèmes d'exécution de la loi et de
+renseignement, et dans ces cas, le voyageur sera renvoyé pour un examen secondaire et tout
+résultat de l'ICV sera annulé. L'ICV sera mis en œuvre dans le cadre de la nouvelle solution
+d'expérience des agents (EA) dans tous les modes pour les modes de traitement en personne,
+selon une approche progressive selon le calendrier du projet EA. Le déploiement initial se fera
+aux traversiers et aux postes frontaliers terrestres de l'ASFC à partir de 2026.
+
+L'Initiative de modernisation des services aux voyageurs de l'ASFC vise à mettre au point de
+nouveaux outils et de nouvelles technologies pour une expérience plus rapide, meilleure et plus
+sûre à la frontière.
+
+L'ASFC est en train de procéder à une transformation majeure, motivée par la nécessité de
+moderniser la prestation des services de première ligne et la gestion des opérations. L'objectif
+est de moderniser l'approche actuelle de l'ASFC en matière de gestion frontalière fondée sur le
+risque en investissant dans des solutions numériques afin de renforcer sa capacité de prendre
+des décisions fondées sur des données probantes et d'améliorer la gestion du rendement. Cela
+se reflète dans la stratégie d'analyse des données de l'ASFC, qui permet d'obtenir des données
+de haute qualité, accessibles et bien gérées et qui appuient une gestion efficace des
+renseignements opérationnels et des risques.
+
+L'initiative de l’EA comprend le regroupement et la rationalisation de multiples systèmes
+opérationnels, la migration des données vers l'environnement infonuagique hybride, l'utilisation
+de l'analytique pour appuyer la prise de décisions des agents et l'élaboration d'une interface
+unique et conviviale pour appuyer les décisions des agents et leurs besoins opérationnels. Pour
+s'assurer que la gestion des frontières suit le rythme d'un monde en évolution, l'ASFC modernise
+ses services et ses processus pour répondre au nombre croissant de voyageurs. L'ASFC
+comprend que les nouvelles technologies peuvent soulever des préoccupations en matière de
+protection de la vie privée, de partialité et de protection des renseignements personnels. Pour y
+remédier, l'ASFC s'engage à s'assurer qu'elle développe ses technologies conformément aux
+cadres juridiques applicables, notamment en veillant à la conformité à la Loi sur la protection des
+renseignements personnels et à la Charte.
+
+À la frontière, le traitement d'un voyageur comprend parfois des examens secondaires, une
+partie courante du traitement des voyageurs, y compris l'examen des voyageurs et des
+marchandises, aux points d'entrée canadiens pour assurer la conformité aux lois et règlements
+du Canada en matière de douanes, d'immigration, d'aliments, de végétaux et d'animaux. L'ASFC a
+toujours soutenu les opérations de première ligne dans le cadre de processus d'exécution de la
+loi et de renseignement, en plus de doter les agents de technologies de détection et d'outils
+d'exécution de la loi afin de renforcer la capacité d'intercepter les voyageurs non conformes aux
+points d'entrée. L'ICV permet d'évaluer si un voyageur est très susceptible de se conformer en
+évaluant l'historique des passages antérieurs et les résultats des références secondaires. Par
+conséquent, l'ASFC ne présente pas l'ICV comme une caractéristique d'exécution de la loi, mais
+plutôt comme un outil pour faciliter la circulation des voyageurs pendant le processus de passage
+à la frontière.
+
+Avantages de l'ICV
+
+Le projet devrait :
+   •  Permettre aux agents de concentrer leurs ressources limitées sur les voyageurs dont les
+      niveaux de risque sont inconnus ou à risque élevé selon l'ICV.
+   •  Améliorer l'exactitude des références et traiter les voyageurs plus efficacement,
+     notamment en tirant parti des données déjà disponibles dans les systèmes de l'ASFC.
+   •  Accélérer le traitement des voyageurs dont les caractéristiques de passage correspondent
+      aux tendances en matière de conformité.
+
+L'ICV permettra à l'ASFC d'adopter un modèle de conformité fondé sur le risque afin de
+permettre des interactions moins nombreuses et plus rapides avec les voyageurs à faible risque,
+tout en augmentant la capacité d'examen pour les voyageurs à risque élevé et inconnu. Les
+éléments de données de l'ICV qui ont été inclus dans l'algorithme ont été choisis en utilisant
+l'historique des passages et les dossiers d'exécution de la loi sur cinq ans du SIED, qui ont
+ensuite été analysés pour cerner les modèles et les tendances des voyageurs entrant au Canada.
+Parmi les exemples de données historiques, citons le nombre de passages d'un voyageur au
+cours d'une période donnée ; l'heure la plus courante de la journée pour le passage d'un
+voyageur ; le plus souvent franchi la frontière d'un voyageur.
+
+À propos du système
+9. Veuillez cocher laquelle des capacités suivantes s'applique à votre système.
+Autre (veuillez préciser)
+
+10. Veuillez décrire.
+Triage – En fonction des tendances établies, l'ICV se concentre sur la prédiction de la conformité
+des voyageurs et met en évidence ceux qui sont très susceptibles de se conformer (c.-à-d. les
+voyageurs à faible risque). Dans tous les cas, aucune mesure n'est déclenchée automatiquement,
+et les agents conservent toujours le pouvoir discrétionnaire de prendre la décision finale en
+fonction de l'ensemble des renseignements dont ils disposent pour accorder la mainlevée au
+voyageur ou le renvoyer au traitement secondaire.
+
+Dans les cas où des systèmes (autres que l'ICV) qui identifient les voyageurs potentiellement à
+risque élevé sont déclenchés, le voyageur sera signalé pour renvoi au secondaire pour un
+examen plus approfondi. Dans ces cas, l'agent suivra le protocole requis avant de procéder à un
+renvoi pour traitement secondaire supplémentaire, que ce soit pour le traitement secondaire
+des douanes ou de l'immigration, sous réserve du jugement et de la discrétion de l'agent.
+
+Section 1 : Niveau d'impact : 2
+
+Score actuel : 45
+
+Score d'impact brut :
+
+45 Score
+
+d'atténuation : 32
+Section 2 : Exigences propres au niveau d'impact 2
+Examen par les pairs
+
+Consultez au moins un des experts suivants et publiez l'examen complet ou un résumé en
+langage clair des conclusions sur un site Web du gouvernement du Canada :
+
+   •  Expert qualifié d'un établissement fédéral, provincial, territorial ou municipal
+
+   •  Membres qualifiés du corps professoral d'un établissement postsecondaire
+
+   •  Des chercheurs qualifiés d'une organisation non gouvernementale pertinente ont fait
+      appel à un fournisseur tiers avec une spécialisation pertinente
+   •  Un conseil consultatif sur les données et l'automatisation précisé par le Secrétariat du
+      Conseil du Trésor du Canada.
+
+OU
+
+   •  Publier les spécifications du système de décision automatisé dans une revue à comité
+      de lecture. Lorsque l'accès à l'examen publié est restreint, veiller à ce qu'un résumé
+      des constatations en langage clair soit librement accessible.
+Analyse comparative entre les sexes plus
+
+Veiller à ce que l'analyse comparative entre les sexes plus aborde les questions suivantes :
+
+   •   les répercussions du projet d'automatisation (y compris le système, les données et la
+       décision) sur le genre ou d'autres facteurs identitaires ;
+   •   les mesures prévues ou existantes pour gérer les risques cernés par l'analyse comparative
+      entre les sexes plus.
+Avis
+Avis en langage clair affiché par tous les modes de prestation de services utilisés (Internet, en
+personne, par la poste ou par téléphone).
+L'humain dans la boucle pour les décisions
+
+Les décisions peuvent être prises sans intervention humaine directe.
+Explication
+
+En plus de toute exigence légale applicable, s'assurer qu'une explication significative est fournie
+au client avec toute décision qui entraîne le refus d'un avantage ou d'un service, ou qui implique
+une mesure réglementaire. L'explication doit informer le client en langage clair de ce qui suit :
+
+   •   le rôle du système dans le processus décisionnel ;
+   •   les données sur la formation et les clients, leur source et la méthode de
+       collecte, le cas échéant ; les critères utilisés pour évaluer les données des
+       clients et les opérations appliquées pour les traiter ;
+   •   le résultat produit par le système et toute information pertinente nécessaire pour l'interpréter
+       dans le contexte de la décision administrative ;
+   •  une justification de la décision administrative, y compris les principaux facteurs qui l'ont
+      motivée.
+
+Les explications doivent également informer les clients des options de recours pertinentes, le cas
+échéant.
+
+Une description générale de ces éléments doit également être disponible au moyen de
+l'évaluation de l'incidence algorithmique et accessible sur un site Web ministériel.
+Formation
+
+Documentation sur la conception et la fonctionnalité du système.
+Gestion des TI et de la continuité des activités
+
+Aucun
+Approbation du fonctionnement du système
+
+Aucun
+Autres exigences
+
+La Directive sur la prise de décisions automatisée comprend également d'autres exigences qui doivent
+être respectées pour tous les niveaux d'impact.
+
+Lien vers la Directive sur  la prise de décisions automatisée
+
+Communiquez avec le bureau de l'AIPRP de votre institution pour discuter de l'exigence d'une
+évaluation des facteurs relatifs à la vie privée conformément à la Directive sur l'évaluation des
+facteurs relatifs à la vie privée.
+Section 3 : Questions et réponses
+Section 3.1 : Questions et réponses sur les
+répercussions Raisons de l'automatisation
+
+1. Qu'est-ce qui motive votre équipe à introduire l'automatisation dans ce processus
+décisionnel ? (Cochez toutes les réponses qui s'appliquent)
+Améliorer la qualité globale des décisions
+Réduction des coûts de transaction d'un
+programme existant Utiliser des approches
+novatrices
+Autre (veuillez préciser)
+
+2. Veuillez décrire
+
+Le système d'ICV utilise des données qui sont tirées de données déjà contenues dans les bases
+de données de l'ASFC et qui sont traitées en temps réel afin de permettre à l'agent de se
+concentrer sur son entrevue avec le voyageur pendant le processus d'inspection primaire au lieu
+d'avoir à effectuer des recherches manuelles de données qui sont inefficaces et peuvent
+entraîner une augmentation des délais de traitement à la frontière et peuvent également
+entraîner des distractions et des erreurs qui ont une incidence négative sur la sécurité
+frontalière. En raison d'un traitement plus rapide et plus précis des voyageurs, on ne s'attend pas
+à ce que l'augmentation du nombre de voyageurs entraîne une augmentation relative du nombre
+d'ASF. De plus, cela permettrait aux ASF de consacrer leur temps au traitement des voyageurs
+soupçonnés de présenter un risque élevé ou inconnu de non-conformité du point de vue de la
+Loi sur les douanes et des règlements connexes.
+
+3. À quels besoins le système répondra-t-il et comment ce système répondra-t-il à eux ? Si
+possible, décrivez comment les besoins des clients ont été cernés.
+
+Tous les voyageurs, y compris les citoyens canadiens et les résidents permanents, s'attendent à
+être traités équitablement et professionnellement pendant le processus de passage à la frontière.
+Ils s'attendent également à ce que l'ASFC facilite la circulation efficace des personnes et des
+marchandises, conformément au mandat de l'ASFC énoncé dans la Loi sur l' Agence des services
+frontaliers du Canada. Concrètement, cela se traduit par un besoin de traitement rapide,
+prévisible et efficace, en particulier pour les voyageurs récurrents qui sont déjà entrés au
+Canada. Ces besoins ont été cernés grâce à l'expérience opérationnelle, à l'observation des
+volumes de voyageurs et des temps d'attente, ainsi qu'aux efforts plus vastes de l'ASFC pour
+améliorer le service à la clientèle et la facilitation à la frontière.
+Bien que l'ICV ne soit pas un outil destiné au public et qu'il ne soit accessible qu'aux ASF, il est
+conçu pour répondre à ces mêmes besoins des clients. En utilisant les données historiques
+disponibles pour identifier les voyageurs dont les caractéristiques de passage correspondent aux
+tendances en matière de conformité, l'ICV aide les ASF à concentrer leur attention sur les
+voyageurs qui peuvent présenter un risque élevé ou inconnu de non-conformité. Cela favorise un
+traitement plus efficace des voyageurs conformes et permet d'éviter les références inutiles à
+l'examen secondaire, améliorant ainsi l'équité, la cohérence et la facilitation globale du processus
+de dédouanement à la frontière.
+
+En fournissant aux ASF l'ICV à l'étape du premier contact, ils pourront passer moins de temps
+avec les voyageurs considérés comme très susceptibles de se conformer et plus de temps avec
+les voyageurs qui peuvent présenter un risque élevé ou inconnu. Le fait de consacrer moins de
+temps aux voyageurs jugés très probablement conformes permettra de réduire les délais de
+traitement pour les voyageurs à faible risque et de soutenir le cœur du mandat de l'ASFC, qui est
+de fournir des services frontaliers intégrés qui appuient les priorités en matière de sécurité nationale et
+de sécurité publique et facilitent la libre circulation des personnes et des marchandises.
+
+4. Veuillez décrire les avantages publics que le système devrait avoir.
+
+L'ICV permettra aux ASF de passer moins de temps avec des voyageurs conformes et de
+concentrer leur attention sur les voyageurs qui présentent un risque plus élevé de non-
+conformité à la législation frontalière et aux règlements connexes.
+
+5. Dans quelle mesure le système sera-t-il susceptible de répondre aux besoins des clients ?
+Très efficace                                                                                           [ Points : +0 ]
+
+6. Veuillez décrire les améliorations et les avantages que vous attendez de l'utilisation d'un
+système automatisé. Il pourrait s'agir d'indicateurs de programme et de cibles de rendement
+pertinents.
+
+Le système d'ICV améliorera le service à la clientèle grâce à des gains de temps potentiels grâce
+à l'utilisation d'un outil de prévision de la conformité qui exploite les données déjà disponibles
+dans les systèmes de l'ASFC. Le temps passé par un voyageur avec les ASF diminuera, en
+moyenne, en raison d'un accès plus rapide aux dossiers existants, ce qui améliorera la capacité
+des ASF à prendre des décisions éclairées au primaire, réduisant ainsi les références infructueux
+au secondaire de 20 à 30 %. Les facteurs critiques de succès, les indicateurs de rendement clés
+(IRC) et les critères de succès ont été utilisés pour déterminer les résultats mesurables
+(efficience, convivialité et efficacité) de l'ICV. Les résultats des essais hors ligne précédents ont été
+analysés et il a été conclu qu'ils répondaient aux critères de réussite prédéterminés pour le projet.
+L'analyse a démontré le potentiel du système pour aider à réduire le taux global de renvoi sélectif
+infructueux en identifiant les voyageurs conformes avec un haut degré de précision.
+
+En résumé, voici quelques-uns des avantages attendus :
+1) Capacité de concentrer les ressources limitées sur les voyageurs inconnus et à risque élevé
+2) Améliorer l'exactitude des références aux secondaire
+3) Accélérer le traitement des voyageurs à faible risque
+
+7. Veuillez décrire comment vous vous assurerez que le système se limite à répondre aux
+besoins des clients indiqués ci-dessus.
+
+ L'ASFC veillera à ce que le système d'ICV reste limité aux besoins des clients identifiés ci-dessus grâce à la
+portée définie de son programme et aux exigences opérationnelles à l'appui. Ces documents établissent
+que l'objectif de l'ICV est de favoriser un traitement efficace à la frontière pour les voyageurs qui entrent
+au Canada et de réduire les références inutiles pour le traitement secondaire en identifiant les voyageurs
+qui sont susceptibles de se conformer. Tout changement proposé au système de l'ICV, y compris les
+changements apportés à sa portée, aux entrées ou aux extrants de données, est assujetti aux processus
+existants de gestion et de gouvernance des programmes de l'ASFC. Ces processus exigent que les
+changements soient évalués par rapport au mandat de l'ASFC et aux objectifs continus de service à la
+clientèle et qu'ils soient appuyés par l'analyse nécessaire, y compris les considérations juridiques, de
+protection des renseignements personnels et de gestion des données éclairées par les instruments de
+politique pertinents (p. ex. la Directive sur la prise de décision automatisée et la Directive sur les services
+et le numérique).
+
+8. Veuillez décrire tout compromis entre les intérêts du client et les objectifs du programme
+que vous avez pris en compte lors de la conception du projet.
+
+Plusieurs compromis entre les intérêts des clients et les objectifs du programme ont été pris en
+compte dans la conception de l'ICV. Premièrement, en indiquant des caractéristiques dont la
+présence tend à prédire une probabilité plus élevée de conformité pour environ 30 % de tous les
+voyageurs, le système appuie l'objectif du programme d'améliorer la facilitation et l'efficacité
+opérationnelle. L'ICV réduit le temps de traitement de certains voyageurs qui sont considérés
+comme très probablement conformes et fournit aux ASF des renseignements supplémentaires
+pour étayer leurs décisions de mainlevée et de renvoi. Le fait de reconnaître les voyageurs à
+faible risque au primaire peut réduire les références infructueux à l'examen secondaire, ce qui
+permet aux voyageurs et aux ASF de gagner du temps.
+
+Deuxièmement, l'utilisation des données existantes sur les voyageurs pour créer un nouvel outil
+à utiliser lors des examens peut être perçue par certains voyageurs comme un compromis entre
+leur intérêt à limiter les nouvelles utilisations de leurs données et l'objectif du programme
+d'améliorer l'efficacité et le ciblage. Bien que l'ICV s'appuie sur des données déjà disponibles dans
+les systèmes de l'ASFC et que le système soit conçu pour préserver la vie privée et l'intégrité,
+certains voyageurs peuvent encore considérer cette réutilisation des données comme une
+nouvelle forme de traitement des données. L'ASFC veillera à ce que la collecte, l'utilisation et la
+communication de renseignements sur les voyageurs aux fins de l'ICV soient conformes aux
+pouvoirs que lui confère la Loi sur les douanes et aux obligations applicables en vertu de la Loi sur
+la protection des renseignements personnels. L'objectif du programme, cependant, est d'utiliser plus
+efficacement les données disponibles pour soutenir un traitement plus efficace et plus uniforme
+pour tous les voyageurs.
+
+Troisièmement, un autre compromis serait lié à l'affectation des ressources, car on prévoit une
+augmentation du nombre de voyageurs dans les années à venir.
+Par conséquent, si nos processus actuels restent inchangés, des ASF supplémentaires seront
+nécessaires pour soutenir les opérations de première ligne. La fonction d'ICV contribuera à
+accélérer les délais de traitement et permettra à l'ASFC de continuer à fonctionner avec succès
+avec son effectif actuel. Il convient également de noter que le système ne remplacera pas les ASF
+ou leur prise de décision, mais leur permettra plutôt de se concentrer sur les voyageurs qui
+peuvent présenter un risque inconnu ou plus élevé de non-conformité.
+
+Enfin, comme l'ICV représente la première utilisation de l'intelligence artificielle par l'ASFC en
+temps réel à la frontière, un choix de conception délibéré a été fait pour donner la priorité à
+l'explicabilité plutôt qu'au pouvoir prédictif des modèles formés. En d'autres termes, la capacité
+d'expliquer la logique des modèles de l'ICV de manière détaillée a été privilégiée par rapport aux
+techniques de modélisation plus complexes qui auraient pu augmenter la proportion de passages
+entraînant un indicateur. Cette décision vise à renforcer la confiance dans le projet à la fois à
+l'interne et auprès du public voyageur.
+
+9. A-t-on envisagé d'autres processus non automatisés ?
+Oui                                                                                                      [ Points : +0 ]
+
+10. Si des processus non automatisés ont été envisagés, pourquoi l'automatisation a-t-
+elle été désignée comme l' option privilégiée ?
+Le processus actuel d'inspection primaire aux postes frontaliers terrestres consiste en une série
+normalisée d'évaluations automatisées des systèmes pour tous les voyageurs. Si, au cours du
+processus d'inspection primaire, un agent décide de compléter les résultats du système
+automatisé existant par des recherches supplémentaires sur un voyageur, il n'y a actuellement
+qu'une seule option à sa disposition : effectuer des recherches manuelles des renseignements sur
+les voyageurs dans les systèmes de l'ASFC. Cela prend du temps, est inefficace et distrayant.
+
+L'automatisation a été désignée comme l'option privilégiée pour la nouvelle fonction de l'ICV, car
+elle permet une analyse plus organisée et synthétisée des données, plus rapidement que ce qui
+serait possible dans un processus non automatisé, ce qui évite encore une fois de recourir à des
+recherches manuelles par les agents qui peuvent également être sujettes à des erreurs en raison
+d'une saisie inexacte des renseignements biographiques d'un voyageur. Cela permettra aux ASF
+de se concentrer sur les voyageurs à risque élevé plutôt que sur les voyageurs dont on prévoit
+qu'ils seront très probablement conformes. De plus, cela permettra à l'ASFC de maintenir le
+niveau de service de traitement primaire des temps d'attente à la frontière au taux actuel au cas
+où le volume plus élevé prévu se concrétiserait.
+
+De plus, l'utilisation de l'automatisation permettra donc d'obtenir les avantages suivants, qui ne
+seraient pas possibles sans le système :
+    1. Accroître l'efficacité globale du traitement des voyageurs en assurant un traitement plus
+      rapide des voyageurs.
+    2. La réduction des coûts transactionnels associés au traitement des voyageurs permettra
+       d'éviter des coûts.
+    3. Accroître l'efficacité globale du traitement des voyageurs
+
+11. Quelles seraient les conséquences si le système n'était pas déployé ?
+Le service sera fourni de manière moins rapide et moins efficace.                      [ Points : +0 ]
+
+Profil de risque
+12. Le projet fait-il l'objet d'un examen public intense (p. ex. en raison de préoccupations
+relatives à la protection de la vie privée) et/ou de litiges fréquents ?
+Oui                                                                                                      [ Points : +3 ]
+
+13. Les clients de ce secteur d'activité sont-ils particulièrement vulnérables ?
+Oui                                                                                                      [ Points : +3 ]
+
+14. Les enjeux des décisions sont-ils très élevés ?
+Non                                                                                                     [ Points : +0 ]
+
+15. Ce projet aura-t-il des répercussions majeures sur le personnel, que ce soit en termes de
+   nombre ou de rôles ?
+Non                                                                                                     [ Points : +0 ]
+
+16. L'utilisation du système créera-t-elle ou exacerbera-t-elle des obstacles pour les personnes
+   handicapées ?
+Non                                                                                                     [ Points : +0 ]
+
+Chargé de projet
+17. Aurez-vous besoin d'une nouvelle autorisation stratégique pour ce projet ?
+Non                                                                                                     [ Points : +0 ]
+
+À propos de l'algorithme
+18. L'algorithme utilisé sera un secret (commercial)
+Oui                                                                                                      [ Points : +3 ]
+
+19. Le processus algorithmique sera difficile à interpréter ou à expliquer.
+Non                                                                                                     [ Points : +0 ]
+
+À propos de la décision
+20. Veuillez décrire la ou les décisions qui seront automatisées.
+ Les résultats de l'ICV ne sont pas une décision. Il s'agit plutôt d'indicateurs qui peuvent être
+utilisés dans le processus décisionnel d'un agent de libérer un voyageur ou de poursuivre
+l'examen, par exemple dans le cas d'un renvoi pour un examen continu au secondaire.
+
+21. La décision se rapporte-t-elle à l'une des catégories ci-dessous (cochez toutes les cases qui
+    s'appliquent) :
+Accès et mobilité (habilitations de sécurité, passage à la frontière)                     [ Points : +1 ]
+
+Évaluation de l'incidence
+22. Lequel des énoncés suivants décrit le mieux le type d'automatisation que vous envisagez ?
+Automatisation partielle (le système contribuera à la prise de décisions administratives en
+appuyant un agent au moyen d'évaluations, de recommandations,
+décisions intermédiaires ou autres extrants).       [ Points : +2 ]
+
+23. Veuillez décrire le rôle du système dans le processus décisionnel.
+
+L'ICV fournira un indicateur de conformité prévu pour chaque voyageur en fonction d'une
+évaluation algorithmique. Les extrants de l'ICV exploitent les données historiques des systèmes
+de l'ASFC et fournissent des renseignements supplémentaires aux ASF pour appuyer la décision
+finale de laisser entrer un voyageur au Canada ou de le renvoyer pour un examen secondaire.
+Encore une fois, il convient de noter que le système ne prend pas de décisions par lui-même,
+mais qu'il s'agit d'un outil supplémentaire fourni aux ASF pour les aider dans leur prise de
+décision.
+
+La décision finale de laisser passer un voyageur au secondaire ou de le renvoyer au secondaire
+revient toujours à l'ASF, comme c'est le cas aujourd'hui, et elle est fondée sur une multitude de
+facteurs, y compris l'entrevue du voyageur par l'ASF.
+
+24. Le système prendra-t-il des décisions ou des évaluations qui nécessiteront du jugement ou
+  de la discrétion ?
+  Oui                                                                                                   [ Points : +4 ]
+
+25. Veuillez décrire les critères utilisés pour évaluer les données des clients et les
+opérations appliquées pour les traiter.
+
+Les phases initiales du projet de l'ICV comprenaient une longue évaluation qualitative de toutes
+les données proposées au besoin pour l'entraînement des modèles de l'ICV. Il s'agissait
+notamment d'évaluer la qualité et l'exhaustivité des données, et d'évaluer leur importance
+relative dans le contexte opérationnel (c.-à-d. la façon dont le personnel de première ligne
+perçoit l'utilité de ces données). Au cours de cette période initiale, l'équipe de projet, le
+scientifique des données et les groupes d'ASF ont été étroitement intégrés afin de déterminer
+ensemble les caractéristiques des données saisies dans les systèmes sources de l'ASFC, et
+d'autres qui pourraient être dérivées des données sources, et qui pourraient être utiles pour
+déterminer les comportements conformes.
+Afin de donner suite à ces informations et de créer l'ensemble de données à utiliser pour
+l'entraînement du modèle, un processus de couplage d'enregistrements était nécessaire pour
+relier les enregistrements de transactions de l'ASFC aux dossiers d'exécution de la loi qui en
+résultent. Ce processus a été examiné en détail pour s'assurer de l'exactitude des liens et
+continuera d'être surveillé à mesure que l'ASFC modernise ses capacités de résolution de
+l'identité. Cette analyse permettra d'établir des antécédents exacts des voyageurs et de s'assurer
+que les modèles et les tendances dérivés de ces données reflètent fidèlement la réalité.
+Grâce aux données recueillies et couplées, les modèles d'ICV pourraient être entraînés et
+analysés en fonction de divers paramètres qui visent à établir l'exactitude de leur rendement et
+de leur rendement dans tous les groupes sociodémographiques afin d'atténuer les biais. Par
+exemple, ces mesures comprennent :
+
+   •  Le pourcentage de passages ayant reçu l’indicateur.
+   •  Le pourcentage de passages qui ont été examinés et jugés conformes ayant reçu
+        l’indicateur.
+   •  Le pourcentage de passages pour lesquels une mesure d'exécution des douanes a été
+      émise ayant reçu l’indicateur.
+
+Des tableaux de bord et des pipelines ont été créés dans le cadre de l'infrastructure
+informatique du projet pour être surveillés en temps quasi réel afin de s'assurer que l’ICV
+fonctionne comme prévu, garantissant ainsi que tout problème de mise en œuvre ou de données
+sera rapidement détecté et traité.
+
+26. Veuillez décrire le résultat produit par le système et toute information pertinente
+nécessaire pour l'interpréter dans le contexte de la décision administrative.
+
+L'algorithme de l'ICV peut produire un résultat que les ASF peuvent prendre en compte dans le
+contexte de la prise de leurs décisions administratives. Le système peut afficher un indicateur
+lorsque le modèle prédit que le voyageur actuel correspond à un modèle de conformité. Cela
+signifie que le voyageur correspond à l'un des modèles « à faible risque ». Par conséquent, le
+résultat de l'ICV générera un indicateur et si le score est supérieur à la valeur seuil, il n'affichera
+pas d’indicateur. Cela signifie que la conformité prévue d'un voyageur est « inconnue » ou
+inférieure à la valeur seuil.
+
+Au moment où la fonctionnalité de l'ICV sera déployée pour s'afficher à l'écran dans le cadre du
+projet EA, l'évaluation de l'ICV sera déclenchée par le balayage du passeport primaire, le balayage
+de la plaque d'immatriculation ou la soumission de la déclaration préalable. Cela peut aider les
+ASF à se concentrer sur les questions lorsqu'ils prennent leur décision de laisser le voyageur ou
+de le renvoyer à un examen secondaire. La formation des ASF fait l'objet de discussions au sein
+de groupes de travail et le matériel de formation sera fourni avant le déploiement.
+
+27. Le système effectuera-t-il une évaluation ou une autre opération qui ne serait pas
+effectuée autrement par un humain ?
+Non                                                                                                     [ Points : +0 ]
+
+28. Le système est-il utilisé par une autre partie de l'organisation que ceux qui l'ont développé ?
+Oui
+                                                                                                          [ Points : +4 ]
+29. Les répercussions découlant de la décision sont-elles réversibles ?
+Réversible                                                                                              [ Points : +1 ]
+
+30. Combien de temps dureront les répercussions de la décision ?
+Les répercussions sont plus susceptibles d'être brèves                                    [ Points : +1 ]
+
+31. Veuillez décrire pourquoi les répercussions découlant de la décision sont conformes à
+l'option sélectionnée ci-dessus.
+L'ICV fournira plus de renseignements aux ASF pour les aider à identifier les voyageurs dont les
+caractéristiques de passage correspondent aux tendances en matière de conformité. Bien que les
+essais aient démontré que les prévisions de sortie de l'ICV sont correctes 99 % du temps, il y a
+une légère probabilité que la prévision de conformité soit inexacte. Dans tous les cas, les ASF
+prennent des décisions en fonction d'un examen, d'indicateurs visuels et des renseignements mis
+à leur disposition lorsqu'ils comparent les pièces d'identité du voyageur à leurs dossiers d'entrée.
+L'ASF pourrait renvoyer un voyageur au secondaire ou le laisser partir, peu importe le résultat
+de l'ICV. Si un voyageur fait l'objet d'une référence, le temps typique passé au secondaire dépend
+de plusieurs facteurs, dont le type d'examen. Bien que des statistiques soient recueillies pour
+déterminer le temps qui s'écoule entre le moment où le voyageur est renvoyé du primaire au
+secondaire et le moment où le contrôle secondaire est terminé, il se peut qu'elles ne reflètent
+pas l'heure réelle de l'examen, car cela dépend du moment où l'agent met à jour le système
+d'examen secondaire pour indiquer que l'examen est clos.
+
+La mise en liberté de voyageurs qui n'étaient pas conformes et qui auraient dû faire l'objet d'un
+examen secondaire pourrait avoir une incidence négative sur la sécurité nationale, les intérêts
+économiques et la santé et la sécurité. Toutefois, il convient de noter que cela ne fera que
+diminuer ces risques, car cela fournira un outil supplémentaire aux ASF pour leur permettre de
+prendre des décisions plus éclairées. En outre, les résultats des références continueront d'être
+utilisés pour affiner les modèles. Les extrants de l'ICV sont conservés aux seules fins de l'analyse
+du système et ne sont pas utilisés pour calculer les passages subséquents d'un même voyageur.
+
+32. Les répercussions que la décision aura sur les droits ou libertés des personnes seront
+   probablement les suivantes :
+Peu ou pas d'impact                                                                             [ Points : +1 ]
+
+33. Veuillez décrire pourquoi les répercussions découlant de la décision sont conformes à
+l'option sélectionnée ci-dessus.
+
+Le système de l'ICV ne devrait avoir que peu ou pas d'incidence sur les droits ou libertés des voyageurs,
+car l'ICV ne fournit aux ASF que des renseignements prédictifs liés à la conformité provenant des
+données existantes déjà détenues dans l'historique des passages et le SIED. Comme nous l'avons
+déjà mentionné, le système d'ICV ne prend aucune décision et représente des renseignements
+supplémentaires fournis aux ASF pour les aider dans leur processus décisionnel. La décision
+finale et les directives données à un voyageur pour son entrée au Canada ou son renvoi à un
+examen secondaire seront toujours prises par l'ASF, et non par le système de l'ICV.
+
+Malgré le 1 % des cas où les résultats de l'ICV sont « erronés » lorsqu'il s'agit de prédire si un
+voyageur est très susceptible de se conformer, il ne s'agit que d'un élément parmi une multitude
+d'autres qui peuvent être utilisés pour appuyer la décision d'un ASF de renvoyer ou de libérer un
+voyageur. Les ASF sont hautement qualifiés et formés pour détecter les cas potentiels de non-
+conformité au cours du processus d'inspection primaire ; ils utiliseront donc toujours ces
+compétences et cette formation pour appuyer leur décision finale.
+
+34. Les répercussions que la décision aura sur l'égalité, la dignité, la vie privée et
+l'autonomie des personnes seront probablement les suivantes :
+Peu ou pas d'impact                                                                             [ Points : +1 ]
+
+35. Veuillez décrire pourquoi les répercussions découlant de la décision sont conformes à
+l'option sélectionnée ci-dessus.
+
+Le système de l'ICV ne devrait avoir que peu ou pas d'incidence sur l'égalité, la dignité ou la vie privée des
+voyageurs, car il ne fournit aux ASF que des renseignements sur le niveau de conformité fondés
+sur les données déjà incluses dans d'autres systèmes. Cependant, comme les données sont
+utilisées de nouvelles façons, les voyageurs peuvent ne pas comprendre comment l'information
+est traitée et comment elle peut influer sur le traitement à leur arrivée au Canada. À cet égard,
+le système recueillera des renseignements tirés de l'historique des passages et du SIED, les
+modifiera, ce qui fournira une note de conformité pour chaque voyageur en fonction d'une
+évaluation algorithmique. Ces renseignements fourniront des renseignements supplémentaires à
+l'ASF pour qu'il puisse prendre sa décision et seront utilisés pour accélérer le processus aux
+frontières. Grâce à ces données, les ASF seront en mesure de prendre des décisions plus
+éclairées dans un laps de temps réduit. Si le système n'était pas à la disposition des ASF, ceux-ci
+seraient toujours en mesure d'effectuer une analyse basée sur toutes les données auxquelles ils
+ont actuellement accès.
+
+Comme indiqué précédemment, le système d'ICV ne prend aucune décision et représente des
+renseignements supplémentaires fournis aux ASF pour les aider dans leur processus décisionnel.
+La décision finale et les directives données à un voyageur pour son entrée au Canada ou sa
+référence à un examen secondaire seront toujours prises par l'ASF, et non par le système de
+l'ICV.
+
+Des évaluations supplémentaires (évaluation des facteurs relatifs à la vie privée et évaluation de
+l'ACS Plus) ont été réalisées pour s'assurer que tous les facteurs liés à la vie privée, à l'égalité et
+à la dignité des personnes sont pris en considération. C'est pourquoi l'incidence devrait être
+minimale.
+
+36. Les répercussions que la décision aura sur la santé et le bien-être des personnes seront
+probablement les suivantes :
+Peu ou pas d'impact                                                                             [ Points : +1 ]
+
+37. Veuillez décrire pourquoi les répercussions découlant de la décision sont conformes à
+l'option sélectionnée ci-dessus.
+
+Le système d'ICV ne devrait avoir que peu ou pas d'incidence sur la santé et le bien-être des
+voyageurs, car
+L'ICV ne fournit aux ASF que des renseignements supplémentaires à prendre en compte, tirés
+des données déjà disponibles dans d'autres systèmes.
+
+Comme indiqué précédemment, le système d'ICV ne prend aucune décision et représente des
+renseignements supplémentaires fournis aux ASF pour les aider dans leur processus décisionnel.
+La décision finale et les directives données à un voyageur pour son entrée au Canada ou son
+renvoi à un examen secondaire seront toujours prises par l'ASF, et non par le système de l'ICV.
+
+De plus, l'outil sera mis à l'essai tous les trimestres dans les systèmes dorsaux avant d'être disponible
+et utilisé en temps réel. Cela contribuera également à renforcer l'exactitude de l'outil et à s'assurer
+que les ASF savent comment l'utiliser pour servir au mieux les intérêts des voyageurs en matière de
+santé et de bien-être.
+
+38. Les répercussions que la décision aura sur les intérêts économiques des personnes
+seront probablement les suivantes :
+Peu ou pas d'impact                                                                             [ Points : +1 ]
+
+39. Veuillez décrire pourquoi les répercussions découlant de la décision sont conformes à
+l'option sélectionnée ci-dessus.
+
+Le système d'ICV ne devrait avoir que peu ou pas d'incidence sur les intérêts économiques, car
+L'ICV ne fournit aux ASF que des renseignements sur la conformité fondés sur les données
+provenant d'autres systèmes. Les ASF effectueront tout de même une analyse de tous les
+renseignements disponibles et la décision finale de communiquer ou de renvoyer sera à leur
+discrétion.
+En ce qui concerne les intérêts économiques des individus, le système pourrait être favorable.
+Comme on s'attend à ce que les délais de traitement soient réduits par l'introduction de l'ICV,
+elle accélérera le processus pour les voyageurs tout en améliorant la probabilité de traverser les
+frontières sans retards inutiles. De meilleurs délais de traitement contribueraient à des
+processus sans heurts, réduisant ainsi les retards inutiles qui devraient avoir une incidence
+positive sur d'autres préparatifs de voyage. De plus, l'efficacité accrue du traitement à la frontière
+permettra à l'ASFC de mieux se préparer à gérer des volumes de voyages plus élevés sans
+nécessiter une augmentation relative du nombre d'ASF. C'est pourquoi l'impact devrait être
+minime et servira les intérêts des voyageurs en ce qui concerne les intérêts économiques.
+
+Comme indiqué précédemment, le système d'ICV ne prend aucune décision et représente des
+renseignements supplémentaires fournis aux ASF pour les aider dans leur processus décisionnel.
+La décision finale et les directives données à un voyageur pour son entrée au Canada ou son
+renvoi à un examen secondaire seront toujours prises par l'ASF, et non par le système de l'ICV.
+
+40. Les répercussions que la décision aura sur la durabilité continue d'un écosystème
+environnemental seront probablement les suivantes :
+Peu ou pas d'impact                                                                             [ Points : +1 ]
+
+41. Veuillez décrire pourquoi les répercussions découlant de la décision sont conformes à
+l'option sélectionnée ci-dessus.
+
+Comme le système est axé sur les données, il n'a pas d'incidence importante sur la durabilité
+continue d'un écosystème environnemental. Le système n'a que peu ou pas d'incidence sur
+l'écosystème environnemental, car il est opérationnel dans un environnement numérique, mais la
+réduction des temps d'attente à la frontière pourrait avoir une très faible incidence sur les
+émissions de carburant et, par conséquent, sur l'environnement.
+
+À propos des données – A. Source des données
+42. Le système décisionnel automatisé utilisera-t-il des renseignements personnels comme
+   données d'entrée ?
+Non                                                                                                     [ Points : +4 ]
+
+43. Avez-vous vérifié que l'utilisation des renseignements personnels se limite à ce qui est
+directement lié à la prestation d'un programme ou d'un service ?
+Oui                                                                                                      [ Points : +2 ]
+
+44. Les renseignements personnels des personnes sont-ils utilisés dans le cadre d'un
+processus décisionnel qui les touche directement ?
+Oui
+                                                                                                          [ Points : +0 ]
+45. Avez-vous vérifié si le système utilise les renseignements personnels d'une manière
+conforme : a) aux fichiers de renseignements personnels (FRP) et aux évaluations des facteurs
+relatifs à la vie privée (EFVP) actuels de vos programmes ou b) aux modifications prévues ou
+mises en œuvre des FRP ou des EFVP qui tiennent compte de nouveaux usages et processus ?
+Oui                                                                                                      [ Points : +0 ]
+
+46. Veuillez indiquer les numéros de banque de FRP pertinents.
+SIED FRP CBSA PPU 016 et historique des passages FRP CBSA PPU 1101
+
+47. Quelle est la classification de sécurité la plus élevée des données d'entrée utilisées par le
+   système ? (Sélectionnez-en un)
+Protégé B                                                                                              [ Points : +3 ]
+
+48. Qui contrôle les données ?
+Gouvernement fédéral                                                                              [ Points : +1 ]
+
+49. Le système utilisera-t-il des données provenant de plusieurs sources différentes ?
+Oui                                                                                                      [ Points : +4 ]
+
+50. Le système nécessitera-t-il des données d'entrée provenant d'un appareil connecté à
+Internet ou à la téléphonie ? (p. ex. Internet des objets, capteur)
+Non                                                                                                     [ Points : +0 ]
+
+51. Le système sera-t-il relié à d'autres systèmes de TI ?
+Oui                                                                                                      [ Points : +4 ]
+
+52. Qui a recueilli les données utilisées pour entraîner le système ?
+Votre institution                                                                                       [ Points : +1 ]
+
+53. Qui a recueilli les données d'entrée utilisées par le système ?
+Votre institution                                                                                       [ Points : +1 ]
+
+54. Veuillez décrire les données d'entrée recueillies et utilisées par le système, leur source et
+la méthode de collecte.
+
+L'algorithme de l’ICV utilise des données en direct du passage en cours (telles que
+si le voyageur voyage seul, le type de pièce d'identité qu'il a présentée, la plaque
+d'immatriculation du véhicule, etc.) et les données des voyages précédents
+des voyageurs (c.-à-d. les renseignements inclus dans le SIED et les
+renseignements de la base de données de l'historique des passages).
+
+Les données réelles sont recueillies lors de la numérisation des documents et
+de la plaque du voyageur, et les données sur les antécédents de voyage sont
+recueillies à partir de l'entrepôt de données d'entreprise (EDE) de l'ASFC,
+qui contient des données sur l'historique des passages et des données du
+SIED. Toutes les données dérivées du système de l'ICV proviennent des
+systèmes internes de l'ASFC.
+
+À propos des données – B. Type de données
+55. Le système exigera-t-il l'analyse de données non structurées pour formuler une
+recommandation ou prendre une décision ?
+Non                                                                                                     [ Points : 0 ]
+
+Section 3.2 : Consultations sur les questions et réponses
+sur les mesures d'atténuation
+1. Intervenants internes (institutions fédérales, y compris la fonction publique fédérale)
+Oui                                                                                                      [ Points : +1 ]
+
+2. Quels intervenants internes allez-vous mobiliser ?
+Services de communication
+Politiques et planification
+stratégiques
+Gouvernance des données
+Politique du
+programme
+Services
+juridiques
+Autre (décrire)
+Bureau de l'accès à l'information et de la protection des renseignements personnels
+Groupes de travail sur l'accessibilité de l'expérience client et
+de la gestion des relations avec la clientèle
+Bureau du dirigeant principal de l'information du SCT
+
+3. Veuillez décrire
+(suite) ACS Plus
+Secrétariat aux affaires autochtones
+Agents des services frontaliers/surintendants
+
+4. Intervenants externes (groupes d'autres secteurs ou administrations)
+Oui                                                                                                      [ Points : +1 ]
+
+5. Quels intervenants externes allez-vous mobiliser ?
+Gouvernements d'autres administrations
+
+Réduction des risques et mesures d'atténuation – Qualité
+des données
+6. Aurez-vous mis en place des processus documentés pour tester les ensembles de
+données contre les préjugés et d'autres résultats inattendus ? Il peut s'agir d'une
+expérience de l'application de cadres, de méthodes, de lignes directrices ou d'autres
+outils d'évaluation.
+Oui                                                                                                      [ Points : +2 ]
+
+7. Allez-vous rendre ces renseignements accessibles au public ?
+Non                                                                                                     [ Points : +0 ]
+
+8. Élaborerez-vous un processus pour documenter la façon dont les problèmes de qualité des
+données ont été résolus au cours du processus de conception ?
+Oui                                                                                                      [ Points : +1 ]
+
+9. Allez-vous rendre ces renseignements accessibles au public ?
+Non                                                                                                     [ Points : +0 ]
+
+10. Entreprendrez-vous une analyse comparative entre les sexes plus des données ?
+Oui                                                                                                      [ Points : +1 ]
+
+11. Allez-vous rendre ces renseignements accessibles au public ?
+Non                                                                                                     [ Points : +0 ]
+
+12. Avez-vous assigné à votre institution la responsabilité de la conception, de
+l'élaboration , de la maintenance et de l'amélioration du système ?
+Oui                                                                                                      [ Points : +2 ]
+
+13. Disposez-vous d'un processus documenté pour gérer le risque que des données
+obsolètes ou peu fiables soient utilisées pour prendre une décision automatisée ?
+Oui                                                                                                      [ Points : +2 ]
+
+14. Allez-vous rendre ces renseignements accessibles au public ?
+Non                                                                                                     [ Points : +0 ]
+15. Les données utilisées pour ce système seront-elles affichées sur le Portail du gouvernement
+    ouvert ?
+Non                                                                                                     [ Points : +0 ]
+
+Réduction des risques et mesures d'atténuation – équité
+procédurale
+16. La piste de vérification indiquera-t-elle l'autorité ou l'autorité déléguée prévue par la loi ?
+Oui                                                                                                      [ Points : +1 ]
+
+17. Le système fournira-t-il une piste de vérification qui enregistre toutes les
+recommandations ou décisions prises par le système ?
+Oui                                                                                                      [ Points : +2 ]
+
+18. Tous les points de décision clés seront-ils identifiables dans la piste de vérification ?
+Oui                                                                                                      [ Points : +2 ]
+
+19. Tous les points de décision clés dans la logique du système automatisé seront-ils liés à
+la législation, à la politique ou à la procédure pertinente ?
+Oui                                                                                                      [ Points : +1 ]
+
+20. Tiendrez-vous un registre détaillant tous les changements apportés au modèle et au
+   système ?
+Oui                                                                                                      [ Points : +2 ]
+
+21. La piste de vérification indiquera-t-elle clairement tous les points de décision pris par le
+   système ?
+Oui                                                                                                      [ Points : +2 ]
+
+22. La piste de vérification générée par le système pourrait-elle être utilisée pour générer un
+avis de décision (y compris un énoncé des motifs ou un autre avis) au besoin ?
+Oui                                                                                                      [ Points : +1 ]
+
+23. La piste de vérification indiquera-t-elle précisément quelle version du système a été utilisée
+pour chaque décision qu'elle appuie ?
+Oui                                                                                                      [ Points : +2 ]
+
+24. La piste de vérification indiquera-t-elle qui est le décideur autorisé ?
+Oui                                                                                                      [ Points : +1 ]
+
+25. Le système sera-t-il en mesure de justifier ses décisions ou de formuler des
+recommandations au besoin ?
+Oui                                                                                                      [ Points : +2 ]
+
+26. Y aura-t-il un processus en place pour accorder, surveiller et révoquer l'autorisation
+d'accès au système ?
+Oui                                                                                                      [ Points : +1 ]
+
+27. Y aura-t-il un mécanisme pour recueillir les commentaires des utilisateurs du système ?
+Oui                                                                                                      [ Points : +1 ]
+
+28. Un processus de recours sera-t-il prévu ou établi pour les clients qui souhaitent contester
+la décision ?
+Non                                                                                                     [ Points : +0 ]
+
+29. Le système permettra-t-il une dérogation humaine aux décisions du système ?
+Oui                                                                                                      [ Points : +0 ]
+
+30. Y aura-t-il un processus en place pour consigner les cas où des dérogations ont été
+    effectuées ?
+Oui                                                                                                      [ Points : +0 ]
+
+31. La piste de vérification comprendra-t-elle des processus de contrôle des changements
+pour consigner les modifications apportées au fonctionnement ou au rendement du système ?
+Oui                                                                                                      [ Points : +2 ]
+
+32. Préparerez-vous un cas conceptuel à l'intention du Conseil d'examen de l'architecture
+intégrée du gouvernement du Canada ?
+Oui                                                                                                      [ Points : +1 ]
+Réduction des risques et mesures d'atténuation –
+Protection des renseignements personnels
+33. Si votre système utilise ou crée des renseignements personnels, allez-vous entreprendre ou
+   faire en sorte que vous entrepris une évaluation des facteurs relatifs à la vie privée ou mis à jour une
+   évaluation existante ?
+Oui                                                                                                      [ Points : +1 ]
+
+34. Veuillez indiquer ce qui suit dans votre réponse : Titre et portée de l'évaluation
+des facteurs relatifs à la vie privée   ; Comment le projet d'automatisation s'inscrit dans le
+programme ; la date d'achèvement ou de modification de l'évaluation des facteurs relatifs
+à la vie privée .
+
+L'ASFC s'est engagée à soumettre l' évaluation des facteurs relatifs à la vie privée (EFVP) du Programme de
+ facilitation de la circulation des voyageurs et de conformité au Commissariat à la protection de la vie
+ privée et au Conseil du Trésor avant la mise en œuvre du projet EA. L'EFVP pour la version 1 de la phase
+1 du projet EA devrait être présentée en août 2026. Une évaluation du protocole de protection des
+renseignements personnels pour la validation de principe de l'indicateur de conformité des
+voyageurs a également été réalisée en 2019.
+
+Le projet d'automatisation s'inscrit dans le programme, car il offre aux ASF qui travaillent dans
+ les zones d'inspection primaire et secondaire un meilleur accès à l'information tirée des données
+existantes recueillies par l'ASFC et devrait accroître la probabilité de conformité des voyageurs.
+L'ASFC bénéficiera d 'un meilleur accès à l'information grâce à un meilleur processus décisionnel
+en matière de mainlevée et de renvoi, en particulier dans le cas des voyageurs identifiés comme
+ayant des caractéristiques de passage conformes aux tendances en matière de conformité.
+
+35. Allez-vous concevoir et intégrer la sécurité et la protection des renseignements
+personnels dans vos systèmes dès l'étape de la conception du projet ?
+Oui                                                                                                      [ Points : +1 ]
+
+36. L'information sera-t-elle utilisée dans un système fermé (c.-à-d. sans connexion à Internet,
+à l'intranet ou à tout autre système) ?
+Non                                                                                                     [ Points : +0 ]
+
+37. S'il s'agit de la communication de renseignements personnels, une entente ou une
+entente comportant des mesures de protection appropriées a-t-elle été établie ?
+Non                                                                                                     [ Points : +0 ]
+
+38. Allez-vous anonymiser les renseignements personnels utilisés ou créés par le système à
+un moment donné du cycle de vie ?
+Oui                                                                                                      [ Points : +0 ]
+
+Tous les renseignements personnels sont anonymisés avant l'entraînement des modèles d'ICV. Tous les
+renseignements personnels sont anonymisés avant de marquer un passage. Aucun nom, aucune date de
+ naissance, aucune pièce d'identité de passeport et aucun autre identifiant personnel ne sont utilisés pour la
+ notation/formation. Ces champs sont tous purgés avant la notation/formation. Seules les caractéristiques
+sont utilisées (p. ex. le nombre de passages, l'origine, le groupe d'âge, etc.).

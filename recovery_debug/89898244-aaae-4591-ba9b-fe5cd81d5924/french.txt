@@ -1,0 +1,585 @@
+Résultats de l’évaluation de l’incidence
+algorithmique
+Version : 0.10.0
+
+Détails du projet
+ 1. Nom de la personne sondée
+   Serg. Tom Guineau
+
+ 2. Titre du poste
+Gestionnaire technique
+
+ 3. Organisation
+Gendarmerie royale du Canada
+
+ 4. Direction
+Opérations techniques de la DG/SESND/Groupe de la technologie du CNCEE
+
+ 5. Titre du projet
+   Griffeye
+
+ 6. Identifiant du projet provenant du Plan TI
+   Griffeye CS et Di Pro
+
+ 7. Programme ministériel (Cadre des résultats ministériels)
+   Griffeye CS et Di Pro
+
+ 8. Phase du projet
+Mise en œuvre                                                                                                [ Points : 0 ]
+
+ 9. Veuillez fournir une description du projet :
+LOGICIEL déjà utilisé – Outil développé pour catégoriser et classer les images et les
+vidéos d’exploitation d’enfants. Il intègre les contenus multimédias provenant des
+éléments de preuve saisis et des transmissions des partenaires (NCMEC, Cyberaide et
+d’autres organismes d’application de la loi) et il présente tous les contenus
+multimédias et les métadonnées intégrées connexes (données EXIF, etc.) dans un
+espace de travail où les catégories conformes à l’art. 163 du Code criminel peuvent
+être appliquées, où les contenus multimédias peuvent être regroupés à l’aide de
+divers filtres et où une précatégorisation est effectuée dans les bases de données des
+condensés du matériel connu. Cet outil offre la capacité d’utiliser la mise en œuvre de
+l’IA pour évaluer les images et les vidéos et déterminer si de la pornographie juvénile
+est présente en appliquant une fonction de classification entraînée aux contenus
+multimédias aux fins d’examen par un humain. Cette fonction d’IA est aussi en
+mesure d’effectuer une correspondance faciale (et non une reconnaissance faciale)
+avec d’autres contenus multimédias qui se trouvent dans l’espace de travail pour
+essayer de regrouper des individus qui possèdent des caractéristiques similaires. La
+fonction intégrée de correspondance faciale peut être utilisée et elle ne fait pas appel
+aux autres systèmes pour reconnaître le visage d’une personne en particulier qui est
+identifiable. Une fois le processus terminé, les condensés et les métadonnées
+connexes peuvent être exportés pour être transmis à d’autres outils compatibles au
+moyen du format PVIC, puis être partagés au besoin ou être autorisés.
+
+À propos du système
+ 10. Veuillez indiquer laquelle des capacités suivantes s’applique à votre système :
+Reconnaissance d’images et d’objets : analyser de vastes ensembles de données pour
+ automatiser la reconnaissance, la classification et le contexte associés à une image ou à un objet.
+ Production de contenu : analyser de vastes ensembles de données pour catégoriser, traiter,
+ trier, personnaliser et présenter du contenu particulier en fonction du contexte.
+ Évaluation du risque : analyser de vastes ensembles de données pour relever des
+ tendances, recommander des plans d’action et, dans certains cas, exécuter des tâches
+ précises.
+
+Section 1 : Niveau d’incidence : 2
+ Cote actuelle : 39
+
+ Cote d’incidence brute : 39
+
+ Cote d’atténuation : 16
+
+Section 2 : Exigences propres au niveau d’incidence 2
+Examen par les pairs
+Consulter au moins un des experts suivants et publier l’examen complet ou un résumé en
+langage clair des conclusions sur un site Web du gouvernement du Canada :
+    expert qualifié d’une institution gouvernementale fédérale, provinciale, territoriale ou municipale;
+   membres qualifiés d’une faculté d’un établissement postsecondaire;
+    chercheurs qualifiés d’une organisation non gouvernementale pertinente;
+     tiers fournisseur contractuel avec une spécialisation pertinente;
+    un comité consultatif des données et d’automatisation spécifié par le Secrétariat du Conseil du Trésor
+du Canada.
+OU
+
+Publier les spécifications du système décisionnel automatisé dans une revue à comité de lecture. Lorsque
+l’accès à la revue publiée est restreint, veiller à ce qu’un résumé des conclusions en langage clair soit
+librement accessible.
+
+Analyse comparative entre les sexes plus
+S’assurer que l’analyse comparative entre les sexes plus aborde les questions suivantes :
+     les incidences du projet d’automatisation (y compris le système, les données et la décision) sur le
+    genre ou d’autres facteurs d’identité;
+     les mesures prévues ou existantes pour faire face aux risques identifiés par l’analyse comparative
+  entre les sexes plus.
+Avis
+Avis en langage simple fourni par l’entremise de tous les modes de prestation de services utilisés
+(Internet, en personne, par courrier, par téléphone).
+
+Maillon humain de la prise de décisions
+Des décisions peuvent être prises sans participation humaine directe.
+
+Explication
+En plus de toute exigence juridique applicable, s’assurer qu’une explication significative est fournie au
+client avec toute décision qui entraîne le refus de prestation ou de service, ou qui implique une autre
+mesure réglementaire. L’explication doit fournir des renseignements au client, en langage clair, sur ce qui
+suit :
+
+     le rôle du système dans le processus de décision;
+     les données d’apprentissage et relatives aux clients, leur source et leur méthode de collecte, le cas
+    échéant;
+     les critères utilisés pour évaluer les données des clients et les opérations appliquées pour les
+     traiter;
+     le résultat produit par le système et toute information pertinente nécessaire pour l’interpréter
+  dans le contexte de la décision administrative;
+ une justification de la décision administrative, y compris les principaux facteurs qui l’ont motivée.
+Les explications doivent également fournir des renseignements aux clients sur les possibilités de recours
+pertinentes, le cas échéant.
+
+Une description générale de ces éléments doit également être mise à disposition par l’entremise
+de l’évaluation de l’incidence algorithmique et être repérable sur le site Web de l’organisation.
+
+Formation
+Documents sur la conception et la fonctionnalité du système.
+
+Gestion de la TI et de la continuité des activités
+Aucune
+
+Approbation de l’exploitation du système
+Aucune
+Autres exigences
+La Directive sur la prise de décisions automatisée comprend également d’autres exigences qui doivent
+être respectées pour tous les niveaux d’incidence.
+
+ Lien vers la Directive sur la prise de décisions automatisée
+
+Contactez le bureau de l’AIPRP de votre établissement pour discuter de l’exigence d’une évaluation des
+facteurs relatifs à la vie privée conformément à la Directive sur l’évaluation des facteurs relatifs à la vie
+privée.
+
+Section 3 : Questions et réponses
+Section 3.1 : Questions et réponses liées aux risques
+Raisons de l’automatisation
+ 1. Qu’est-ce qui motive votre équipe à introduire l’automatisation dans ce processus décisionnel?
+   (Cochez toutes les réponses qui s’appliquent.)
+ Améliorer la qualité générale des décisions.
+ Le système exécute des tâches que les humains ne pourraient pas accomplir dans un délai
+ raisonnable.
+ Utiliser des approches innovatrices.
+
+ Retard à rattraper dans le travail ou les dossiers.
+Coûts moindres par transaction dans un programme
+actuel.
+Autre (veuillez préciser).
+
+ 2. Veuillez fournir une description :
+En ce qui concerne la pornographie juvénile et les vidéos et les images d’exploitation
+sexuelle d’enfants, l’examen et la prise de décisions par un humain sont toujours
+requis pour identifier, localiser et protéger rapidement les enfants qui en sont
+victimes. Comme chaque dossier unique contient en moyenne plus de trois millions
+d’éléments de médias, ces outils sont utilisés pour déterminer quels contenus
+multimédias ont déjà fait l’objet d’un examen ou d’une enquête, puis pour regrouper
+les « nouveaux contenus multimédias » afin qu’ils soient examinés par un humain en
+vue de déterminer plus rapidement quel type d’intervention ou de sauvetage la police
+devra effectuer. En éliminant la nécessité de toujours revoir les mêmes contenus
+multimédias atroces, nous améliorons non seulement l’efficacité avec laquelle nous
+protégeons les enfants, mais nous protégeons aussi la santé et le bien-être des
+enquêteurs en réduisant leur exposition à ces contenus.
+
+ 3. Quels sont les besoins des clients auxquels le système répondra et comment le système y
+   répondra-t-il? Si possible, décrivez la façon dont les besoins des clients ont été déterminés.
+Plusieurs clients sont impliqués. En premier lieu, il faut identifier les enfants qui sont
+victimes et qui sont exploités, puis il faut les localiser et les retirer de la situation
+abusive le plus rapidement possible, peu importe l’endroit où ils se trouvent. Si les
+maigres ressources d’application de la loi passent leur temps à examiner des fichiers
+non pertinents ou non urgents, cela retardera la découverte des abus pendant des
+mois ou des années, laissant les victimes subir d’autres violences en dépit du fait que
+l’organisation possède des renseignements à jour pour les sauver. De tels systèmes
+aident à établir l’ordre de priorité dans lequel les contenus multimédias doivent être
+examinés par des humains dans le but de déterminer la probabilité qu’un enfant soit
+actuellement à risque.
+
+ 4. Veuillez décrire tous les bienfaits d’intérêt public que le système devrait avoir.
+   Outre ce qui précède, le public s’attend à ce que les organismes d’application de la loi donnent suite
+   aux renseignements et protègent les personnes en temps opportun. Si une intervention était
+   effectuée des semaines après un appel au 911, la sécurité du public serait menacée, de même que la
+   confiance dans la capacité d’assurer la sécurité d’une personne. La mise en place de systèmes
+   permettant d’organiser les données de manière à ce que les personnes vulnérables puissent bénéficier
+   plus rapidement d’une aide est essentielle.
+
+ 5. Dans quelle mesure le système sera-t-il efficace pour répondre aux besoins des clients?
+ Très efficace.                                                                                                  [ Points : +0 ]
+
+ 6. Veuillez décrire les améliorations, les bienfaits ou les avantages que vous attendez de l’utilisation d’un
+   système automatisé. Cela pourrait inclure des indicateurs de programme et des objectifs de
+   rendement pertinents.
+   Griffeye Analyze est l’un des très rares outils spécialisés qui permettent de catégoriser les contenus
+   multimédias liés aux enquêtes sur la pornographie juvénile. Voici les avantages liés à l’utilisation de
+    tels outils :
+ -     mener des enquêtes et identifier, localiser et protéger plus rapidement les
+ enfants à risque; faciliter l’échange de preuves et de renseignements avec des
+ partenaires externes et internes puisque ces outils utilisent un format normalisé pour
+ exporter et importer des données; réduire les blessures psychologiques et la douleur
+ des enquêteurs en réduisant le nombre de traumatismes auxquels ils sont
+ constamment exposés;
+ -      être en mesure de fournir aux procureurs des données factuelles concernant
+ la gravité et l’étendue des collectes de contenus multimédias par les contrevenants;
+ -      être en mesure de fournir des données statistiques au gouvernement pour lui
+ faire connaître l’ampleur des abus et l’intervention policière qui y est associée.
+
+ 7.  Veuillez décrire la façon dont vous allez vous assurer que le système se limite à répondre aux besoins
+    des clients mentionnés ci-dessus.
+L’outil Griffeye Analyze sert précisément à catégoriser les contenus multimédias de
+cette nature (comme d’autres solutions spécialisées concurrentes) et il est conçu en
+tenant compte de ces besoins.
+
+ 8.  Veuillez décrire toutes les concessions mutuelles entre les intérêts des clients et les objectifs du
+    programme que vous avez pris en considération lors de l’élaboration du projet.
+Aucune
+
+ 9.  D’autres options de processus non automatisés ont-elles été envisagées?
+Oui                                                                                                               [ Points : +0 ]
+ 10. Si des processus non automatisés ont été envisagés, pourquoi l’automatisation a-t-elle été l’option
+     choisie?
+Par le passé, les enquêteurs avaient l’habitude d’imprimer des images d’abus à partir
+de disquettes et d’autres supports numériques, ce qui faisait en sorte que peu de
+contenus multimédias devaient être examinés et évalués par des humains. Avec
+l’avènement des supports de mémoire de masse et de la disponibilité d’Internet haute
+vitesse, la production, la transmission et la collecte de vidéos et d’images sont
+presque instantanées et il est possible de recueillir en moyenne plus de deux à
+trois millions de contenus multimédias au cours d’une seule enquête (un grand
+nombre d’ordinateurs, de téléphones cellulaires, de tablettes et d’autres appareils
+d’usage courant ayant une grande capacité de stockage et une connectivité à Internet
+peuvent se trouver dans toutes les résidences). L’examen et l’évaluation par un
+humain de chaque vidéo ou image ne peuvent pas être effectués par une seule
+personne si elle doit toujours examiner chaque image d’abus, chaque logo de
+Windows ou chaque liste d’Amazon qu’elle a déjà vus. Sans un traitement et une
+analyse numériques des médias qui peuvent reconnaître du contenu déjà visionné ou
+sans la capacité de regrouper des contenus multimédias avec des produits communs
+(même caméra, même utilisateur informatique, même site Web, etc.), il faudrait un
+mois à un enquêteur seulement pour évaluer les risques associés à un dossier, sans
+parler de tous les signalements reçus au quotidien.
+
+ 11. Quelle serait la conséquence du non-déploiement du système?
+ Le service ne peut pas être fourni de façon rapide et efficace                                    [ Points : +2 ]
+ Les coûts du service sont trop élevés                                                                   [ Points : 0 ]
+ La qualité du service n’est pas aussi élevée                                                           [ Points : 0 ]
+ La prestation du service ne peut pas atteindre les objectifs de rendement                   [ Points : 0 ]
+ Autre (veuillez préciser)                                                                                    [ Points : 0 ]
+ 12. Veuillez fournir une description :
+Les enfants continueront d’être filmés pendant qu’ils sont agressés sexuellement ou
+torturés en raison des retards liés à l’évaluation et à la priorisation des contenus
+multimédias qui font l’objet d’une enquête.
+
+Profil de risque
+ 13. Le projet fait-il l’objet d’un examen public approfondi (p. ex. en raison de préoccupations liées à la
+     protection de la vie privée) ou de litiges fréquents?
+Non                                                                                                              [ Points : +0 ]
+
+ 14. Les clients de ce secteur d’activité sont-ils particulièrement vulnérables?
+Oui                                                                                                               [ Points : +3 ]
+
+ 15. Les enjeux des décisions de ce programme sont-ils très élevés?
+Oui                                                                                                               [ Points : +4 ]
+
+ 16. Ce projet aura-t-il d’importantes répercussions sur le personnel, que ce soit en termes de nombre ou
+    de rôle?
+Oui                                                                                                               [ Points : +3 ]
+ 17. L’utilisation du système entraînera-t-elle des difficultés pour les personnes handicapées ou les
+     accentuera-t-elle?
+Non                                                                                                              [ Points : +0 ]
+
+Chargé de projet
+ 18. Aurez-vous besoin d’une nouvelle autorisation pour ce projet ?
+Non                                                                                                              [ Points : +0 ]
+
+À propos de l’algorithme
+ 19. L’algorithme utilisé sera un secret (commercial).
+Non                                                                                                              [ Points : +0 ]
+
+ 20. Le processus algorithmique sera difficile à interpréter ou à expliquer.
+Non                                                                                                              [ Points : +0 ]
+
+À propos de la décision
+ 21. Veuillez décrire la ou les décisions qui seront automatisées.
+Cet outil permet de regrouper des contenus multimédias de différentes façons qui ne
+sont pas axées sur l’IA (regroupement par exif, chemin d’accès, condensés binaires,
+etc.) et il peut aussi jouter des modules d’apprentissage automatique pour regrouper
+des images et des vidéos si elles contiennent des enfants, différentes agressions
+sexuelles et divers niveaux de nudité. Les décisions visent à regrouper des médias et à
+les signaler à l’enquêteur afin de prioriser leur examen et leur évaluation manuels par
+un humain – c’est donc dire que la décision finale appartient toujours à la personne
+qui utilise l’outil. L’IA aide à repérer rapidement les contenus multimédias qui
+contiennent des éléments d’abus sexuel et d’abus d’enfants parmi les masses de
+contenus multimédias indépendants, comme des pages Web, des images de systèmes
+d’exploitation et d’autres contenus multimédias légitimes.
+
+ 22. La décision s’applique-t-elle à l’une ou l’autre des catégories ci-dessous (Cochez toutes les réponses
+     qui s’appliquent) :
+ Autre (veuillez préciser)                                                                                    [ Points : +1 ]
+
+ 23. Veuillez fournir une description :
+Les décisions permettent de reconnaître plus rapidement les contenus multimédias de
+pornographie juvénile dans les supports de stockage numérique de masse afin de
+prioriser leur examen par un humain.
+
+Évaluation de l’incidence
+ 24. Parmi les propositions suivantes, laquelle décrit le mieux le type d’automatisation que vous
+    envisagez?
+ Automatisation partielle (le système facilitera la prise de décisions administratives en
+ appuyant un agent au moyen d’évaluations, de recommandations, de décisions
+ provisoires ou d’autres résultats).
+                                                                                                                     [ Points : +2 ]
+
+ 25. Veuillez décrire le rôle du système dans le processus de prise de décisions.
+Veuillez vous reporter à l’information précédente.
+
+ 26. Le système prendra-t-il des décisions ou effectuera-t-il des évaluations qui exigent du jugement ou
+    de la discrétion?
+Non                                                                                                              [ Points : +0 ]
+
+ 27. Veuillez décrire les critères utilisés pour évaluer les données des clients et les procédures appliquées
+    pour les traiter.
+Le système (lorsqu’il utilise une fonction d’IA) tente d’examiner le contenu d’images ou
+de vidéos pour déterminer si certains éléments visuels ou comportementaux sont
+présents dans celles-ci (c.-à-d. Est-ce qu’un enfant est présent? Est-ce qu’il y a un
+adulte? Est-ce qu’il y a des activités sexuelles? Peut-on voir des organes génitaux?). Les
+contenus multimédias qui contiennent certains éléments sont signalés et portés à
+l’attention de l’opérateur qui doit déterminer si de la pornographie juvénile est
+présente dans ces contenus multimédias.
+
+ 28. Veuillez décrire le résultat produit par le système et les renseignements pertinents nécessaires à
+     l’interprétation dans le contexte de la décision administrative.
+Les contenus multimédias marqués doivent être examinés par un humain en priorité.
+L’enquêteur peut ensuite visionner la vidéo ou regarder l’image pour vérifier le
+contenu et confirmer qu’il s’agit de pornographie juvénile au sens du Code criminel et
+ensuite décider s’il y a un risque actuel pour la ou les personnes qui doivent
+immédiatement faire l’objet d’une intervention.
+
+ 29. Le système effectuera-t-il une évaluation ou une autre activité qui ne serait autrement pas réalisée
+    par un humain?
+Non                                                                                                              [ Points : +0 ]
+
+ 30. Le système est-il utilisé par une partie de l’organisation différente de celle à laquelle appartiennent
+    ceux qui l’ont développé?
+Non                                                                                                              [ Points : +0 ]
+
+ 31. Les incidences découlant de la décision sont-elles réversibles?
+ Réversible                                                                                                      [ Points : +1 ]
+
+ 32. Combien de temps les incidences de la décision dureront-elles?
+ Les incidences seront très probablement brèves.                                                    [ Points : +1 ]
+
+ 33. Veuillez décrire pourquoi les incidences découlant de la décision sont conformes à l’option choisie.
+Ce n’est pas l’IA qui prend la décision finale, mais plutôt l’opérateur humain. L’IA sert d’aide
+et n’a pas de rôle décisionnel dans le processus d’enquête.
+ 34. Les incidences de la décision sur les droits ou libertés des personnes seront probablement les
+     suivantes :
+ Incidence faible ou nulle                                                                                    [ Points : +1 ]
+
+ 35. Veuillez décrire pourquoi les incidences découlant de la décision sont conformes à l’option choisie.
+L’IA sert d’aide et n’a pas de rôle décisionnel dans le processus d’enquête.
+
+ 36. Les incidences de la décision sur l’égalité, la dignité, la vie privée et l’autonomie des personnes seront
+    probablement :
+ Incidence faible ou nulle                                                                                    [ Points : +1 ]
+
+ 37. Veuillez décrire pourquoi les incidences découlant de la décision sont conformes à l’option choisie.
+L’IA sert d’aide et n’a pas de rôle décisionnel dans le processus d’enquête.
+
+ 38. Les incidences de la décision sur la santé et le bien-être des personnes seront probablement les
+     suivantes :
+ Incidence faible ou nulle                                                                                    [ Points : +1 ]
+
+ 39. Veuillez décrire pourquoi les incidences découlant de la décision sont conformes à l’option choisie.
+L’IA sert d’aide et n’a pas de rôle décisionnel dans le processus d’enquête. Cependant,
+l’utilisation de l’outil permet de réduire le temps nécessaire à la protection des
+enfants victimes d’agressions sexuelles ou de tortures, ce qui sera bénéfique pour la
+victime si les secours sont apportés le plus tôt possible. Par ailleurs, la réduction de
+l’exposition répétitive des enquêteurs à des événements traumatisants sera
+bénéfique pour leur bien-être.
+
+ 40. Les incidences de la décision sur les intérêts économiques des personnes seront probablement les
+     suivantes :
+ Incidence faible ou nulle                                                                                    [ Points : +1 ]
+
+ 41. Veuillez décrire pourquoi les incidences découlant de la décision sont conformes à l’option choisie.
+L’IA sert d’aide et n’a pas de rôle décisionnel dans le processus d’enquête.
+
+ 42. Les incidences de la décision sur la pérennité d’un écosystème environnemental seront
+    probablement les suivantes :
+ Incidence faible ou nulle                                                                                    [ Points : +1 ]
+
+ 43. Veuillez décrire pourquoi les incidences découlant de la décision sont conformes à l’option choisie.
+L’IA sert d’aide et n’a pas de rôle décisionnel dans le processus d’enquête.
+
+À propos des données - A. Source des données
+ 44. Le système de décision automatisé utilisera-t-il des renseignements personnels comme données
+     d’entrée?
+Non                                                                                                              [ Points : +0 ]
+
+ 45. Quelle est la classification de sécurité la plus élevée des données d’entrée utilisées par le système?
+    (N’en choisir qu’une seule)
+ Protégé B / Protégé C                                                                                       [ Points : +3 ]
+
+ 46. Qui contrôle les données?
+Gouvernement fédéral                                                                                      [ Points : +1 ]
+
+ 47. Les données utilisées par le système proviendront-elles de plusieurs sources différentes?
+Oui                                                                                                               [ Points : +4 ]
+
+ 48. Le système aura-t-il besoin de données d’entrée provenant d’un appareil connecté à Internet ou à la
+     téléphonie (p. ex. Internet des objets, un capteur)?
+
+ Non                                                                                                              [ Points : +0 ]
+
+ 49. Le système interagira-t-il avec d’autres systèmes des TI?
+Oui                                                                                                               [ Points : +4 ]
+
+ 50. Qui a recueilli les données utilisées pour préparer le système?
+Un gouvernement étranger ou un tiers non gouvernemental                                    [ Points : +4 ]
+
+ 51. Qui a recueilli les données d’entrée utilisées par le système?
+ Votre institution                                                                                              [ Points : +1 ]
+
+ 52. Veuillez décrire les données d’entrée recueillies et utilisées par le système, leur source et leur
+    méthode de collecte.
+Les données d’entrée (images et vidéos) sont des preuves soumises par la police, des
+ONG et d’autres secteurs de l’industrie dans le cadre du signalement d’une infraction
+criminelle. Elles peuvent provenir d’une saisie policière (autorisations judiciaires) ou
+être transmises par un tiers (signalements fournis par Cyberaide, le NCMEC et
+l’industrie). Certaines données sont recueillies par les spécialistes judiciaires et d’autres
+pas voie électronique par la partie qui les a reçues ou lorsqu’elles transitent par leurs
+systèmes informatiques et sont signalées pour être transmises à la police. Les services
+de police reçoivent ces contenus multimédias directement des victimes ou des
+plaignants ou par l’intermédiaire de demandes d’assistance émanant d’autres services
+de police.
+
+À propos des données - B. Type de données
+ 53. Veuillez décrire les données d’entrée recueillies et utilisées par le système, leur source et leur
+méthode de collecte.
+Non                                                                                                               [ Points : 0 ]
+
+Section 3.2 : Questions et réponses liées aux mesures
+d’atténuation
+ 1. Intervenants internes (institutions fédérales et fonction publique fédérale)
+Oui                                                                                                                [ Points: +1 ]
+2. Quels intervenants internes avez-vous consultés?
+Politique et planification stratégiques
+Gouvernance des données
+Services juridiques
+Bureau de l’Accès à l’information et de la protection des renseignements personnels
+Politique du programme
+
+3. Intervenants externes (groupes d’autres secteurs ou territoires de compétences)
+Oui                                                                                                               [ Points : +1 ]
+
+4. Quels intervenants externes avez-vous consultés?
+Milieu universitaire
+Industrie
+Gouvernements dans d’autres territoires de compétence
+Organisations internationales
+
+Élimination des risques et mesures d’atténuation –
+Qualité des données
+5.  Disposez-vous de processus documentés pour tester les jeux de données en fonction de biais et
+    d’autres résultats inattendus? Par exemple, ceci pourrait inclure une expérience dans l’application de
+    cadres, de méthodes, de lignes directrices ou d’outils d’évaluation.
+Non                                                                                                              [ Points : +0 ]
+
+6.  Cette information est-elle accessible au public?
+Non                                                                                                              [ Points : +0 ]
+
+7.  Avez-vous élaboré un processus permettant de documenter la façon dont les problèmes de qualité
+    des données ont été résolus pendant le processus de conception?
+Non                                                                                                              [ Points : +0 ]
+
+8.  Cette information est-elle accessible au public?
+Non                                                                                                              [ Points : +0 ]
+
+9.  Avez-vous effectué une analyse comparative entre les sexes plus des données?
+Non                                                                                                              [ Points : +0 ]
+
+10. Cette information est-elle accessible au public?
+Non                                                                                                              [ Points : +0 ]
+
+11. Dans votre établissement, existe-t-il des responsables de la conception, du développement, de la
+    maintenance et de l’amélioration du système?
+Oui                                                                                                               [ Points : +2 ]
+
+12. Disposez-vous d’un processus documenté pour gérer le risque que des données périmées ou non
+     fiables soient utilisées pour prendre une décision automatisée?
+Non                                                                                                              [ Points : +0 ]
+13. Cette information est-elle accessible au public?
+Non                                                                                                              [ Points : +0 ]
+
+14. Les données utilisées pour ce système seront-elles affichées sur le Portail du gouvernement ouvert?
+Non                                                                                                              [ Points : +0 ]
+
+Élimination des risques et mesures d’atténuation - Équité
+procédurale
+15. La piste de vérification permet-elle de déterminer les pouvoirs ou les pouvoirs délégués prévus par la
+     loi?
+Non                                                                                                              [ Points : +0 ]
+
+16. Le système fournit-il une piste de vérification qui enregistre toutes les recommandations ou
+    décisions prises par le système?
+Oui                                                                                                               [ Points : +2 ]
+
+17. Est-ce que tous les points de décision clés peuvent être identifiés dans la piste de vérification?
+Non                                                                                                              [ Points : +0 ]
+
+18. Est-ce que toutes les décisions clés sont liées à une législation, à une politique ou à une procédure
+    pertinente?
+Non                                                                                                              [ Points : +0 ]
+
+19. Avez-vous un journal détaillant toutes les modifications apportées au modèle et au système?
+Non                                                                                                              [ Points : +0 ]
+
+20. Est-ce que la piste de vérification indique tous les points de décision pris par le système?
+No                                                                                                                [ Points : +0 ]
+
+21. La piste de vérification générée par le système peut-elle être utilisée pour aider à produire une
+    notification de la décision (y compris un énoncé des motifs ou une autre notification) au besoin?
+Non                                                                                                              [ Points : +0 ]
+
+22. La piste de vérification permet-elle de déterminer précisément quelle version du système a été
+     utilisée pour chaque décision qu’elle appuie?
+Non                                                                                                              [ Points : +0 ]
+
+23. La piste de vérification indique-t-elle qui est le décideur autorisé?
+Oui                                                                                                               [ Points : +1 ]
+
+24. Le système est-il en mesure de justifier ses décisions ou ses recommandations au besoin?
+Non                                                                                                              [ Points : +0 ]
+
+25. Avez-vous un processus en place pour accorder, surveiller et révoquer l’autorisation d’accès au
+    système?
+Oui                                                                                                               [ Points : +1 ]
+26. Avez-vous un mécanisme pour recueillir les commentaires des utilisateurs du système?
+Oui                                                                                                               [ Points : +1 ]
+
+27. Avez-vous un processus de recours prévu ou établi pour les clients qui souhaitent contester la
+    décision?
+Non                                                                                                              [ Points : +0 ]
+
+28. Le système permet-il à une personne de passer outre aux décisions du système?
+Oui                                                                                                               [ Points : +2 ]
+
+29. Avez-vous un processus en place pour consigner les cas où des dérogations ont été effectuées?
+Oui                                                                                                               [ Points : +1 ]
+
+30. Avez-vous des processus en place pour enregistrer les modifications apportées au fonctionnement
+   ou au rendement du système?
+Non                                                                                                              [ Points : +0 ]
+
+31. Avez-vous préparé un dossier conceptuel à l’intention du Comité d’examen de l’architecture intégrée
+   du gouvernement du Canada?
+
+Non                                                                                                              [ Points : +0 ]
+
+Élimination des risques et mesures d’atténuation -
+Confidentialité
+32. Si votre système utilise ou crée des renseignements personnels, avez-vous entrepris une évaluation
+    des facteurs relatifs à la vie privée ou révisé une évaluation existante?
+Oui                                                                                                               [ Points : +1 ]
+
+33. Veuillez indiquer les éléments suivants dans votre réponse : titre et portée de l’évaluation des
+    facteurs relatifs à la vie privée (EFVP); comment le projet d’automatisation cadre dans le programme
+    et date de l’achèvement ou de la modification de l’évaluation des facteurs relatifs à la vie privée.
+    L’EFVP est une garantie de l’entente de mise en commun des condensés du Groupe des cinq qui
+    examinée par les Services juridiques de la GRC, le bureau de l’AIPRP, la SDSM, le GDJ et d’autres
+    intervenants internes qui définissent l’information qui concerne ce type de données. Des documents
+    concernant l’utilisation des condensés et des métadonnées dérivées sont produits et peuvent être
+    fournis sur demande.
+34. Avez-vous conçu et intégré la sécurité et la confidentialité dans vos systèmes dès la phase de
+    conception du projet?
+Oui                                                                                                               [ Points : +1 ]
+
+35. Les informations sont-elles utilisées dans un système fermé (c’est-à-dire sans connexion à Internet,
+    Intranet ou tout autre système)?
+Oui                                                                                                               [ Points : +1 ]
+
+36. Si le partage de renseignements personnels est concerné, un accord ou un arrangement avec des
+    garanties appropriées a-t-il été établi?
+Oui                                                                                                               [ Points : +1 ]
+
+37. Allez-vous dépersonnaliser les renseignements personnels utilisés ou établis par le système à tout
+   moment du cycle de vie?
+Non                                                                                                              [ Points : +0 ]

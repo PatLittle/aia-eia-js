@@ -1,0 +1,593 @@
+Résultats de l'évaluation de l'incidence
+algorithmique
+
+Version: 0.10.0
+Détails du projet
+1. Nom de la personne sondée
+
+2. Titre du poste
+Gestionnaire
+
+3. Ministère
+Agence des services frontaliers du Canada
+
+4. Direction
+Secteur commercial et échanges commerciaux
+
+5. Titre du projet
+Tableau de bord de conformité des exportations
+
+6. Phase du projet
+Mise en oeuvre                                                                                                            [ Points: 0 ]
+
+7. Veuillez fournir une description du projet :
+Le Tableau de bord de conformité des exportations est un outil qui fournit des
+informations supplémentaires sur les expéditions destinées à l’exportation. Il
+vise à aider les agents de l'ASFC à évaluer les risques et à identifier les cas
+potentiels de non conformité afin de sélectionner les expéditions devant être
+renvoyées pour un examen physique ou nécessitant une évaluation plus
+approfondie.
+
+L'outil compare les informations fournies dans les déclarations
+d'exportation par les exportateurs avec les données historiques. L’outil fournit
+un score de probabilité de risque associé à la déclaration et identifie
+également des points de données spécifiques qui peuvent être manquants ou
+anormaux. Cela aidera à
+identifier les expéditions qui ont une plus grande probabilité de non-
+conformité.
+
+Les agents de l’ASFC peuvent utiliser l’outil, en plus des bases de données et
+des systèmes existants, afin de prendre une décision éclairée quant à la
+pertinence d’examiner une expédition qu’ils soupçonnent de contenir des
+marchandises non conformes. Cela permettra un traitement plus efficace des
+expéditions destinées à l’exportation et améliorera la capacité de l’Agence à
+intercepter les expéditions non conformes, y compris celles contenant des
+véhicules volés ou d’autres formes de contrebande.
+
+À propos du système
+8. Veuillez indiquer laquelle des capacités suivantes s'applique à votre système.
+Évaluation des risques: Analyser de volumineux jeux de données pour
+déterminer les tendances et recommander des mesures et, dans certains cas,
+déclencher la prise de mesures précises.
+Optimisation des processus et automatisation des flux de travail: Analyser de
+vastes jeux de données pour déterminer et corriger les anomalies, les
+modèles de grappes, prévoir les résultats ou les façons d'optimiser; et
+d'automatiser des flux de travail spécifique.
+
+Section 1: Niveau d'incidence: 1
+
+Cote actuelle : 30
+
+Cote d'incidence brute : 30
+
+Cote d'atténuation : 34
+Section 2: Exigences spécifiques au niveau
+d'incidence 1
+Examen par les pairs
+
+Aucune
+Analyse comparative entre les sexes plus
+
+Aucune
+Avis
+
+Aucune
+Maillon humain de la prise de décisions
+
+Des décisions peuvent être prises sans participation humaine directe.
+Explication
+
+En plus de toute exigence juridique applicable, s’assurer qu’une explication significative des
+résultats communs des décisions soit publiée. L’explication doit fournir une description générale
+des points suivants :
+
+    le rôle du système dans le processus de décision;
+   les données d’entrée, leur source et leur méthode de collecte;
+   les critères utilisés pour évaluer les données d’entrée et les opérations appliquées pour les
+    traiter;
+    le résultat produit par le système et toute information pertinente nécessaire pour l’interpréter
+   dans le contexte de la décision administrative;
+   les principaux facteurs à l’origine d’une décision.
+
+Les explications doivent également fournir des renseignements aux clients sur les possibilités de
+recours pertinentes, le cas échéant.
+Les descriptions doivent être offertes en langage clair par l’entremise de l’évaluation de
+l’incidence algorithmique et être repérables sur le site Web de l’institution.
+Formation
+
+Aucune
+Gestion de la TI et de la continuité des activités
+
+Aucune
+Approbation de l’exploitation du système
+
+Aucune
+Autres exigences
+
+La Directive sur la prise de décisions automatisée comprend également d'autres exigences qui
+doivent être respectées pour tous les niveaux d'incidences.
+
+Lien vers la Directive sur la prise de décisions automatisée
+
+Contactez le bureau de l'AIPRP de votre établissement pour discuter de l'exigence d'une
+évaluation des facteurs relatifs à la vie privée conformément à la Directive sur l'évaluation des
+facteurs relatifs à la vie privée.
+Section 3: Questions et réponses
+Section 3.1: Questions et réponses liées aux risques
+Raisons de l'automatisation
+1. Qu'est-ce qui motive votre équipe à introduire l'automatisation dans ce processus
+décisionnel? (Cochez toutes les réponses qui s'appliquent.)
+Amélioration de la qualité générale des décisions
+Utilisation d'approches novatrices
+Le système exécute des tâches que les humains ne sont pas en mesure
+d'accomplir dans un délai raisonnable
+
+2. Quels sont les besoins des clients auxquels le système répondra et comment le système y
+répondra-t-il? Si possible, décrivez la façon dont les besoins des clients ont été déterminés.
+Cet outil fournira aux agents de l'ASFC des informations supplémentaires qui
+les aideront à mieux identifier les expéditions non conformes et à améliorer le
+taux d'examens fructueux de l'Agence.
+
+3. Veuillez décrire tous les bienfaits d’intérêt public que le système devrait avoir.
+En améliorant la qualité des renvois pour examen, l’outil contribuera à une
+meilleure facilitation des expéditions à faible risque, c’-à-d, un nombre réduit
+d’exportations conformes seront soumises à un examen. Les agents de
+l’ASFC pourront se concentrer sur les expéditions à haut risque.
+
+4. Dans quelle mesure le système sera-t-il efficace pour répondre aux besoins des clients?
+Très efficace                                                                                                                [ Points: +0 ]
+5. Veuillez décrire les améliorations, les bienfaits ou les avantages que vous attendez de
+l’utilisation d’un système automatisé. Cela pourrait inclure des indicateurs de programme et des
+objectifs de rendement pertinents.
+L'outil fournit des informations supplémentaires qui ne sont pas actuellement
+disponibles pour les agents de l'ASFC dans une interface facile à utiliser.
+L’outil permettra aux agents de mieux identifier les expéditions non
+conformes ou à haut risque. Cela entraînera un plus grand nombre d’examens
+qui se traduiront par des mesures d’application ou des mesures prises pour
+corriger la non-conformité de l’exportateur.
+
+6. Veuillez décrire la façon dont vous allez vous assurer que le système se limite à répondre aux
+besoins des clients mentionnés ci-dessus.
+L'outil vise à fournir des informations supplémentaires qui compléteront les
+systèmes actuels des agents de l'ASFC et les vérifications qu'ils effectuent
+dans les bases de données. L’outil sera communiqué dans un message
+d'accompagnement au moment du déploiement et dans un encadré informatif
+au sein de l'outil. En outre, l’outil ne fournit qu’un petit sous-ensemble de
+données d’exportation pertinentes. Les agents doivent accéder à d'autres
+données clés sur les expéditions dans les principaux systèmes opérationnels
+d'exportation afin de faire des renvois ou d’effectuer des recherches
+supplémentaires.
+
+7. Veuillez décrire toutes les concessions mutuelles entre les intérêts des clients et les objectifs
+du programme que vous avez pris en considération lors de l’élaboration du projet.
+Il n'y a pas de compromis entre les intérêts des clients et les objectifs du
+programme. L'outil aidera les agents de l'ASFC dans leur processus
+décisionnelle afin qu’ils puissent mieux cerner les non-conformités
+potentielles, ce qui facilitera davantage les expéditions à faible risque.
+
+8. D’autres options de processus non automatisés ont-elles été envisagées?
+Oui                                                                                                                                [ Points: +0 ]
+
+9. Si des processus non automatisés ont été envisagés, pourquoi l’automatisation a-t-elle été
+l’option choisie?
+Le personnel régional a recours à d'autres processus manuels qui sont moins
+Efficaces. Cela est dû au fait que l’information n’est disponible dans aucun
+référentiel unique existant. L’outil fournit plus d’informations dans une
+interface facile à
+utiliser. Il permet aux agents de l’ASFC de prendre plus aisément des
+décisions dans le cadre du traitement des expéditions destinées à
+l’exportation. Les agents auront toujours la possibilité d’utiliser les processus
+manuels existants.
+
+10. Quelle serait la conséquence du non-déploiement du système?
+La prestation du service ne parvient pas à atteindre les objectifs de
+rendement
+La qualité du service n’est pas aussi élevée
+
+Profil de risque
+11. Le projet fait-il l'objet d'un examen public approfondi (e.g.: en raison de préoccupations liées
+à la protection de la vie privée) et/ou de litiges fréquents?
+Oui                                                                                                                                [ Points: +3 ]
+12. Les clients de ce secteur d'activité sont-ils particulièrement vulnérables?
+Non                                                                                                                               [ Points: +0 ]
+
+13. Les enjeux des décisions de ce programme sont-ils très élevés?
+Non                                                                                                                               [ Points: +0 ]
+
+14. Ce projet aura-t-il d'importantes répercussions sur le personnel, que ce soit en termes de
+nombre ou de rôle?
+Non                                                                                                                               [ Points: +0 ]
+
+15. L’utilisation du système entraînera-t-elle des difficultés pour les personnes en situation de
+handicap ou les accentuera-t-elle?
+Non                                                                                                                               [ Points: +0 ]
+
+Autorité de projet
+16. Aurez-vous besoin d'une nouvelle autorisation en termes de politiques pour ce projet ?
+Non                                                                                                                               [ Points: +0 ]
+
+À propos de l'algorithme
+17. L'algorithme utilisé sera un secret (commercial)
+Oui                                                                                                                                [ Points: +3 ]
+
+18. Le processus algorithmique sera difficile à interpréter ou à expliquer
+Non                                                                                                                               [ Points: +0 ]
+
+À propos de la décision
+19. Veuillez décrire la ou les décisions qui seront automatisées.
+Les agents de l’ASFC peuvent utiliser cet outil pour compléter les systèmes
+actuels et les vérifications qu’ils effectuent dans les bases de données afin
+d’appuyer des décisions éclairées sur la question de savoir s’il faut examiner
+une expédition qu’ils soupçonnent de contenir des marchandises non
+conformes.
+
+20. La décision s'applique-t-elle à l'une ou l'autre des catégories ci-dessous (*Cochez toutes les
+réponses qui s'appliquent) :
+Autre (veuillez préciser)                                                                                              [ Points: +1 ]
+
+21. S'il vous plait décrire
+Gestion des frontières : évaluation des risques et contrôle des expéditions
+d'exportation.
+
+Évaluation de l'incidence
+22. Parmi les propositions suivantes, laquelle décrit le mieux le type d’automatisation que vous
+envisagez?
+Automatisation partielle (le système facilitera la prise de décisions
+administratives en appuyant un agent au moyen d’évaluations, de
+recommandations, de décisions provisoires ou d’autres résultats)                         [ Points: +2 ]
+
+23. Veuillez décrire le rôle du système dans le processus de prise de décisions.
+Lorsqu'ils examinent des expéditions destinées à l'exportation, les agents de
+l'ASFC consultent de nombreuses sources pour recueillir de l'information, y
+compris les
+systèmes actuels et les bases de données internes, ainsi que des
+renseignements accessibles au public sur Internet. L’outil peut compléter les
+systèmes actuels
+et les vérifications dans les bases de données effectuées par les agents, en
+fournissant des renseignements supplémentaires sur les risques potentiels
+liés
+aux expéditions destinées à l'exportation.
+
+24. Le système prendra-t-il des décisions ou effectuera-t-il des évaluations qui exigent du
+jugement ou de la discrétion?
+Non                                                                                                                               [ Points: +0 ]
+
+25. Veuillez décrire les critères utilisés pour évaluer les données des clients et les procédures
+appliquées pour les traiter.
+Cette information n'est pas partagée pour des raisons de sécurité.
+
+26. Veuillez décrire le résultat produit par le système et les renseignements pertinents
+nécessaires à l’interprétation dans le contexte de la décision administrative.
+L'outil génère une liste des expéditions destinées à l'exportation avec un score
+de probabilité de risque associé et identifie également les déclarations où des
+points de données spécifiques sont manquants ou anormaux. L'outil ne prend
+aucune décision ni ne fait de recommandations. Toutefois, les agents
+de l’ASFC peuvent l’utiliser, en plus des bases de données et des
+systèmes existants, pour prendre des décisions éclairées sur la
+pertinence d’examiner les expéditions qu’ils soupçonnent de contenir des
+marchandises non conformes.
+
+27. Le système effectuera-t-il une évaluation ou une autre activité qui ne serait autrement pas
+réalisée par un humain?
+Non                                                                                                                               [ Points: +0 ]
+
+28. Le système est-il utilisé par une partie de l’organisation différente de celle à laquelle
+appartiennent ceux qui l’ont développé?
+Oui                                                                                                                                [ Points: +4 ]
+
+29. Les incidences découlant de la décision sont-elles réversibles?
+Réversible                                                                                                                    [ Points: +1 ]
+
+30. Combien de temps les incidences de la décision dureront-elles?
+Les incidences risquent fort probablement d’être brèves                                         [ Points: +1 ]
+
+31. Veuillez indiquer pour quelle raison les incidences découlant de la décision sont (selon
+l’option sélectionnée ci-dessus).
+L'outil permettra aux agents de l'ASFC d'améliorer leur capacité à déceler les
+cas de non-conformité potentielle et à faciliter les expéditions conformes.
+Les conséquences pour les exportateurs qui sont en règle seront minimes, car
+tout examen consécutif à une décision de renvoi d'un agent aura
+généralement lieu le même jour. Les exportateurs non conformes seront
+traités de la manière habituelle, ce qui pourrait se traduire par une lettre
+d'avertissement, une sanction pécuniaire, une mesure d'exécution et/ou la
+saisie des marchandises. Il est également possible pour un agent d’annuler un
+renvoi pour examen en utilisant les fonctionnalités existantes du système, ce
+qui permettra à l'exportateur de procéder à l'exportation des marchandises.
+
+32. Les incidences de la décision sur les droits ou libertés des personnes seront probablement
+les suivantes :
+Incidence faible ou nulle                                                                                             [ Points: +1 ]
+
+33. Veuillez indiquer pour quelle raison les incidences découlant de la décision sont (selon
+l’option sélectionnée ci-dessus).
+L’outil complète les systèmes actuels des agents de l'ASFC et les vérifications
+que ces derniers effectuent dans les bases de données. En aidant l'agent à
+effectuer des renvois pour examen plus précis, moins d’expéditions
+conformes seront soumises à un examen. Comme l'outil ne contient que des
+informations sur les expéditions destinées à l'exportation, il n'a pas
+d'incidence directe sur les droits ou les libertés des individus.
+
+34. Les incidences de la décision sur l’égalité, la dignité, la vie privée et l’autonomie des
+personnes seront probablement :
+Incidence faible ou nulle                                                                                             [ Points: +1 ]
+
+35. Veuillez indiquer pour quelle raison les incidences découlant de la décision sont (selon
+l’option sélectionnée ci-dessus).
+L'inspection des expéditions destinées à l'exportation n’affecte pas l’égalité, la
+dignité, la vie privée ou l’autonomie des individus. L’outil complète les
+systèmes actuels des agents de l'ASFC et les vérifications que ces derniers
+effectuent dans les bases de données. Même si l’outil améliorera la qualité
+des renvois pour examen, il n’aura aucune incidence sur la procédure
+d’examen.
+
+36. Les incidences de la décision sur la santé et le bien-être des personnes seront
+probablement les suivantes :
+Incidence faible ou nulle                                                                                             [ Points: +1 ]
+
+37. Veuillez indiquer pour quelle raison les incidences découlant de la décision sont (selon
+l’option sélectionnée ci-dessus).
+L'inspection des expéditions destinées à l'exportation n’affecte pas la santé ou
+le bien-être des individus. L'outil contient uniquement des informations
+relatives aux expéditions destinées à l'exportation et n'évalue pas les risques
+par rapport aux individus. L'outil complète les systèmes actuels des agents de
+l'ASFC et les vérifications que ces derniers effectuent dans les bases de
+données.
+
+38. Les incidences de la décision sur les intérêts économiques des personnes seront
+probablement les suivantes :
+Incidence faible ou nulle                                                                                             [ Points: +1 ]
+
+39. Veuillez indiquer pour quelle raison les incidences découlant de la décision sont (selon
+l’option sélectionnée ci-dessus).
+Toute expédition de marchandises exportées peut être examinée par l'ASFC
+en vertu de l'article 99(1)c) de la Loi sur les douanes. Si l'exploitant du
+terminal portuaire doit déplacer les marchandises vers un entrepôt afin
+d’effectuer un examen, cela peut engendrer des frais pour l'exportateur. Ces
+frais seront imposés indépendamment des résultats de l’examen. Par
+conséquent, l'outil n'aurait pas d'incidence économique sur les exportateurs, à
+moins qu'il y ait une augmentation du nombre d'agents de l'ASFC au port pour
+effectuer davantage d'examens, mais cela n’aurait aucun rapport avec la mise
+en oeuvre de l’outil. L'outil fournira des informations supplémentaires qui
+aideront les agents de l'ASFC à prendre de meilleures décisions. En d’autres
+termes, ces derniers seront mieux en mesure de déterminer les expéditions à
+examiner. Cela se traduira par une meilleure facilitation et une réduction du
+nombre d’examens pour les expéditions à faible risque.
+
+40. Les incidences de la décision sur la pérennité d’un écosystème environnemental seront
+probablement les suivantes :
+Incidence faible ou nulle                                                                                             [ Points: +1 ]
+
+41. Veuillez indiquer pour quelle raison les incidences découlant de la décision sont (selon
+l’option sélectionnée ci-dessus).
+L’outil n’a aucune implication environnementale. L'inspection des expéditions
+n'affecte pas la durabilité continue d'un écosystème environnemental.
+
+À propos des données - A. Source des données
+42. Le système de décision automatisé utilisera-t-il des renseignements personnels comme
+données d’entrée?
+Oui                                                                                                                                [ Points: +4 ]
+
+43. Avez-vous vérifié que l'utilisation des renseignements personnels est limitée à ce qui est
+directement lié à la prestation d'un programme ou d'un service?
+Oui                                                                                                                                [ Points: +0 ]
+
+44. Les renseignements personnels des individus sont-ils utilisés dans un processus
+décisionnel qui affecte directement ces individus?
+Non                                                                                                                               [ Points: +0 ]
+
+45. Avez-vous vérifié si le système utilise les renseignements personnels d'une manière
+compatible avec: (a) les fichiers de renseignements personnels (FRP) et évaluations des
+facteurs relatifs à la vie privée (EFVP) de vos programmes ou (b) les modifications prévues ou
+mises en oeuvre des FRP ou des EFVP qui tiennent compte des nouveaux usages et processus?
+Oui                                                                                                                                [ Points: +0 ]
+
+46. Veuillez énumérer les numéros de fichiers FRP pertinents.
+CBSA PPU 1103
+
+47. Quelle est la classification de sécurité la plus élevée des données d’entrée utilisées par le
+système? (N’en choisir qu’une seule)
+Protégé A                                                                                                                     [ Points: +1 ]
+
+48. Qui contrôle les données?
+Gouvernement fédéral                                                                                                 [ Points: +1 ]
+
+49. Les données utilisées par le système proviendront-elles de plusieurs sources différentes?
+Non                                                                                                                               [ Points: +0 ]
+
+50. Le système aura-t-il besoin de données d’entrée provenant d’un appareil connecté à Internet
+ou à la téléphonie? (P. ex., internet des objets, un Capteur)
+Non                                                                                                                               [ Points: +0 ]
+
+51. Le système interagira-t-il avec d’autres systèmes des TI?
+Non                                                                                                                               [ Points: +0 ]
+
+52. Qui a recueilli les données utilisées pour préparer le système?
+Votre institution                                                                                                           [ Points: +1 ]
+
+53. Qui a recueilli les données d’entrée utilisées par le système?
+Votre institution                                                                                                           [ Points: +1 ]
+
+54. Veuillez décrire les données d’entrée collectées et utilisées par le système, leur source et
+leur méthode de collecte.
+Les données sont initialement collectées dans le SCDE où les partenaires de
+la chaîne commerciale peuvent soumettre leurs données d'exportation par
+l’entremise d’un portail, ou en utilisant la méthode de déclaration EDI du G7.
+Ce dernier permet aux exportateurs et aux fournisseurs de services
+douaniers de
+soumettre déclarations d'exportation par échange de données informatisées.
+Certaines données sont également collectées dans le Système d'examen des
+exportations (SEE) par les agents effectuant les examens. L’outil n'extrait
+pas les données directement des canaux opérationnels, mais plutôt de
+l'Entrepôt des données d’entreprise. Il utilise un modèle statistique pour
+évaluer les données reçues relatives aux expéditions destinées à l'exportation,
+y compris le numéro d'entreprise, le(s) numéro(s) de conteneur, le code SH,
+les descripteurs de marchandises, le pays de destination et la valeur déclarée
+ainsi que les données des résultats d'examen du SEE.
+
+À propos des données - B. Type de données
+55. Le système exigera-t-il l’analyse de données non structurées pour faire une
+recommandation ou prendre une décision?
+Oui                                                                                                                                [ Points: 0 ]
+
+56. De quel type de données non structurées s’agit-il (Cochez toutes les réponses qui
+s’appliquent)?
+Fichiers audio et textuels                                                                                            [ Points: +2 ]
+
+Section 3.2: Questions et réponses liées aux mesures
+d'atténuation
+1. Intervenants internes (institutions fédérales et fonction publique fédérale)
+Oui                                                                                                                                [ Points: +1 ]
+
+2. Quels intervenants internes avez-vous consulté?
+Autre (décrire)
+Bureau de la dirigeante principale de l’information du SCT
+Services des communications
+Bureau de l'accès à l'information et de la protection des renseignements
+personnels
+Politique du programme
+3. S'il vous plait décrire
+Direction générale de la politique stratégique, Bureau du dirigeant principal
+des données
+Utilisateurs finaux en régions
+
+4. Intervenants externes (groupes d’autres secteurs ou administrations)
+Oui                                                                                                                                [ Points: +1 ]
+
+5. Quels intervenants externes avez-vous consulté?
+Autre (décrire)
+
+6. S'il vous plait décrire
+Organisations dans d’autres secteurs ou juridictions
+
+Élimination des risques et mesures d'atténuation - Qualité
+des données
+7. Disposez-vous de processus documentés pour tester les jeux de données en fonction de
+biais et d’autres résultats inattendus? Par exemple, ceci pourrait inclure une expérience dans
+l’application de cadres, de méthodes, de lignes directrices ou d’outils d’évaluation.
+Oui                                                                                                                                [ Points: +2 ]
+
+8. Cette information est-elle publiquement disponible?
+Non                                                                                                                               [ Points: +0 ]
+
+9. Avez-vous élaboré un processus permettant de documenter la façon dont les problèmes de
+qualité des données qui seront résolus pendant le processus de conception?
+Oui                                                                                                                                [ Points: +1 ]
+
+10. Cette information est-elle publiquement disponible?
+Non                                                                                                                               [ Points: +0 ]
+
+11. Avez-vous entrepris une analyse comparative entre les sexes plus des données?
+Non                                                                                                                               [ Points: +0 ]
+
+12. Cette information est-elle publiquement disponible?
+Non                                                                                                                               [ Points: +0 ]
+
+13. Dans votre établissement, existe-t-il des responsables de la conception, du développement,
+de la maintenance et de l’amélioration du système?
+Oui                                                                                                                                [ Points: +2 ]
+
+14. Disposez-vous d'un processus documenté pour gérer le risque que des données périmées
+ou non fiables soient utilisées pour prendre une décision automatisée?
+Oui                                                                                                                                [ Points: +2 ]
+
+15. Cette information est-elle publiquement disponible?
+Non                                                                                                                               [ Points: +0 ]
+
+16. Les données utilisées pour ce système seront-elles affichées sur la portail du gouvernement
+ouvert?
+Non                                                                                                                               [ Points: +0 ]
+Élimination des risques et mesures d'atténuation - Équité
+procédurale
+17. La piste de vérification permet-elle de déterminer les pouvoirs ou les pouvoirs délégués
+prévus par la lois?
+Oui                                                                                                                                [ Points: +1 ]
+
+18. Le système fournit-il une piste de vérification qui enregistre toutes les recommandations ou
+décisions prises par le système?
+Oui                                                                                                                                [ Points: +2 ]
+
+19. Est-ce que tous les points de décision clés peuvent être identifiés dans la piste de
+vérification?
+Oui                                                                                                                                [ Points: +2 ]
+
+20. Est-ce que toutes les décisions clés sont liées à une législation, politique ou à une
+procédure pertinente?
+Oui                                                                                                                                [ Points: +1 ]
+
+21. Avez-vous un journal détaillant toutes les modifications apportées au modèle et au
+système?
+Oui                                                                                                                                [ Points: +2 ]
+
+22. Est-ce que la piste de vérification indique tous les points de décision pris par le système?
+Oui                                                                                                                                [ Points: +1 ]
+
+23. La piste de vérification générée par le système peut-elle être utilisée pour aider à produire
+une notification de la décision (y compris un énoncé des motifs ou une autre notification) au
+besoin?
+Oui                                                                                                                                [ Points: +1 ]
+
+24. La piste de vérification permet-elle de déterminer précisément quelle version du système a
+été utilisée pour chaque décision qu'elle appuie?
+Oui                                                                                                                                [ Points: +2 ]
+
+25. La piste de vérification indique-t-elle qui est le décideur autorisé?
+Oui                                                                                                                                [ Points: +1 ]
+
+26. Le système est-il en mesure de justifier ses décisions ou ses recommandations au besoin?
+Oui                                                                                                                                [ Points: +2 ]
+
+27. Avez-vous un processus en place pour accorder, surveiller et révoquer l'autorisation d'accès
+au système?
+Oui                                                                                                                                [ Points: +1 ]
+
+28. Avez-vous un mécanisme pour recueillir les commentaires des utilisateurs du système?
+Oui                                                                                                                                [ Points: +1 ]
+
+29. Avez-vous un processus de recours prévu ou établi pour les clients qui souhaitent contester
+la décision?
+Oui                                                                                                                                [ Points: +2 ]
+30. Le système permet-il à une personne de passer outre aux décisions du système?
+Oui                                                                                                                                [ Points: +2 ]
+
+31. Avez-vous un processus en place pour consigner les cas où des dérogations ont été
+effectuées?
+Non                                                                                                                               [ Points: +0 ]
+
+32. Avez-vous des processus en place pour enregistrer les modifications apportées au
+fonctionnement ou au rendement du système?
+Oui                                                                                                                                [ Points: +2 ]
+
+33. Avez-vous préparé un dossier conceptuel à l'intention du Comité d'examen de l'architecture
+d'entreprise du gouvernement du Canada?
+Non                                                                                                                               [ Points: +0 ]
+
+Élimination des risques et mesures d'atténuation -
+Confidentialité
+34. Si votre système utilise ou crée des renseignements personnels, avez-vous entrepris une
+évaluation des facteurs relatifs à la vie privée ou révisé une évaluation existante?
+Non                                                                                                                               [ Points: +0 ]
+
+35. Avez-vous entrepris d’autres types d’évaluations de la protection de la vie privée pour votre
+projet d’automatisation? Veuillez décrire toute mesure pertinente.
+Il a été déterminé qu'une Évaluation des facteurs relatifs à la vie privée (EFVP)
+est requise pour cet outil. Toutefois, l'EFVP sera rédigée en combinaison avec
+d'autres fonctionnalités, dans le cadre d'une transformation plus vaste visant
+à établir un modèle d'évaluation des risques dans la voie d'exportation, une
+fois que l'ASFC aura déterminé quelles autres fonctionnalités seraient les
+plus efficaces pour identifier les expéditions à haut risque.
+
+36. Avez-vous conçu et intégré la sécurité et la confidentialité dans vos systèmes dès la phase
+de conception du projet?
+Oui                                                                                                                                [ Points: +1 ]
+
+37. Les informations sont-elles utilisées dans un système fermé (c'est-à-dire sans connexion à
+Internet, Intranet ou tout autre système)?
+Non                                                                                                                               [ Points: +0 ]
+
+38. Si le partage de renseignements personnels est impliqué, un accord ou un arrangement
+avec des garanties appropriées a-t-il été établi?
+Oui                                                                                                                                [ Points: +1 ]
+
+39. Allez-vous dépersonnaliser les renseignements personnels utilisés ou établis par le système
+à tout moment du cycle de vie?
+Non                                                                                                                               [ Points: +0 ]
