@@ -1,8 +1,0 @@
-publication_year,total_aia_count,json_backed_aia_count,missing_json_count,level_2_plus_aia_count,peer_review_resource_found_count,peer_review_resource_missing_count,mean_completion_all_pct,mean_completion_nonconditional_pct,impact_level_1_count,impact_level_2_count,impact_level_3_count,version_v0_10_0_count,version_v0_9_1_count,version_v0_9_count,version_v1_0_1_count,project_phase_item1_design_count,project_phase_item2_implementation_count,peer_review_resource_coverage_pct
-2018,1,1,0,1,0,1,64.0,95.35,0,1,0,0,1,0,0,0,1,0.0
-2021,3,3,0,2,0,2,66.05333333333334,96.54333333333334,1,2,0,1,1,1,0,0,3,0.0
-2022,7,7,0,6,4,2,65.21142857142857,94.07142857142857,1,6,0,2,5,0,0,0,7,66.7
-2023,3,3,0,3,0,3,66.77666666666667,99.22333333333334,0,2,1,1,2,0,0,1,2,0.0
-2024,10,8,2,6,4,2,53.137,78.814,2,6,0,8,0,0,0,1,7,66.7
-2025,11,9,2,2,0,2,53.40272727272727,80.64999999999999,7,2,0,8,0,0,1,0,9,0.0
-2026,3,1,2,0,0,0,19.66,33.333333333333336,1,0,0,0,0,0,1,0,1,

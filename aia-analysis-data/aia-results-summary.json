@@ -1,0 +1,16 @@
+{
+  "generated_at": "2026-08-21T11:46:55.418862+00:00",
+  "catalogue_count": 38,
+  "record_count": 38,
+  "published_count": 32,
+  "recovered_count": 6,
+  "missing_count": 0,
+  "missing_package_ids": [],
+  "survey_versions_loaded": [
+    "v.0.8a1",
+    "v0.10.0",
+    "v0.9.1",
+    "v1.0.0",
+    "v1.0.1"
+  ]
+}
