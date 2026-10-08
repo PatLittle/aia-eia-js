@@ -1,11 +1,13 @@
 {
-  "generated_at": "2026-09-14T04:54:47.262691+00:00",
-  "catalogue_count": 38,
+  "generated_at": "2026-10-08T06:04:36.957712+00:00",
+  "catalogue_count": 39,
   "record_count": 38,
   "published_count": 32,
   "recovered_count": 6,
-  "missing_count": 0,
-  "missing_package_ids": [],
+  "missing_count": 1,
+  "missing_package_ids": [
+    "f77faef4-27d8-4929-929e-bfb1371affde"
+  ],
   "survey_versions_loaded": [
     "v.0.8a1",
     "v0.10.0",
