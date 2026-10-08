@@ -255,7 +255,7 @@
           <p v-else role="status">{{ labels.noSecurityAnswers }}</p>
           <div id="security-counts" class="table-responsive security-counts">
             <table class="table table-condensed table-striped">
-              <caption>
+              <caption class="wb-inv">
                 {{
                   labels.securityCounts
                 }}
@@ -1434,7 +1434,7 @@ export default class AnalysisReport extends Vue {
 
 .security-chart-wrap {
   position: relative;
-  height: 340px;
+  height: 260px;
   max-width: 600px;
   margin: 0 auto 1.5rem;
 }
@@ -1444,6 +1444,7 @@ export default class AnalysisReport extends Vue {
   margin: 0 auto;
 }
 
+.security-counts th:not(:first-child),
 .security-counts td {
   text-align: right;
 }
