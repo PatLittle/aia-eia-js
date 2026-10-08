@@ -233,45 +233,76 @@
         </div>
       </section>
 
-      <details class="analysis-details" open>
-        <summary>
-          <strong>{{ labels.recoveredRecords }}</strong>
-        </summary>
-        <p>{{ labels.recoveredExplanation }}</p>
-        <div class="table-responsive">
-          <table class="table table-striped table-hover">
-            <thead>
-              <tr>
-                <th>{{ labels.assessment }}</th>
-                <th>{{ labels.organization }}</th>
-                <th>{{ labels.version }}</th>
-                <th>{{ labels.phase }}</th>
-                <th>{{ labels.completeness }}</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr v-for="record in recoveredRecords" :key="record.package_id">
-                <td>
-                  <a :href="record.dataset_url">{{ displayTitle(record) }}</a>
-                </td>
-                <td>{{ displayOrganization(record) }}</td>
-                <td>{{ record.version || "—" }}</td>
-                <td>{{ displayPhase(record) }}</td>
-                <td>
-                  {{
-                    formatPercent(
-                      record.derived && record.derived.completeness_pct
-                    )
-                  }}
-                </td>
-              </tr>
-              <tr v-if="recoveredRecords.length === 0">
-                <td colspan="5">{{ labels.noRecovered }}</td>
-              </tr>
-            </tbody>
-          </table>
+      <article
+        class="panel panel-default chart-card security-card"
+        aria-labelledby="security-heading"
+      >
+        <div class="panel-heading">
+          <h2 id="security-heading" class="h3">
+            {{ labels.securityQuestion }}
+          </h2>
         </div>
-      </details>
+        <div class="panel-body">
+          <p>{{ labels.securityExplanation }}</p>
+          <div v-if="securityAnswerCount" class="security-chart-wrap">
+            <canvas
+              ref="securityChart"
+              role="img"
+              :aria-label="labels.securityQuestion"
+              aria-describedby="security-counts"
+            ></canvas>
+          </div>
+          <p v-else role="status">{{ labels.noSecurityAnswers }}</p>
+          <div id="security-counts" class="table-responsive security-counts">
+            <table class="table table-condensed table-striped">
+              <caption>
+                {{
+                  labels.securityCounts
+                }}
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">{{ labels.securityClassification }}</th>
+                  <th scope="col">{{ labels.assessments }}</th>
+                  <th scope="col">{{ labels.shareOfAnswers }}</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr
+                  v-for="item in securityClassificationCounts"
+                  :key="item.key"
+                >
+                  <th scope="row">
+                    <span
+                      class="security-swatch"
+                      :style="{ backgroundColor: item.color }"
+                      aria-hidden="true"
+                    ></span
+                    >{{ item.label }}
+                  </th>
+                  <td>{{ item.value }}</td>
+                  <td>
+                    {{
+                      formatPercent((item.value / securityAnswerCount) * 100)
+                    }}
+                  </td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th scope="row">{{ labels.totalAnswered }}</th>
+                  <td>{{ securityAnswerCount }}</td>
+                  <td>{{ securityAnswerCount ? "100.0%" : "—" }}</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+          <p class="small">
+            {{ labels.excludedSecurityAnswers }}:
+            {{ filteredRecords.length - securityAnswerCount }}
+          </p>
+        </div>
+      </article>
 
       <details class="analysis-details">
         <summary>
@@ -315,6 +346,46 @@
                     )
                   }}
                 </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </details>
+
+      <details class="analysis-details" open>
+        <summary>
+          <strong>{{ labels.recoveredRecords }}</strong>
+        </summary>
+        <p>{{ labels.recoveredExplanation }}</p>
+        <div class="table-responsive">
+          <table class="table table-striped table-hover">
+            <thead>
+              <tr>
+                <th>{{ labels.assessment }}</th>
+                <th>{{ labels.organization }}</th>
+                <th>{{ labels.version }}</th>
+                <th>{{ labels.phase }}</th>
+                <th>{{ labels.completeness }}</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="record in recoveredRecords" :key="record.package_id">
+                <td>
+                  <a :href="record.dataset_url">{{ displayTitle(record) }}</a>
+                </td>
+                <td>{{ displayOrganization(record) }}</td>
+                <td>{{ record.version || "—" }}</td>
+                <td>{{ displayPhase(record) }}</td>
+                <td>
+                  {{
+                    formatPercent(
+                      record.derived && record.derived.completeness_pct
+                    )
+                  }}
+                </td>
+              </tr>
+              <tr v-if="recoveredRecords.length === 0">
+                <td colspan="5">{{ labels.noRecovered }}</td>
               </tr>
             </tbody>
           </table>
@@ -406,6 +477,17 @@ export default class AnalysisReport extends Vue {
     if (this.$i18n.locale === "fr") {
       return {
         title: "Analyse des évaluations de l’incidence algorithmique",
+        securityQuestion:
+          "Quelle est la classification de sécurité la plus élevée des données d’entrée utilisées par le système?",
+        securityExplanation:
+          "Les catégories combinées des anciens questionnaires sont conservées. Les pourcentages portent sur les réponses enregistrées et reconnues, selon les filtres sélectionnés.",
+        securityCounts: "Réponses sur la classification de sécurité",
+        securityClassification: "Classification de sécurité",
+        shareOfAnswers: "Pourcentage des réponses",
+        totalAnswered: "Total des réponses",
+        excludedSecurityAnswers: "Réponses manquantes ou non reconnues exclues",
+        noSecurityAnswers:
+          "Aucune réponse sur la classification de sécurité pour les filtres sélectionnés.",
         modelAlgorithmHeading: "Modèle et algorithme",
         modelAlgorithmExplanation:
           "Les graphiques comptent les réponses enregistrées aux questions sur le secret commercial, le type d’algorithme, l’inférence et le type de modèle. Les questions absentes des anciennes versions et les réponses manquantes sont exclues. Plusieurs choix peuvent être comptés pour une même EIA.",
@@ -469,6 +551,17 @@ export default class AnalysisReport extends Vue {
     }
     return {
       title: "Algorithmic Impact Assessment analysis",
+      securityQuestion:
+        "What is the highest security classification of the input data used by the system?",
+      securityExplanation:
+        "Combined categories from older questionnaires are preserved. Percentages use saved, recognized answers for the selected filters.",
+      securityCounts: "Security classification answers",
+      securityClassification: "Security classification",
+      shareOfAnswers: "Share of answers",
+      totalAnswered: "Total answered",
+      excludedSecurityAnswers: "Missing or unrecognized answers excluded",
+      noSecurityAnswers:
+        "No security classification answers for the selected filters.",
       modelAlgorithmHeading: "Model & Algorithm",
       modelAlgorithmExplanation:
         "Charts count saved answers about trade secrecy, algorithm type, inference and model type. Questions absent from older questionnaire versions and missing answers are excluded. Multiple selections can count the same AIA in more than one bar.",
@@ -526,6 +619,99 @@ export default class AnalysisReport extends Vue {
       allQuestions: "All questions",
       nonconditional: "Non-conditional questions"
     };
+  }
+
+  get securityClassificationCounts() {
+    const french = this.$i18n.locale === "fr";
+    const definitions = [
+      { key: "item1-0", en: "None", fr: "Aucun", color: "#4f6d7a" },
+      { key: "item2-1", en: "Protected A", fr: "Protégé A", color: "#2b8a3e" },
+      { key: "item4-3", en: "Protected B", fr: "Protégé B", color: "#1c578a" },
+      { key: "item6-3", en: "Protected C", fr: "Protégé C", color: "#a05a00" },
+      {
+        key: "item4-3-legacy",
+        en: "Protected B / Protected C",
+        fr: "Protégé B / Protégé C",
+        color: "#26374a"
+      },
+      {
+        key: "item3-2",
+        en: "Confidential",
+        fr: "Confidentiel",
+        color: "#6f42c1"
+      },
+      {
+        key: "item3-2-legacy",
+        en: "Classified / Confidential",
+        fr: "Classifié / Confidentiel",
+        color: "#5b5f97"
+      },
+      { key: "item5-4", en: "Secret", fr: "Secret", color: "#8b1e3f" },
+      { key: "item7-4", en: "Top Secret", fr: "Très Secret", color: "#7a6c5d" },
+      {
+        key: "item5-4-legacy",
+        en: "Secret / Top Secret",
+        fr: "Secret / Très Secret",
+        color: "#8a6d3b"
+      },
+      { key: "item8-0", en: "Other", fr: "Autre", color: "#287271" }
+    ];
+    const keys = this.filteredRecords.map(record => {
+      const answer = record.data && record.data.aboutDataSource2;
+      const legacy = /^v?\.?0\./.test(record.version || "");
+      return legacy && ["item3-2", "item4-3", "item5-4"].includes(answer)
+        ? `${answer}-legacy`
+        : answer;
+    });
+    return definitions
+      .map(item => ({
+        key: item.key,
+        label: french ? item.fr : item.en,
+        color: item.color,
+        value: keys.filter(key => key === item.key).length
+      }))
+      .filter(item => item.value > 0);
+  }
+
+  get securityAnswerCount(): number {
+    return this.securityClassificationCounts.reduce(
+      (sum, item) => sum + item.value,
+      0
+    );
+  }
+
+  renderSecurityChart(): void {
+    if (!this.securityAnswerCount) return;
+    const values = this.securityClassificationCounts;
+    this.createChart("securityChart", {
+      type: "pie",
+      data: {
+        labels: values.map(item => item.label),
+        datasets: [
+          {
+            data: values.map(item => item.value),
+            backgroundColor: values.map(item => item.color),
+            borderColor: "#fff",
+            borderWidth: 2
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { position: "bottom" },
+          tooltip: {
+            callbacks: {
+              label: (context: any) =>
+                `${context.label}: ${context.raw} (${this.formatPercent(
+                  (context.raw / this.securityAnswerCount) * 100
+                )})`
+            }
+          }
+        }
+      }
+    });
   }
 
   get dataQualityPairs(): DataQualityPairDefinition[] {
@@ -1152,6 +1338,7 @@ export default class AnalysisReport extends Vue {
       this.renderDataQualityChart(definition, palette)
     );
     this.renderModelAlgorithmCharts(palette);
+    this.renderSecurityChart();
   }
 
   async created(): Promise<void> {
@@ -1239,6 +1426,33 @@ export default class AnalysisReport extends Vue {
   border-top: 1px solid #ddd;
   margin-top: 2.5rem;
   padding-top: 1rem;
+}
+
+.security-card {
+  margin-top: 2.5rem;
+}
+
+.security-chart-wrap {
+  position: relative;
+  height: 340px;
+  max-width: 600px;
+  margin: 0 auto 1.5rem;
+}
+
+.security-counts {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.security-counts td {
+  text-align: right;
+}
+
+.security-swatch {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.6rem;
 }
 
 .analysis-details {
