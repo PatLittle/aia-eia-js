@@ -2,9 +2,16 @@ name: Build and deploy GitHub Pages
 
 on:
   workflow_dispatch:
+  schedule:
+    # Mondays at 10:00 UTC (06:00 EDT / 05:00 EST).
+    - cron: "0 10 * * 1"
   push:
     branches:
       - master
+
+concurrency:
+  group: aia-pages-refresh
+  cancel-in-progress: false
 
 jobs:
   deploy:
@@ -13,6 +20,9 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v5
+        with:
+          ref: master
+          fetch-depth: 0
 
       - name: Setup Python
         uses: actions/setup-python@v7
@@ -23,6 +33,28 @@ jobs:
 
       - name: Install report dependencies
         run: python -m pip install -r requirements-aia-report.txt
+
+      - name: Discover and recover new catalogue assessments
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        run: |
+          python -m pip install pymupdf rapidfuzz
+          python scripts/refresh_aia_catalogue.py
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add scripts/aia_pdf_recovery_targets.json recovered_aia_json/*/aia-results.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Refresh AIA PDF recoveries from Open Canada"
+            git pull --rebase origin master
+            git push origin HEAD:master
+          fi
+
+      - name: Upload recovery diagnostics
+        if: always() && (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch')
+        uses: actions/upload-artifact@v4
+        with:
+          name: weekly-aia-recovery-diagnostics
+          path: recovery_debug
+          if-no-files-found: ignore
 
       - name: Build unified bilingual AIA JSONL
         run: |

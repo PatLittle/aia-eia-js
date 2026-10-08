@@ -158,7 +158,10 @@
         </div>
       </article>
 
-      <section class="data-quality-section" aria-labelledby="data-quality-heading">
+      <section
+        class="data-quality-section"
+        aria-labelledby="data-quality-heading"
+      >
         <h2 id="data-quality-heading">{{ labels.dataQualityHeading }}</h2>
         <p>{{ labels.dataQualityExplanation }}</p>
         <div class="row">
@@ -204,6 +207,29 @@
               </div>
             </article>
           </div>
+        </div>
+      </section>
+
+      <section
+        class="data-quality-section"
+        aria-labelledby="model-algorithm-heading"
+      >
+        <h2 id="model-algorithm-heading">{{ labels.modelAlgorithmHeading }}</h2>
+        <p>{{ labels.modelAlgorithmExplanation }}</p>
+        <div class="model-algorithm-grid">
+          <article
+            v-for="definition in modelAlgorithmCharts"
+            :key="definition.field"
+            class="panel panel-default chart-card"
+          >
+            <div class="panel-heading">
+              <h3 class="h4">{{ definition.title }}</h3>
+            </div>
+            <div class="panel-body chart-wrap">
+              <canvas :ref="definition.field"></canvas>
+            </div>
+            <p class="panel-body small">{{ definition.choices.join("; ") }}</p>
+          </article>
         </div>
       </section>
 
@@ -380,6 +406,9 @@ export default class AnalysisReport extends Vue {
     if (this.$i18n.locale === "fr") {
       return {
         title: "Analyse des évaluations de l’incidence algorithmique",
+        modelAlgorithmHeading: "Modèle et algorithme",
+        modelAlgorithmExplanation:
+          "Les graphiques comptent les réponses enregistrées aux questions sur le secret commercial, le type d’algorithme, l’inférence et le type de modèle. Les questions absentes des anciennes versions et les réponses manquantes sont exclues. Plusieurs choix peuvent être comptés pour une même EIA.",
         introduction:
           "Analyse interactive des EIA publiées et des EIA reconstruites à partir de leurs PDF officiels, toutes normalisées dans le même jeu de données bilingue.",
         loading: "Chargement des données d’analyse des EIA…",
@@ -440,6 +469,9 @@ export default class AnalysisReport extends Vue {
     }
     return {
       title: "Algorithmic Impact Assessment analysis",
+      modelAlgorithmHeading: "Model & Algorithm",
+      modelAlgorithmExplanation:
+        "Charts count saved answers about trade secrecy, algorithm type, inference and model type. Questions absent from older questionnaire versions and missing answers are excluded. Multiple selections can count the same AIA in more than one bar.",
       introduction:
         "Interactive analysis of published AIAs and AIAs reconstructed from their official PDFs, normalized into one bilingual dataset.",
       loading: "Loading AIA analysis data…",
@@ -464,8 +496,7 @@ export default class AnalysisReport extends Vue {
       dataQualityExplanation:
         "These charts use the Design or Implementation fields that match each AIA's saved project phase. For GBA Plus, the public-availability field is question 6 in v0.x surveys and question 7 in v1.x surveys. Only saved Yes/No answers are counted.",
       biasAvailability: "Bias testing and public availability",
-      resolutionAvailability:
-        "Data-quality resolution and public availability",
+      resolutionAvailability: "Data-quality resolution and public availability",
       unreliableAvailability:
         "Unreliable-data risk management and public availability",
       gbaAvailability: "GBA Plus analysis and public availability",
@@ -684,7 +715,9 @@ export default class AnalysisReport extends Vue {
 
   binaryAnswer(value: any): string {
     if (!this.isSubstantive(value)) return "";
-    const normalized = String(value).trim().toLowerCase();
+    const normalized = String(value)
+      .trim()
+      .toLowerCase();
     if (
       normalized === "yes" ||
       normalized === "oui" ||
@@ -761,6 +794,117 @@ export default class AnalysisReport extends Vue {
     return counts;
   }
 
+  get modelAlgorithmCharts() {
+    const fr = this.$i18n.locale === "fr";
+    return [
+      {
+        field: "aboutAlgorithm1",
+        title: fr
+          ? "L’algorithme utilisé sera un secret (commercial)"
+          : "The algorithm used will be a (trade) secret",
+        choices: [this.labels.yes, this.labels.no],
+        values: ["yes", "no"]
+      },
+      {
+        field: "aboutAlgorithm3",
+        title: fr
+          ? "L’algorithme est (cochez toutes les réponses qui s’appliquent) :"
+          : "Is the algorithm (Check all that apply):",
+        choices: fr
+          ? [
+              "Fondé sur des règles établies en fonction des lois, des politiques ou de l’expertise humaine (p. ex. énoncés si/alors)",
+              "Fondé sur des modèles de données déterminés par l’IA (p. ex. réseau neuronal, apprentissage profond)"
+            ]
+          : [
+              "Based on rules developed from laws and policy and/or using human expertise (for example, if/then statements)",
+              "Based on patterns in data identified by the AI model (for example, neural network, deep learning)"
+            ],
+        values: ["item1-0", "item2-1"]
+      },
+      {
+        field: "aboutAlgorithm4",
+        title: fr
+          ? "Si le système est fondé sur un modèle, l’inférence du modèle est-elle (cochez toutes les réponses qui s’appliquent) :"
+          : "If the automated decision-system is model based, is the model inference (select all that apply):",
+        choices: fr
+          ? [
+              "Déterministe (suit des règles précises et produit un résultat unique)",
+              "Probabiliste (explique les données en appliquant plusieurs modèles)"
+            ]
+          : [
+              "Deterministic (follow precise rules and generate single outcome)",
+              "Probabilistic (infer several models to explain data)"
+            ],
+        values: ["item1-0", "item2-1"]
+      },
+      {
+        field: "aboutAlgorithm5",
+        title: fr ? "Le modèle est :" : "Is the model:",
+        choices: fr
+          ? [
+              "Discriminatif (p. ex. analyses de régression, arbres de décision)",
+              "Génératif (p. ex. analyse discriminante linéaire, classification naïve bayésienne)"
+            ]
+          : [
+              "Discriminative (for example, regression analyses, decision trees)",
+              "Generative (for example, linear discriminant analysis, naïve Bayes)"
+            ],
+        values: ["item1-0", "item2-1"]
+      }
+    ];
+  }
+
+  renderModelAlgorithmCharts(palette: string[]): void {
+    this.modelAlgorithmCharts.forEach(definition => {
+      const counts = definition.values.map(
+        value =>
+          this.filteredRecords.filter(record => {
+            const answer = (record.data || {})[definition.field];
+            if (definition.field === "aboutAlgorithm1") {
+              return this.binaryAnswer(answer) === value;
+            }
+            const selections = Array.isArray(answer) ? answer : [answer];
+            return selections.indexOf(value) !== -1;
+          }).length
+      );
+      this.createChart(definition.field, {
+        type: "bar",
+        data: {
+          labels: definition.choices.map(choice => {
+            const words = choice.split(" ");
+            const lines: string[] = [];
+            words.forEach(word => {
+              const last = lines.length - 1;
+              if (last < 0 || lines[last].length + word.length > 35)
+                lines.push(word);
+              else lines[last] += ` ${word}`;
+            });
+            return lines;
+          }),
+          datasets: [
+            {
+              label: this.labels.assessments,
+              data: counts,
+              backgroundColor: [palette[1], palette[2]]
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            y: {
+              beginAtZero: true,
+              ticks: { precision: 0 },
+              title: { display: true, text: this.labels.assessments }
+            }
+          },
+          plugins: { legend: { display: false } }
+        }
+      });
+    });
+  }
+
   async loadChartJs(): Promise<void> {
     const chartWindow: any = window;
     if (chartWindow.Chart) return;
@@ -795,7 +939,8 @@ export default class AnalysisReport extends Vue {
 
   createChart(refName: string, configuration: any): void {
     const chartWindow: any = window;
-    const canvas: any = this.$refs[refName];
+    const reference: any = this.$refs[refName];
+    const canvas: any = Array.isArray(reference) ? reference[0] : reference;
     if (!canvas || !chartWindow.Chart) return;
     this.charts.push(
       new chartWindow.Chart(canvas.getContext("2d"), configuration)
@@ -1006,6 +1151,7 @@ export default class AnalysisReport extends Vue {
     this.dataQualityPairs.forEach(definition =>
       this.renderDataQualityChart(definition, palette)
     );
+    this.renderModelAlgorithmCharts(palette);
   }
 
   async created(): Promise<void> {
@@ -1097,6 +1243,18 @@ export default class AnalysisReport extends Vue {
 
 .analysis-details {
   margin: 2rem 0;
+}
+
+.model-algorithm-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+@media (max-width: 767px) {
+  .model-algorithm-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .analysis-details summary {

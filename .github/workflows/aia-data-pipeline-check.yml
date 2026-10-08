@@ -3,6 +3,7 @@ name: Validate AIA data pipeline
 on:
   pull_request:
     paths:
+      - "scripts/refresh_aia_catalogue.py"
       - "scripts/recover_aia_json_from_pdfs.py"
       - "scripts/build_aia_jsonl.py"
       - "scripts/build_aia_site_assets.py"
@@ -19,6 +20,7 @@ on:
     branches:
       - master
     paths:
+      - "scripts/refresh_aia_catalogue.py"
       - "scripts/recover_aia_json_from_pdfs.py"
       - "scripts/build_aia_jsonl.py"
       - "scripts/build_aia_site_assets.py"
