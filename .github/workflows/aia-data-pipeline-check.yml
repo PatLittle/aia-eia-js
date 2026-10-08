@@ -85,7 +85,7 @@ jobs:
 
           assert summary['record_count'] == summary['catalogue_count'], summary
           assert summary['missing_count'] == 0, summary
-          assert summary['recovered_count'] == 6, summary
+          assert summary['recovered_count'] == len(expected_recovered), summary
           assert summary['published_count'] + summary['recovered_count'] == summary['record_count'], summary
           assert actual_recovered == expected_recovered, (actual_recovered, expected_recovered)
 
