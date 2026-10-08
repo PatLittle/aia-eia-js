@@ -52,6 +52,19 @@
     "source": "recovered"
   },
   {
+    "package_id": "f77faef4-27d8-4929-929e-bfb1371affde",
+    "title_en": "Algorithm Impact Assessment ERA Food model",
+    "title_fr": "Evaluation de l'impact algorithmique Modèle ERE Aliments",
+    "organization_en": "Canadian Food Inspection Agency | Agence canadienne d'inspection des aliments",
+    "organization_fr": "Canadian Food Inspection Agency | Agence canadienne d'inspection des aliments",
+    "publication_date": "2026-09-29T17:41:58.811567",
+    "aia_version": "v1.0.1",
+    "impact_level": "Level 2",
+    "dataset_url": "https://open.canada.ca/data/en/dataset/f77faef4-27d8-4929-929e-bfb1371affde",
+    "resource_url": "https://raw.githubusercontent.com/PatLittle/aia-eia-js/master/recovered_aia_json/f77faef4-27d8-4929-929e-bfb1371affde/aia-results.json",
+    "source": "recovered"
+  },
+  {
     "package_id": "94d9dd91-803a-458c-a381-db6a22c9571a",
     "title_en": "Algorithmic Impact Assessment - Electronic Social Insurance Number Automation (eSINa)",
     "title_fr": "Évaluation de l'incidence algorithmique - Automatisation du numéro d’assurance sociale électronique (aNASe)",
