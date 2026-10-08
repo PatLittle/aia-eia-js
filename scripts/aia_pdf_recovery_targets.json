@@ -28,5 +28,10 @@
     "package_id": "c839bedc-0d5f-4b02-98a7-671d1f60ac51",
     "title": "Algorithmic Impact Assessment - Claim Summary Tool (CST)",
     "expected_locales": ["en", "fr"]
+  },
+  {
+    "package_id": "f77faef4-27d8-4929-929e-bfb1371affde",
+    "title": "Algorithm Impact Assessment ERA Food model",
+    "expected_locales": ["en", "fr"]
   }
 ]

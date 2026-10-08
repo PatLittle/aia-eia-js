@@ -289,6 +289,16 @@ def pdf_resource_score(resource: dict[str, Any], locale: str) -> int:
     score = 10 + (
         20 if any(term in haystack for term in ("aia", "algorithmic impact", "eia", "incidence algorithmique")) else 0
     )
+    resource_languages = resource.get("language") or []
+    if isinstance(resource_languages, str):
+        resource_languages = [resource_languages]
+    resource_languages = {
+        str(language).strip().lower().split("-")[0]
+        for language in resource_languages
+        if str(language).strip()
+    }
+    if resource_languages:
+        score += 100 if locale in resource_languages else -100
     looks_fr = any(hint in haystack for hint in FRENCH_HINTS)
     looks_en = any(hint in haystack for hint in ENGLISH_HINTS)
     if locale == "en":
@@ -654,7 +664,8 @@ def reconstruct(
 def build_translations(
     french_data: dict[str, Any], questions: list[Question]
 ) -> dict[str, Any]:
-    text_fields = {question.name for question in questions if question.qtype in TEXT_TYPES}
+    # Preserve questionnaire order so repeated recovery runs produce identical JSON.
+    text_fields = [question.name for question in questions if question.qtype in TEXT_TYPES]
     return {
         name: french_data[name]
         for name in text_fields
