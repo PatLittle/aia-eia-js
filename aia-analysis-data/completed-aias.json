@@ -364,6 +364,19 @@
     "source": "published"
   },
   {
+    "package_id": "20aa6a7a-37c1-4b79-abe8-d977cb4c8563",
+    "title_en": "Algorithmic Impact Assessment Results",
+    "title_fr": "Résultats de l’évaluation de l’incidence algorithmique",
+    "organization_en": "Prairies Economic Development Canada | Développement économique Canada pour les Prairies",
+    "organization_fr": "Prairies Economic Development Canada | Développement économique Canada pour les Prairies",
+    "publication_date": "2026-11-19T18:22:21.891952",
+    "aia_version": "v1.0.1",
+    "impact_level": "Level 2",
+    "dataset_url": "https://open.canada.ca/data/en/dataset/20aa6a7a-37c1-4b79-abe8-d977cb4c8563",
+    "resource_url": "https://open.canada.ca/data/dataset/20aa6a7a-37c1-4b79-abe8-d977cb4c8563/resource/7abd754c-f082-4e78-b89c-d1eb7e2dfb9e/download/aia-results-september-28-2026-bilingual.json",
+    "source": "published"
+  },
+  {
     "package_id": "afc17416-3781-422d-a4a9-cc55e3a053c8",
     "title_en": "Algorithmic Impact Assessment - ArriveCAN Proof of Vaccination Recognition",
     "title_fr": "Évaluation de l'incidence algorithmique - Reconnaissance de preuve de vaccination d'ArriveCAN",

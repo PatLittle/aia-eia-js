@@ -4,27 +4,27 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/aia-eia-js/404.html"
   },
   {
-    "revision": "1e7b5d7de86e3a673461652b49f9ded2",
+    "revision": "129da711e23e6875e6f354e4c29ccf89",
     "url": "/aia-eia-js/aia-analysis-data/aia-results-summary.json"
   },
   {
-    "revision": "bff9bad6f9c184cee5482223ffb36a90",
+    "revision": "041a7a50dc5cea78b3ff9388582433c3",
     "url": "/aia-eia-js/aia-analysis-data/aia-results.jsonl"
   },
   {
-    "revision": "ac4381868c6c5ce940908c372e4c8747",
+    "revision": "40fcd22a44afbc5ca54ec2c3ca30d904",
     "url": "/aia-eia-js/aia-analysis-data/aia_completeness_by_organization.csv"
   },
   {
-    "revision": "e3eb1955b3a5855f73970099e6c25ec8",
+    "revision": "fa76258babebc1c50951dae0e2929f4e",
     "url": "/aia-eia-js/aia-analysis-data/aia_publications_by_year.csv"
   },
   {
-    "revision": "beb161078073ecf5a1d8e420134b034c",
+    "revision": "8f2824e6f678ac471be178f669bf1b1b",
     "url": "/aia-eia-js/aia-analysis-data/aia_report_assessments.csv"
   },
   {
-    "revision": "df651362dfa0410e493602a6c74ed814",
+    "revision": "f3df52bf5ee47b036655a3102e08cfce",
     "url": "/aia-eia-js/aia-analysis-data/completed-aias.json"
   },
   {
